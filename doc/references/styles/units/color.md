@@ -21,10 +21,6 @@ Supported value types:
 }
 ```
 
-## Note
-
-* `hsl()`, `hsla()`, `currentColor`, 8-chars hex colors are not supported.
-
-* `rgb(a,b,c)` or `rgba(a,b,c,d)` have much worse performance than ohter color format. Choose your color format wisely.
+**Note:** `hsl()`, `hsla()`, `currentColor`, 8-chars hex colors are not supported.
 
 See more for [named colors](../../color-names.md).
