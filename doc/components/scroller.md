@@ -21,6 +21,9 @@ It supports all kinds of weex components as its child components.
 
 - `show-scrollbar`: &lt;boolean&gt; `true` | `false`. This value determines whether the scrollbar show. The default value is `true`.
 - `scroll-direction`: &lt;string&gt; define scroll direction of component, `horizontal` or `vertical`.
+	- Default value for `scroll-direction` is vertical, and for `flex-direction` is row .
+	- `scroll-direction:horizontal` and `flex-direction: row` should be used together.
+	- `scroll-direction:vertical` and `flex-direction: column` should be used together, too. But thoes two values are default, if you don't set them, it also works fine.
 
 Other attributes please check out the [common attributes](../references/common-attrs.md).
 
