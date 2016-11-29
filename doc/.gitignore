@@ -1,3 +1,5 @@
-node_modules
-*.sass-cache
 _book
+node_modules
+*.epub
+*.mobi
+*.pdf
