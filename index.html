@@ -26,13 +26,13 @@
                     <div class="top-bar-title"></div>
                     <div class="top-bar-left">
                         <ul class="dropdown menu" data-dropdown-menu>
-                            <li> <a href="http://alibaba.github.io/weex/doc/">Docs</a>
+                            <li> <a href="doc">Docs</a>
 
                             </li>
                             <li>
                                 <script>
                                     if( location.pathname.indexOf("demo.html") != -1 ){
-                                    document.write("<span class='current'>Showcases</span>")          
+                                    document.write("<a class='current'>Showcases</a>")          
                                     }else{
                                     document.write("<a href='demo.html'>Showcases</a>")          
                                     }
@@ -41,7 +41,7 @@
                             <li>
                                 <script>
                                     if( location.pathname.indexOf("download.html") != -1 ){
-                                    document.write("<span class='current'>Download</span>")          
+                                    document.write("<a class='current'>Download</a>")          
                                     }else{
                                     document.write("<a href='download.html'>Download</a>")          
                                     }
@@ -193,31 +193,31 @@
           --> <pre style='color:#000000;'><span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>template</span><span style='color:#a65700; '>></span>
   <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>div</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"container"</span><span style='color:#a65700; '>></span>
     <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>div</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"logoContainer"</span><span style='color:#a65700; '>></span>
-    <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>image</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"logo"</span><span style='color:#274796; '> </span><span style='color:#074726; '>src</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"https://t.cn/Rq9bcDm"</span><span style='color:#a65700; '>></span>
-    <span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>image</span><span style='color:#a65700; '>></span>
-      <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>text</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"desc"</span><span style='color:#a65700; '>></span>
-A framework for building Mobile cross-platform UI
-     <span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>text</span><span style='color:#a65700; '>></span>
+      <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>img</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"logo"</span><span style='color:#274796; '> </span><span style='color:#074726; '>src</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"https://t.cn/Rq9bcDm"</span><span style='color:#a65700; '>/></span>
+      <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>text</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"desc"</span><span style='color:#a65700; '>></span>...<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>text</span><span style='color:#a65700; '>></span>
     <span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>div</span><span style='color:#a65700; '>></span>
     <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>div</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"textContainer"</span><span style='color:#a65700; '>></span>
-        <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>text</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"text"</span><span style='color:#a65700; '>></span>Hello weex<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>text</span><span style='color:#a65700; '>></span>
+      <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>text</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"text"</span><span style='color:#a65700; '>></span>Hello weex<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>text</span><span style='color:#a65700; '>></span>
     <span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>div</span><span style='color:#a65700; '>></span>
   <span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>div</span><span style='color:#a65700; '>></span>
-  <span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>template</span><span style='color:#a65700; '>></span>
-  <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>style</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>template</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>style</span><span style='color:#a65700; '>></span>
   <span style='color:#808030; '>.</span>logoContainer <span style='color:#800080; '>{</span>
     <span style='color:#bb7977; font-weight:bold; '>width</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>750</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span><span style='color:#bb7977; font-weight:bold; '>height</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>500</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span>
-    <span style='color:#bb7977; font-weight:bold; '>align-items</span><span style='color:#808030; '>:</span> <span style='color:#074726; '>center</span><span style='color:#800080; '>;</span><span style='color:#008484; '>justify-content</span><span style='color:#808030; '>:</span> <span style='color:#074726; '>center</span><span style='color:#800080; '>;</span>
+    <span style='color:#bb7977; font-weight:bold; '>align-items</span><span style='color:#808030; '>:</span> <span style='color:#074726; '>center</span><span style='color:#800080; '>;</span> <span style='color:#008484; '>justify-content</span><span style='color:#808030; '>:</span> <span style='color:#074726; '>center</span><span style='color:#800080; '>;</span>
     <span style='color:#bb7977; font-weight:bold; '>background-color</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>#</span><span style='color:#008000; '>0054DC</span><span style='color:#800080; '>;</span>
   <span style='color:#800080; '>}</span>
   <span style='color:#808030; '>.</span>logo <span style='color:#800080; '>{</span>
-    <span style='color:#bb7977; font-weight:bold; '>width</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>378px</span><span style='color:#800080; '>;</span><span style='color:#bb7977; font-weight:bold; '>height</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>84px</span><span style='color:#800080; '>;</span>
+    <span style='color:#bb7977; font-weight:bold; '>width</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>378px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>height</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>84px</span><span style='color:#800080; '>;</span>
   <span style='color:#800080; '>}</span>
-  <span style='color:#808030; '>.</span>desc <span style='color:#800080; '>{</span><span style='color:#bb7977; font-weight:bold; '>margin-top</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>40</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span><span style='color:#bb7977; font-weight:bold; '>font-size</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>24</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span><span style='color:#bb7977; font-weight:bold; '>color</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>#</span><span style='color:#008000; '>ccc</span><span style='color:#800080; '>;</span><span style='color:#800080; '>}</span>
+  <span style='color:#808030; '>.</span>desc <span style='color:#800080; '>{</span>
+    <span style='color:#bb7977; font-weight:bold; '>margin-top</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>40</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>font-size</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>24</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>color</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>#</span><span style='color:#008000; '>ccc</span><span style='color:#800080; '>;</span>
+  <span style='color:#800080; '>}</span>
   <span style='color:#808030; '>.</span>textContainer <span style='color:#800080; '>{</span>
-    <span style='color:#bb7977; font-weight:bold; '>width</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>750</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span><span style='color:#bb7977; font-weight:bold; '>padding-top</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>200</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span>
+    <span style='color:#bb7977; font-weight:bold; '>width</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>750</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>padding-top</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>200</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span>
     <span style='color:#bb7977; font-weight:bold; '>align-items</span><span style='color:#808030; '>:</span> <span style='color:#074726; '>center</span><span style='color:#800080; '>;</span><span style='color:#008484; '>justify-content</span><span style='color:#808030; '>:</span> <span style='color:#074726; '>center</span><span style='color:#800080; '>;</span>
-  <span style='color:#800080; '>}</span><span style='color:#808030; '>.</span>text <span style='color:#800080; '>{</span><span style='color:#bb7977; font-weight:bold; '>font-size</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>48</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span><span style='color:#800080; '>}</span>
+  <span style='color:#800080; '>}</span>
+  <span style='color:#808030; '>.</span>text <span style='color:#800080; '>{</span><span style='color:#bb7977; font-weight:bold; '>font-size</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>48</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span><span style='color:#800080; '>}</span>
 <span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>style</span><span style='color:#a65700; '>></span>
 </pre>
 

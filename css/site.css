@@ -37,7 +37,7 @@ body {
     width: 1200px;
     margin-left: auto;
     margin-right: auto; }
-  .top-bar span.current {
+  .top-bar .current {
     color: #0055DD; }
   .top-bar.fade {
     opacity: 0; }
@@ -141,6 +141,7 @@ body {
 .entrance {
   z-index: 10;
   position: relative;
+  margin: auto;
   text-align: center;
   font-size: 16px;
   color: #ffffff;
@@ -154,12 +155,12 @@ body {
     width: 166px;
     height: 48px;
     line-height: 48px;
-    float: left; }
+    display: inline-block; }
   .entrance div:nth-child(2) {
     cursor: pointer;
     box-sizing: border-box;
     margin-left: 10px;
-    float: left;
+    display: inline-block;
     border: 1px solid #ffffff;
     border-radius: 2px;
     width: 164px;
@@ -201,9 +202,11 @@ body {
   /* font-family: Roboto-Light */ }
 
 .high-light {
-  margin-top: 60px; }
+  margin: 60px 10% 0; }
   .high-light > div {
-    float: left; }
+    float: left;
+    width: 40%;
+    text-align: center; }
   .high-light div:nth-child(2) {
     margin-left: 150px; }
   .high-light h5 {

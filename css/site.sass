@@ -41,7 +41,7 @@ $header-height: 70px
   transition: opacity .25s ease-in-out
   -webkit-transition: opacity .25s ease-in-out
 
-  span.current
+  .current
     color: #0055DD
     
   &.fade 
@@ -160,6 +160,7 @@ $header-height: 70px
 .entrance
   z-index: 10  
   position: relative
+  margin: auto
   text-align: center
   font-size: 16px
   color: #ffffff
@@ -174,14 +175,14 @@ $header-height: 70px
     width: 166px
     height: 48px
     line-height: 48px
-    float: left
+    display: inline-block
 
     
   div:nth-child(2)
     cursor: pointer        
     box-sizing: border-box  
     margin-left: 10px
-    float: left
+    display: inline-block
     border: 1px solid #ffffff
     border-radius: 2px
     width: 164px
@@ -226,10 +227,12 @@ $header-height: 70px
 
 
 .high-light
-  margin-top: 60px
+  margin: 60px 10% 0
 
   >div
     float: left
+    width: 40%
+    text-align: center
 
   div:nth-child(2)    
     margin-left: 150px
