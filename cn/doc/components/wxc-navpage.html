@@ -1,0 +1,1817 @@
+
+<!DOCTYPE HTML>
+<html lang="">
+    <head>
+        <title>wxc-navpage &#xB7; Weex</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.1.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../modules/main.html">
+    
+    
+    <link rel="prev" href="wxc-tabbar.html">
+    
+
+    </head>
+    <body>
+        
+<div class="book"><style>
+.weex-doc-header{
+    height: 70px;
+    width: 100%;
+}
+.book .book-summary , .book .book-body{
+    top: 70px;
+}
+
+a[aria-label="Share"] ,  i.fa-facebook , i.fa-twitter{
+   display: none  !important;
+}
+
+.top-bar, .top-bar ul{
+    background-color: white;
+    padding-left: 0;
+}
+
+dl, ol, ul {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    list-style-position: outside;
+}
+
+.top-bar {
+    /* padding: .5rem; */
+}
+
+.top-bar:after {
+    clear: both;
+}
+.top-bar:after, .top-bar:before {
+    content: ' ';
+    display: table;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+.top-bar a {
+    
+    font-size: 16px;
+    color: #333333;
+    text-align: left;
+    /* font-family: HelveticaNeue-Light; */
+}
+
+.top-bar-title {
+    float: left;
+    margin-right: 5px;
+    margin-left: 10px;    
+    margin-top: 29px;    
+    background: url("//alibaba.github.io/weex/img/weex_logo_blue@3x.png") no-repeat;
+    height: 33px;
+    width: 145px;
+    background-position: 0px 0px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    cursor:pointer;
+}
+
+ .top-bar-left {
+    margin-top: 25px;         
+    float: left;
+}
+
+.top-bar-right {
+    float: right;
+}
+.top-bar .top-bar-right {
+    margin-right: 100px;
+    margin-top: 25px;
+}
+.top-bar .top-bar-right .github {
+    width: 32px;
+    height: 32px;
+}
+
+
+.menu {
+    margin: 0;
+    list-style-type: none;
+}
+
+.menu>li {
+    display: table-cell;    
+    vertical-align: middle;    
+}
+
+
+.menu>li>a {
+    display: block;
+    padding: .7rem 1rem;
+    line-height: 1;
+    line-height: 1;
+    text-decoration: none;
+    line-height: inherit;
+    cursor: pointer;
+}
+
+
+span.weex-version{
+    position: absolute;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+a.weex-translate{
+    font-size: 16px;
+    position: relative;
+    top: -6px;
+    left: 20px;
+    padding: 2px 4px;    
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    background-color: #de2810;
+}
+
+a.weex-translate.incomplete{
+  background-color: #777;                    
+}
+ 
+
+.wx-v{
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+}
+</style>
+
+    <!-- 
+    <link rel="stylesheet"  href="//alibaba.github.io/weex/css/weex_doc.css" >
+
+    <link rel="stylesheet"  href="//alibaba.github.io/weex/doc/ali_addition/weex_doc.css" >
+    -->
+
+<script>
+function contentLoaded(win, fn) {
+
+	var done = false, top = true,
+
+	doc = win.document,
+	root = doc.documentElement,
+	modern = doc.addEventListener,
+
+	add = modern ? 'addEventListener' : 'attachEvent',
+	rem = modern ? 'removeEventListener' : 'detachEvent',
+	pre = modern ? '' : 'on',
+
+	init = function(e) {
+		if (e.type == 'readystatechange' && doc.readyState != 'complete') return;
+		(e.type == 'load' ? win : doc)[rem](pre + e.type, init, false);
+		if (!done && (done = true)) fn.call(win, e.type || e);
+	},
+
+	poll = function() {
+		try { root.doScroll('left'); } catch(e) { setTimeout(poll, 50); return; }
+		init('poll');
+	};
+
+	if (doc.readyState == 'complete') fn.call(win, 'lazy');
+	else {
+		if (!modern && root.doScroll) {
+			try { top = !win.frameElement; } catch(e) { }
+			if (top) poll();
+		}
+		doc[add](pre + 'DOMContentLoaded', init, false);
+		doc[add](pre + 'readystatechange', init, false);
+		win[add](pre + 'load', init, false);
+	}
+}
+
+
+
+function getTextWidth(text, font) {
+    // re-use canvas object for better performance
+    var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
+    var context = canvas.getContext("2d");
+    context.font = font;
+    var metrics = context.measureText(text);
+    return metrics.width;
+}
+
+
+
+function rePostionVersion(vDis){
+    vDis =   vDis ? vDis : -28;
+    if ($(".weex-version").length < 1){return ;}
+    var vOffset = $(".weex-version").offset();
+    var titleJObj = $(".weex-version").parents(".markdown-section").find("h1,h2,h3");
+    var titleOffset = titleJObj.offset();
+    var vDistance = (vOffset.top - titleOffset.top + vDis  );
+    var hDistance = (titleJObj.width());
+    $(".weex-version").css("transform", "translate("+hDistance+"px,-"+vDistance+"px)"); 
+}
+
+
+function rePostionTranslate(){
+    if ($(".weex-version").length < 1){return ;}
+    var translateMark = $(".weex-translate").filter(':visible');
+    var titleJObj = translateMark.parents(".markdown-section").find("h1,h2,h3").eq(0);
+    titleJObj.append(translateMark);
+}
+
+window._rePostionAll =   function () {
+    rePostionVersion();
+    rePostionTranslate();
+}
+
+contentLoaded(window,function(){
+    setTimeout(function(){
+        window._rePostionAll();
+    },100);
+})
+</script>
+
+    <!-- 
+    <script src="//alibaba.github.io/weex/css/weex_doc.js"></script>
+    <script src="//alibaba.github.io/weex/doc/ali_addition/weex_doc.js"></script>
+    -->    
+    
+<div class="weex-doc-header">
+    <div class="top-bar">
+        <div class="top-bar-title" onclick="location=&apos;//alibaba.github.io/weex/cn&apos;"></div>
+        <div class="top-bar-left">
+            <ul class="menu" role="menubar">
+                <li role="menuitem">
+                    <a href="//alibaba.github.io/weex/cn/demo.html">&#x793A;&#x4F8B;</a>
+                </li>
+                <li role="menuitem">
+                    <a href="//alibaba.github.io/weex/cn/download.html">&#x4E0B;&#x8F7D;</a>
+                </li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu">
+                <li>
+                    <a href="//github.com/alibaba/weex">
+                        <img class="github" src="//alibaba.github.io/weex/img/github.png" alt="github">
+                    </a>
+                 </li>
+                
+            </ul>                    
+        </div>
+    </div>        
+</div>
+
+
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../guide.html">
+            
+                <a href="../guide.html">
+            
+                    
+                    &#x5165;&#x95E8;&#x6307;&#x5357;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../tutorial.html">
+            
+                <a href="../tutorial.html">
+            
+                    
+                    &#x6559;&#x7A0B;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../syntax/main.html">
+            
+                <a href="../syntax/main.html">
+            
+                    
+                    &#x8BED;&#x6CD5;&#x4ECB;&#x7ECD;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../syntax/data-binding.html">
+            
+                <a href="../syntax/data-binding.html">
+            
+                    
+                    &#x6570;&#x636E;&#x7ED1;&#x5B9A;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../syntax/style-n-class.html">
+            
+                <a href="../syntax/style-n-class.html">
+            
+                    
+                    CSS &#x6837;&#x5F0F;&#x548C;&#x7C7B;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../syntax/events.html">
+            
+                <a href="../syntax/events.html">
+            
+                    
+                    &#x4E8B;&#x4EF6;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../syntax/display-logic.html">
+            
+                <a href="../syntax/display-logic.html">
+            
+                    
+                    &#x5C55;&#x793A;&#x903B;&#x8F91;&#x63A7;&#x5236;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../syntax/render-logic.html">
+            
+                <a href="../syntax/render-logic.html">
+            
+                    
+                    &#x6E32;&#x67D3;&#x903B;&#x8F91;&#x63A7;&#x5236;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../syntax/composed-component.html">
+            
+                <a href="../syntax/composed-component.html">
+            
+                    
+                    &#x7EC4;&#x4EF6;&#x5C01;&#x88C5;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="../syntax/id.html">
+            
+                <a href="../syntax/id.html">
+            
+                    
+                    &#x627E;&#x8282;&#x70B9;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8" data-path="../syntax/comm.html">
+            
+                <a href="../syntax/comm.html">
+            
+                    
+                    &#x7EC4;&#x4EF6;&#x901A;&#x4FE1;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.9" data-path="../syntax/config-n-data.html">
+            
+                <a href="../syntax/config-n-data.html">
+            
+                    
+                    &#x9875;&#x9762;&#x914D;&#x7F6E;&#x548C;&#x9875;&#x9762;&#x6570;&#x636E;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../how-to/main.html">
+            
+                <a href="../how-to/main.html">
+            
+                    
+                    How-tos
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../how-to/preview-in-browser.html">
+            
+                <a href="../how-to/preview-in-browser.html">
+            
+                    
+                    &#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x9884;&#x89C8;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../how-to/preview-in-playground-app.html">
+            
+                <a href="../how-to/preview-in-playground-app.html">
+            
+                    
+                    &#x5728; native &#x4E2D;&#x9884;&#x89C8;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../how-to/customize-a-native-component.html">
+            
+                <a href="../how-to/customize-a-native-component.html">
+            
+                    
+                    &#x81EA;&#x5B9A;&#x4E49; native &#x7EC4;&#x4EF6;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../how-to/cuszomize-native-apis.html">
+            
+                <a href="../how-to/cuszomize-native-apis.html">
+            
+                    
+                    &#x81EA;&#x5B9A;&#x4E49; native API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../how-to/debug-with-html5.html">
+            
+                <a href="../how-to/debug-with-html5.html">
+            
+                    
+                    &#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8C03;&#x8BD5;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../how-to/require-3rd-party-libs.html">
+            
+                <a href="../how-to/require-3rd-party-libs.html">
+            
+                    
+                    &#x5F15;&#x5165;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.7" data-path="../how-to/transform-code-into-js-bundle.html">
+            
+                <a href="../how-to/transform-code-into-js-bundle.html">
+            
+                    
+                    &#x8BB2;&#x6E90;&#x4EE3;&#x7801;&#x8F6C;&#x6362;&#x6210; JS Bundle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../advanced/main.html">
+            
+                <a href="../advanced/main.html">
+            
+                    
+                    &#x9AD8;&#x9636;&#x77E5;&#x8BC6;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../advanced/how-it-works.html">
+            
+                <a href="../advanced/how-it-works.html">
+            
+                    
+                    Weex &#x5DE5;&#x4F5C;&#x539F;&#x7406;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../advanced/how-data-binding-works.html">
+            
+                <a href="../advanced/how-data-binding-works.html">
+            
+                    
+                    &#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x539F;&#x7406;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../advanced/integrate-to-android.html">
+            
+                <a href="../advanced/integrate-to-android.html">
+            
+                    
+                    &#x96C6;&#x6210;&#x5230; Android
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../advanced/integrate-to-ios.html">
+            
+                <a href="../advanced/integrate-to-ios.html">
+            
+                    
+                    &#x96C6;&#x6210;&#x5230; iOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../advanced/integrate-to-html5.html">
+            
+                <a href="../advanced/integrate-to-html5.html">
+            
+                    
+                    &#x96C6;&#x6210;&#x5230; web
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../advanced/extend-to-android.html">
+            
+                <a href="../advanced/extend-to-android.html">
+            
+                    
+                    &#x6269;&#x5C55; Android
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../advanced/extend-to-ios.html">
+            
+                <a href="../advanced/extend-to-ios.html">
+            
+                    
+                    &#x6269;&#x5C55; iOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.8" data-path="../advanced/extend-to-html5.html">
+            
+                <a href="../advanced/extend-to-html5.html">
+            
+                    
+                    &#x6269;&#x5C55; web
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../references/main.html">
+            
+                <a href="../references/main.html">
+            
+                    
+                    &#x624B;&#x518C;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../references/bootstrap.html">
+            
+                <a href="../references/bootstrap.html">
+            
+                    
+                    Bootstrap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../references/component-defs.html">
+            
+                <a href="../references/component-defs.html">
+            
+                    
+                    &#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../references/api.html">
+            
+                <a href="../references/api.html">
+            
+                    
+                    &#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B; API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../references/gesture.html">
+            
+                <a href="../references/gesture.html">
+            
+                    
+                    &#x624B;&#x52BF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="main.html">
+            
+                <a href="main.html">
+            
+                    
+                    &#x5185;&#x5EFA;&#x7EC4;&#x4EF6;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../references/common-attrs.html">
+            
+                <a href="../references/common-attrs.html">
+            
+                    
+                    &#x901A;&#x7528;&#x7279;&#x6027;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../references/common-style.html">
+            
+                <a href="../references/common-style.html">
+            
+                    
+                    &#x901A;&#x7528;&#x6837;&#x5F0F;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.2.1" data-path="../references/text-style.html">
+            
+                <a href="../references/text-style.html">
+            
+                    
+                    &#x6587;&#x672C;&#x6837;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2.2" data-path="../references/color-names.html">
+            
+                <a href="../references/color-names.html">
+            
+                    
+                    &#x989C;&#x8272;&#x540D;&#x79F0;&#x5217;&#x8868;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../references/common-event.html">
+            
+                <a href="../references/common-event.html">
+            
+                    
+                    &#x901A;&#x7528;&#x4E8B;&#x4EF6;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="special-element.html">
+            
+                <a href="special-element.html">
+            
+                    
+                    &#x7279;&#x6B8A;&#x5143;&#x7D20;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="div.html">
+            
+                <a href="div.html">
+            
+                    
+                    div
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.6" data-path="scroller.html">
+            
+                <a href="scroller.html">
+            
+                    
+                    scroller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7" data-path="list.html">
+            
+                <a href="list.html">
+            
+                    
+                    list
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.7.1" data-path="cell.html">
+            
+                <a href="cell.html">
+            
+                    
+                    cell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7.2" data-path="refresh-loading.html">
+            
+                <a href="refresh-loading.html">
+            
+                    
+                    refresh &amp; loading
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.8" data-path="text.html">
+            
+                <a href="text.html">
+            
+                    
+                    text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.9" data-path="image.html">
+            
+                <a href="image.html">
+            
+                    
+                    image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.10" data-path="input.html">
+            
+                <a href="input.html">
+            
+                    
+                    input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.11" data-path="textarea.html">
+            
+                <a href="textarea.html">
+            
+                    
+                    textarea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.12" data-path="switch.html">
+            
+                <a href="switch.html">
+            
+                    
+                    switch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.13" data-path="slider.html">
+            
+                <a href="slider.html">
+            
+                    
+                    slider
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.13.1" data-path="indicator.html">
+            
+                <a href="indicator.html">
+            
+                    
+                    indicator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.14" data-path="video.html">
+            
+                <a href="video.html">
+            
+                    
+                    video
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.15" data-path="a.html">
+            
+                <a href="a.html">
+            
+                    
+                    a
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.16" data-path="web.html">
+            
+                <a href="web.html">
+            
+                    
+                    web
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.17" data-path="wxc-tabbar.html">
+            
+                <a href="wxc-tabbar.html">
+            
+                    
+                    wxc-tabbar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5.18" data-path="wxc-navpage.html">
+            
+                <a href="wxc-navpage.html">
+            
+                    
+                    wxc-navpage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../modules/main.html">
+            
+                <a href="../modules/main.html">
+            
+                    
+                    &#x5185;&#x5EFA;&#x6A21;&#x5757;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../modules/dom.html">
+            
+                <a href="../modules/dom.html">
+            
+                    
+                    dom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../modules/stream.html">
+            
+                <a href="../modules/stream.html">
+            
+                    
+                    stream
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="../modules/modal.html">
+            
+                <a href="../modules/modal.html">
+            
+                    
+                    modal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" data-path="../modules/animation.html">
+            
+                <a href="../modules/animation.html">
+            
+                    
+                    animation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.5" data-path="../modules/webview.html">
+            
+                <a href="../modules/webview.html">
+            
+                    
+                    webview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.6" data-path="../modules/navigator.html">
+            
+                <a href="../modules/navigator.html">
+            
+                    
+                    navigator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.7" data-path="../modules/storage.html">
+            
+                <a href="../modules/storage.html">
+            
+                    
+                    storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.8" data-path="../modules/timer.html">
+            
+                <a href="../modules/timer.html">
+            
+                    
+                    timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.9" data-path="../modules/clipboard.html">
+            
+                <a href="../modules/clipboard.html">
+            
+                    
+                    clipboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.10" data-path="../modules/globalevent.html">
+            
+                <a href="../modules/globalevent.html">
+            
+                    
+                    globalEvent
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7">
+            
+                <span>
+            
+                    
+                    &#x5E95;&#x5C42;&#x89C4;&#x8303;
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../specs/js-bundle-format.html">
+            
+                <a href="../specs/js-bundle-format.html">
+            
+                    
+                    JS Bundle &#x683C;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../specs/js-framework-apis.html">
+            
+                <a href="../specs/js-framework-apis.html">
+            
+                    
+                    JS Framework APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../specs/virtual-dom-apis.html">
+            
+                <a href="../specs/virtual-dom-apis.html">
+            
+                    
+                    Virtual DOM APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4">
+            
+                <span>
+            
+                    
+                    &#x793A;&#x4F8B;
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../demo/hello-world.html">
+            
+                <a href="../demo/hello-world.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../demo/modal.html">
+            
+                <a href="../demo/modal.html">
+            
+                    
+                    Modal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../demo/clipboard.html">
+            
+                <a href="../demo/clipboard.html">
+            
+                    
+                    Clipboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../demo/list.html">
+            
+                <a href="../demo/list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../demo/slider.html">
+            
+                <a href="../demo/slider.html">
+            
+                    
+                    Slider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../demo/animation.html">
+            
+                <a href="../demo/animation.html">
+            
+                    
+                    Animation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7">
+            
+                <a target="_blank" href="https://github.com/alibaba/weex/tree/dev/examples">
+            
+                    
+                    More
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5">
+            
+                <span>
+            
+                    
+                    &#x5DE5;&#x5177;&#x548C;&#x670D;&#x52A1;
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../tools/cli.html">
+            
+                <a href="../tools/cli.html">
+            
+                    
+                    CLI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../tools/devtools.html">
+            
+                <a href="../tools/devtools.html">
+            
+                    
+                    Devtools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../tools/devtools-android.html">
+            
+                <a href="../tools/devtools-android.html">
+            
+                    
+                    Weex devtools (Android)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../tools/devtools-ios.html">
+            
+                <a href="../tools/devtools-ios.html">
+            
+                    
+                    Weex devtools (IOS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../tools/transformer.html">
+            
+                <a href="../tools/transformer.html">
+            
+                    
+                    Transformer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../tools/playground-app.html">
+            
+                <a href="../tools/playground-app.html">
+            
+                    
+                    Playground App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    &#x5E38;&#x89C1;&#x95EE;&#x9898;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="..">wxc-navpage</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="wxc-navpage">&lt;wxc-navpage&gt;</h1>
+<p><span class="weex-version">0.5</span>
+<a href="https://github.com/weexteam/article/wiki/%E6%AC%A2%E8%BF%8E%E5%8F%82%E4%B8%8EWeex%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3%E7%BF%BB%E8%AF%91" class="weex-translate incomplete" target="_blank">cn</a></p>
+<h3 id="summary">Summary</h3>
+<p>The &quot;wxc-navpage&quot; tag implements a specialized component that contains a navbar at the top of the window and an embed content page. You can customize the navbar as you like. In addition, you can use <code>navigator</code> module to control the page jump, see <a href="../modules/navigator.html">navigator module</a>.</p>
+<h3 id="child-components">Child Components</h3>
+<p>This type of component supports all kinds of weex component as its child components.</p>
+<h3 id="attributes">Attributes</h3>
+<ul>
+<li><code>height</code>: &lt;length&gt; The height of the navbar. Default value is 88. </li>
+<li><code>background-color</code>: &lt;color&gt;The backgroudColor of the navbar. Default value is <code>white</code>.</li>
+<li><code>title</code>: &lt;string&gt; The title of the navbar. </li>
+<li><code>title-color</code>: &lt;color&gt;The color of the navbar title. Default value is <code>black</code>.</li>
+<li><code>left-item-title</code>: &lt;string&gt; The title of the leftItem.</li>
+<li><code>left-item-color</code>: &lt;color&gt; The color of the leftItem title. Default value is <code>black</code>.</li>
+<li><code>right-item-title</code>: &lt;string&gt; The title of the rightItem.</li>
+<li><code>right-item-color</code>: &lt;color&gt; The color of the rightItem title. Default value is <code>black</code>. </li>
+<li><code>left-item-src</code>: &lt;string&gt; The imageURL of the leftItem you want to set.</li>
+<li><code>right-item-src</code>: &lt;string&gt; The imageURL of the rightItem you want to set.</li>
+</ul>
+<p>Other attributes please check out the <a href="../references/common-attrs.html">common attributes</a>.</p>
+<h3 id="styles">Styles</h3>
+<p><strong>common styles</strong>: check out the <a href="../references/common-attrs.html">common styles</a></p>
+<ul>
+<li>support flexbox related styles</li>
+<li>support box model related styles</li>
+<li>support <code>position</code> related styles</li>
+<li>support <code>opacity</code>, <code>background-color</code> etc.</li>
+</ul>
+<h3 id="events">Events</h3>
+<ul>
+<li><code>naviBar.leftItem.click</code>: triggered when the leftItem of navbar is clicked. You need to register the observer in ready or create block.</li>
+<li><code>naviBar.rightItem.click</code>: triggered when the rightItem of navbar is clicked. You need to register the observer in ready or create block.</li>
+</ul>
+<p><strong>common events</strong>: check out the <a href="../references/common-event.html">common events</a></p>
+<ul>
+<li>support <code>click</code> event. Check out <a href="../references/common-event.html">common events</a></li>
+<li>support <code>appear</code> / <code>disappear</code> event. Check out <a href="../references/common-event.html">common events</a></li>
+</ul>
+<h3 id="example">Example</h3>
+<pre><code class="lang-js">&lt;template&gt;
+  &lt;wxc-navpage height={{...}} background-color=&quot;...&quot; title=&quot;...&quot; title-color=&quot;...&quot; left-item-title=&quot;...&quot; left-item-color=&quot;...&quot; right-item-src=&quot;...&quot;&gt;
+      &lt;content&gt; ...&lt;/content&gt;
+  &lt;/wxc-navpage&gt;
+&lt;/template&gt;
+&lt;script&gt;
+  require(&apos;weex-components&apos;);
+  module.exports = {
+    created: function() {
+        this.$on(&apos;naviBar.rightItem.click&apos;,function(e){
+           //handle your click event here.
+        });
+
+        this.$on(&apos;naviBar.leftItem.click&apos;,function(e){
+          //handle your click event here. 
+        });
+    }
+  }
+&lt;/script&gt;
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class="search-results-count"></span> results matching &quot;<span class="search-query"></span>&quot;</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching &quot;<span class="search-query"></span>&quot;</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="wxc-tabbar.html" class="navigation navigation-prev " aria-label="Previous page: wxc-tabbar">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../modules/main.html" class="navigation navigation-next " aria-label="Next page: &#x5185;&#x5EFA;&#x6A21;&#x5757;">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"wxc-navpage","level":"1.3.5.18","depth":3,"next":{"title":"内建模块","level":"1.3.6","depth":2,"path":"modules/main.md","ref":"modules/main.md","articles":[{"title":"dom","level":"1.3.6.1","depth":3,"path":"modules/dom.md","ref":"modules/dom.md","articles":[]},{"title":"stream","level":"1.3.6.2","depth":3,"path":"modules/stream.md","ref":"modules/stream.md","articles":[]},{"title":"modal","level":"1.3.6.3","depth":3,"path":"modules/modal.md","ref":"modules/modal.md","articles":[]},{"title":"animation","level":"1.3.6.4","depth":3,"path":"modules/animation.md","ref":"modules/animation.md","articles":[]},{"title":"webview","level":"1.3.6.5","depth":3,"path":"modules/webview.md","ref":"modules/webview.md","articles":[]},{"title":"navigator","level":"1.3.6.6","depth":3,"path":"modules/navigator.md","ref":"modules/navigator.md","articles":[]},{"title":"storage","level":"1.3.6.7","depth":3,"path":"modules/storage.md","ref":"modules/storage.md","articles":[]},{"title":"timer","level":"1.3.6.8","depth":3,"path":"modules/timer.md","ref":"modules/timer.md","articles":[]},{"title":"clipboard","level":"1.3.6.9","depth":3,"path":"modules/clipboard.md","ref":"modules/clipboard.md","articles":[]},{"title":"globalEvent","level":"1.3.6.10","depth":3,"path":"modules/globalevent.md","ref":"modules/globalevent.md","articles":[]}]},"previous":{"title":"wxc-tabbar","level":"1.3.5.17","depth":3,"path":"components/wxc-tabbar.md","ref":"components/wxc-tabbar.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/wxc-navpage.md","mtime":"2016-11-29T16:08:28.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-11-29T18:41:10.358Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
