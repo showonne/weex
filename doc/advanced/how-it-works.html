@@ -122,7 +122,7 @@ dl, ol, ul {
     margin-right: 5px;
     margin-left: 10px;    
     margin-top: 29px;    
-    background: url("https://g.alicdn.com/mtb/lab-zikuan/0.0.18/weex/weex_logo_blue@3x.png") no-repeat;
+    background: url("//alibaba.github.io/weex/img/weex_logo_blue@3x.png") no-repeat;
     height: 33px;
     width: 145px;
     background-position: 0px 0px;
@@ -221,9 +221,9 @@ a.weex-translate.incomplete{
 </style>
 
     <!-- 
-    <link rel="stylesheet"  href="//g.alicdn.com/mtb/lab-zikuan/0.1.3/weex/weex_doc.css" >
+    <link rel="stylesheet"  href="//alibaba.github.io/weex/css/weex_doc.css" >
 
-    <link rel="stylesheet"  href="http://127.0.0.1/taobao/weex-os/weex/doc/ali_addition/weex_doc.css" >
+    <link rel="stylesheet"  href="//alibaba.github.io/weex/doc/ali_addition/weex_doc.css" >
     -->
 
 <script>
@@ -307,31 +307,33 @@ contentLoaded(window,function(){
 </script>
 
     <!-- 
-    <script src="//g.alicdn.com/mtb/lab-zikuan/0.1.3/weex/weex_doc.js"></script>
-    <script src="http://127.0.0.1/taobao/weex-os/weex/doc/ali_addition/weex_doc.js"></script>
+    <script src="//alibaba.github.io/weex/css/weex_doc.js"></script>
+    <script src="//alibaba.github.io/weex/doc/ali_addition/weex_doc.js"></script>
     -->    
     
 <div class="weex-doc-header">
     <div class="top-bar">
-        <div class="top-bar-title" onclick="location=&apos;http://alibaba.github.io/weex/index.html&apos;"></div>                        
+        <div class="top-bar-title" onclick="location=&apos;//alibaba.github.io/weex/index.html&apos;"></div>
         <div class="top-bar-left">
             <ul class="menu" role="menubar">
                 <li role="menuitem">
-                    <a href="http://alibaba.github.io/weex/demo.html">Showcase</a>                            
+                    <a href="//alibaba.github.io/weex/demo.html">Showcase</a>
                 </li>
                 <li role="menuitem">
-                    <a href="http://alibaba.github.io/weex/download.html">Download</a>
+                    <a href="//alibaba.github.io/weex/download.html">Download</a>
                 </li>
             </ul>
         </div>
         <div class="top-bar-right">
             <ul class="menu">
                 <li>
-                    <a href="https://github.com/alibaba/weex">
-                        <img class="github" src="//g.alicdn.com/mtb/lab-zikuan/0.1.1/weex/github.png" alt="github">
+                    <a href="//github.com/alibaba/weex">
+                        <img class="github" src="//alibaba.github.io/weex/img/github.png" alt="github">
                     </a>
-                 </li>
-                
+                </li>
+                <li>
+                    <a href="//alibaba.github.io/weex/doc/cn/">&#x1F1E8;&#x1F1F3;</a>
+                </li>
             </ul>                    
         </div>
     </div>        
@@ -1736,7 +1738,7 @@ bootstrap(&apos;@weex-component/main&apos;)
 <p><strong>Component</strong> is an element in the screen which have a certain view and behavior. It could be configured with some attributes and style properties, and could response user interactions. There are some common components like <code>&lt;div&gt;</code>, <code>&lt;text&gt;</code>, <code>&lt;image&gt;</code> etc.</p>
 <p><strong>Module</strong> is a set of APIs which could be called from JS Framework. Some of them also have to make async callbacks to JS Framework, for example: send HTTP request.</p>
 <p>During a Weex instance works, Native RenderEngine receives all kinds of module API calls from JS Framework. These calls will create or update components for view and use client-side features like <code>toast</code>. When a user interaction or module API callback happens, It will call <code>callJS()</code> from JS Framework. These jobs could walk through the Weex instance lifecycle till the instance is destroyed. As is shown in the architecture figure, H5 RenderEngine is a special RenderEngine with almost the same functions as native RenderEngines. </p>
-<p><img src="http://gtms02.alicdn.com/tps/i2/TB1ootBMpXXXXXrXXXXwi60UVXX-596-397.png" alt="arch"><br>Weex Architecture </p>
+<p><img src="../gtms02.alicdn.com/tps/i2/TB1ootBMpXXXXXrXXXXwi60UVXX-596-397.png" alt="arch"><br>Weex Architecture </p>
 <h3 id="call-native-from-javascript">call native from javascript</h3>
 <pre><code>[JS Framework]
 &#x2193; callNative
@@ -1751,7 +1753,7 @@ user interactions
 &#x2193; callJS
 [JS Framework]
 </code></pre><h3 id="render-flow">Render Flow</h3>
-<p><img src="http://gtms03.alicdn.com/tps/i3/TB1_SA4MXXXXXXGaXXXpZ8UVXXX-519-337.png" alt="render flow"><br>Weex Render Flow </p>
+<p><img src="../gtms03.alicdn.com/tps/i3/TB1_SA4MXXXXXXGaXXXpZ8UVXXX-519-337.png" alt="render flow"><br>Weex Render Flow </p>
 <ol>
 <li>Input is virtual dom.</li>
 <li><strong>Build Tree</strong>. Parse JSON data (virtual dom) to a Render Tree (RT).</li>
@@ -1806,7 +1808,7 @@ user interactions
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How It Works","level":"1.2.4.1","depth":3,"next":{"title":"How Data Binding Works","level":"1.2.4.2","depth":3,"path":"advanced/how-data-binding-works.md","ref":"advanced/how-data-binding-works.md","articles":[]},"previous":{"title":"Advanced","level":"1.2.4","depth":2,"path":"advanced/main.md","ref":"advanced/main.md","articles":[{"title":"How It Works","level":"1.2.4.1","depth":3,"path":"advanced/how-it-works.md","ref":"advanced/how-it-works.md","articles":[]},{"title":"How Data Binding Works","level":"1.2.4.2","depth":3,"path":"advanced/how-data-binding-works.md","ref":"advanced/how-data-binding-works.md","articles":[]},{"title":"Integrate to Android","level":"1.2.4.3","depth":3,"path":"advanced/integrate-to-android.md","ref":"advanced/integrate-to-android.md","articles":[]},{"title":"Integrate to iOS","level":"1.2.4.4","depth":3,"path":"advanced/integrate-to-ios.md","ref":"advanced/integrate-to-ios.md","articles":[]},{"title":"Integrate to web","level":"1.2.4.5","depth":3,"path":"advanced/integrate-to-html5.md","ref":"advanced/integrate-to-html5.md","articles":[]},{"title":"Extend to Android","level":"1.2.4.6","depth":3,"path":"advanced/extend-to-android.md","ref":"advanced/extend-to-android.md","articles":[]},{"title":"Extend to iOS","level":"1.2.4.7","depth":3,"path":"advanced/extend-to-ios.md","ref":"advanced/extend-to-ios.md","articles":[]},{"title":"Extend to web","level":"1.2.4.8","depth":3,"path":"advanced/extend-to-html5.md","ref":"advanced/extend-to-html5.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"advanced/how-it-works.md","mtime":"2016-11-29T14:37:02.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-11-29T16:08:42.942Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How It Works","level":"1.2.4.1","depth":3,"next":{"title":"How Data Binding Works","level":"1.2.4.2","depth":3,"path":"advanced/how-data-binding-works.md","ref":"advanced/how-data-binding-works.md","articles":[]},"previous":{"title":"Advanced","level":"1.2.4","depth":2,"path":"advanced/main.md","ref":"advanced/main.md","articles":[{"title":"How It Works","level":"1.2.4.1","depth":3,"path":"advanced/how-it-works.md","ref":"advanced/how-it-works.md","articles":[]},{"title":"How Data Binding Works","level":"1.2.4.2","depth":3,"path":"advanced/how-data-binding-works.md","ref":"advanced/how-data-binding-works.md","articles":[]},{"title":"Integrate to Android","level":"1.2.4.3","depth":3,"path":"advanced/integrate-to-android.md","ref":"advanced/integrate-to-android.md","articles":[]},{"title":"Integrate to iOS","level":"1.2.4.4","depth":3,"path":"advanced/integrate-to-ios.md","ref":"advanced/integrate-to-ios.md","articles":[]},{"title":"Integrate to web","level":"1.2.4.5","depth":3,"path":"advanced/integrate-to-html5.md","ref":"advanced/integrate-to-html5.md","articles":[]},{"title":"Extend to Android","level":"1.2.4.6","depth":3,"path":"advanced/extend-to-android.md","ref":"advanced/extend-to-android.md","articles":[]},{"title":"Extend to iOS","level":"1.2.4.7","depth":3,"path":"advanced/extend-to-ios.md","ref":"advanced/extend-to-ios.md","articles":[]},{"title":"Extend to web","level":"1.2.4.8","depth":3,"path":"advanced/extend-to-html5.md","ref":"advanced/extend-to-html5.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"advanced/how-it-works.md","mtime":"2016-11-29T20:00:02.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-11-29T20:03:25.860Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
