@@ -72,6 +72,7 @@ Something you have to do is to render weex view with specific URL, then add it t
     __weak typeof(self) weakSelf = self;
     _instance.onCreate = ^(UIView *view) {
         [weakSelf.weexView removeFromSuperview];
+        weakSelf.weexView = view;
         [weakSelf.view addSubview:weakSelf.weexView];
     };
     
