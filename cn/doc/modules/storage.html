@@ -995,12 +995,25 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.5.7.2" data-path="../components/refresh-loading.html">
+        <li class="chapter " data-level="1.3.5.7.2" data-path="../components/refresh.html">
             
-                <a href="../components/refresh-loading.html">
+                <a href="../components/refresh.html">
             
                     
-                    refresh &amp; loading
+                    refresh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7.3" data-path="../components/loading.html">
+            
+                <a href="../components/loading.html">
+            
+                    
+                    loading
             
                 </a>
             
@@ -1664,36 +1677,98 @@ contentLoaded(window,function(){
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="storage-&#x672C;&#x5730;&#x5B58;&#x50A8;-weexsdk-07"><code>storage</code> &#x672C;&#x5730;&#x5B58;&#x50A8; <sup>(WeexSDK 0.7+)</sup></h1>
-<p><code>storage</code> &#x662F; Weex &#x7684;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;&#x63D0;&#x4F9B;&#x672C;&#x5730;&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x3001;&#x4FEE;&#x6539;&#x3001;&#x5220;&#x9664;&#x7B49;&#x529F;&#x80FD;&#xFF0C;&#x6CA1;&#x6709;&#x65F6;&#x95F4;&#x9650;&#x5236;&#x3002;&#x4F46;&#x662F;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5728; Web &#x7AEF;&#x7684;&#x5B9E;&#x73B0;&#x662F;&#x91C7;&#x7528; <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/localStorage" target="_blank">LocalStorage API</a>&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5C31;&#x4F1A;&#x5B58;&#x5728;&#x6570;&#x636E;&#x5927;&#x5C0F;&#x7684;&#x9650;&#x5236;&#x3002;&#x4E00;&#x822C;&#x800C;&#x8A00;&#xFF0C;&#x73B0;&#x4EE3;&#x6D4F;&#x89C8;&#x5668;&#x63D0;&#x4F9B; 5M &#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x3002;<code>storage</code> &#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x4E00;&#x4E9B;&#x5173;&#x952E;&#x6570;&#x636E;&#xFF0C;&#x4F8B;&#x5982;&#x4E00;&#x4E9B;&#x8F7B;&#x91CF;&#x7684;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x6570;&#x636E;&#x3002;</p>
+<p><strong>&#x5907;&#x6CE8;</strong>&#xFF1A;0.7&#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x53EF;&#x7528;</p>
+<p><code>storage</code> &#x662F;&#x4E00;&#x4E2A;&#x5728;&#x524D;&#x7AEF;&#x6BD4;&#x8F83;&#x5E38;&#x7528;&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x672C;&#x5730;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#x3001;&#x4FEE;&#x6539;&#x3001;&#x5220;&#x9664;&#xFF0C;&#x5E76;&#x4E14;&#x8BE5;&#x6570;&#x636E;&#x662F;&#x6C38;&#x4E45;&#x4FDD;&#x5B58;&#x7684;&#xFF0C;&#x9664;&#x975E;&#x624B;&#x52A8;&#x6E05;&#x9664;&#x6216;&#x8005;&#x4EE3;&#x7801;&#x6E05;&#x9664;&#x3002;&#x4F46;&#x662F;&#xFF0C;<code>storage</code> &#x6A21;&#x5757;&#x6709;&#x4E00;&#x4E2A;&#x9650;&#x5236;&#x5C31;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#xFF08;H5&#xFF09;&#x53EA;&#x80FD;&#x5B58;&#x50A8;&#x5C0F;&#x4E8E;5M&#x7684;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x4E3A;&#x5728; H5/Web &#x7AEF;&#x7684;&#x5B9E;&#x73B0;&#x662F;&#x91C7;&#x7528; <code>HTML5 LocalStorage API</code>&#x3002;&#x800C; Android &#x548C; iOS &#x8FD9;&#x5757;&#x662F;&#x6CA1;&#x4EC0;&#x4E48;&#x9650;&#x5236;&#x7684;&#x3002;
+ storage &#x5E38;&#x7528;&#x5728;&#x4E00;&#x4E9B;&#x88AB;&#x7528;&#x6237;&#x7ECF;&#x5E38;&#x67E5;&#x8BE2;&#xFF0C;&#x4F46;&#x662F;&#x53C8;&#x4E0D;&#x9891;&#x7E41;&#x66F4;&#x65B0;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6BD4;&#x5982;&#x641C;&#x7D22;&#x5386;&#x53F2;&#x3001;&#x7528;&#x6237;&#x7684;&#x8BA2;&#x5355;&#x5217;&#x8868;&#x7B49;&#x3002;&#x641C;&#x7D22;&#x5386;&#x53F2;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x90FD;&#x662F;&#x4F5C;&#x4E3A;&#x672C;&#x5730;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x4F7F;&#x7528; storage &#x6BD4;&#x8F83;&#x5408;&#x9002;&#x3002;&#x800C;&#x7528;&#x6237;&#x8BA2;&#x5355;&#x5217;&#x8868;&#x662F;&#x9700;&#x8981;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x5668;&#x68C0;&#x7D22;&#x914D;&#x5408;&#x7684;&#x573A;&#x666F;&#x3002;&#x5F53;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x4E0B;&#x5355;&#x540E;&#xFF0C;&#x4F1A;&#x7ECF;&#x5E38;&#x67E5;&#x9605;&#x4E2A;&#x4EBA;&#x7684;&#x8BA2;&#x5355;&#x5217;&#x8868;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x8BA2;&#x5355;&#x7684;&#x5217;&#x8868;&#x6570;&#x636E;&#x4E0D;&#x662F;&#x9891;&#x7E41;&#x66F4;&#x65B0;&#x7684;&#xFF0C;&#x5F80;&#x5F80;&#x53EA;&#x6709;&#x5728;&#x6536;&#x5230;&#x8D27;&#x54C1;&#x65F6;&#xFF0C;&#x624D;&#x66F4;&#x65B0;&#x201C;&#x5DF2;&#x7B7E;&#x6536;&#x201D;&#xFF0C;&#x5176;&#x4F59;&#x5E73;&#x65F6;&#x7684;&#x72B6;&#x6001;&#x662F;&#x201C;&#x5DF2;&#x53D1;&#x8D27;&#x201D;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; storage &#x5B58;&#x50A8;&#x8BA2;&#x5355;&#x5217;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x670D;&#x52A1;&#x5668;&#x7684;&#x538B;&#x529B;&#xFF0C;&#x4F8B;&#x5982;&#x51CF;&#x5C11; SQL &#x67E5;&#x8BE2;&#x6216;&#x8005;&#x7F13;&#x5B58;&#x7684;&#x538B;&#x529B;&#x3002;&#x5F53;&#x7528;&#x6237;&#x67E5;&#x770B;&#x8BA2;&#x5355;&#x8BE6;&#x60C5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x518D;&#x66F4;&#x65B0;&#x6570;&#x636E;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x7B80;&#x5355;&#x6A21;&#x62DF;&#x201C;&#x641C;&#x7D22;&#x201D;&#x8BB0;&#x5F55;&#x7684;&#x573A;&#x666F;&#x3002;&#x5728;&#x641C;&#x7D22;&#x7684;&#x65F6;&#x5019;&#x5199;&#x5165;&#xFF0C;&#x7136;&#x540E;&#x8BFB;&#x53D6;&#x51FA;&#x6765;&#x5C55;&#x793A;&#x6210;&#x5217;&#x8868;&#x3002; </p>
+<p><a href="http://dotwe.org/753c3fdeaad490462c838eaa8b6a15a3" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{weex}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background-color:#F6F6F6;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;search_view&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;search&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x641C;&#x7D22;&#x5173;&#x952E;&#x5B57;&quot;</span> <span class="hljs-attr">onchange</span>=<span class="hljs-string">&quot;change&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;search&quot;</span>&gt;</span>&#x641C;&#x7D22;<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>&#x641C;&#x7D22;&#x5386;&#x53F2;<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">list</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cell</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;(i, v) in items&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>{{v}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">cell</span>&gt;</span>  
+    <span class="hljs-tag">&lt;/<span class="hljs-name">list</span>&gt;</span>  
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.search_view</span>{
+    <span class="hljs-attribute">height</span>:<span class="hljs-number">70</span>;
+    <span class="hljs-attribute">margin-top</span>:<span class="hljs-number">20</span>;
+    <span class="hljs-attribute">margin-left</span>:<span class="hljs-number">10</span>;
+    <span class="hljs-attribute">margin-right</span>:<span class="hljs-number">10</span>;
+    <span class="hljs-attribute">flex-direction</span>:row;
+  }
+  <span class="hljs-selector-class">.search</span>{
+    <span class="hljs-attribute">height</span>:<span class="hljs-number">70</span>;
+    <span class="hljs-attribute">border-width</span>:<span class="hljs-number">1</span>;
+    <span class="hljs-attribute">border-color</span>:<span class="hljs-number">#dddddd</span>;
+    <span class="hljs-attribute">padding-left</span>:<span class="hljs-number">10</span>;
+    <span class="hljs-attribute">font-size</span>:<span class="hljs-number">28</span>;
+    <span class="hljs-attribute">flex</span>:<span class="hljs-number">1</span>;
+  }
+  <span class="hljs-selector-class">.btn</span>{
+    <span class="hljs-attribute">width</span>:<span class="hljs-number">80</span>;
+    <span class="hljs-attribute">text-align</span>:center;
+    <span class="hljs-attribute">justify-content</span>:center;
+    <span class="hljs-attribute">font-size</span>:<span class="hljs-number">28</span>;
+    <span class="hljs-attribute">background-color</span>:<span class="hljs-number">#1A89EA</span>;
+    <span class="hljs-attribute">color</span>:<span class="hljs-number">#ffffff</span>;
+  }
+  <span class="hljs-selector-class">.item</span>{
+    <span class="hljs-attribute">text-align</span>:center;
+    <span class="hljs-attribute">font-size</span>:<span class="hljs-number">25</span>;
+    <span class="hljs-attribute">height</span>:<span class="hljs-number">50</span>;
+    <span class="hljs-attribute">margin-top</span>:<span class="hljs-number">10</span>;
+    <span class="hljs-attribute">color</span>:<span class="hljs-number">#5E5E5E</span>;
+    <span class="hljs-attribute">border-bottom-width</span>:<span class="hljs-number">1</span>;
+    <span class="hljs-attribute">border-bottom-color</span>:<span class="hljs-number">#dddddd</span>;
+    <span class="hljs-attribute">justify-content</span>:center;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-keyword">var</span> storage = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/storage&apos;</span>)
+  <span class="hljs-keyword">var</span> storage = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/storage&apos;</span>);
   <span class="hljs-built_in">module</span>.exports = {
     data: {
-      weex: <span class="hljs-string">&apos;&apos;</span>
+      items: [],
+      keywords:<span class="hljs-string">&apos;&apos;</span>
     },
-    created: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-      <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
-      storage.setItem(<span class="hljs-string">&apos;weex&apos;</span>, <span class="hljs-string">&apos;A framework for building Mobile cross-platform UI&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
-        <span class="hljs-keyword">if</span> (e.result === <span class="hljs-string">&apos;success&apos;</span>) {
-          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x6210;&#x529F;&apos;</span>)
-          storage.getItem(<span class="hljs-string">&apos;weex&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
-            <span class="hljs-keyword">if</span> (e.result === <span class="hljs-string">&apos;success&apos;</span>) {
-              self.weex = e.data
+    created: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+      <span class="hljs-keyword">var</span> that = <span class="hljs-keyword">this</span>;
+      storage.getAllKeys(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">if</span>(e.result == <span class="hljs-string">&apos;success&apos;</span> &amp;&amp; e.data.length){
+          e.data.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item</span>)</span>{
+            <span class="hljs-keyword">if</span>(item.indexOf(<span class="hljs-string">&apos;search_&apos;</span>) &gt; <span class="hljs-number">-1</span>){
+              that.items.push(item.split(<span class="hljs-string">&apos;search_&apos;</span>)[<span class="hljs-number">1</span>]);
             }
-          })
+          });
         }
-      })
+      });
+    },
+    methods:{
+      search: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+          <span class="hljs-keyword">var</span> that = <span class="hljs-keyword">this</span>;
+          <span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.keywords) <span class="hljs-keyword">return</span>;
+        storage.setItem(<span class="hljs-string">&apos;search_&apos;</span> + <span class="hljs-keyword">this</span>.keywords, <span class="hljs-keyword">this</span>.keywords, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+            that.items.push(that.keywords);
+         });
+      },
+      change: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        <span class="hljs-keyword">if</span>(!e.value) <span class="hljs-keyword">return</span>;
+        <span class="hljs-keyword">this</span>.keywords = e.value;
+      }
     }
-  }
+  };
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
-<p><a href="http://dotwe.org/661ecd64a3d4927a892d9f239b555b46" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<p>&#x8FD9;&#x91CC;&#xFF0C;&#x9010;&#x4E00;&#x89E3;&#x91CA;&#x4E0B;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x3002;<code>input</code> &#x7EC4;&#x4EF6;&#x76D1;&#x542C;&#x4E86; <code>change</code> &#x4E8B;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x641C;&#x7D22;&#x5173;&#x952E;&#x5B57;&#x3002;&#x5982;&#x679C;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x4E86;&#x641C;&#x7D22;&#x6309;&#x94AE;&#xFF0C;&#x5219;&#x5C06;&#x5173;&#x952E;&#x5B57;&#x5B58;&#x50A8;&#x5230; storage&#x3002;&#x8FD9;&#x91CC;&#xFF0C;&#x4F7F;&#x7528;&#x4E86; <code>search_</code> &#x4F5C;&#x4E3A; storage key &#x7684;&#x524D;&#x7F00;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x65F6;&#xFF0C;&#x5728; <code>created</code> &#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#x53EF;&#x4EE5;&#x5148;&#x4F7F;&#x7528; <code>storage.getAllKeys</code> &#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684; <code>key</code>&#x3002;&#x5982;&#x679C; <code>key</code> &#x5305;&#x542B;&#x4E86; <code>search_</code>&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x662F;&#x641C;&#x7D22;&#x8BB0;&#x5F55;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5C06;&#x8BE5;&#x8BB0;&#x5F55;&#x538B;&#x5165;&#x6570;&#x7EC4; items &#x4E2D;&#xFF0C;&#x4E8E;&#x662F;&#x754C;&#x9762;&#x5C31;&#x4F1A;&#x5C55;&#x793A;&#x51FA;&#x641C;&#x7D22;&#x8BB0;&#x5F55;&#x7684;&#x5217;&#x8868;&#x3002;</p>
 <h2 id="api">API</h2>
 <p><code>storage</code> &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684; API &#x4F9B;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x3002;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5F15;&#x5165;&#x8BE5;&#x6A21;&#x5757;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x5BF9;&#x5E94;&#x7684; API &#x5373;&#x53EF;&#x3002;</p>
 <h3 id="setitemkey-value-callback"><code>setItem(key, value, callback)</code></h3>
@@ -1715,6 +1790,8 @@ storage.setItem(<span class="hljs-string">&apos;bar&apos;</span>, <span class="h
   e.data
 })
 </code></pre>
+<p>&#x8FD9;&#x91CC;&#xFF0C;&#x5BF9;&#x8FD4;&#x56DE;&#x503C;&#x505A;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4ECB;&#x7ECD;&#xFF1A;</p>
+<p><code>e</code> &#x5305;&#x542B;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;: <code>e.result</code> &#x548C; <code>e.data</code>&#x3002;&#x5982;&#x679C; <code>e.result</code> &#x8FD4;&#x56DE;&#x503C;&#x662F; &#x201C;success&#x201D;&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x6210;&#x529F;&#x3002;<code>e.data</code> &#x8FD4;&#x56DE; <code>undefined</code> &#x8868;&#x793A;&#x8BBE;&#x7F6E;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE; <code>invalid_param</code> &#x8868;&#x793A;<code>key/value</code> &#x4E3A; &quot;&quot; &#x6216;&#x8005; null&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x8FD4;&#x56DE;&#x5224;&#x65AD;&#x662F;&#x5426;&#x63D2;&#x5165;&#x6210;&#x529F;&#x3002;</p>
 <h3 id="getitemkey-callback"><code>getItem(key, callback)</code></h3>
 <p>&#x4F20;&#x5165;&#x952E;&#x540D;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7684;&#x952E;&#x503C;</p>
 <h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
@@ -1832,7 +1909,7 @@ storage.getAllKeys(<span class="hljs-function"><span class="hljs-keyword">functi
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"storage","level":"1.3.6.7","depth":3,"next":{"title":"timer","level":"1.3.6.8","depth":3,"path":"modules/timer.md","ref":"modules/timer.md","articles":[]},"previous":{"title":"navigator","level":"1.3.6.6","depth":3,"path":"modules/navigator.md","ref":"modules/navigator.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"modules/storage.md","mtime":"2016-12-01T01:46:45.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T01:54:51.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"storage","level":"1.3.6.7","depth":3,"next":{"title":"timer","level":"1.3.6.8","depth":3,"path":"modules/timer.md","ref":"modules/timer.md","articles":[]},"previous":{"title":"navigator","level":"1.3.6.6","depth":3,"path":"modules/navigator.md","ref":"modules/navigator.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"modules/storage.md","mtime":"2016-12-01T14:46:06.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T18:21:31.427Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

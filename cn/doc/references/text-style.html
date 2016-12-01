@@ -995,12 +995,25 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.5.7.2" data-path="../components/refresh-loading.html">
+        <li class="chapter " data-level="1.3.5.7.2" data-path="../components/refresh.html">
             
-                <a href="../components/refresh-loading.html">
+                <a href="../components/refresh.html">
             
                     
-                    refresh &amp; loading
+                    refresh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7.3" data-path="../components/loading.html">
+            
+                <a href="../components/loading.html">
+            
+                    
+                    loading
             
                 </a>
             
@@ -1663,34 +1676,31 @@ contentLoaded(window,function(){
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6587;&#x672C;&#x6837;&#x5F0F;">&#x6587;&#x672C;&#x6837;&#x5F0F;</h1>
-<p><span class="weex-version">0.5</span></p>
-<p>&#x6587;&#x6863;&#x7C7B;&#x7EC4;&#x4EF6;&#x5171;&#x4EAB;&#x4E00;&#x4E9B;&#x5171;&#x540C;&#x7279;&#x6027;, &#x8FD9;&#x7C7B;&#x7EC4;&#x4EF6;&#x76EE;&#x524D;&#x5305;&#x62EC;<a href="../components/text.html">text</a> and <a href="../components/input.html">input</a>.</p>
+                                <h1 id="text-&#x6837;&#x5F0F;-v05">text &#x6837;&#x5F0F; <sup>(v0.5+)</sup></h1>
+<p>&#x6587;&#x672C;&#x7C7B;&#x7EC4;&#x4EF6;&#x5171;&#x4EAB;&#x4E00;&#x4E9B;&#x901A;&#x7528;&#x6837;&#x5F0F;, &#x8FD9;&#x7C7B;&#x7EC4;&#x4EF6;&#x76EE;&#x524D;&#x5305;&#x62EC; <a href="http://alibaba.github.io/weex/doc/components/text.html" target="_blank"><code>&lt;text&gt;</code></a> &#x548C; <a href="http://alibaba.github.io/weex/doc/components/input.html" target="_blank"><code>&lt;input&gt;</code></a>&#x3002;</p>
 <h2 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h2>
 <ul>
-<li><code>color</code>: &lt;colors&gt; &#x524D;&#x666F;&#x989C;&#x8272;.</li>
-<li><code>font-size</code>: &lt;length&gt; &#x6587;&#x5B57;&#x5927;&#x5C0F;.</li>
-<li><code>font-style</code>: &lt;enum&gt; <code>normal</code> | <code>italic</code>. &#x5B57;&#x4F53;&#x7C7B;&#x522B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>normal</code>.</li>
-<li><code>font-weight</code>: &lt;enum&gt; <code>normal</code> | <code>bold</code>. &#x5B57;&#x4F53;&#x7C97;&#x7EC6;&#x7A0B;&#x5EA6;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>normal</code>.</li>
-<li><code>text-decoration</code>: &lt;enum&gt; <code>none</code> | <code>underline</code> | <code>line-through</code>. &#x5B57;&#x4F53;&#x88C5;&#x9970;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>none</code>.</li>
-<li><code>text-align</code>: &lt;enum&gt; <code>left</code> | <code>center</code> | <code>right</code>. &#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>left</code>.</li>
-<li><code>font-family</code>:&lt;string&gt; &#x5B57;&#x4F53;&#x5BB6;&#x65CF;&#xFF0C; &#x8FD9;&#x4E2A;&#x8BBE;&#x7F6E; <strong>&#x4E0D;&#x4FDD;&#x8BC1;</strong> &#x5728;&#x4E0D;&#x540C;&#x5E73;&#x53F0;&#xFF0C;&#x8BBE;&#x5907;&#x95F4;&#x7684;&#x4E00;&#x81F4;&#x6027;. &#x5982;&#x6240;&#x9009;&#x8BBE;&#x7F6E;&#x5728;&#x5E73;&#x53F0;&#x4E0A;&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x5C06;&#x4F1A;&#x964D;&#x7EA7;&#x5230;&#x5E73;&#x53F0;&#x9ED8;&#x8BA4;&#x5B57;&#x4F53;&#x5BB6;&#x65CF;.</li>
-<li><code>text-overflow</code>:&lt;string&gt; <code>clip</code> | <code>ellipsis</code>. &#x5185;&#x5BB9;&#x8D85;&#x957F;&#x65F6;&#x7684;&#x7701;&#x7565;&#x6837;&#x5F0F; </li>
+<li><p><code>color</code>: &#x6587;&#x5B57;&#x989C;&#x8272;&#x3002;&#x53EF;&#x9009;&#x503C;&#x4E3A;&#x8272;&#x503C;&#xFF0C;&#x652F;&#x6301; RGB&#xFF08; <code>rgb(255, 0, 0)</code> &#xFF09;&#xFF1B;RGBA&#xFF08; <code>rgba(255, 0, 0, 0.5)</code> &#xFF09;&#xFF1B;&#x5341;&#x516D;&#x8FDB;&#x5236;&#xFF08; <code>#ff0000</code> &#xFF09;&#xFF1B;&#x7CBE;&#x7B80;&#x5199;&#x6CD5;&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236;&#xFF08; <code>#f00</code> &#xFF09;&#xFF1B;&#x8272;&#x503C;&#x5173;&#x952E;&#x5B57;&#xFF08;<code>red</code>&#xFF09;&#x3002;</p>
+</li>
+<li><p><code>font-size</code>: &#x6587;&#x5B57;&#x5927;&#x5C0F;&#x3002;&#x503C;&#x4E3A; number &#x7C7B;&#x578B;&#x3002;</p>
+</li>
+<li><p><code>font-style</code>: &#x5B57;&#x4F53;&#x7C7B;&#x522B;&#x3002;&#x53EF;&#x9009;&#x503C; <code>normal</code> | <code>italic</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>normal</code>&#x3002;</p>
+</li>
+<li><p><code>font-weight</code>: &#x5B57;&#x4F53;&#x7C97;&#x7EC6;&#x7A0B;&#x5EA6;&#x3002;&#x53EF;&#x9009;&#x503C; <code>normal</code> | <code>bold</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>normal</code>&#x3002;</p>
+</li>
+<li><p><code>text-decoration</code>: &#x5B57;&#x4F53;&#x88C5;&#x9970;&#xFF0C;&#x53EF;&#x9009;&#x503C; <code>none</code> | <code>underline</code> | <code>line-through</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>none</code>&#x3002;</p>
+</li>
+<li><p><code>text-align</code>: &#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#x3002;&#x53EF;&#x9009;&#x503C; <code>left</code> | <code>center</code> | <code>right</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>left</code>&#x3002;</p>
+</li>
+<li><p><code>font-family</code>: &#x8BBE;&#x7F6E;&#x5B57;&#x4F53;&#x3002;&#x503C;&#x4E3A; string &#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x4E2A;&#x8BBE;&#x7F6E; <strong>&#x4E0D;&#x4FDD;&#x8BC1;</strong> &#x5728;&#x4E0D;&#x540C;&#x5E73;&#x53F0;&#xFF0C;&#x8BBE;&#x5907;&#x95F4;&#x7684;&#x4E00;&#x81F4;&#x6027;&#x3002;&#x5982;&#x6240;&#x9009;&#x8BBE;&#x7F6E;&#x5728;&#x5E73;&#x53F0;&#x4E0A;&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x5C06;&#x4F1A;&#x964D;&#x7EA7;&#x5230;&#x5E73;&#x53F0;&#x9ED8;&#x8BA4;&#x5B57;&#x4F53;&#x3002;</p>
+</li>
+<li><p><code>text-overflow</code>: &#x8BBE;&#x7F6E;&#x5185;&#x5BB9;&#x8D85;&#x957F;&#x65F6;&#x7684;&#x7701;&#x7565;&#x6837;&#x5F0F;&#x3002;&#x53EF;&#x9009;&#x503C; <code>clip</code> | <code>ellipsis</code></p>
+</li>
 </ul>
-<p><code>color</code>&#x5C5E;&#x6027;&#x652F;&#x6301;&#x591A;&#x79CD;&#x989C;&#x8272;&#x8868;&#x8FBE;&#x65B9;&#x6CD5;: rgb, rgba, #fff, #ffffff, &#x6216;&#x989C;&#x8272;&#x540D;.</p>
-<p>&#x4F8B;&#x5B50;:</p>
-<pre><code>.my-class { color: red; }
-.my-class { color: #f00; }
-.my-class { color: #ff0000; }
-.my-class { color: rgb(255, 0, 0); }
-.my-class { color: rgba(255, 0, 0, 0.5); }
-</code></pre><h2 id="&#x503C;&#x7C7B;&#x578B;">&#x503C;&#x7C7B;&#x578B;</h2>
+<h2 id="&#x5176;&#x5B83;&#x53C2;&#x8003;">&#x5176;&#x5B83;&#x53C2;&#x8003;</h2>
 <ul>
-<li>&#x957F;&#x5EA6;:  &#x5355;&#x4F4D;&#x4E3A;<code>px</code>, <code>px</code> &#x80FD;&#x88AB;&#x7701;&#x7565;.</li>
-<li>&#x989C;&#x8272;:  &#x652F;&#x6301;&#x591A;&#x79CD;&#x683C;&#x5F0F;&#xFF0C;&#x4F8B;&#x5982; rgb (<code>rgb(255, 0, 0)</code>), rgba (<code>rgba(255, 0, 0, 0.5)</code>), &#x5341;&#x516D;&#x8FDB;&#x5236; (<code>#ff0000</code>), &#x77ED;&#x5341;&#x516D;&#x8FDB;&#x5236; (<code>#f00</code>), &#x989C;&#x8272;&#x540D;&#x5B57; (<code>red</code>).</li>
-<li>&#x679A;&#x4E3E;&#x7C7B;&#x578B;: &#x6709;&#x9650;&#x51E0;&#x4E2A;&#x540D;&#x5B57;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;.</li>
+<li><a href="http://alibaba.github.io/weex/doc/references/color-names.html" target="_blank">&#x989C;&#x8272;&#x5173;&#x952E;&#x5B57;&#x5217;&#x8868;</a>&#x3002;</li>
 </ul>
-<p><a href="color-names.html">&#x989C;&#x8272;&#x5173;&#x952E;&#x5B57;&#x5217;&#x8868;</a></p>
 
                                 
                                 </section>
@@ -1734,7 +1744,7 @@ contentLoaded(window,function(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"文本样式","level":"1.3.5.2.1","depth":4,"next":{"title":"颜色名称列表","level":"1.3.5.2.2","depth":4,"path":"references/color-names.md","ref":"references/color-names.md","articles":[]},"previous":{"title":"通用样式","level":"1.3.5.2","depth":3,"path":"references/common-style.md","ref":"references/common-style.md","articles":[{"title":"文本样式","level":"1.3.5.2.1","depth":4,"path":"references/text-style.md","ref":"references/text-style.md","articles":[]},{"title":"颜色名称列表","level":"1.3.5.2.2","depth":4,"path":"references/color-names.md","ref":"references/color-names.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"references/text-style.md","mtime":"2016-12-01T01:46:30.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T01:54:51.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"文本样式","level":"1.3.5.2.1","depth":4,"next":{"title":"颜色名称列表","level":"1.3.5.2.2","depth":4,"path":"references/color-names.md","ref":"references/color-names.md","articles":[]},"previous":{"title":"通用样式","level":"1.3.5.2","depth":3,"path":"references/common-style.md","ref":"references/common-style.md","articles":[{"title":"文本样式","level":"1.3.5.2.1","depth":4,"path":"references/text-style.md","ref":"references/text-style.md","articles":[]},{"title":"颜色名称列表","level":"1.3.5.2.2","depth":4,"path":"references/color-names.md","ref":"references/color-names.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"references/text-style.md","mtime":"2016-12-01T18:12:36.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T18:21:31.427Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

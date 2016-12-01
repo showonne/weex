@@ -995,12 +995,25 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.5.7.2" data-path="../components/refresh-loading.html">
+        <li class="chapter " data-level="1.3.5.7.2" data-path="../components/refresh.html">
             
-                <a href="../components/refresh-loading.html">
+                <a href="../components/refresh.html">
             
                     
-                    refresh &amp; loading
+                    refresh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7.3" data-path="../components/loading.html">
+            
+                <a href="../components/loading.html">
+            
+                    
+                    loading
             
                 </a>
             
@@ -1664,50 +1677,182 @@ contentLoaded(window,function(){
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="stream">stream</h1>
-<h1 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h1>
-<p>&#x4EE5;&#x4E0B;&#x4E3A;stream&#x76F8;&#x5173;&#x7684;API&#xFF0C;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x3002;</p>
-<h1 id="api">API</h1>
-<h2 id="fetchoptions-callbackprogresscallback">fetch(options, callback[,progressCallback])</h2>
-<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<h2 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h2>
+<p>&#x4EE5;&#x4E0B;&#x4E3A; stream &#x76F8;&#x5173;&#x7684; API&#xFF0C;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x3002;</p>
+<h2 id="api">API</h2>
+<h3 id="fetchoptions-callbackprogresscallback"><code>fetch(options, callback[,progressCallback])</code></h3>
+<p>&#x53D1;&#x8D77;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <ul>
-<li>options(object): &#x8BF7;&#x6C42;&#x7684;&#x4E00;&#x4E9B;&#x9009;&#x9879;.<ul>
-<li>method(string): HTTP&#x65B9;&#x6CD5;&#xFF1A; <code>GET</code>&#x6216;&#x662F;<code>POST</code>.</li>
-<li>url(string): &#x8BF7;&#x6C42;&#x7684;URL.</li>
-<li>headers(object): HTTP&#x8BF7;&#x6C42;&#x5934;.</li>
-<li>type(string): &#x8BF7;&#x6C42;&#x7C7B;&#x578B;, &apos;json&apos;,&apos;text&apos; &#x6216;&#x662F; &apos;jsonp&apos;(&#x5728;&#x539F;&#x751F;&#x5B9E;&#x73B0;&#x4E2D;&#x5176;&#x5B9E;&#x4E0E;json&#x76F8;&#x540C;)</li>
-<li>body(string): HTTP&#x8BF7;&#x6C42;&#x4F53;.</li>
+<li><code>options(object)</code>: &#x8BF7;&#x6C42;&#x7684;&#x4E00;&#x4E9B;&#x9009;&#x9879;<ul>
+<li><code>method(string)</code>: HTTP &#x65B9;&#x6CD5; <code>GET</code> &#x6216;&#x662F; <code>POST</code></li>
+<li><code>url(string)</code>: &#x8BF7;&#x6C42;&#x7684; URL</li>
+<li><code>headers(object)</code>: HTTP &#x8BF7;&#x6C42;&#x5934;</li>
+<li><code>type(string)</code>: &#x8BF7;&#x6C42;&#x7C7B;&#x578B;, <code>json</code>,<code>text</code> &#x6216;&#x662F; <code>jsonp</code>(&#x5728;&#x539F;&#x751F;&#x5B9E;&#x73B0;&#x4E2D;&#x5176;&#x5B9E;&#x4E0E; json &#x76F8;&#x540C;)</li>
+<li><code>body(string)</code>: HTTP &#x8BF7;&#x6C42;&#x4F53;</li>
 </ul>
 </li>
-<li>callback(function): &#x54CD;&#x5E94;&#x7ED3;&#x679C;&#x56DE;&#x8C03;&#xFF0C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5C06;&#x6536;&#x5230;&#x5982;&#x4E0B;&#x7684;<code>response</code>&#x5BF9;&#x8C61;&#xFF1A;<ul>
-<li>status(number)&#xFF1A;&#x8FD4;&#x56DE;&#x7684;&#x72B6;&#x6001;&#x7801;.</li>
-<li>ok(boolean): &#x5982;&#x679C;&#x72B6;&#x6001;&#x7801;&#x5728;200~299&#x4E4B;&#x95F4;&#x5C31;&#x4E3A;&#x771F;&#x3002;</li>
-<li>statusText(string)&#xFF1A;&#x72B6;&#x6001;&#x63CF;&#x8FF0;&#x6587;&#x672C;</li>
-<li>data: &#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x7C7B;&#x578B;&#x662F;<code>json</code>&#x548C;<code>jsonp</code>&#xFF0C;&#x5219;&#x5B83;&#x5C31;&#x662F;&#x4E00;&#x4E2A; object &#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#xFF0C;&#x5219;&#x5B83;&#x5C31;&#x662F;&#x4E00;&#x4E2A; string &#x3002;</li>
-<li>headers(object): &#x54CD;&#x5E94;&#x5934;</li>
+<li><code>callback(function)</code>: &#x54CD;&#x5E94;&#x7ED3;&#x679C;&#x56DE;&#x8C03;&#xFF0C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5C06;&#x6536;&#x5230;&#x5982;&#x4E0B;&#x7684; <code>response</code> &#x5BF9;&#x8C61;&#xFF1A;<ul>
+<li><code>status(number)</code>: &#x8FD4;&#x56DE;&#x7684;&#x72B6;&#x6001;&#x7801;</li>
+<li><code>ok(boolean)</code>: &#x5982;&#x679C;&#x72B6;&#x6001;&#x7801;&#x5728; 200~299 &#x4E4B;&#x95F4;&#x5C31;&#x4E3A;&#x771F;&#x3002;</li>
+<li><code>statusText(string)</code>: &#x72B6;&#x6001;&#x63CF;&#x8FF0;&#x6587;&#x672C;</li>
+<li><code>data: &#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x7C7B;&#x578B;&#x662F;</code>json<code>&#x548C;</code>jsonp`&#xFF0C;&#x5219;&#x5B83;&#x5C31;&#x662F;&#x4E00;&#x4E2A; object &#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#xFF0C;&#x5219;&#x5B83;&#x5C31;&#x662F;&#x4E00;&#x4E2A; string&#x3002;</li>
+<li><code>headers(object)</code>: &#x54CD;&#x5E94;&#x5934;</li>
 </ul>
 </li>
-<li>progressCallback(function): &#x5173;&#x4E8E;&#x8BF7;&#x6C42;&#x72B6;&#x6001;&#x7684;&#x56DE;&#x8C03;&#x3002; &#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5C06;&#x5728;&#x8BF7;&#x6C42;&#x5B8C;&#x6210;&#x540E;&#x5C31;&#x88AB;&#x8C03;&#x7528;:<ul>
-<li>readyState(number): &#x5F53;&#x524D;&#x72B6;&#x6001; 
-state.&apos;1&apos;:&#x8BF7;&#x6C42;&#x8FDE;&#x63A5;&#x4E2D;
-opened;&apos;2&apos;:&#x8FD4;&#x56DE;&#x54CD;&#x5E94;&#x5934;&#x4E2D;
-received.;&apos;3&apos;:&#x6B63;&#x5728;&#x52A0;&#x8F7D;&#x8FD4;&#x56DE;&#x6570;&#x636E;</li>
-<li>status(number)&#xFF1A;&#x54CD;&#x5E94;&#x72B6;&#x6001;&#x7801;.</li>
-<li>length(number): &#x5DF2;&#x7ECF;&#x63A5;&#x53D7;&#x5230;&#x7684;&#x6570;&#x636E;&#x957F;&#x5EA6;. &#x4F60;&#x53EF;&#x4EE5;&#x4ECE;&#x54CD;&#x5E94;&#x5934;&#x4E2D;&#x83B7;&#x53D6;&#x603B;&#x957F;&#x5EA6;</li>
-<li>statusText(string)&#xFF1A;&#x72B6;&#x6001;&#x6587;&#x672C;</li>
-<li>headers(object): &#x54CD;&#x5E94;&#x5934;<h3 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h3>
-</li>
+<li><code>progressCallback(function)</code>: &#x5173;&#x4E8E;&#x8BF7;&#x6C42;&#x72B6;&#x6001;&#x7684;&#x56DE;&#x8C03;&#x3002; &#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5C06;&#x5728;&#x8BF7;&#x6C42;&#x5B8C;&#x6210;&#x540E;&#x5C31;&#x88AB;&#x8C03;&#x7528;:<ul>
+<li><code>readyState(number)</code>: &#x5F53;&#x524D;&#x72B6;&#x6001; 
+state:&apos;1&apos;: &#x8BF7;&#x6C42;&#x8FDE;&#x63A5;&#x4E2D;
+opened:&apos;2&apos;: &#x8FD4;&#x56DE;&#x54CD;&#x5E94;&#x5934;&#x4E2D;
+received:&apos;3&apos;: &#x6B63;&#x5728;&#x52A0;&#x8F7D;&#x8FD4;&#x56DE;&#x6570;&#x636E;</li>
+<li><code>status(number)</code>: &#x54CD;&#x5E94;&#x72B6;&#x6001;&#x7801;.</li>
+<li><code>length(number)</code>: &#x5DF2;&#x7ECF;&#x63A5;&#x53D7;&#x5230;&#x7684;&#x6570;&#x636E;&#x957F;&#x5EA6;. &#x4F60;&#x53EF;&#x4EE5;&#x4ECE;&#x54CD;&#x5E94;&#x5934;&#x4E2D;&#x83B7;&#x53D6;&#x603B;&#x957F;&#x5EA6;</li>
+<li><code>statusText(string)</code>: &#x72B6;&#x6001;&#x6587;&#x672C;</li>
+<li><code>headers(object)</code>: &#x54CD;&#x5E94;&#x5934;</li>
 </ul>
 </li>
 </ul>
-<pre><code class="lang-javascript">stream.fetch({
-    method: <span class="hljs-string">&apos;GET&apos;</span>,
-    url: <span class="hljs-string">&quot;http://httpbin.org/get&quot;</span>,
-    type:<span class="hljs-string">&apos;json&apos;</span>
-}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
-    <span class="hljs-comment">//process response</span>
-},<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>)</span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;bytes received:&quot;</span>+response.length);
-});
+<h4 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h4>
+<p><a href="http://dotwe.org/6ab66f595ff0265194ebd5f1f407ed9d" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">list</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Search Results<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">refresh</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 750; padding: 30;&quot;</span> <span class="hljs-attr">onrefresh</span>=<span class="hljs-string">&quot;refreshData&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span> &#x2193; Pull to refresh <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">loading-indicator</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;indicator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">loading-indicator</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">refresh</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cell</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;item in items&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;item-{{$index}}&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>Repo name: {{item.full_name}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>Repo star: {{item.stargazers_count}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">loading</span> <span class="hljs-attr">onloading</span>=<span class="hljs-string">&quot;loadingData&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 750; padding: 30;&quot;</span> <span class="hljs-attr">display</span>=<span class="hljs-string">&quot;{{loadingDisplay}}&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>{{loadingText}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">loading</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">list</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;up&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;goToTop&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;img&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://img.alicdn.com/tps/TB1ZVOEOpXXXXcQaXXXXXXXXXXX-200-200.png&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">img</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+<span class="hljs-selector-class">.header</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">25</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#efefef</span>;
+  <span class="hljs-attribute">border-bottom-color</span>: <span class="hljs-number">#eeeeee</span>;
+  <span class="hljs-attribute">border-bottom-width</span>: <span class="hljs-number">2</span>;
+  <span class="hljs-attribute">border-bottom-style</span>: solid;
+}
+<span class="hljs-selector-class">.title</span> {
+  <span class="hljs-attribute">text-align</span>: center;
+}
+<span class="hljs-selector-class">.text</span> {
+  <span class="hljs-attribute">text-align</span>: center;
+}
+<span class="hljs-selector-class">.list</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffffff</span>;
+}
+<span class="hljs-selector-class">.row</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">20</span>;
+  <span class="hljs-attribute">border-bottom-color</span>: <span class="hljs-number">#eeeeee</span>;
+  <span class="hljs-attribute">border-bottom-width</span>: <span class="hljs-number">2</span>;
+  <span class="hljs-attribute">border-bottom-style</span>: solid;
+}
+<span class="hljs-selector-class">.up</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">70</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">70</span>;
+  <span class="hljs-attribute">position</span>: fixed;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">20</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">20</span>;
+}
+<span class="hljs-selector-class">.img</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">70</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">70</span>;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">var</span> dom = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/dom&apos;</span>) || {}
+<span class="hljs-keyword">var</span> stream = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/stream&apos;</span>) || {}
+<span class="hljs-keyword">var</span> modal = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/modal&apos;</span>) || {}
+
+<span class="hljs-keyword">var</span> SEARCH_URL = <span class="hljs-string">&apos;https://api.github.com/search/repositories?q=language:javascript&amp;sort=stars&amp;order=desc&apos;</span>
+
+<span class="hljs-built_in">module</span>.exports = {
+  data: {
+    page: <span class="hljs-number">1</span>,
+    loadingDisplay: <span class="hljs-string">&apos;show&apos;</span>,
+    loadingText: <span class="hljs-string">&apos;Loading...&apos;</span>,
+    items:[]
+  },
+  created: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> url = SEARCH_URL + <span class="hljs-string">&apos;&amp;page=&apos;</span> + <span class="hljs-keyword">this</span>.page
+
+    <span class="hljs-keyword">this</span>.renderData(url)
+
+    <span class="hljs-keyword">this</span>.page++
+  },
+  methods: {
+    renderData: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">url</span>) </span>{
+      <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
+
+      stream.fetch({
+        method: <span class="hljs-string">&apos;GET&apos;</span>,
+        url: url,
+        type:<span class="hljs-string">&apos;json&apos;</span>
+      }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+        <span class="hljs-keyword">try</span> {
+          <span class="hljs-keyword">var</span> results = res.data.items || []
+
+          <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Array</span>.isArray(results)) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; results.length; i++) {
+              self.items.push(results[i])
+            }
+          }
+        } <span class="hljs-keyword">catch</span>(e) {}
+      },<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+
+      })
+    },
+    loadingData: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+      <span class="hljs-keyword">var</span> url = SEARCH_URL + <span class="hljs-string">&apos;&amp;page=&apos;</span> + <span class="hljs-keyword">this</span>.page
+      <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
+
+      <span class="hljs-keyword">if</span> (self.page &lt;=<span class="hljs-number">10</span> ) {
+        self.renderData(url)
+        self.page++
+      } <span class="hljs-keyword">else</span> {
+        self.loadingDisplay = <span class="hljs-string">&apos;hide&apos;</span>
+        self.loadingText = <span class="hljs-string">&apos;NO MORE!&apos;</span>
+      }
+    },
+    goToTop: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+      dom.scrollToElement(<span class="hljs-keyword">this</span>.$el(<span class="hljs-string">&apos;item-0&apos;</span>), {
+        offset: <span class="hljs-number">-100</span>
+      })
+    },
+    refreshData: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+      <span class="hljs-keyword">var</span> url = SEARCH_URL + <span class="hljs-string">&apos;&amp;page=1&apos;</span>
+
+      modal.toast({
+        <span class="hljs-string">&apos;message&apos;</span>: <span class="hljs-string">&apos;Refreshing...&apos;</span>, 
+        <span class="hljs-string">&apos;duration&apos;</span>: <span class="hljs-number">1</span>
+      })
+
+      <span class="hljs-keyword">this</span>.items = []
+      <span class="hljs-keyword">this</span>.page = <span class="hljs-number">1</span>
+      <span class="hljs-keyword">this</span>.renderData(url)
+    }
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 
                                 
@@ -1752,7 +1897,7 @@ received.;&apos;3&apos;:&#x6B63;&#x5728;&#x52A0;&#x8F7D;&#x8FD4;&#x56DE;&#x6570;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"stream","level":"1.3.6.2","depth":3,"next":{"title":"modal","level":"1.3.6.3","depth":3,"path":"modules/modal.md","ref":"modules/modal.md","articles":[]},"previous":{"title":"dom","level":"1.3.6.1","depth":3,"path":"modules/dom.md","ref":"modules/dom.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"modules/stream.md","mtime":"2016-12-01T01:46:30.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T01:54:51.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"stream","level":"1.3.6.2","depth":3,"next":{"title":"modal","level":"1.3.6.3","depth":3,"path":"modules/modal.md","ref":"modules/modal.md","articles":[]},"previous":{"title":"dom","level":"1.3.6.1","depth":3,"path":"modules/dom.md","ref":"modules/dom.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"modules/stream.md","mtime":"2016-12-01T14:46:06.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T18:21:31.427Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

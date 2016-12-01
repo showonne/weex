@@ -995,12 +995,25 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.5.7.2" data-path="refresh-loading.html">
+        <li class="chapter " data-level="1.3.5.7.2" data-path="refresh.html">
             
-                <a href="refresh-loading.html">
+                <a href="refresh.html">
             
                     
-                    refresh &amp; loading
+                    refresh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7.3" data-path="loading.html">
+            
+                <a href="loading.html">
+            
+                    
+                    loading
             
                 </a>
             
@@ -1663,64 +1676,171 @@ contentLoaded(window,function(){
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="wxc-navpage">&lt;wxc-navpage&gt;</h1>
-<p><span class="weex-version">0.5</span></p>
-<h3 id="summary">Summary</h3>
-<p>The &quot;wxc-navpage&quot; tag implements a specialized component that contains a navbar at the top of the window and an embed content page. You can customize the navbar as you like. In addition, you can use <code>navigator</code> module to control the page jump, see <a href="../modules/navigator.html">navigator module</a>.</p>
-<h3 id="child-components">Child Components</h3>
-<p>This type of component supports all kinds of weex component as its child components.</p>
-<h3 id="attributes">Attributes</h3>
-<ul>
-<li><code>height</code>: &lt;length&gt; The height of the navbar. Default value is 88. </li>
-<li><code>background-color</code>: &lt;color&gt;The backgroudColor of the navbar. Default value is <code>white</code>.</li>
-<li><code>title</code>: &lt;string&gt; The title of the navbar. </li>
-<li><code>title-color</code>: &lt;color&gt;The color of the navbar title. Default value is <code>black</code>.</li>
-<li><code>left-item-title</code>: &lt;string&gt; The title of the leftItem.</li>
-<li><code>left-item-color</code>: &lt;color&gt; The color of the leftItem title. Default value is <code>black</code>.</li>
-<li><code>right-item-title</code>: &lt;string&gt; The title of the rightItem.</li>
-<li><code>right-item-color</code>: &lt;color&gt; The color of the rightItem title. Default value is <code>black</code>. </li>
-<li><code>left-item-src</code>: &lt;string&gt; The imageURL of the leftItem you want to set.</li>
-<li><code>right-item-src</code>: &lt;string&gt; The imageURL of the rightItem you want to set.</li>
-</ul>
-<p>Other attributes please check out the <a href="../references/common-attrs.html">common attributes</a>.</p>
-<h3 id="styles">Styles</h3>
-<p><strong>common styles</strong>: check out the <a href="../references/common-attrs.html">common styles</a></p>
-<ul>
-<li>support flexbox related styles</li>
-<li>support box model related styles</li>
-<li>support <code>position</code> related styles</li>
-<li>support <code>opacity</code>, <code>background-color</code> etc.</li>
-</ul>
-<h3 id="events">Events</h3>
-<ul>
-<li><code>naviBar.leftItem.click</code>: triggered when the leftItem of navbar is clicked. You need to register the observer in ready or create block.</li>
-<li><code>naviBar.rightItem.click</code>: triggered when the rightItem of navbar is clicked. You need to register the observer in ready or create block.</li>
-</ul>
-<p><strong>common events</strong>: check out the <a href="../references/common-event.html">common events</a></p>
-<ul>
-<li>support <code>click</code> event. Check out <a href="../references/common-event.html">common events</a></li>
-<li>support <code>appear</code> / <code>disappear</code> event. Check out <a href="../references/common-event.html">common events</a></li>
-</ul>
-<h3 id="example">Example</h3>
-<pre><code class="lang-js">&lt;template&gt;
-  &lt;wxc-navpage height={{...}} background-color=&quot;...&quot; title=&quot;...&quot; title-color=&quot;...&quot; left-item-title=&quot;...&quot; left-item-color=&quot;...&quot; right-item-src=&quot;...&quot;&gt;
-      &lt;content&gt; ...&lt;/content&gt;
-  &lt;/wxc-navpage&gt;
-&lt;/template&gt;
-&lt;script&gt;
-  require(&apos;weex-components&apos;);
-  module.exports = {
-    created: function() {
-        this.$on(&apos;naviBar.rightItem.click&apos;,function(e){
-           //handle your click event here.
-        });
+                                <h1 id="wxc-navpage-v05">&lt;wxc-navpage&gt; <sup>(v0.5+)</sup></h1>
+<p><code>&lt;wxc-navpage&gt;</code> &#x7EC4;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B; navbar &#x7684;&#x5BB9;&#x5668;&#x7EC4;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#x5B9A;&#x5236; navbar &#x7EC4;&#x4EF6;&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>navigator</code> &#x6A21;&#x5757;&#x63A7;&#x5236;&#x9875;&#x9762;&#x7684;&#x8DF3;&#x8F6C;&#xFF0C;&#x5177;&#x4F53;&#x53C2;&#x8003; <a href="https://alibaba.github.io/weex/cn/doc/modules/navigator.html" target="_blank"><code>navigator module</code></a>&#x3002;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#xFF0C;&#x90FD;&#x662F;&#x914D;&#x5408; navbar &#x7EC4;&#x4EF6;&#x4F7F;&#x7528;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x4E86;&#x89E3; navigator &#x76F8;&#x5173;&#x77E5;&#x8BC6;&#xFF0C;&#x5EFA;&#x8BAE;&#x5148;&#x4E86;&#x89E3;&#x4E0B; iOS &#x6216;&#x8005; Android &#x7684;&#x76F8;&#x5173;&#x7EC4;&#x4EF6;&#x3002;&#x5728; H5 &#x4E0A;&#xFF0C;&#x5176;&#x5B9E;&#x662F;&#x76F8;&#x5F53;&#x4E8E;&#x5BFC;&#x822A;&#x680F;&#x3002;</p>
+<p>&#x7528;&#x6CD5;&#xFF1A;&#x5728; <code>script</code> &#x6807;&#x7B7E;&#x4E2D;&#x901A;&#x8FC7;&#x4E00;&#x4E2A; <code>require</code> &#x8BED;&#x53E5;&#x5F15;&#x5165;&#xFF0C;&#x5373;&#xFF1A;<code>require(&apos;weex-components&apos;);</code></p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;flex-direction: column;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">wxc-navpage</span> <span class="hljs-attr">tab-items</span> = {{<span class="hljs-attr">tabItems</span>}}&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">wxc-navpage</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
-        this.$on(&apos;naviBar.leftItem.click&apos;,function(e){
-          //handle your click event here. 
-        });
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;weex-components&apos;</span>);
+  <span class="hljs-comment">// more</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x5728; <code>require(&apos;weex-components&apos;);</code> &#x4E4B;&#x524D; &#xFF0C;&#x9700;&#x8981;&#x5728;&#x5DE5;&#x7A0B;&#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-bash">npm install weex-components
+</code></pre>
+<h2 id="&#x5B50;&#x7EC4;&#x4EF6;">&#x5B50;&#x7EC4;&#x4EF6;</h2>
+<p><code>&lt;wxc-navpage&gt;</code> &#x7EC4;&#x4EF6;&#x652F;&#x6301;&#x4EFB;&#x610F; Weex &#x7EC4;&#x4EF6;&#x3002;</p>
+<h2 id="&#x7279;&#x6027;">&#x7279;&#x6027;</h2>
+<p><code>&lt;wxc-navpage&gt;</code> &#x7EC4;&#x4EF6;&#x7684;&#x7279;&#x6027;&#x5176;&#x5B9E;&#x662F;&#x5BF9; navbar &#x8FDB;&#x884C;&#x529F;&#x80FD;&#x8BBE;&#x7F6E;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x662F; navbar &#x7684;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x793A;&#x610F;&#x3002;</p>
+<p><img src="../images/nav.png" alt="nav@500*245"></p>
+<ul>
+<li><p><code>height</code>: navbar &#x7684;&#x9AD8;&#x5EA6;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F; 88&#x3002;</p>
+</li>
+<li><p><code>background-color</code>: navbar &#x7684;&#x80CC;&#x666F;&#x989C;&#x8272;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x767D;&#x8272;&#x3002;</p>
+</li>
+<li><p><code>title</code>: navbar &#x7684;&#x6807;&#x9898;&#x3002;</p>
+</li>
+<li><p><code>title-color</code>: navbar &#x6807;&#x9898;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x9ED8;&#x8BA4;&#x9ED1;&#x8272;&#x3002;</p>
+</li>
+<li><p><code>left-item-title</code>: &#x5DE6;&#x4FA7;&#x6309;&#x94AE;&#x7684;&#x6807;&#x9898;&#x3002;</p>
+</li>
+<li><p><code>left-item-color</code>: &#x5DE6;&#x4FA7;&#x6309;&#x94AE;&#x6807;&#x9898;&#x989C;&#x8272;&#xFF0C;&#x9ED8;&#x8BA4;&#x9ED1;&#x8272;&#x3002;</p>
+</li>
+<li><p><code>right-item-title</code>:  &#x53F3;&#x4FA7;&#x6309;&#x94AE;&#x6807;&#x9898;&#x3002;</p>
+</li>
+<li><p><code>right-item-color</code>:  &#x53F3;&#x4FA7;&#x6309;&#x94AE;&#x6807;&#x9898;&#x989C;&#x8272;&#xFF0C;&#x9ED8;&#x8BA4;&#x9ED1;&#x8272;&#x3002;</p>
+</li>
+<li><p><code>left-item-src</code>: &#x5DE6;&#x4FA7;&#x6309;&#x94AE;&#x7684;&#x56FE;&#x6807;&#x3002;</p>
+</li>
+<li><p><code>right-item-src</code>:  &#x53F3;&#x4FA7;&#x6309;&#x94AE;&#x7684;&#x56FE;&#x6807;&#x3002;</p>
+</li>
+</ul>
+<h3 id="&#x6837;&#x5F0F;">&#x6837;&#x5F0F;</h3>
+<ul>
+<li><p>&#x901A;&#x7528;&#x6837;&#x5F0F;&#xFF1A;&#x652F;&#x6301;&#x6240;&#x6709;&#x901A;&#x7528;&#x6837;&#x5F0F;</p>
+<ul>
+<li>&#x76D2;&#x6A21;&#x578B;</li>
+<li><code>flexbox</code> &#x5E03;&#x5C40;</li>
+<li><code>position</code></li>
+<li><code>opacity</code></li>
+<li><code>background-color</code></li>
+</ul>
+<p>&#x67E5;&#x770B; <a href="https://alibaba.github.io/weex/cn/doc/references/common-style.html" target="_blank">&#x7EC4;&#x4EF6;&#x901A;&#x7528;&#x6837;&#x5F0F;</a></p>
+</li>
+</ul>
+<h2 id="&#x4E8B;&#x4EF6;">&#x4E8B;&#x4EF6;</h2>
+<p><code>&lt;wxc-navpage&gt;</code> &#x7EC4;&#x4EF6;&#x652F;&#x6301;&#x5DE6;&#x53F3;&#x4E24;&#x9879;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x3002;</p>
+<ul>
+<li><code>naviBar.leftItem.click</code>: &#x5F53; navbar &#x7684;&#x5DE6;&#x4FA7;&#x6309;&#x94AE;&#x88AB;&#x70B9;&#x51FB;&#x65F6;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x5728; <code>created</code> &#x65F6;&#x671F;&#x6CE8;&#x518C;&#x4E8B;&#x4EF6;&#x3002;</li>
+<li><code>naviBar.rightItem.click</code>: &#x5F53; navbar &#x7684;&#x53F3;&#x4FA7;&#x6309;&#x94AE;&#x88AB;&#x70B9;&#x51FB;&#x65F6;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x5728; <code>created</code> &#x65F6;&#x671F;&#x6CE8;&#x518C;&#x4E8B;&#x4EF6;&#x3002;</li>
+</ul>
+<p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">wxc-navpage</span> <span class="hljs-attr">height</span>=<span class="hljs-string">{{...}}</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">title-color</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">left-item-title</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">left-item-color</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">right-item-src</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">content</span>&gt;</span> ...<span class="hljs-tag">&lt;/<span class="hljs-name">content</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">wxc-navpage</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;weex-components&apos;</span>);
+  <span class="hljs-built_in">module</span>.exports = {
+    created: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">this</span>.$on(<span class="hljs-string">&apos;naviBar.rightItem.click&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        <span class="hljs-comment">//handle your click event here.</span>
+      });
+
+      <span class="hljs-keyword">this</span>.$on(<span class="hljs-string">&apos;naviBar.leftItem.click&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        <span class="hljs-comment">//handle your click event here. </span>
+      });
     }
   }
-&lt;/script&gt;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<ul>
+<li><p>&#x901A;&#x7528;&#x4E8B;&#x4EF6;</p>
+<p>&#x652F;&#x6301;&#x6240;&#x6709;&#x901A;&#x7528;&#x4E8B;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li><code>click</code></li>
+<li><code>longpress</code></li>
+<li><code>appear</code></li>
+<li><code>disappear</code></li>
+</ul>
+<p>&#x67E5;&#x770B; <a href="https://alibaba.github.io/weex/cn/doc/references/common-event.html" target="_blank">&#x901A;&#x7528;&#x4E8B;&#x4EF6;</a></p>
+</li>
+</ul>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<p><a href="http://dotwe.org/e7ea243de84da5ca22887730cdfad989" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">wxc-navpage</span> <span class="hljs-attr">data-role</span>=<span class="hljs-string">&quot;none&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">{{navBarHeight}}</span> <span class="hljs-attr">background-color</span>=<span class="hljs-string">&quot;#ff5898&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">{{title}}</span> <span class="hljs-attr">title-color</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">left-item-title</span>=<span class="hljs-string">&quot;More&quot;</span> <span class="hljs-attr">left-item-color</span>=<span class="hljs-string">&quot;white&quot;</span> <span class="hljs-attr">right-item-src</span>=<span class="hljs-string">&quot;http://gtms02.alicdn.com/tps/i2/TB1ED7iMpXXXXXEXXXXWA_BHXXX-48-48.png&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">wxc-panel</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;push a new page&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">wxc-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;small&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;push&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;push&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">wxc-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">wxc-panel</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">wxc-panel</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;pop to the last page&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">wxc-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;success&quot;</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;small&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;pop&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;pop&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">wxc-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">wxc-panel</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">wxc-navpage</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;weex-components&apos;</span>);
+  <span class="hljs-built_in">module</span>.exports = {
+    data: {
+      navBarHeight: <span class="hljs-number">88</span>,
+      title: <span class="hljs-string">&apos;Navigator&apos;</span>,
+      dir: <span class="hljs-string">&apos;examples&apos;</span>,
+      baseURL: <span class="hljs-string">&apos;&apos;</span>,
+    },
+    created: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">this</span>.$getConfig(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">config</span>) </span>{
+        <span class="hljs-keyword">var</span> env = config.env;
+        <span class="hljs-keyword">if</span>(env.platform == <span class="hljs-string">&apos;iOS&apos;</span>){
+          <span class="hljs-keyword">var</span> scale = env.scale;
+          <span class="hljs-keyword">var</span> deviceWidth = env.deviceWidth / scale;
+          <span class="hljs-keyword">this</span>.navBarHeight = <span class="hljs-number">64.0</span> * <span class="hljs-number">750.0</span> / deviceWidth;
+        }
+      }.bind(<span class="hljs-keyword">this</span>));
+
+      <span class="hljs-keyword">this</span>.$on(<span class="hljs-string">&apos;naviBar.rightItem.click&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        duration = <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">this</span>.$call(<span class="hljs-string">&apos;modal&apos;</span>, <span class="hljs-string">&apos;toast&apos;</span>, {
+          <span class="hljs-string">&apos;message&apos;</span>: <span class="hljs-string">&apos;naviBar.rightItem.click&apos;</span>,
+          <span class="hljs-string">&apos;duration&apos;</span>: duration
+          });
+      });
+
+      <span class="hljs-keyword">this</span>.$on(<span class="hljs-string">&apos;naviBar.leftItem.click&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        duration = <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">this</span>.$call(<span class="hljs-string">&apos;modal&apos;</span>, <span class="hljs-string">&apos;toast&apos;</span>, {
+          <span class="hljs-string">&apos;message&apos;</span>: <span class="hljs-string">&apos;naviBar.leftItem.click&apos;</span>,
+          <span class="hljs-string">&apos;duration&apos;</span>: duration
+          });
+      });
+    },
+    methods: {
+      push: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">this</span>;
+        <span class="hljs-keyword">var</span> params = {
+          <span class="hljs-string">&apos;url&apos;</span>:  <span class="hljs-string">&apos;http://dotwe.org/raw/dist/33dfcbe81979c60ba5de72c235d7d0f8.js&apos;</span>,
+          <span class="hljs-string">&apos;animated&apos;</span> : <span class="hljs-string">&apos;true&apos;</span>,
+        }
+        vm.$call(<span class="hljs-string">&apos;navigator&apos;</span>,<span class="hljs-string">&apos;push&apos;</span>,params, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{});
+      },
+
+      pop: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">this</span>;
+        <span class="hljs-keyword">var</span> params = {
+          <span class="hljs-string">&apos;animated&apos;</span> : <span class="hljs-string">&apos;true&apos;</span>,
+        }
+        vm.$call(<span class="hljs-string">&apos;navigator&apos;</span>,<span class="hljs-string">&apos;pop&apos;</span>,params, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{});
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 
                                 
@@ -1765,7 +1885,7 @@ contentLoaded(window,function(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"wxc-navpage","level":"1.3.5.18","depth":3,"next":{"title":"内建模块","level":"1.3.6","depth":2,"path":"modules/main.md","ref":"modules/main.md","articles":[{"title":"dom","level":"1.3.6.1","depth":3,"path":"modules/dom.md","ref":"modules/dom.md","articles":[]},{"title":"stream","level":"1.3.6.2","depth":3,"path":"modules/stream.md","ref":"modules/stream.md","articles":[]},{"title":"modal","level":"1.3.6.3","depth":3,"path":"modules/modal.md","ref":"modules/modal.md","articles":[]},{"title":"animation","level":"1.3.6.4","depth":3,"path":"modules/animation.md","ref":"modules/animation.md","articles":[]},{"title":"webview","level":"1.3.6.5","depth":3,"path":"modules/webview.md","ref":"modules/webview.md","articles":[]},{"title":"navigator","level":"1.3.6.6","depth":3,"path":"modules/navigator.md","ref":"modules/navigator.md","articles":[]},{"title":"storage","level":"1.3.6.7","depth":3,"path":"modules/storage.md","ref":"modules/storage.md","articles":[]},{"title":"timer","level":"1.3.6.8","depth":3,"path":"modules/timer.md","ref":"modules/timer.md","articles":[]},{"title":"clipboard","level":"1.3.6.9","depth":3,"path":"modules/clipboard.md","ref":"modules/clipboard.md","articles":[]},{"title":"globalEvent","level":"1.3.6.10","depth":3,"path":"modules/globalevent.md","ref":"modules/globalevent.md","articles":[]}]},"previous":{"title":"wxc-tabbar","level":"1.3.5.17","depth":3,"path":"components/wxc-tabbar.md","ref":"components/wxc-tabbar.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/wxc-navpage.md","mtime":"2016-11-29T20:07:29.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T01:54:51.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"wxc-navpage","level":"1.3.5.18","depth":3,"next":{"title":"内建模块","level":"1.3.6","depth":2,"path":"modules/main.md","ref":"modules/main.md","articles":[{"title":"dom","level":"1.3.6.1","depth":3,"path":"modules/dom.md","ref":"modules/dom.md","articles":[]},{"title":"stream","level":"1.3.6.2","depth":3,"path":"modules/stream.md","ref":"modules/stream.md","articles":[]},{"title":"modal","level":"1.3.6.3","depth":3,"path":"modules/modal.md","ref":"modules/modal.md","articles":[]},{"title":"animation","level":"1.3.6.4","depth":3,"path":"modules/animation.md","ref":"modules/animation.md","articles":[]},{"title":"webview","level":"1.3.6.5","depth":3,"path":"modules/webview.md","ref":"modules/webview.md","articles":[]},{"title":"navigator","level":"1.3.6.6","depth":3,"path":"modules/navigator.md","ref":"modules/navigator.md","articles":[]},{"title":"storage","level":"1.3.6.7","depth":3,"path":"modules/storage.md","ref":"modules/storage.md","articles":[]},{"title":"timer","level":"1.3.6.8","depth":3,"path":"modules/timer.md","ref":"modules/timer.md","articles":[]},{"title":"clipboard","level":"1.3.6.9","depth":3,"path":"modules/clipboard.md","ref":"modules/clipboard.md","articles":[]},{"title":"globalEvent","level":"1.3.6.10","depth":3,"path":"modules/globalevent.md","ref":"modules/globalevent.md","articles":[]}]},"previous":{"title":"wxc-tabbar","level":"1.3.5.17","depth":3,"path":"components/wxc-tabbar.md","ref":"components/wxc-tabbar.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/wxc-navpage.md","mtime":"2016-12-01T18:12:36.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T18:21:31.427Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

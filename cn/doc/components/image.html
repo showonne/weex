@@ -995,12 +995,25 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.5.7.2" data-path="refresh-loading.html">
+        <li class="chapter " data-level="1.3.5.7.2" data-path="refresh.html">
             
-                <a href="refresh-loading.html">
+                <a href="refresh.html">
             
                     
-                    refresh &amp; loading
+                    refresh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7.3" data-path="loading.html">
+            
+                <a href="loading.html">
+            
+                    
+                    loading
             
                 </a>
             
@@ -1663,48 +1676,139 @@ contentLoaded(window,function(){
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="image-&#x7EC4;&#x4EF6;">&lt;image&gt; &#x7EC4;&#x4EF6;</h1>
-<h2 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h2>
-<p><code>image</code> &#x6807;&#x7B7E;&#x7528;&#x4E8E;&#x6E32;&#x67D3;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;&#x53EF;&#x4EE5;&#x7528; <code>img</code> &#x4F5C;&#x7B80;&#x5199;&#x3002;</p>
-<p><strong>&#x6CE8;&#x610F;:</strong> <code>width</code>&#x548C;<code>height</code>&#x9700;&#x8981;&#x6307;&#x5B9A;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x4E0D;&#x5DE5;&#x4F5C;&#x3002;</p>
-<p>&#x7B80;&#x5199;&#xFF1A;<code>&lt;img&gt;</code></p>
+                                <h1 id="image">&lt;image&gt;</h1>
+<p><code>&lt;image&gt;</code> &#x7EC4;&#x4EF6;&#x7528;&#x4E8E;&#x6E32;&#x67D3;&#x56FE;&#x7247;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;&#x53EF;&#x4EE5;&#x7528; <code>&lt;img&gt;</code> &#x4F5C;&#x7B80;&#x5199;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x9700;&#x8981;&#x660E;&#x786E;&#x6307;&#x5B9A; <code>width</code> &#x548C; <code>height</code>&#xFF0C;&#x5426;&#x5219;&#x56FE;&#x7247;&#x65E0;&#x6CD5;&#x663E;&#x793A;&#x3002;</p>
+<p>&#x7B80;&#x5355;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 560;height: 560;&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://img.alicdn.com/tps/TB1RD.aOpXXXXbzXXXXXXXXXXXX-560-560.png&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">img</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+<p><a href="http://dotwe.org/b9db9b6c5ac487bd053308e66e592792" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
 <h2 id="&#x5B50;&#x7EC4;&#x4EF6;">&#x5B50;&#x7EC4;&#x4EF6;</h2>
-<p>&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E0D;&#x652F;&#x6301;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;</p>
-<h2 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h2>
+<p><code>&lt;image&gt;</code> &#x7EC4;&#x4EF6;&#x4E0D;&#x652F;&#x6301;&#x4EFB;&#x4F55;&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x8981;&#x5C1D;&#x8BD5;&#x5728; <code>&lt;image&gt;</code> &#x7EC4;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x4EFB;&#x4F55;&#x7EC4;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x5B9E;&#x73B0; <code>background-image</code> &#x7684;&#x6548;&#x679C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>&lt;image&gt;</code> &#x7EC4;&#x4EF6;&#x548C; <code>position</code> &#x5B9A;&#x4F4D;&#x6765;&#x73B0;&#x5B9E;&#xFF0C;&#x5982;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:750; height:750;&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://img.alicdn.com/tps/TB1RD.aOpXXXXbzXXXXXXXXXXXX-560-560.png&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">img</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;font-size:50; color: #ff0000&quot;</span>&gt;</span>&#x4F60;&#x597D;&#xFF0C;image<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.title</span>{
+    <span class="hljs-attribute">position</span>:absolute;
+    <span class="hljs-attribute">top</span>:<span class="hljs-number">50</span>;
+    <span class="hljs-attribute">left</span>:<span class="hljs-number">10</span>;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<p><a href="http://dotwe.org/9cfb27a6cb3c30f3316a2a15257fca5d" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<h2 id="&#x7279;&#x6027;">&#x7279;&#x6027;</h2>
+<p><code>&lt;image&gt;</code> &#x7EC4;&#x4EF6;&#xFF0C;&#x5305;&#x542B; <code>src</code> &#x548C; <code>resize</code> &#x4E24;&#x4E2A;&#x91CD;&#x8981;&#x7279;&#x6027;&#x3002;</p>
 <ul>
-<li><code>src</code>:&lt;&#x5B57;&#x7B26;&#x4E32;&gt;&#x5C5E;&#x6027; &#x56FE;&#x7247;&#x539F;&#x59CB;&#x94FE;&#x63A5;</li>
-<li><code>resize</code>: &lt;&#x5B57;&#x7B26;&#x4E32;&gt;  &#x7EC4;&#x4EF6;&#x7684;&#x62C9;&#x4F38;&#x5C5E;&#x6027;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F;<code>stretch</code>,&#x5982;&#x679C;&#x6B64;&#x5C5E;&#x6027;&#x4E0D;&#x6307;&#x5B9A;&#xFF0C;&#x8BE5;&#x503C;&#x53EF;&#x80FD;&#x662F;<code>cover</code>,<code>contain</code> , &#x503C;&#x884C;&#x4E3A;&#x548C;W3C&#x6807;&#x51C6;&#x4E00;&#x81F4;&#x3002;</li>
+<li><code>src</code>&#xFF1A;&#x503C;&#x4E3A; string &#x7C7B;&#x578B;&#xFF0C;&#x5B9A;&#x4E49;&#x56FE;&#x7247;&#x94FE;&#x63A5;&#xFF0C;&#x76EE;&#x524D;&#x56FE;&#x7247;&#x6682;&#x4E0D;&#x652F;&#x6301;&#x672C;&#x5730;&#x56FE;&#x7247;&#x3002;</li>
+<li><p><code>resize</code>&#xFF1A;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <code>stretch</code>&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; <code>cover</code>&#xFF0C;<code>contain</code>&#x3002;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x56FE;&#x7247;&#x7684;&#x62C9;&#x4F38;&#x72B6;&#x6001;&#x3002;&#x503C;&#x884C;&#x4E3A;&#x548C; W3C &#x6807;&#x51C6;&#x4E00;&#x81F4;&#x3002;</p>
+<p>&#x8FD9;&#x51E0;&#x4E2A;&#x503C;&#x5206;&#x522B;&#x6709;&#x4EE5;&#x4E0B;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ul>
+<li><code>stretch</code>&#xFF1A;&#x6307;&#x5B9A;&#x56FE;&#x7247;&#x6309;&#x7167;&#x5BB9;&#x5668;&#x62C9;&#x4F38;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x4F7F;&#x56FE;&#x7247;&#x4EA7;&#x751F;&#x5F62;&#x53D8;&#x3002;</li>
+<li><code>cover</code>&#xFF1A;&#x6307;&#x5B9A;&#x56FE;&#x7247;&#x53EF;&#x4EE5;&#x88AB;&#x8C03;&#x6574;&#x5230;&#x5BB9;&#x5668;&#xFF0C;&#x4EE5;&#x4F7F;&#x56FE;&#x7247;&#x5B8C;&#x5168;&#x8986;&#x76D6;&#x80CC;&#x666F;&#x533A;&#x57DF;&#xFF0C;&#x56FE;&#x7247;&#x6709;&#x53EF;&#x80FD;&#x88AB;&#x526A;&#x88C1;&#x3002;</li>
+<li><code>contain</code>&#xFF1A;&#x6307;&#x5B9A;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x8003;&#x8651;&#x5BB9;&#x5668;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x628A;&#x56FE;&#x50CF;&#x6269;&#x5C55;&#x81F3;&#x6700;&#x5927;&#x5C3A;&#x5BF8;&#xFF0C;&#x4EE5;&#x4F7F;&#x5176;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x5B8C;&#x5168;&#x9002;&#x5E94;&#x5185;&#x5BB9;&#x533A;&#x57DF;&#x3002;</li>
 </ul>
-<p>&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x8BF7;&#x67E5;&#x9605;<a href="../references/common-attrs.html">&#x57FA;&#x672C;&#x5C5E;&#x6027;</a></p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<p><img src="../images/image_1.jpg" alt="mobile_preview"></p>
+<p><a href="http://dotwe.org/ede2959ea5225642cf6202f9e3b43d3a" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+</li>
+</ul>
 <h2 id="&#x6837;&#x5F0F;">&#x6837;&#x5F0F;</h2>
 <ul>
-<li><code>width</code> : <code>&lt;length&gt;</code> &#x7EC4;&#x4EF6;&#x7684;&#x5BBD;&#x5EA6;&#xFF0C;&#x9700;&#x6307;&#x5B9A;&#x3002;</li>
-<li><code>height</code>: <code>&lt;length&gt;</code> &#x7EC4;&#x4EF6;&#x7684;&#x9AD8;&#x5EA6;&#xFF0C;&#x9700;&#x6307;&#x5B9A;&#x3002;</li>
-</ul>
-<p><strong>&#x57FA;&#x672C;&#x6837;&#x5F0F;</strong>&#xFF1A;&#x67E5;&#x770B;<a href="references/common-attrs.md">&#x57FA;&#x672C;&#x6837;&#x5F0F;</a></p>
+<li><p>&#x901A;&#x7528;&#x6837;&#x5F0F;&#xFF1A;&#x652F;&#x6301;&#x6240;&#x6709;&#x901A;&#x7528;&#x6837;&#x5F0F;</p>
 <ul>
-<li>&#x652F;&#x6301; flexbox &#x76F8;&#x5173;&#x6837;&#x5F0F;</li>
-<li>&#x652F;&#x6301; box &#x6A21;&#x578B;&#x76F8;&#x5173;&#x6837;&#x5F0F;</li>
-<li>&#x652F;&#x6301; <code>position</code> &#x76F8;&#x5173;&#x5C5E;&#x6027;</li>
-<li>&#x652F;&#x6301; <code>opacity</code>,<code>background-color</code> &#x7B49;&#x3002;<h2 id="&#x4E8B;&#x4EF6;">&#x4E8B;&#x4EF6;</h2>
+<li>&#x76D2;&#x6A21;&#x578B;</li>
+<li><code>flexbox</code> &#x5E03;&#x5C40;</li>
+<li><code>position</code></li>
+<li><code>opacity</code></li>
+<li><code>background-color</code></li>
+</ul>
+<p>&#x67E5;&#x770B; <a href="https://alibaba.github.io/weex/cn/doc/references/common-style.html" target="_blank">&#x7EC4;&#x4EF6;&#x901A;&#x7528;&#x6837;&#x5F0F;</a></p>
 </li>
 </ul>
-<p><strong>&#x57FA;&#x672C;&#x4E8B;&#x4EF6;</strong>&#xFF1A;&#x67E5;&#x9605;<a href="references/common-event.md">&#x57FA;&#x672C;&#x4E8B;&#x4EF6;</a></p>
+<h2 id="&#x4E8B;&#x4EF6;">&#x4E8B;&#x4EF6;</h2>
 <ul>
-<li>&#x652F;&#x6301; <code>click</code> &#x4E8B;&#x4EF6;&#x3002;&#x67E5;&#x9605;<a href="references/common-event.md">&#x57FA;&#x672C;&#x4E8B;&#x4EF6;</a></li>
-<li>&#x652F;&#x6301; <code>appear</code> / <code>disappear</code> &#x4E8B;&#x4EF6;&#x3002;&#x67E5;&#x9605;<a href="references/common-event.md">&#x57FA;&#x672C;&#x4E8B;&#x4EF6;</a><h2 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h2>
+<li><p><code>load</code> <sup class="wx-v">v0.8+</sup>&#xFF1A;&#x5F53;&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x65F6;&#x89E6;&#x53D1;&#x3002;&#x76EE;&#x524D;&#x5728; Android&#x3001;iOS &#x4E0A;&#x652F;&#x6301;&#xFF0C;H5 &#x6682;&#x4E0D;&#x652F;&#x6301;&#x3002;</p>
+</li>
+<li><p>&#x901A;&#x7528;&#x4E8B;&#x4EF6;</p>
+<p>&#x652F;&#x6301;&#x6240;&#x6709;&#x901A;&#x7528;&#x4E8B;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li><code>click</code></li>
+<li><code>longpress</code></li>
+<li><code>appear</code></li>
+<li><code>disappear</code></li>
+</ul>
+<p>&#x67E5;&#x770B; <a href="https://alibaba.github.io/weex/cn/doc/references/common-event.html" target="_blank">&#x901A;&#x7528;&#x4E8B;&#x4EF6;</a></p>
 </li>
 </ul>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-</code></pre>
-<p>&#x7B80;&#x5199;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">img</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<h2 id="&#x7EA6;&#x675F;">&#x7EA6;&#x675F;</h2>
+<ol>
+<li>&#x9700;&#x8981;&#x6307;&#x5B9A;&#x5BBD;&#x9AD8;&#xFF1B;</li>
+<li>&#x4E0D;&#x652F;&#x6301;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;</li>
+</ol>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<p>&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x5C55;&#x793A;&#x4E86;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x6587;&#x7AE0;&#x6807;&#x9898;&#x6709;&#x4E00;&#x526F;&#x80CC;&#x666F;&#x56FE;&#x3002;</p>
+<p><img src="../images/image_2.jpg" alt="mobile_preview"></p>
+<p>&#x8FD9;&#x4E2A;&#x6548;&#x679C;&#x5B9E;&#x73B0;&#x8D77;&#x6765;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x6807;&#x9898;&#x6587;&#x6848;&#x901A;&#x8FC7; <code>position: absolute</code> &#x8FDB;&#x884C;&#x5B9A;&#x4F4D;&#x5373;&#x53EF;&#x3002;&#x552F;&#x4E00;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x4E00;&#x70B9;&#x662F;&#xFF0C;Weex &#x76EE;&#x524D;&#x4E0D;&#x652F;&#x6301; <code>z-index</code>&#xFF0C;&#x56E0;&#x6B64;&#x5FC5;&#x987B;&#x628A;&#x4E0A;&#x5C42;&#x5143;&#x7D20;&#x653E;&#x5728;&#x540E;&#x3002;</p>
+<p><a href="http://dotwe.org/15f7454a6e666b04eeeab1bbc2d25415" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.page-head</span> {
+    <span class="hljs-attribute">width</span>:<span class="hljs-number">750</span>;
+    <span class="hljs-attribute">height</span>:<span class="hljs-number">200</span>;
+  }
+  <span class="hljs-selector-class">.title-bg</span> {
+    <span class="hljs-attribute">width</span>:<span class="hljs-number">750</span>;
+    <span class="hljs-attribute">height</span>:<span class="hljs-number">200</span>;
+  }
+  <span class="hljs-selector-class">.title-box</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">750</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">200</span>;
+    <span class="hljs-attribute">justify-content</span>: center;
+    <span class="hljs-attribute">align-items</span>: center;
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  }
+  <span class="hljs-selector-class">.title</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">32</span>;
+    <span class="hljs-attribute">font-weight</span>: bold;
+  }
+  <span class="hljs-selector-class">.article</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">20</span>;
+  }
+  <span class="hljs-selector-class">.paragraph</span>{
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">15</span>;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">scroller</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span> &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page-head&quot;</span> &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bg&quot;</span> <span class="hljs-attr">resize</span>=<span class="hljs-string">&quot;cover&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://img.alicdn.com/tps/TB14LzSOpXXXXbNapXXXXXXXXXX-750-200.png&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-box&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Alan Turing<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;article&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;paragraph&quot;</span>&gt;</span>Alan Mathison Turing ( 23 June 1912 &#x2013; 7 June 1954) was an English computer scientist, mathematician, logician, cryptanalyst and theoretical biologist. He was highly influential in the development of theoretical computer science, providing a formalisation of the concepts of algorithm and computation with the Turing machine, which can be considered a model of a general purpose computer.Turing is widely considered to be the father of theoretical computer science and artificial intelligence.<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;paragraph&quot;</span>&gt;</span>During the Second World War, Turing worked for the Government Code and Cypher School (GC&amp;CS) at Bletchley Park, Britain&apos;s codebreaking centre. For a time he led Hut 8, the section responsible for German naval cryptanalysis. He devised a number of techniques for speeding the breaking of German ciphers, including improvements to the pre-war Polish bombe method, an electromechanical machine that could find settings for the Enigma machine. Turing played a pivotal role in cracking intercepted coded messages that enabled the Allies to defeat the Nazis in many crucial engagements, including the Battle of the Atlantic; it has been estimated that this work shortened the war in Europe by more than two years and saved over fourteen million lives.<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;paragraph&quot;</span>&gt;</span>After the war, he worked at the National Physical Laboratory, where he designed the ACE, among the first designs for a stored-program computer. In 1948 Turing joined Max Newman&apos;s Computing Machine Laboratory at the Victoria University of Manchester, where he helped develop the Manchester computers and became interested in mathematical biology. He wrote a paper on the chemical basis of morphogenesis, and predicted oscillating chemical reactions such as the Belousov&#x2013;Zhabotinsky reaction, first observed in the 1960s.<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;paragraph&quot;</span>&gt;</span>Turing was prosecuted in 1952 for homosexual acts, when by the Labouchere Amendment, &quot;gross indecency&quot; was still criminal in the UK. He accepted chemical castration treatment, with DES, as an alternative to prison. Turing died in 1954, 16 days before his 42nd birthday, from cyanide poisoning. An inquest determined his death as suicide, but it has been noted that the known evidence is also consistent with accidental poisoning. In 2009, following an Internet campaign, British Prime Minister Gordon Brown made an official public apology on behalf of the British government for &quot;the appalling way he was treated.&quot; Queen Elizabeth II granted him a posthumous pardon in 2013.<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">scroller</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 </code></pre>
 
                                 
@@ -1749,7 +1853,7 @@ contentLoaded(window,function(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"image","level":"1.3.5.9","depth":3,"next":{"title":"input","level":"1.3.5.10","depth":3,"path":"components/input.md","ref":"components/input.md","articles":[]},"previous":{"title":"text","level":"1.3.5.8","depth":3,"path":"components/text.md","ref":"components/text.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/image.md","mtime":"2016-12-01T01:46:30.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T01:54:51.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"image","level":"1.3.5.9","depth":3,"next":{"title":"input","level":"1.3.5.10","depth":3,"path":"components/input.md","ref":"components/input.md","articles":[]},"previous":{"title":"text","level":"1.3.5.8","depth":3,"path":"components/text.md","ref":"components/text.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/image.md","mtime":"2016-12-01T18:12:36.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T18:21:31.427Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

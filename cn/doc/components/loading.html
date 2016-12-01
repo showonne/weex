@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="">
     <head>
-        <title>refresh &amp; loading &#xB7; Weex</title>
+        <title>loading &#xB7; Weex</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -64,7 +64,7 @@
     <link rel="next" href="text.html">
     
     
-    <link rel="prev" href="cell.html">
+    <link rel="prev" href="refresh.html">
     
 
     </head>
@@ -995,12 +995,25 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter active" data-level="1.3.5.7.2" data-path="refresh-loading.html">
+        <li class="chapter " data-level="1.3.5.7.2" data-path="refresh.html">
             
-                <a href="refresh-loading.html">
+                <a href="refresh.html">
             
                     
-                    refresh &amp; loading
+                    refresh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5.7.3" data-path="loading.html">
+            
+                <a href="loading.html">
+            
+                    
+                    loading
             
                 </a>
             
@@ -1648,7 +1661,7 @@ contentLoaded(window,function(){
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="..">refresh &amp; loading</a>
+        <a href="..">loading</a>
     </h1>
 </div>
 
@@ -1663,160 +1676,109 @@ contentLoaded(window,function(){
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="refresh-loading">&lt;refresh-loading&gt;</h1>
-<h3 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h3>
-<p> refresh/loading &#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x63A7;&#x4EF6;&#xFF0C;&#x662F;scroller&#x548C;list&#x7684;&#x9644;&#x5C5E;&#x63A7;&#x4EF6;&#x3002;&#x5FC5;&#x987B;&#x5199;&#x5728;scroller&#x548C;list&#x7684;&#x6807;&#x7B7E;&#x4E2D;&#x624D;&#x4F1A;&#x751F;&#x6548;&#x3002;</p>
-<h3 id="&#x7528;&#x6CD5;">&#x7528;&#x6CD5;</h3>
-<p>refresh/loading &#x53EF;&#x4EE5;&#x50CF;&#x5176;&#x4ED6;&#x6807;&#x7B7E;&#x4E00;&#x6837;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x3002;
-&#x6807;&#x7B7E;&#x5185;&#x90E8;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x7A7A;&#x95F4;&#xFF0C;&#x6BD4;&#x5982;text&#x3001;img&#x7B49;&#x3002;
-&#x7279;&#x522B;: weex &#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x52A0;&#x8F7D;&#x52A8;&#x753B;&#x7684;indicator&#x3002;&#x7528;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>&lt;loading  display=&quot;{{loading_display}}&quot; onloading=&quot;onloading&quot;&gt;
-      &lt;loading-indicator style=&quot;height:60;width:60;color:#3192e1&quot;&gt;&lt;/loading-indicator&gt;
-&lt;/loading&gt;
-</code></pre><h4 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h4>
-<p>&#x5177;&#x6709;&#x901A;&#x7528;&#x63A7;&#x4EF6;&#x7684;&#x4E00;&#x822C;&#x5C5E;&#x6027;</p>
-<h4 id="&#x4E8B;&#x4EF6;">&#x4E8B;&#x4EF6;</h4>
+                                <h1 id="loading-v061">&lt;loading&gt; <sup>(v0.6.1+)</sup></h1>
+<p><code>&lt;loading&gt;</code> &#x4E3A; <code>&lt;scroller&gt;</code> &#x548C; <code>&lt;list&gt;</code> &#x63D0;&#x4F9B;&#x4E0A;&#x62C9;&#x52A0;&#x8F7D;&#x529F;&#x80FD;&#x3002;&#x7528;&#x6CD5;&#x4E0E;&#x7279;&#x6027;&#x4E0E; <code>&lt;refresh&gt;</code> &#x7C7B;&#x4F3C;&#xFF0C; &#x662F; <code>&lt;scroller&gt;</code> &#x548C; <code>&lt;list&gt;</code> &#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;&#x4E14;&#x53EA;&#x80FD;&#x5728;&#x88AB; <code>&lt;scroller&gt;</code> &#x548C; <code>&lt;list&gt;</code> &#x5305;&#x542B;&#x65F6;&#x624D;&#x80FD;&#x88AB;&#x6B63;&#x786E;&#x7684;&#x6E32;&#x67D3;&#x3002;</p>
+<h2 id="&#x5B50;&#x7EC4;&#x4EF6;">&#x5B50;&#x7EC4;&#x4EF6;</h2>
 <ul>
-<li>onrefresh scroller/list &#x4E0B;&#x62C9;&#x65F6;&#x89E6;&#x53D1;&#x3002;</li>
-<li>onloading scroller/list &#x4E0A;&#x62C9;&#x5230;&#x5E95;&#x90E8;&#x65F6;&#x89E6;&#x53D1;&#x3002;</li>
-<li>onpullingdown scoller/list &#x4E0B;&#x62C9;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x4F1A;&#x628A;&#x4E0B;&#x62C9;&#x7684;&#x8DDD;&#x79BB;&#x548C;&#x80FD;&#x591F;&#x4E0B;&#x62C9;&#x7684;&#x6700;&#x5927;&#x8DDD;&#x79BB;&#x900F;&#x4F20;&#x7ED9;&#x524D;&#x7AEF;&#x3002;&#x524D;&#x7AEF;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x505A;&#x4E0D;&#x540C;&#x7684;&#x52A8;&#x753B;&#x3002;  iOS&#x76EE;&#x524D;&#x4E0D;&#x652F;&#x6301;&#xFF0C;&#x9884;&#x8BA1;0.9&#x7248;&#x672C;&#x4F1A;&#x652F;&#x6301;&#x3002;
-&#x53C2;&#x6570;&#x63CF;&#x8FF0;&#x5982;&#x4E0B;&#xFF1A;<br>dy:refresh&#x5782;&#x76F4;&#x65B9;&#x5411;&#x6ED1;&#x52A8;&#x8DDD;&#x79BB;<br>headerHeight&#xFF1A;refresh&#x63A7;&#x4EF6;&#x4E0B;&#x6ED1;&#x8DDD;&#x79BB;<br>maxHeight&#xFF1A;refresh&#x63A7;&#x4EF6;&#x80FD;&#x591F;&#x4E0B;&#x6ED1;&#x7684;&#x6700;&#x5927;&#x8DDD;&#x79BB;  <h3 id="&#x5F53;&#x524D;&#x5B58;&#x5728;&#x7684;&#x95EE;&#x9898;">&#x5F53;&#x524D;&#x5B58;&#x5728;&#x7684;&#x95EE;&#x9898;</h3>
+<li><a href="https://alibaba.github.io/weex/cn/doc/components/text.html" target="_blank"><code>&lt;text&gt;</code></a></li>
+<li><a href="https://alibaba.github.io/weex/cn/doc/components/image.html" target="_blank"><code>&lt;image&gt;</code></a></li>
+<li><code>&lt;loading-indicator&gt;</code>: <code>&lt;refresh&gt;</code> &#x548C; <code>&lt;loading&gt;</code> &#x7EC4;&#x4EF6;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;&#x62E5;&#x6709;&#x9ED8;&#x8BA4;&#x7684;&#x52A8;&#x753B;&#x6548;&#x679C;&#x7684;&#x5B9E;&#x73B0;&#x3002;</li>
+</ul>
+<h2 id="&#x7279;&#x6027;">&#x7279;&#x6027;</h2>
+<ul>
+<li><code>display</code>&#xFF1A;&#x53EF;&#x9009;&#x503C;&#x4E3A; <code>show</code> &#x6216;&#x8005; <code>hide</code>&#xFF0C;&#x4EC5;&#x9690;&#x85CF; <code>&lt;indicator&gt;</code>&#xFF0C;<code>&lt;loading&gt;</code> &#x5176;&#x4ED6;&#x5B50;&#x7EC4;&#x4EF6;&#x4F9D;&#x7136;&#x53EF;&#x89C1;&#xFF0C;<code>loading</code> &#x4E8B;&#x4EF6;&#x4ECD;&#x4F1A;&#x88AB;&#x89E6;&#x53D1;&#x3002;</li>
+</ul>
+<h2 id="&#x6837;&#x5F0F;">&#x6837;&#x5F0F;</h2>
+<p>&#x652F;&#x6301;&#x6240;&#x6709;&#x901A;&#x7528;&#x6837;&#x5F0F;&#x3002;</p>
+<ul>
+<li>&#x76D2;&#x6A21;&#x578B;</li>
+<li><code>flexbox</code> &#x5E03;&#x5C40;</li>
+<li><code>position</code></li>
+<li><code>opacity</code></li>
+<li><code>background-color</code></li>
+</ul>
+<p>&#x67E5;&#x770B; <a href="https://alibaba.github.io/weex/cn/doc/references/common-style.html" target="_blank">&#x7EC4;&#x4EF6;&#x901A;&#x7528;&#x6837;&#x5F0F;</a></p>
+<h2 id="&#x4E8B;&#x4EF6;">&#x4E8B;&#x4EF6;</h2>
+<ul>
+<li><code>loading</code>&#xFF1A;&#x52A0;&#x8F7D;&#x65F6;&#x88AB;&#x89E6;&#x53D1;&#x3002;</li>
+</ul>
+<h2 id="&#x7EA6;&#x675F;">&#x7EA6;&#x675F;</h2>
+<ul>
+<li><code>&lt;loading&gt;</code> &#x4E0D;&#x652F;&#x6301; <code>remove</code>&#xFF0C;v0.9 &#x7248;&#x672C;&#x4F1A;&#x4FEE;&#x590D;&#x3002;</li>
+<li><p><code>display</code> &#x503C;&#x4E3A; <code>show</code> &#x6216; <code>hide</code>&#x3002;&#x4EC5;&#x9690;&#x85CF; <code>&lt;indicator&gt;</code>&#xFF0C;<code>&lt;loading&gt;</code> &#x5176;&#x4ED6;&#x5B50;&#x7EC4;&#x4EF6;&#x4F9D;&#x7136;&#x53EF;&#x89C1;&#xFF0C;<code>loading</code> &#x4E8B;&#x4EF6;&#x4ECD;&#x4F1A;&#x88AB;&#x89E6;&#x53D1;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x9700;&#x8981; <code>&lt;loading&gt;</code> hide &#x65F6;&#x9690;&#x85CF;&#x6587;&#x6848;&#x5E76;&#x4E0D;&#x518D;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#xFF0C;&#x6709;&#x4E24;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ol>
+<li>&#x4FEE;&#x6539;&#x63D0;&#x793A;&#x6587;&#x6848;&#xFF0C;&#x5E76;&#x5728; <code>loading</code> &#x4E8B;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x5224;&#x65AD;&#x903B;&#x8F91;&#xFF1B;</li>
+<li>v0.9+ &#x53EF;&#x901A;&#x8FC7; <code>remove</code> &#x89E3;&#x51B3;&#x3002;</li>
+</ol>
 </li>
-<li>refresh/loading &#x4E0D;&#x652F;&#x6301;remove. 0.9 &#x7248;&#x672C;&#x4F1A;&#x4FEE;&#x590D;&#x3002;</li>
-<li>refresh/loading &#x4E0D;&#x518D;&#x4F7F;&#x7528;&#x65F6;&#x8BBE;&#x7F6E;display=&#x2018;hide&apos; &#x6ED1;&#x52A8;&#x65F6;&#x4EFB;&#x7136;&#x4F1A;&#x51FA;&#x73B0;&#xFF0C;&#x5E76;&#x6709;onrefresh/loaing &#x4E8B;&#x4EF6;&#x3002;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;1. &#x4FEE;&#x6539;&#x63D0;&#x793A;&#x8BED;&#x53E5;&#xFF0C;&#x5728;onfresh/onloaing &#x4E8B;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x5224;&#x65AD;&#x8BED;&#x53E5;&#x3002;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x3002;2. 0.9&#x7248;&#x672C;&#x540E;&#x53EF;&#x4EE5;remove refresh/loading &#x63A7;&#x4EF6;&#x89E3;&#x51B3;&#x3002;</li>
-<li>refresh/loading &#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x5C5E;&#x6027; display&#x8FDB;&#x884C;&#x5C55;&#x793A;&#x548C;&#x9690;&#x85CF;&#xFF0C;&#x4E14;&#x5FC5;&#x987B;&#x6210;&#x5BF9;&#x51FA;&#x73B0;&#xFF0C;&#x53CA;&#x8BBE;&#x7F6E;display=&apos;show&apos;,&#x5FC5;&#x987B;&#x6709;&#x5BF9;&#x5E94;&#x7684;display=&apos;hide&apos;&#x3002;&#x5426;&#x5219;&#xFF0C;&#x7A0B;&#x5E8F;&#x4F1A;&#x51FA;&#x73B0;&#x5047;&#x6B7B;&#x7684;&#x95EE;&#x9898;&#x3002;<h3 id="loading&#x6807;&#x7B7E;-&#x548C;-onloadmore&#x4E8B;&#x4EF6;&#x7684;&#x533A;&#x522B;&#x3002;">loading&#x6807;&#x7B7E; &#x548C; onloadmore&#x4E8B;&#x4EF6;&#x7684;&#x533A;&#x522B;&#x3002;</h3>
+<li><p>&#x53EA;&#x80FD;&#x901A;&#x8FC7; <code>display</code> &#x7279;&#x6027;&#x8FDB;&#x884C;&#x5C55;&#x793A;&#x548C;&#x9690;&#x85CF;&#xFF0C;&#x4E14;&#x5FC5;&#x987B;&#x6210;&#x5BF9;&#x51FA;&#x73B0;&#xFF0C;&#x5373;&#x8BBE;&#x7F6E; <code>display=&quot;show&quot;</code>,&#x5FC5;&#x987B;&#x6709;&#x5BF9;&#x5E94;&#x7684; <code>display=&quot;hide&quot;</code>&#x3002;</p>
 </li>
 </ul>
-<p>loading&#x662F;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;,&#x8FD9;&#x4E2A;&#x6807;&#x7B7E;&#x53EF;&#x4EE5;&#x54CD;&#x5E94;onloading&#x4E8B;&#x4EF6;&#xFF0C;&#x53EA;&#x6709;&#x5728;scroller/list &#x6ED1;&#x52A8;&#x5230;&#x5E95;&#x90E8;&#x65F6;&#x624D;&#x4F1A;&#x89E6;&#x53D1;&#x3002;
-onloadmore &#x662F; scroller/list &#x6807;&#x7B7E;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;loadmoreoffset&#x624D;&#x4F1A;&#x751F;&#x6548;&#x3002;&#x5F53;scroller/list &#x5269;&#x4F59;&#x6CA1;&#x6709;&#x663E;&#x793A;&#x7684;&#x9AD8;&#x5EA6;&#x5C0F;&#x4E8E;loadmoreoffset&#x65F6;&#x4F1A;&#x89E6;&#x53D1;onloadmore &#x4E8B;&#x4EF6;&#x3002;
-&#x4F8B;&#x5982;&#xFF1A;scroller &#x603B;&#x9AD8;&#x5EA6;1000&#xFF0C;loadmoreoffset=600 &#x5F53;scroller&#x5DF2;&#x7ECF;&#x663E;&#x793A;400&#x65F6;&#x518D;&#x6ED1;&#x52A8;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;onloadmore&#x4E8B;&#x4EF6;&#x3002;list&#x540C;&#x7406;&#x3002;</p>
-<h3 id="&#x4F7F;&#x7528;&#x8303;&#x4F8B;">&#x4F7F;&#x7528;&#x8303;&#x4F8B;</h3>
-<h4 id="scroller">scroller</h4>
-<pre><code>&lt;template&gt;
-    &lt;scroller onloadmore=&quot;onloadmore&quot; loadmoreoffset=&quot;1000&quot;&gt;
-        &lt;refresh onrefresh=&quot;onrefresh&quot; display=&quot;{{refreshDisplay}}&quot;&gt;
-            &lt;text id=&quot;refreshText&quot;&gt;{{refreshText}}&lt;/text&gt;
-        &lt;/refresh&gt;
-        &lt;div repeat=&quot;{{v in items}}&quot;&gt;
-            &lt;text style=&quot;font-size: 40px; color: black&quot;&gt;{{v.item}}&lt;/text&gt;
-        &lt;/div&gt;
-        &lt;loading onloading=&quot;onloading&quot; display=&quot;{{loadingDisplay}}&quot;&gt;
-            &lt;text id=&quot;loadingText&quot;&gt;{{loadingText}}&lt;/text&gt;
-        &lt;/loading&gt;
-    &lt;/scroller&gt;
-&lt;/template&gt;
-&lt;script&gt;
-    module.exports = {
-        data: {
-            refreshDisplay: &apos;show&apos;,
-            loadingDisplay: &apos;show&apos;,
-            loadingText: &apos;&#x4E0A;&#x62C9;&#x52A0;&#x8F7D;&#x66F4;&#x591A;&apos;,
-            refreshText: &apos;&#x4E0B;&#x62C9;&#x5237;&#x65B0;&apos;,
-            items: []
-        },
-        created: function () {
-            for (var i = 0; i &lt; 30; i++) {
-                this.items.push({&apos;item&apos;: &apos;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&apos; + i});
-            }
-        },
-        methods: {
-            onrefresh: function () {
-                var vm = this;
-                vm.refreshDisplay = &apos;show&apos;
-                if (vm.items.length &gt; 50) {
-                    vm.refreshText = &quot;&#x6CA1;&#x6709;&#x66F4;&#x65B0;&#x4E86;&quot;
-                    vm.refreshDisplay = &apos;hide&apos;
-                    return;
-                }
-                var len = vm.items.length;
-                for (var i = len; i &lt; (len + 20); i++) {
-                    vm.items.unshift({&apos;item&apos;: &apos;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&apos; + i});
-                }
-                vm.refreshDisplay = &apos;hide&apos;
-            },
-            onloading: function () {
-                var vm = this;
-                vm.loadingDisplay = &apos;show&apos;
-                if (vm.items.length &gt; 30) {
-                    vm.loadingText = &quot;&#x6CA1;&#x6709;&#x66F4;&#x591A;&#x4E86;!&quot;
-                    vm.loadingDisplay = &apos;hide&apos;
-                    return;
-                }
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<p><a href="http://dotwe.org/03789a6057aaafe74b54a3fd22a4b7ee" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">list</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;center&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align:center&quot;</span>&gt;</span>I am the header<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">loading</span> <span class="hljs-attr">onloading</span>=<span class="hljs-string">&quot;onloading&quot;</span> <span class="hljs-attr">display</span>=<span class="hljs-string">&quot;{{loadingDisplay}}&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:750;flex-direction: row;justify-content: center;&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">loading-indicator</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height:160;width:160;color:#3192e1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">loading-indicator</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">loading</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cell</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;{{i in staffs}}&quot;</span> <span class="hljs-attr">index</span>=<span class="hljs-string">&quot;{{$index}}&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{i.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">list</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
-                var len = vm.items.length;
-                for (var i = len; i &lt; (len + 20); i++) {
-                    vm.items.push({&apos;item&apos;: &apos;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&apos; + i});
-                }
-                vm.loadingDisplay = &apos;hide&apos;
-            },
-            onloadmore:function(){
-                console.log(&quot;into--[onloadmore]&quot;)
-            }
-        }
-    }
-&lt;/script&gt;
-</code></pre><h4 id="list">list</h4>
-<pre><code>&lt;template&gt;
-    &lt;list&gt;
-        &lt;refresh onrefresh=&quot;onrefresh&quot; display=&quot;{{refreshDisplay}}&quot;&gt;
-            &lt;text id=&quot;refreshText&quot;&gt;{{refreshText}}&lt;/text&gt;
-        &lt;/refresh&gt;
-        &lt;cell repeat=&quot;{{v in items}}&quot;&gt;
-            &lt;text style=&quot;font-size: 40px; color: black&quot;&gt;{{v.item}}&lt;/text&gt;
-        &lt;/cell&gt;
-        &lt;loading onloading=&quot;onloading&quot; display=&quot;{{loadingDisplay}}&quot;&gt;
-            &lt;text id=&quot;loadingText&quot;&gt;{{loadingText}}&lt;/text&gt;
-        &lt;/loading&gt;
-    &lt;/list&gt;
-&lt;/template&gt;
-&lt;script&gt;
-    module.exports = {
-        data: {
-            refreshDisplay: &apos;show&apos;,
-            loadingDisplay: &apos;show&apos;,
-            loadingText: &apos;&#x4E0A;&#x62C9;&#x52A0;&#x8F7D;&#x66F4;&#x591A;&apos;,
-            refreshText: &apos;&#x4E0B;&#x62C9;&#x5237;&#x65B0;&apos;,
-            items: []
-        },
-        created: function () {
-            for (var i = 0; i &lt; 30; i++) {
-                this.items.push({&apos;item&apos;: &apos;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&apos; + i});
-            }
-        },
-        methods: {
-            onrefresh: function () {
-                var vm = this;
-                vm.refreshDisplay = &apos;show&apos;
-                if (vm.items.length &gt; 50) {
-                    vm.refreshText = &quot;&#x6CA1;&#x6709;&#x66F4;&#x65B0;&#x4E86;&quot;
-                    vm.refreshDisplay = &apos;hide&apos;
-                    return;
-                }
-                var len = vm.items.length;
-                for (var i = len; i &lt; (len + 20); i++) {
-                    vm.items.unshift({&apos;item&apos;: &apos;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&apos; + i});
-                }
-                vm.refreshDisplay = &apos;hide&apos;
-            },
-            onloading: function () {
-                var vm = this;
-                vm.loadingDisplay = &apos;show&apos;
-                if (vm.items.length &gt; 30) {
-                    vm.loadingText = &quot;&#x6CA1;&#x6709;&#x66F4;&#x591A;&#x4E86;!&quot;
-                    vm.loadingDisplay = &apos;hide&apos;
-                    return;
-                }
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.row</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">750</span>;
+  }
+  <span class="hljs-selector-class">.item</span> {
+    <span class="hljs-attribute">justify-content</span>: center;
+    <span class="hljs-attribute">border-bottom-width</span>: <span class="hljs-number">2</span>;
+    <span class="hljs-attribute">border-bottom-color</span>: <span class="hljs-number">#c0c0c0</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100</span>;
+    <span class="hljs-attribute">padding</span>:<span class="hljs-number">20</span>;
+  }
+  <span class="hljs-selector-class">.center</span> {
+    <span class="hljs-attribute">border-bottom-width</span>: <span class="hljs-number">2</span>;
+    <span class="hljs-attribute">border-bottom-color</span>: <span class="hljs-number">#cccccc</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100</span>;
+    <span class="hljs-attribute">padding</span>:<span class="hljs-number">20</span>;
+    <span class="hljs-attribute">background-color</span>:<span class="hljs-number">#FFFFFF</span>;
+    <span class="hljs-attribute">justify-content</span>: center;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 
-                var len = vm.items.length;
-                for (var i = len; i &lt; (len + 20); i++) {
-                    vm.items.push({&apos;item&apos;: &apos;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&apos; + i});
-                }
-                vm.loadingDisplay = &apos;hide&apos;
-            }
-        }
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-built_in">module</span>.exports = {
+    data: {
+      staffs:[],
+      loadingDisplay: <span class="hljs-string">&apos;show&apos;</span>,
+      loadingText: <span class="hljs-string">&apos;pull up to load more&apos;</span>,
+      refreshText: <span class="hljs-string">&apos;pull down to refresh&apos;</span>
+    },
+    created:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">this</span>.refreshDisplay=<span class="hljs-string">&apos;show&apos;</span>
+      <span class="hljs-keyword">this</span>.staffs=[{name:<span class="hljs-string">&apos;inns&apos;</span>},{name:<span class="hljs-string">&apos;connon&apos;</span>},{name:<span class="hljs-string">&apos;baos&apos;</span>},{name:<span class="hljs-string">&apos;anna&apos;</span>},{name:<span class="hljs-string">&apos;dolley&apos;</span>},{name:<span class="hljs-string">&apos;lucy&apos;</span>},{name:<span class="hljs-string">&apos;john&apos;</span>}, {name:<span class="hljs-string">&apos;lily&apos;</span>},{name:<span class="hljs-string">&apos;locke&apos;</span>},{name:<span class="hljs-string">&apos;jack&apos;</span>},{name:<span class="hljs-string">&apos;danny&apos;</span>},{name:<span class="hljs-string">&apos;rose&apos;</span>},{name:<span class="hljs-string">&apos;harris&apos;</span>},{name:<span class="hljs-string">&apos;lotus&apos;</span>},{name:<span class="hljs-string">&apos;louis&apos;</span>}];
+    },
+    methods:{
+      onloading:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;onloading...&apos;</span>);
+        <span class="hljs-keyword">this</span>.staffs.push({name:<span class="hljs-string">&apos;onloading&apos;</span>})
+      }
     }
-&lt;/script&gt;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
+<p>&#x66F4;&#x591A;&#x793A;&#x4F8B;&#x53EF;&#x67E5;&#x770B; <a href="https://alibaba.github.io/weex/cn/doc/components/list.html" target="_blank"><code>&lt;list&gt;</code></a></p>
+
                                 
                                 </section>
                             
@@ -1843,7 +1805,7 @@ onloadmore &#x662F; scroller/list &#x6807;&#x7B7E;&#x7684;&#x4E8B;&#x4EF6;&#xFF0
 
             
                 
-                <a href="cell.html" class="navigation navigation-prev " aria-label="Previous page: cell">
+                <a href="refresh.html" class="navigation navigation-prev " aria-label="Previous page: refresh">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -1859,7 +1821,7 @@ onloadmore &#x662F; scroller/list &#x6807;&#x7B7E;&#x7684;&#x4E8B;&#x4EF6;&#xFF0
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"refresh & loading","level":"1.3.5.7.2","depth":4,"next":{"title":"text","level":"1.3.5.8","depth":3,"path":"components/text.md","ref":"components/text.md","articles":[]},"previous":{"title":"cell","level":"1.3.5.7.1","depth":4,"path":"components/cell.md","ref":"components/cell.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/refresh-loading.md","mtime":"2016-12-01T01:46:30.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T01:54:51.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"loading","level":"1.3.5.7.3","depth":4,"next":{"title":"text","level":"1.3.5.8","depth":3,"path":"components/text.md","ref":"components/text.md","articles":[]},"previous":{"title":"refresh","level":"1.3.5.7.2","depth":4,"path":"components/refresh.md","ref":"components/refresh.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/loading.md","mtime":"2016-12-01T18:12:36.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T18:21:31.427Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

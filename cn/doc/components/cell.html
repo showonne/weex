@@ -61,7 +61,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="refresh-loading.html">
+    <link rel="next" href="refresh.html">
     
     
     <link rel="prev" href="list.html">
@@ -995,12 +995,25 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.5.7.2" data-path="refresh-loading.html">
+        <li class="chapter " data-level="1.3.5.7.2" data-path="refresh.html">
             
-                <a href="refresh-loading.html">
+                <a href="refresh.html">
             
                     
-                    refresh &amp; loading
+                    refresh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7.3" data-path="loading.html">
+            
+                <a href="loading.html">
+            
+                    
+                    loading
             
                 </a>
             
@@ -1664,29 +1677,180 @@ contentLoaded(window,function(){
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="cell">&lt;cell&gt;</h1>
-<h3 id="summary">Summary</h3>
-<p>This component must be used as a subcomponent of a <a href="list.html"><code>list</code></a> component, which is for the performance optimizing during scrolling.</p>
-<h3 id="child-components">Child Components</h3>
-<p>This type of component supports all kinds of weex component as its child components.</p>
-<h3 id="attributes">Attributes</h3>
-<p>There is no specific attribute for this component other than the <a href="../references/common-attrs.html">common attributes</a>.</p>
-<p><strong>Notes:</strong> you can&apos;t give <code>&lt;cell&gt;</code> a <code>flex</code> value. Width of <code>&lt;cell&gt;</code> is equal to the width of its parent component <code>&lt;list&gt;</code>, and you don&apos;t need to specify its height.</p>
-<h3 id="styles">Styles</h3>
-<p><strong>common styles</strong>: check out the <a href="../references/common-attrs.html">common styles</a></p>
+<p>&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x5B50;&#x5217;&#x8868;&#x9879;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E; HTML &#x4E2D;&#x7684; <code>ul</code> &#x4E4B;&#x4E8E; <code>li</code>&#x3002;Weex &#x4F1A;&#x5BF9; <code>&lt;cell&gt;</code> &#x8FDB;&#x884C;&#x9AD8;&#x6548;&#x7684;&#x5185;&#x5B58;&#x56DE;&#x6536;&#x4EE5;&#x8FBE;&#x5230;&#x66F4;&#x597D;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x8BE5;&#x7EC4;&#x4EF6;&#x5FC5;&#x987B;&#x4F5C;&#x4E3A;<a href="http://alibaba.github.io/weex/cn/doc/components/list.html" target="_blank"><code>&lt;list&gt;</code></a> &#x7EC4;&#x4EF6;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;, &#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x4F18;&#x5316;&#x6EDA;&#x52A8;&#x65F6;&#x7684;&#x6027;&#x80FD;&#x3002;</p>
+<h2 id="&#x5B50;&#x7EC4;&#x4EF6;">&#x5B50;&#x7EC4;&#x4EF6;</h2>
+<p>&#x652F;&#x6301;&#x6240;&#x6709; Weex &#x7684;&#x7EC4;&#x4EF6;&#x4F5C;&#x4E3A;&#x5B83;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;</p>
+<h2 id="&#x6837;&#x5F0F;">&#x6837;&#x5F0F;</h2>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></p>
+<p>&#x4F60;&#x4E0D;&#x80FD;&#x7ED9; <code>&lt;cell&gt;</code> &#x8BBE;&#x5B9A;<code>flex</code>&#x503C;&#x3002; <code>&lt;cell&gt;</code>&#x7684;&#x5BBD;&#x5EA6;&#x7B49;&#x4E8E;&#x7236;&#x7EC4;&#x4EF6; <code>&lt;list&gt;</code> &#x7684;&#x5BBD;&#x5EA6;&#xFF0C;&#x5E76;&#x4E14;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x53BB;&#x8BBE;&#x5B9A;&#x5B83;&#x7684;&#x9AD8;&#x5EA6;&#x3002;</p>
 <ul>
-<li>support flexbox related styles</li>
-<li>support box model related styles</li>
-<li>support <code>position</code> related styles</li>
-<li>support <code>opacity</code>, <code>background-color</code> etc.</li>
-</ul>
-<h3 id="events">Events</h3>
-<p><strong>common events</strong>: check out the <a href="../references/common-event.html">common events</a></p>
+<li><p>&#x901A;&#x7528;&#x6837;&#x5F0F;&#xFF1A;&#x652F;&#x6301;&#x6240;&#x6709;&#x901A;&#x7528;&#x6837;&#x5F0F;</p>
 <ul>
-<li>support <code>click</code> event. Check out <a href="../references/common-event.html">common events</a></li>
-<li>support <code>appear</code> / <code>disappear</code> event. Check out <a href="../references/common-event.html">common events</a></li>
+<li>&#x76D2;&#x6A21;&#x578B;</li>
+<li><code>flexbox</code> &#x5E03;&#x5C40;</li>
+<li><code>position</code></li>
+<li><code>opacity</code></li>
+<li><code>background-color</code></li>
 </ul>
-<h3 id="example">Example</h3>
-<p>please refer to <a href="list.html">List</a></p>
+<p>&#x67E5;&#x770B; <a href="https://alibaba.github.io/weex/cn/doc/references/common-style.html" target="_blank">&#x7EC4;&#x4EF6;&#x901A;&#x7528;&#x6837;&#x5F0F;</a></p>
+</li>
+</ul>
+<h2 id="&#x4E8B;&#x4EF6;">&#x4E8B;&#x4EF6;</h2>
+<ul>
+<li><p>&#x901A;&#x7528;&#x4E8B;&#x4EF6;</p>
+<p>&#x652F;&#x6301;&#x6240;&#x6709;&#x901A;&#x7528;&#x4E8B;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li><code>click</code></li>
+<li><code>longpress</code></li>
+<li><code>appear</code></li>
+<li><code>disappear</code></li>
+</ul>
+<p>&#x67E5;&#x770B; <a href="https://alibaba.github.io/weex/cn/doc/references/common-event.html" target="_blank">&#x901A;&#x7528;&#x4E8B;&#x4EF6;</a></p>
+</li>
+</ul>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<p><img src="../images/list_3.jpg" alt="mobile_preview"></p>
+<p><a href="http://dotwe.org/280fa3dc8e793ea8712451ecdf84fb7b" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">list</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Search Results<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">refresh</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 750; padding: 30;&quot;</span> <span class="hljs-attr">onrefresh</span>=<span class="hljs-string">&quot;refreshData&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span> &#x2193; Pull to refresh <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">loading-indicator</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;indicator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">loading-indicator</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">refresh</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cell</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;item in items&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;item-{{$index}}&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>Repo name: {{item.full_name}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>Repo star: {{item.stargazers_count}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">loading</span> <span class="hljs-attr">onloading</span>=<span class="hljs-string">&quot;loadingData&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 750; padding: 30;&quot;</span> <span class="hljs-attr">display</span>=<span class="hljs-string">&quot;{{loadingDisplay}}&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>{{loadingText}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">loading</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">list</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;up&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;goToTop&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;img&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://img.alicdn.com/tps/TB1ZVOEOpXXXXcQaXXXXXXXXXXX-200-200.png&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">img</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+<span class="hljs-selector-class">.header</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">25</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#efefef</span>;
+  <span class="hljs-attribute">border-bottom-color</span>: <span class="hljs-number">#eeeeee</span>;
+  <span class="hljs-attribute">border-bottom-width</span>: <span class="hljs-number">2</span>;
+  <span class="hljs-attribute">border-bottom-style</span>: solid;
+}
+<span class="hljs-selector-class">.title</span> {
+  <span class="hljs-attribute">text-align</span>: center;
+}
+<span class="hljs-selector-class">.text</span> {
+  <span class="hljs-attribute">text-align</span>: center;
+}
+<span class="hljs-selector-class">.list</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffffff</span>;
+}
+<span class="hljs-selector-class">.row</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">20</span>;
+  <span class="hljs-attribute">border-bottom-color</span>: <span class="hljs-number">#eeeeee</span>;
+  <span class="hljs-attribute">border-bottom-width</span>: <span class="hljs-number">2</span>;
+  <span class="hljs-attribute">border-bottom-style</span>: solid;
+}
+<span class="hljs-selector-class">.up</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">70</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">70</span>;
+  <span class="hljs-attribute">position</span>: fixed;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">20</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">20</span>;
+}
+<span class="hljs-selector-class">.img</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">70</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">70</span>;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">var</span> dom = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/dom&apos;</span>) || {}
+<span class="hljs-keyword">var</span> stream = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/stream&apos;</span>) || {}
+<span class="hljs-keyword">var</span> modal = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/modal&apos;</span>) || {}
+
+<span class="hljs-keyword">var</span> SEARCH_URL = <span class="hljs-string">&apos;https://api.github.com/search/repositories?q=language:javascript&amp;sort=stars&amp;order=desc&apos;</span>
+
+<span class="hljs-built_in">module</span>.exports = {
+  data: {
+    page: <span class="hljs-number">1</span>,
+    loadingDisplay: <span class="hljs-string">&apos;show&apos;</span>,
+    loadingText: <span class="hljs-string">&apos;Loading...&apos;</span>,
+    items:[]
+  },
+  created: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> url = SEARCH_URL + <span class="hljs-string">&apos;&amp;page=&apos;</span> + <span class="hljs-keyword">this</span>.page
+
+    <span class="hljs-keyword">this</span>.renderData(url)
+
+    <span class="hljs-keyword">this</span>.page++
+  },
+  methods: {
+    renderData: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">url</span>) </span>{
+      <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
+
+      stream.fetch({
+        method: <span class="hljs-string">&apos;GET&apos;</span>,
+        url: url,
+        type:<span class="hljs-string">&apos;json&apos;</span>
+      }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+        <span class="hljs-keyword">try</span> {
+          <span class="hljs-keyword">var</span> results = res.data.items || []
+
+          <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Array</span>.isArray(results)) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; results.length; i++) {
+              self.items.push(results[i])
+            }
+          }
+        } <span class="hljs-keyword">catch</span>(e) {}
+      },<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+
+      })
+    },
+    loadingData: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+      <span class="hljs-keyword">var</span> url = SEARCH_URL + <span class="hljs-string">&apos;&amp;page=&apos;</span> + <span class="hljs-keyword">this</span>.page
+      <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
+
+      <span class="hljs-keyword">if</span> (self.page &lt;=<span class="hljs-number">10</span> ) {
+        self.renderData(url)
+        self.page++
+      } <span class="hljs-keyword">else</span> {
+        self.loadingDisplay = <span class="hljs-string">&apos;hide&apos;</span>
+        self.loadingText = <span class="hljs-string">&apos;NO MORE!&apos;</span>
+      }
+    },
+    goToTop: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+      dom.scrollToElement(<span class="hljs-keyword">this</span>.$el(<span class="hljs-string">&apos;item-0&apos;</span>), {
+        offset: <span class="hljs-number">-100</span>
+      })
+    },
+    refreshData: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+      <span class="hljs-keyword">var</span> url = SEARCH_URL + <span class="hljs-string">&apos;&amp;page=1&apos;</span>
+
+      modal.toast({
+        <span class="hljs-string">&apos;message&apos;</span>: <span class="hljs-string">&apos;Refreshing...&apos;</span>,
+        <span class="hljs-string">&apos;duration&apos;</span>: <span class="hljs-number">1</span>
+      })
+
+      <span class="hljs-keyword">this</span>.items = []
+      <span class="hljs-keyword">this</span>.page = <span class="hljs-number">1</span>
+      <span class="hljs-keyword">this</span>.renderData(url)
+    }
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -1719,7 +1883,7 @@ contentLoaded(window,function(){
                 </a>
                 
                 
-                <a href="refresh-loading.html" class="navigation navigation-next " aria-label="Next page: refresh &amp; loading">
+                <a href="refresh.html" class="navigation navigation-next " aria-label="Next page: refresh">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1730,7 +1894,7 @@ contentLoaded(window,function(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"cell","level":"1.3.5.7.1","depth":4,"next":{"title":"refresh & loading","level":"1.3.5.7.2","depth":4,"path":"components/refresh-loading.md","ref":"components/refresh-loading.md","articles":[]},"previous":{"title":"list","level":"1.3.5.7","depth":3,"path":"components/list.md","ref":"components/list.md","articles":[{"title":"cell","level":"1.3.5.7.1","depth":4,"path":"components/cell.md","ref":"components/cell.md","articles":[]},{"title":"refresh & loading","level":"1.3.5.7.2","depth":4,"path":"components/refresh-loading.md","ref":"components/refresh-loading.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/cell.md","mtime":"2016-12-01T01:46:30.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T01:54:51.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"cell","level":"1.3.5.7.1","depth":4,"next":{"title":"refresh","level":"1.3.5.7.2","depth":4,"path":"components/refresh.md","ref":"components/refresh.md","articles":[]},"previous":{"title":"list","level":"1.3.5.7","depth":3,"path":"components/list.md","ref":"components/list.md","articles":[{"title":"cell","level":"1.3.5.7.1","depth":4,"path":"components/cell.md","ref":"components/cell.md","articles":[]},{"title":"refresh","level":"1.3.5.7.2","depth":4,"path":"components/refresh.md","ref":"components/refresh.md","articles":[]},{"title":"loading","level":"1.3.5.7.3","depth":4,"path":"components/loading.md","ref":"components/loading.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/cell.md","mtime":"2016-12-01T18:12:36.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T18:21:31.427Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

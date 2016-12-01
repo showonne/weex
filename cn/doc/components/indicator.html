@@ -995,12 +995,25 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.5.7.2" data-path="refresh-loading.html">
+        <li class="chapter " data-level="1.3.5.7.2" data-path="refresh.html">
             
-                <a href="refresh-loading.html">
+                <a href="refresh.html">
             
                     
-                    refresh &amp; loading
+                    refresh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7.3" data-path="loading.html">
+            
+                <a href="loading.html">
+            
+                    
+                    loading
             
                 </a>
             
@@ -1664,86 +1677,110 @@ contentLoaded(window,function(){
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="indicator">&lt;indicator&gt;</h1>
-<h2 id="&#x6982;&#x8981;">&#x6982;&#x8981;</h2>
-<p>&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x5FC5;&#x987B;&#x4F5C;&#x4E3A;<a href="slider.html">slider</a>&#x5B50;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;</p>
+<p><code>&lt;indicator&gt;</code> &#x7EC4;&#x4EF6;&#x7528;&#x4E8E;&#x663E;&#x793A;&#x8F6E;&#x64AD;&#x56FE;&#x6307;&#x793A;&#x5668;&#x6548;&#x679C;&#xFF0C;&#x5FC5;&#x987B;&#x5145;&#x5F53; <a href="https://alibaba.github.io/weex/cn/doc/components/slider.html" target="_blank"><code>&lt;slider&gt;</code></a> &#x7EC4;&#x4EF6;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;&#x3002;</p>
 <h2 id="&#x5B50;&#x7EC4;&#x4EF6;">&#x5B50;&#x7EC4;&#x4EF6;</h2>
-<p>&#x8BE5;&#x7EC4;&#x4EF6;&#x4E0D;&#x652F;&#x6301;&#x5B50;&#x7EC4;&#x4EF6;</p>
-<h2 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h2>
-<p>&#x8BE5;&#x7EC4;&#x4EF6;&#x9664;&#x4E86;<a href="../references/common-attrs.html">&#x901A;&#x7528;&#x5C5E;&#x6027;</a>&#x5916;&#x6CA1;&#x6709;&#x5176;&#x4ED6;&#x7684;&#x7279;&#x6B8A;&#x5C5E;&#x6027;</p>
+<p><code>&lt;indicator&gt;</code> &#x7EC4;&#x4EF6;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;</p>
 <h2 id="&#x6837;&#x5F0F;">&#x6837;&#x5F0F;</h2>
+<p><code>&lt;indicator&gt;</code> &#x7EC4;&#x4EF6;&#x6709;&#x4E00;&#x4E9B;&#x79C1;&#x6709;&#x6837;&#x5F0F;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <ul>
-<li>item-color &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x88AB;&#x547D;&#x540D;&#x8FC7;&#x7684;&#x989C;&#x8272;&#x6216;&#x8005;&#x5341;&#x516D;&#x8FDB;&#x5236;#RRGGBB &#x683C;&#x5F0F;&#x8BBE;&#x7F6E;&#x6BCF;&#x4E2A;item&#x7684;&#x989C;&#x8272;</li>
-<li>item-selectedColor &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x88AB;&#x547D;&#x540D;&#x8FC7;&#x7684;&#x989C;&#x8272;&#x6216;&#x8005;&#x5341;&#x516D;&#x8FDB;&#x5236;#RRGGBB &#x683C;&#x5F0F;&#x8BBE;&#x7F6E;&#x6BCF;&#x4E2A;item&#x88AB;&#x9009;&#x4E2D;&#x7684;&#x989C;&#x8272;</li>
-<li>item-size &#x8BBE;&#x7F6E;&#x6307;&#x793A;&#x5668;&#x5143;&#x7D20;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4E3A;float&#x7C7B;&#x578B;&#x503C;</li>
+<li><p><code>item-color</code>: &#x8BBE;&#x7F6E;&#x9879;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x989C;&#x8272;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x4F8B;&#x5982; <code>red</code>&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x662F; 16 &#x8FDB;&#x5236;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x4F8B;&#x5982; <code>#RRGGBB</code>&#x3002;</p>
+</li>
+<li><p><code>item-selected-color</code>: &#x88AB;&#x9009;&#x4E2D;&#x65F6;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x989C;&#x8272;&#x7684;&#x540D;&#x79F0;&#xFF0C;<code>red</code>&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x662F; 16 &#x8FDB;&#x5236;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x4F8B;&#x5982; <code>#RRGGBB</code>&#x3002;</p>
+</li>
+<li><p><code>item-size:</code> &#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;&#x3002;</p>
+</li>
+<li><p>&#x901A;&#x7528;&#x6837;&#x5F0F;</p>
+<ul>
+<li>&#x76D2;&#x6A21;&#x578B;</li>
+<li><code>flexbox</code> &#x5E03;&#x5C40;</li>
+<li><code>position</code></li>
+<li><code>opacity</code></li>
+<li><code>background-color</code></li>
 </ul>
-<p><strong>&#x901A;&#x7528;&#x5C5E;&#x6027;</strong>&#x53C2;&#x8003;<a href="../references/common-attrs.html">&#x901A;&#x7528;&#x5C5E;&#x6027;</a></p>
-<ul>
-<li>&#x652F;&#x6301; flexbox &#x76F8;&#x5173;&#x6837;&#x5F0F;</li>
-<li>&#x652F;&#x6301; box model &#x76F8;&#x5173;&#x6837;&#x5F0F;</li>
-<li>&#x652F;&#x6301; position &#x76F8;&#x5173;&#x6837;&#x5F0F;</li>
-</ul>
-<p><strong>&#x6CE8;&#x610F;</strong>
-&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E9B;&#x5173;&#x4E8E;&#x6837;&#x5F0F;width&#x548C;height&#x7684;&#x7279;&#x6B8A;&#x7EC6;&#x8282;&#x3002;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x5B9A;&#x4F4D;&#x4E0D;&#x4EC5;&#x4E0E;top, left, bottom &#x548C;right&#x6709;&#x5173;&#xFF0C;&#x8FD8;&#x4E0E;width &#x548C; height&#x7684;&#x503C;&#x6709;&#x5173;&#x3002;&#x60F3;&#x8C61;indicator&#x5916;&#x90E8;&#x6709;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x7684;&#x5BB9;&#x5668;,&#x5E76;&#x4E14;&#x5B83;&#x7684;width&#x548C;height&#x7EE7;&#x627F;&#x4E8E;indicator&#xFF0C;top, left, right &#x548C; bottom &#x5C06;&#x53EA;&#x4F1A;&#x4F5C;&#x7528;&#x4E8E;&#x5916;&#x90E8;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x800C;&#x4E0D;&#x662F;indicator,indicator&#x5C06;&#x4F1A;&#x4E00;&#x76F4;&#x4F4D;&#x4E8E;&#x8FD9;&#x4E2A;&#x5BB9;&#x5668;&#x7684;&#x4E2D;&#x5FC3;&#x4F4D;&#x7F6E;,&#x5E76;&#x4E14;&#x4F60;&#x8981;&#x77E5;&#x9053;&#x7684;&#x662F;&#x901A;&#x5E38;indicator&#x7684;width &#x548C; height&#x662F;&#x7236;&#x7EC4;&#x4EF6;slider&#x7684;width &#x548C; height&#x3002;
-<strong>&#x6CE8;&#x610F;</strong>
-background-color&#x662F;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x5728;&#x8BE5;&#x7EC4;&#x4EF6;&#x4E0A;&#x7684;,&#x4F60;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;item-color &#x548C; item-selectedColor&#x6765;&#x4EE3;&#x66FF;</p>
-<h2 id="&#x4E8B;&#x4EF6;">&#x4E8B;&#x4EF6;</h2>
-<p>&#x901A;&#x7528;&#x4E8B;&#x4EF6;:&#x53C2;&#x8003;<a href="../references/common-event.html">&#x901A;&#x7528;&#x4E8B;&#x4EF6;</a></p>
-<ul>
-<li>&#x652F;&#x6301; click &#x4E8B;&#x4EF6; &#x53C2;&#x8003;<a href="../references/common-event.html">&#x901A;&#x7528;&#x4E8B;&#x4EF6;</a></li>
-<li>&#x652F;&#x6301; appear / disappear &#x4E8B;&#x4EF6; &#x53C2;&#x8003;<a href="../references/common-event.html">&#x901A;&#x7528;&#x4E8B;&#x4EF6;</a><h2 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h2>
+<p>&#x67E5;&#x770B; <a href="https://alibaba.github.io/weex/cn/doc/references/common-style.html" target="_blank">&#x7EC4;&#x4EF6;&#x901A;&#x7528;&#x6837;&#x5F0F;</a></p>
 </li>
 </ul>
-<pre><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;slider class=&quot;slider&quot;&gt;
-      &lt;div class=&quot;slider-pages&quot; repeat=&quot;{{itemList}}&quot;&gt;
-        &lt;image class=&quot;img&quot; src=&quot;{{pictureUrl}}&quot;&gt;&lt;/image&gt;
-        &lt;text class=&quot;title&quot;&gt;{{title}}&lt;/text&gt;
-      &lt;/div&gt;
+<p><strong>&#x6CE8;&#x610F; 1&#xFF1A;</strong></p>
+<p>&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4E00;&#x70B9;&#xFF0C;<code>&lt;indicator&gt;</code> &#x7684; <code>position</code> &#x4E0D;&#x4EC5;&#x4F9D;&#x8D56; <code>top</code>&#x3001;<code>left</code>&#x3001;<code>bottom</code> &#x548C; <code>right</code> &#x6837;&#x5F0F;&#xFF0C;&#x540C;&#x65F6;&#x4F1A;&#x53C2;&#x8003; <code>width</code>&#x548C; <code>height</code> &#x6837;&#x5F0F;&#x3002;<code>&lt;indicator&gt;</code> &#x9ED8;&#x8BA4;&#x7684;&#x5BBD;&#x9AD8;&#x7EE7;&#x627F;&#x4E8E; <code>&lt;slider&gt;</code>&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F; 2&#xFF1A;</strong></p>
+<p><code>background-color</code> &#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528; <code>item-color</code> &#x548C; <code>item-selected-color</code> &#x4EE3;&#x66FF;&#x3002;</p>
+<h2 id="&#x4E8B;&#x4EF6;">&#x4E8B;&#x4EF6;</h2>
+<p>&#x652F;&#x6301;&#x6240;&#x6709;&#x901A;&#x7528;&#x4E8B;&#x4EF6;&#x3002;</p>
+<ul>
+<li><code>click</code></li>
+<li><code>longpress</code></li>
+<li><code>appear</code></li>
+<li><code>disappear</code></li>
+</ul>
+<p>&#x67E5;&#x770B; <a href="https://alibaba.github.io/weex/cn/doc/references/common-event.html" target="_blank">&#x901A;&#x7528;&#x4E8B;&#x4EF6;</a></p>
+<h2 id="&#x7EA6;&#x675F;">&#x7EA6;&#x675F;</h2>
+<ol>
+<li>&#x4E0D;&#x652F;&#x6301;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;</li>
+</ol>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<p><a href="http://dotwe.org/18500737944ddc99497aaac8f1fe6f1c" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">slider</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slider&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slider-pages&quot;</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;{{itemList}}&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;img&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{pictureUrl}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>{{title}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">indicator</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;indicator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">indicator</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">slider</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
-      &lt;indicator class=&quot;indicator&quot;&gt;&lt;/indicator&gt;
-    &lt;/slider&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.img</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">714</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">150</span>;
+  }
+  <span class="hljs-selector-class">.title</span> {
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">20</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">20</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#ff0000</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">48</span>;
+    <span class="hljs-attribute">font-weight</span>: bold;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#eeeeee</span>;
+  }
+  <span class="hljs-selector-class">.slider</span> {
+    <span class="hljs-attribute">flex-direction</span>: row;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">18</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">714</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">230</span>;
+  }
+  <span class="hljs-selector-class">.slider-pages</span> {
+    <span class="hljs-attribute">flex-direction</span>: row;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">714</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">200</span>;
+  }
+  <span class="hljs-selector-class">.indicator</span> {
+    <span class="hljs-attribute">width</span>:<span class="hljs-number">714</span>;
+    <span class="hljs-attribute">height</span>:<span class="hljs-number">200</span>;
+    <span class="hljs-attribute">position</span>:absolute;
+    <span class="hljs-attribute">top</span>:<span class="hljs-number">1</span>;
+    <span class="hljs-attribute">left</span>:<span class="hljs-number">1</span>;
+    <span class="hljs-attribute">item-color</span>: red;
+    <span class="hljs-attribute">item-selectedColor</span>: blue;
+    <span class="hljs-attribute">item-size</span>: <span class="hljs-number">20</span>;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 
-&lt;style&gt;
-  .img {width: 150; height: 150;}
-  .title {flex: 1; color: #ff0000; font-size: 48; font-weight: bold; background-color: #eeeeee;}
-  .slider {
-    flex-direction: row;
-    margin: 18;
-    width: 714;
-    height: 230;
-  }
-  .slider-pages {
-    flex-direction: row;
-    width: 714;
-    height: 200;
-  }
-  .indicator {
-    width:714;
-    height:200;
-    position:absolute;
-    top:1;
-    left:1;
-    item-color: red;
-    item-selectedColor: blue;
-    item-size: 20;
-  }
-&lt;/style&gt;
-
-&lt;script&gt;
-  module.exports = {
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-built_in">module</span>.exports = {
     data: {
       itemList: [
-        {itemId: &apos;520421163634&apos;, title: &apos;item1&apos;, pictureUrl: &apos;https://gd2.alicdn.com/bao/uploaded/i2/T14H1LFwBcXXXXXXXX_!!0-item_pic.jpg&apos;},
-        {itemId: &apos;522076777462&apos;, title: &apos;item2&apos;, pictureUrl: &apos;https://gd1.alicdn.com/bao/uploaded/i1/TB1PXJCJFXXXXciXFXXXXXXXXXX_!!0-item_pic.jpg&apos;},
-        {itemId: &apos;522076777462&apos;, title: &apos;iten3&apos;, pictureUrl: &apos;https://gd3.alicdn.com/bao/uploaded/i3/TB1x6hYLXXXXXazXVXXXXXXXXXX_!!0-item_pic.jpg&apos;}
+        {itemId: <span class="hljs-string">&apos;520421163634&apos;</span>, title: <span class="hljs-string">&apos;item1&apos;</span>, pictureUrl: <span class="hljs-string">&apos;https://gd2.alicdn.com/bao/uploaded/i2/T14H1LFwBcXXXXXXXX_!!0-item_pic.jpg&apos;</span>},
+        {itemId: <span class="hljs-string">&apos;522076777462&apos;</span>, title: <span class="hljs-string">&apos;item2&apos;</span>, pictureUrl: <span class="hljs-string">&apos;https://gd1.alicdn.com/bao/uploaded/i1/TB1PXJCJFXXXXciXFXXXXXXXXXX_!!0-item_pic.jpg&apos;</span>},
+        {itemId: <span class="hljs-string">&apos;522076777462&apos;</span>, title: <span class="hljs-string">&apos;iten3&apos;</span>, pictureUrl: <span class="hljs-string">&apos;https://gd3.alicdn.com/bao/uploaded/i3/TB1x6hYLXXXXXazXVXXXXXXXXXX_!!0-item_pic.jpg&apos;</span>}
       ]
     }
   }
-&lt;/script&gt;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
+
                                 
                                 </section>
                             
@@ -1786,7 +1823,7 @@ background-color&#x662F;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x5728;&#x8BE5;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"indicator","level":"1.3.5.13.1","depth":4,"next":{"title":"video","level":"1.3.5.14","depth":3,"path":"components/video.md","ref":"components/video.md","articles":[]},"previous":{"title":"slider","level":"1.3.5.13","depth":3,"path":"components/slider.md","ref":"components/slider.md","articles":[{"title":"indicator","level":"1.3.5.13.1","depth":4,"path":"components/indicator.md","ref":"components/indicator.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/indicator.md","mtime":"2016-12-01T01:46:30.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T01:54:51.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"indicator","level":"1.3.5.13.1","depth":4,"next":{"title":"video","level":"1.3.5.14","depth":3,"path":"components/video.md","ref":"components/video.md","articles":[]},"previous":{"title":"slider","level":"1.3.5.13","depth":3,"path":"components/slider.md","ref":"components/slider.md","articles":[{"title":"indicator","level":"1.3.5.13.1","depth":4,"path":"components/indicator.md","ref":"components/indicator.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/indicator.md","mtime":"2016-12-01T18:12:36.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T18:21:31.427Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -995,12 +995,25 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.5.7.2" data-path="../components/refresh-loading.html">
+        <li class="chapter " data-level="1.3.5.7.2" data-path="../components/refresh.html">
             
-                <a href="../components/refresh-loading.html">
+                <a href="../components/refresh.html">
             
                     
-                    refresh &amp; loading
+                    refresh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7.3" data-path="../components/loading.html">
+            
+                <a href="../components/loading.html">
+            
+                    
+                    loading
             
                 </a>
             
@@ -1673,24 +1686,61 @@ contentLoaded(window,function(){
 &#xFF08;&#x5173;&#x4E8E;<code>callNative</code>&#x8FDB;&#x7A0B;&#x7684;&#x8FDB;&#x4E00;&#x6B65;&#x4ECB;&#x7ECD;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;<a href="../advanced/how-it-works.html">How it works</a>&#x4E2D;&#x7684;JS Framework&#x90E8;&#x5206;&#x770B;&#x5230; &#xFF09;</p>
 <h1 id="api">API</h1>
 <h2 id="scrolltoelementnode-options">scrollToElement(node, options)</h2>
-<p>&#x8BA9;&#x9875;&#x9762;&#x6EDA;&#x52A8;&#x5230;&#x90A3;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x8FD9;&#x4E2A;API&#x53EA;&#x80FD;&#x5728;<code>scroller</code>&#x548C;<code>list</code>&#x7EC4;&#x4EF6;&#x4E2D;&#x7528;&#x3002;</p>
+<p>&#x8BA9;&#x9875;&#x9762;&#x6EDA;&#x52A8;&#x5230;&#x90A3;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x8FD9;&#x4E2A;API&#x53EA;&#x80FD;&#x5728;<code>&lt;scroller&gt;</code>&#x548C;<code>&lt;list&gt;</code>&#x7EC4;&#x4EF6;&#x4E2D;&#x7528;&#x3002;</p>
 <p><del>&#x8FD9;&#x4E2A;API&#x4E5F;&#x80FD;&#x901A;&#x8FC7;&#x8C03;&#x7528;VM&#x7684;&#x65B9;&#x6CD5;<code>$scrollTo</code>&#x6765;&#x4F7F;&#x7528;&#xFF08;&#x5DF2;&#x5F03;&#x7528;&#xFF09;</del></p>
 <p>&#x8981;&#x5728;&#x4F60;&#x7684;<code>.we</code>&#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;API&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>require(&apos;@weex-module/dom&apos;).scrollToElement</code>&#x3002;</p>
 <h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
 <ul>
 <li>node(Node): &#x4F60;&#x8981;&#x6EDA;&#x52A8;&#x5230;&#x7684;&#x90A3;&#x4E2A;&#x8282;&#x70B9;</li>
 <li>options(object): &#x5982;&#x4E0B;&#x9009;&#x9879;<ul>
-<li>offset(number): &#x4E00;&#x4E2A;&#x5230;&#x5176;&#x53EF;&#x89C1;&#x4F4D;&#x7F6E;&#x7684;&#x504F;&#x79FB;&#x8DDD;&#x79BB;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;<code>0</code><h4 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h4>
-</li>
+<li>offset(number): &#x4E00;&#x4E2A;&#x5230;&#x5176;&#x53EF;&#x89C1;&#x4F4D;&#x7F6E;&#x7684;&#x504F;&#x79FB;&#x8DDD;&#x79BB;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;<code>0</code></li>
 </ul>
 </li>
 </ul>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> dom = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/dom&apos;</span>);
-dom.scrollToElement(<span class="hljs-keyword">this</span>.$el(<span class="hljs-string">&apos;someId&apos;</span>), {offset: <span class="hljs-number">10</span>});
+<h3 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h3>
+<p><a href="http://dotwe.org/483e5c878c52c0891e6e35e478f19854" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">scroller</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;item in rows&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;item-{{$index}}&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item-title&quot;</span>&gt;</span>row {{item.id}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;go&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 750;height: 50; position: fixed; left: 0; right: 0; bottom: 0; background-color: #eeeeee;&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align: center;&quot;</span>&gt;</span>
+        Go to 50th line.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">scroller</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">var</span> dom = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/dom&apos;</span>)
+
+<span class="hljs-built_in">module</span>.exports = {
+  data: {
+    rows: []
+  },
+  created: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) {
+      <span class="hljs-keyword">this</span>.rows.push({
+        id: i
+      })
+    }
+  },
+  methods: {
+    go: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">var</span> el = <span class="hljs-keyword">this</span>.$el(<span class="hljs-string">&apos;item-49&apos;</span>)
+
+      dom.scrollToElement(el, {
+        offset: <span class="hljs-number">0</span>
+      })
+    }
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 <h2 id="createbodyelement">createBody(element)</h2>
 <p>&#x4E3A;&#x6574;&#x4E2A;dom&#x6811;&#x521B;&#x5EFA;body&#x3002;
-&#x5143;&#x7D20;&#xFF08;Element&#xFF09;&#x7684;&#x7C7B;&#x578B;&#x53EA;&#x80FD;&#x662F;&#x67D0;&#x79CD;&#x80FD;&#x88AB;&#x5F53;&#x505A;&#x6839;&#x8282;&#x70B9;&#x7684;&#x5143;&#x7D20;&#xFF08;&#x5305;&#x62EC;<code>div</code>,<code>scroller</code>,<code>list</code>&#xFF09;</p>
+&#x5143;&#x7D20;&#xFF08;Element&#xFF09;&#x7684;&#x7C7B;&#x578B;&#x53EA;&#x80FD;&#x662F;&#x67D0;&#x79CD;&#x80FD;&#x88AB;&#x5F53;&#x505A;&#x6839;&#x8282;&#x70B9;&#x7684;&#x5143;&#x7D20;&#xFF08;&#x5305;&#x62EC;<code>&lt;div&gt;</code>,<code>&lt;scroller&gt;</code>,<code>&lt;list&gt;</code>&#xFF09;</p>
 <h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
 <ul>
 <li>element(object): &#x4E00;&#x4E2A;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x8282;&#x70B9;&#x5404;&#x9879;&#x4FE1;&#x606F;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x62EC;ref, type, children&#x7B49;&#x3002;<h2 id="addelementparentnode-element-index">addElement(parentNode, element, index)</h2>
@@ -1798,7 +1848,7 @@ dom.scrollToElement(<span class="hljs-keyword">this</span>.$el(<span class="hljs
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"dom","level":"1.3.6.1","depth":3,"next":{"title":"stream","level":"1.3.6.2","depth":3,"path":"modules/stream.md","ref":"modules/stream.md","articles":[]},"previous":{"title":"内建模块","level":"1.3.6","depth":2,"path":"modules/main.md","ref":"modules/main.md","articles":[{"title":"dom","level":"1.3.6.1","depth":3,"path":"modules/dom.md","ref":"modules/dom.md","articles":[]},{"title":"stream","level":"1.3.6.2","depth":3,"path":"modules/stream.md","ref":"modules/stream.md","articles":[]},{"title":"modal","level":"1.3.6.3","depth":3,"path":"modules/modal.md","ref":"modules/modal.md","articles":[]},{"title":"animation","level":"1.3.6.4","depth":3,"path":"modules/animation.md","ref":"modules/animation.md","articles":[]},{"title":"webview","level":"1.3.6.5","depth":3,"path":"modules/webview.md","ref":"modules/webview.md","articles":[]},{"title":"navigator","level":"1.3.6.6","depth":3,"path":"modules/navigator.md","ref":"modules/navigator.md","articles":[]},{"title":"storage","level":"1.3.6.7","depth":3,"path":"modules/storage.md","ref":"modules/storage.md","articles":[]},{"title":"timer","level":"1.3.6.8","depth":3,"path":"modules/timer.md","ref":"modules/timer.md","articles":[]},{"title":"clipboard","level":"1.3.6.9","depth":3,"path":"modules/clipboard.md","ref":"modules/clipboard.md","articles":[]},{"title":"globalEvent","level":"1.3.6.10","depth":3,"path":"modules/globalevent.md","ref":"modules/globalevent.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"modules/dom.md","mtime":"2016-12-01T01:46:30.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T01:54:51.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"dom","level":"1.3.6.1","depth":3,"next":{"title":"stream","level":"1.3.6.2","depth":3,"path":"modules/stream.md","ref":"modules/stream.md","articles":[]},"previous":{"title":"内建模块","level":"1.3.6","depth":2,"path":"modules/main.md","ref":"modules/main.md","articles":[{"title":"dom","level":"1.3.6.1","depth":3,"path":"modules/dom.md","ref":"modules/dom.md","articles":[]},{"title":"stream","level":"1.3.6.2","depth":3,"path":"modules/stream.md","ref":"modules/stream.md","articles":[]},{"title":"modal","level":"1.3.6.3","depth":3,"path":"modules/modal.md","ref":"modules/modal.md","articles":[]},{"title":"animation","level":"1.3.6.4","depth":3,"path":"modules/animation.md","ref":"modules/animation.md","articles":[]},{"title":"webview","level":"1.3.6.5","depth":3,"path":"modules/webview.md","ref":"modules/webview.md","articles":[]},{"title":"navigator","level":"1.3.6.6","depth":3,"path":"modules/navigator.md","ref":"modules/navigator.md","articles":[]},{"title":"storage","level":"1.3.6.7","depth":3,"path":"modules/storage.md","ref":"modules/storage.md","articles":[]},{"title":"timer","level":"1.3.6.8","depth":3,"path":"modules/timer.md","ref":"modules/timer.md","articles":[]},{"title":"clipboard","level":"1.3.6.9","depth":3,"path":"modules/clipboard.md","ref":"modules/clipboard.md","articles":[]},{"title":"globalEvent","level":"1.3.6.10","depth":3,"path":"modules/globalevent.md","ref":"modules/globalevent.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"modules/dom.md","mtime":"2016-12-01T18:12:36.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T18:21:31.427Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

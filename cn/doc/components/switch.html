@@ -995,12 +995,25 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.5.7.2" data-path="refresh-loading.html">
+        <li class="chapter " data-level="1.3.5.7.2" data-path="refresh.html">
             
-                <a href="refresh-loading.html">
+                <a href="refresh.html">
             
                     
-                    refresh &amp; loading
+                    refresh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7.3" data-path="loading.html">
+            
+                <a href="loading.html">
+            
+                    
+                    loading
             
                 </a>
             
@@ -1663,48 +1676,86 @@ contentLoaded(window,function(){
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="switch">&lt;switch&gt;</h1>
-<h2 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h2>
-<p>weex &#x6784;&#x5EFA;&#x4E86;&#x7EC4;&#x4EF6;<code>switch</code> &#x7528;&#x4E8E;&#x521B;&#x9020;&#x548C;&#x7BA1;&#x7406;&#x7C7B;&#x4F3C;iOS&#x6837;&#x5F0F;&#x7684;On/Off &#x5F00;&#x5173;&#x6309;&#x94AE;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5728;app&#x8BBE;&#x7F6E;&#x4E2D;&#x7684;&#x2018;muted&#x2019;&#x548C;&#x2018;toggle color&#x2019;&#x8BBE;&#x7F6E;&#x3002;</p>
+                                <h1 id="switch-v061">&lt;switch&gt; <sup>(v0.6.1+)</sup></h1>
+<p><code>&lt;switch&gt;</code> &#x662F; Weex &#x7684;&#x5185;&#x7F6E;&#x7EC4;&#x4EF6;&#xFF0C;&#x7528;&#x6765;&#x521B;&#x5EFA;&#x4E0E; iOS &#x4E00;&#x81F4;&#x6837;&#x5F0F;&#x7684;&#x6309;&#x94AE;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728; iPhone &#x4E2D;&#x7684;&#x8BBE;&#x7F6E;&#x5E94;&#x7528;&#x4E2D;&#x7684;&#x98DE;&#x884C;&#x6A21;&#x5F0F;&#x6309;&#x94AE;&#x5C31;&#x662F;&#x4E00;&#x4E2A; switch &#x6309;&#x94AE;&#x3002;</p>
 <h2 id="&#x5B50;&#x7EC4;&#x4EF6;">&#x5B50;&#x7EC4;&#x4EF6;</h2>
-<p>&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E0D;&#x652F;&#x6301;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;</p>
-<h2 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h2>
+<p><code>&lt;switch&gt;</code> &#x7EC4;&#x4EF6;<strong>&#x4E0D;&#x652F;&#x6301;</strong>&#x4EFB;&#x4F55;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;</p>
+<h2 id="&#x7279;&#x6027;">&#x7279;&#x6027;</h2>
 <ul>
-<li><code>checked</code>:<code>&lt;boolean&gt;</code> <code>true</code> | <code>false</code>.&#x6309;&#x94AE;&#x521D;&#x59CB;&#x503C;&#x7684;&#x72B6;&#x6001;&#x662F;&#x5F00;&#x6216;&#x8005;&#x5173;&#x3002;</li>
+<li><code>checked</code>&#xFF1A;<code>boolean</code> &#x7C7B;&#x578B; <code>true</code>|<code>false</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>false</code>&#xFF0C;&#x8868;&#x660E;&#x6309;&#x94AE;&#x662F;&#x5426;&#x5F00;&#x542F; is on or not.</li>
+<li><code>disabled</code>&#xFF1A;<code>boolean</code> &#x7C7B;&#x578B; <code>true</code>|<code>false</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>false</code>&#xFF0C;&#x8868;&#x660E;&#x662F;&#x5426;&#x6FC0;&#x6D3B;&#x6309;&#x94AE;</li>
 </ul>
-<p>&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x8BF7;&#x67E5;&#x9605;<a href="references/common-attrs.md">&#x57FA;&#x672C;&#x5C5E;&#x6027;</a></p>
 <h2 id="&#x6837;&#x5F0F;">&#x6837;&#x5F0F;</h2>
-<p><strong>&#x6CE8;&#x91CA;</strong>&#xFF1A;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x4F60;&#x4E0D;&#x80FD;&#x7528;&#x5728;&#x6B64;&#x7EC4;&#x4EF6;&#x4E0A;&#xFF0C;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x5F71;&#x54CD;&#x5E03;&#x5C40;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x6240;&#x6709;&#x975E;&#x6CD5;&#x5C5E;&#x6027;&#xFF1A;</p>
+<p>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E0A;&#xFF0C;&#x6709;&#x4E9B;&#x6837;&#x5F0F;&#x7EC4;&#x4EF6;&#x5C5E;&#x6027;<strong>&#x4E0D;&#x80FD;&#x4F7F;&#x7528;</strong>&#xFF0C;&#x5B83;&#x4EEC;&#x662F;&#xFF1A;</p>
 <ul>
 <li><code>width</code></li>
 <li><code>height</code></li>
 <li><code>min-width</code></li>
 <li><code>min-height</code></li>
-<li><code>margin</code> &#x548C; <code>margin-xx</code></li>
-<li><code>padding</code> &#x548C; <code>padding-xx</code></li>
-<li><code>border</code> &#x548C; <code>border-xx</code></li>
+<li><code>margin</code></li>
+<li><code>padding</code></li>
+<li><code>border</code></li>
 </ul>
-<p><strong>&#x57FA;&#x7840;&#x6837;&#x5F0F;</strong>&#x7279;&#x522B;&#x662F;<code>width</code>&#x548C;<code>height</code>&#x76F8;&#x5173;&#x5C5E;&#x6027;&#x548C;&#x5C3A;&#x5BF8;&#x4E0D;&#x53EF;&#x914D;&#x7F6E;&#xFF0C;&#x56FA;&#x5B9A;&#x5728;<code>100x60</code>(750px&#x5C3A;&#x5BF8;&#x8BBE;&#x8BA1;&#x4E0B;)</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></p>
+<p>&#x7531;&#x4E8E;&#x8BBE;&#x8BA1;&#x5BBD;&#x5EA6;&#x4E3A; 750px&#xFF0C;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x76F8;&#x5173;&#x7684;&#x5C5E;&#x6027;&#x4E0D;&#x80FD;&#x914D;&#x7F6E;&#xFF0C;&#x7EC4;&#x4EF6;&#x7684;&#x5C3A;&#x5BF8;&#x9650;&#x5B9A;&#x5728; 100x60&#x3002;</p>
+<ul>
+<li><p>&#x901A;&#x7528;&#x6837;&#x5F0F;</p>
+<ul>
+<li><code>flexbox</code> &#x5E03;&#x5C40;</li>
+<li><code>position</code></li>
+<li><code>opacity</code></li>
+<li><code>background-color</code></li>
+</ul>
+<p>&#x67E5;&#x770B; <a href="https://alibaba.github.io/weex/cn/doc/references/common-style.html" target="_blank">&#x7EC4;&#x4EF6;&#x901A;&#x7528;&#x6837;&#x5F0F;</a></p>
+</li>
+</ul>
 <h2 id="&#x4E8B;&#x4EF6;">&#x4E8B;&#x4EF6;</h2>
 <ul>
-<li><code>click</code>:&#x67E5;&#x9605;<a href="references/common-event.md">&#x57FA;&#x672C;&#x4E8B;&#x4EF6;</a></li>
-</ul>
-<p><strong>&#x57FA;&#x672C;&#x4E8B;&#x4EF6;</strong>&#xFF1A;&#x67E5;&#x9605;<a href="references/common-event.md">&#x57FA;&#x672C;&#x4E8B;&#x4EF6;</a></p>
+<li><p><code>change</code>&#xFF1A;&#x6539;&#x53D8;&#x5F00;&#x5173;&#x72B6;&#x6001;&#x65F6;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;&#x3002;</p>
+<p>&#x4E8B;&#x4EF6;&#x4E2D; event &#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#xFF1A;</p>
 <ul>
-<li>&#x652F;&#x6301;<code>click</code>&#x4E8B;&#x4EF6;:&#x67E5;&#x9605;<a href="references/common-event.md">&#x57FA;&#x672C;&#x4E8B;&#x4EF6;</a></li>
-<li>&#x652F;&#x6301;<code>appear</code> / <code>disapper</code>&#x4E8B;&#x4EF6;:&#x67E5;&#x9605;<a href="references/common-event.md">&#x57FA;&#x672C;&#x4E8B;&#x4EF6;</a><h2 id="&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x7684;&#x53C2;&#x6570;">&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x7684;&#x53C2;&#x6570;</h2>
-</li>
-<li>&#x5BF9;&#x4E8E; <code>change</code>&#x4E8B;&#x4EF6;&#xFF1A;<ul>
-<li><code>value</code>:&#x7EC4;&#x4EF6;&#x5E03;&#x5C14;&#x503C;&#x771F;&#x6216;&#x5047;&#x3002;</li>
-<li><timestamp>:&#x4E8B;&#x4EF6;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x3002;<h2 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h2>
-</timestamp></li>
+<li><code>value</code>: &#x7EC4;&#x4EF6;&#x5E03;&#x5C14;&#x503C;&#x771F;&#x6216;&#x5047;&#x3002;</li>
+<li><code>timestamp</code>: &#x4E8B;&#x4EF6;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x3002;</li>
 </ul>
 </li>
+<li><p>&#x901A;&#x7528;&#x4E8B;&#x4EF6;</p>
+<p>&#x652F;&#x6301;&#x6240;&#x6709;&#x901A;&#x7528;&#x4E8B;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li><code>click</code></li>
+<li><code>longpress</code></li>
+<li><code>appear</code></li>
+<li><code>disappear</code></li>
 </ul>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>muted:<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">switch</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>muted:<span class="hljs-tag">&lt;/<span class="hljs-name">switch</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<p>&#x67E5;&#x770B; <a href="https://alibaba.github.io/weex/cn/doc/references/common-event.html" target="_blank">&#x901A;&#x7528;&#x4E8B;&#x4EF6;</a></p>
+</li>
+</ul>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<p><a href="http://dotwe.org/5f8b9d9c0e429e61f4a004dc8ee637e1" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>muted:<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">switch</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&apos;onclick&apos;</span> <span class="hljs-attr">onchange</span>=<span class="hljs-string">&apos;onchange&apos;</span> <span class="hljs-attr">ondisappear</span>=<span class="hljs-string">&apos;ondisappear&apos;</span> <span class="hljs-attr">onappear</span>=<span class="hljs-string">&apos;onappear&apos;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">switch</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-built_in">module</span>.exports ={
+    methods:{
+      onclick:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;onclick:&apos;</span> + e.timestamp);
+      },
+      onchange:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;onchage, value:&apos;</span> + e.value);
+      },
+      ondisappear:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;ondisappear, value:&apos;</span> + e.value);
+      },
+      onappear:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;onappear, value:&apos;</span> + e.value);
+      },
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 
                                 
@@ -1749,7 +1800,7 @@ contentLoaded(window,function(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"switch","level":"1.3.5.12","depth":3,"next":{"title":"slider","level":"1.3.5.13","depth":3,"path":"components/slider.md","ref":"components/slider.md","articles":[{"title":"indicator","level":"1.3.5.13.1","depth":4,"path":"components/indicator.md","ref":"components/indicator.md","articles":[]}]},"previous":{"title":"textarea","level":"1.3.5.11","depth":3,"path":"components/textarea.md","ref":"components/textarea.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/switch.md","mtime":"2016-12-01T01:46:30.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T01:54:51.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"switch","level":"1.3.5.12","depth":3,"next":{"title":"slider","level":"1.3.5.13","depth":3,"path":"components/slider.md","ref":"components/slider.md","articles":[{"title":"indicator","level":"1.3.5.13.1","depth":4,"path":"components/indicator.md","ref":"components/indicator.md","articles":[]}]},"previous":{"title":"textarea","level":"1.3.5.11","depth":3,"path":"components/textarea.md","ref":"components/textarea.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/switch.md","mtime":"2016-12-01T18:12:36.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T18:21:31.427Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
