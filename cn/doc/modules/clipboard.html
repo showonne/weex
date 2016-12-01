@@ -218,6 +218,8 @@ a.weex-translate.incomplete{
     background-color: #777;
     border-radius: 10px;
 }
+
+.markdown-section h1 sup { font-size: 50%; font-weight: normal; }
 </style>
 
     <!-- 
@@ -1661,38 +1663,89 @@ contentLoaded(window,function(){
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="clipboard">clipboard</h1>
-<p><span class="weex-version">0.8 (developing)</span></p>
-<h2 id="summary">Summary</h2>
-<p><code>clipboard</code> allows you to <code>getString()</code> or <code>setString()</code> from the system clipboard.<br>
-Image a scene, you have send a verification code by SMS. Now most phone has a feature to capture the code from whole SMS text, and copy to the clipboard. In the past, you need to input the code manually. Now just click a button which calls <code>clipboard.getString()</code> .</p><p></p>
-<p><em>AUCTION</em> </p>
+                                <h1 id="clipboard-&#x526A;&#x5207;&#x677F;-weexsdk-08"><code>clipboard</code> &#x526A;&#x5207;&#x677F; <sup>(WeexSDK 0.8+)</sup></h1>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>clipboard</code> &#x6A21;&#x5757;&#x7684; <code>getString()</code>&#x3001;<code>setString()</code> &#x63A5;&#x53E3;&#x4ECE;&#x7CFB;&#x7EDF;&#x7684;&#x7C98;&#x8D34;&#x677F;&#x83B7;&#x53D6;&#x5185;&#x5BB9;&#x6216;&#x8005;&#x8BBE;&#x7F6E;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x4EE5;&#x524D;&#x5F53;&#x6211;&#x4EEC;&#x6536;&#x5230;&#x4E00;&#x6761;&#x77ED;&#x4FE1;&#x9A8C;&#x8BC1;&#x7801;&#x4FE1;&#x606F;&#x65F6;&#xFF0C;&#x9664;&#x4E86;&#x4EBA;&#x8089;&#x62F7;&#x8D1D;&#xFF0C;&#x6211;&#x4EEC;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x62F7;&#x8D1D;&#x77ED;&#x4FE1;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x8FD9;&#x662F;&#x975E;&#x5E38;&#x82E6;&#x607C;&#x7684;&#x3002;&#x4F46;&#x662F;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x7684;&#x8C03;&#x7528; <code>clipboard.getString()</code> &#x63A5;&#x53E3;&#x6765;&#x83B7;&#x53D6;&#x77ED;&#x4FE1;&#x5185;&#x5BB9;&#x4E86;&#x3002;</p>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;div&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;onItemClick&quot;</span>&gt;</span>hello {{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;div&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;setContent&quot;</span>&gt;</span>click me to set: {{tobecopied}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">var</span> clipboard = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/clipboard&apos;</span>);
+  <span class="hljs-built_in">module</span>.exports ={
+    data:{
+      tobecopied:<span class="hljs-string">&apos;yay!&apos;</span>,
+      message:<span class="hljs-string">&quot;nothing.&quot;</span>
+    },
+    methods:{
+      setContent:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        clipboard.setString(<span class="hljs-keyword">this</span>.tobecopied);
+      },
+      onItemClick:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        <span class="hljs-keyword">this</span>.message=<span class="hljs-string">&apos;clicked! &apos;</span>;
+        clipboard.getString(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ret</span>) </span>{
+          <span class="hljs-keyword">this</span>.message = <span class="hljs-string">&apos;text from clipboard:&apos;</span>+ ret;
+        }.bind(<span class="hljs-keyword">this</span>));
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.div</span> {
+    <span class="hljs-attribute">flex-direction</span>: row;
+    <span class="hljs-attribute">justify-content</span>: space-between;
+    <span class="hljs-attribute">align-items</span>: center;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">750</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">90</span>;
+    <span class="hljs-attribute">padding-left</span>:<span class="hljs-number">30</span>;
+    <span class="hljs-attribute">padding-right</span>:<span class="hljs-number">30</span>;
+
+    <span class="hljs-attribute">border-bottom-width</span>: <span class="hljs-number">1</span>;
+    <span class="hljs-attribute">border-style</span>: solid;
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-number">#dddddd</span>;
+  }
+  <span class="hljs-selector-class">.text</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">750</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">90</span>;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<p><a href="http://dotwe.org/b6a9d613462d85dce56f81085b094dfa" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<p><strong>&#x6CE8;&#x610F;</strong></p>
 <ul>
-<li>only support text. </li>
-<li>only works in Android and iOS. NOT works in html5, for web security reason.</li>
+<li>&#x4EC5;&#x652F;&#x6301;&#x6587;&#x672C;&#x62F7;&#x8D1D;</li>
+<li>&#x51FA;&#x4E8E;&#x5B89;&#x5168;&#x8003;&#x8651;&#x548C;&#x5E73;&#x53F0;&#x9650;&#x5236;&#xFF0C;&#x53EA;&#x652F;&#x6301; Android &#x548C; iOS&#xFF0C;&#x4E0D;&#x652F;&#x6301; html5&#x3002;</li>
 </ul>
 <h2 id="api">API</h2>
-<h3 id="getstringcallback">getString(callback)</h3>
-<p>read from clipboard.</p>
-<h4 id="arguments">Arguments</h4>
+<h3 id="getstringcallback"><code>getString(callback)</code></h3>
+<p>&#x4ECE;&#x7CFB;&#x7EDF;&#x7C98;&#x8D34;&#x677F;&#x8BFB;&#x53D6;&#x5185;&#x5BB9;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <ul>
-<li><code>callback</code><em>(function)</em>: the callback function after executing this action. <code>data</code> is the return value. </li>
+<li><code>callback</code> (<code>function (ret)</code>): &#x6267;&#x884C;&#x5B8C;&#x8BFB;&#x53D6;&#x64CD;&#x4F5C;&#x540E;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;<code>ret</code> &#x4E3A; <code>callback</code> &#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x83B7;&#x53D6;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x3002;</li>
 </ul>
-<h4 id="example">Example</h4>
+<h4 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h4>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> clipboard = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/clipboard&apos;</span>);
 clipboard.getString(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ret</span>) </span>{
-  <span class="hljs-comment">// callback. &apos;ret&apos; is an object that contains &apos;result&apos; and &apos;data&apos;.</span>
-  <span class="hljs-comment">// use &apos;ret.data&apos; to fetch the value.</span>
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;read from clipboard is &quot;</span> + ret.data);
+  <span class="hljs-comment">// &apos;ret&apos; &#x5BF9;&#x8C61;&#xFF0C;&#x62E5;&#x6709;result&#x548C;data&#x5C5E;&#x6027;&#x3002;</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;text from clipboard&#xFF1A; &quot;</span> + ret);
 });
 </code></pre>
-<h3 id="setstringtext">setString(text)</h3>
-<p>set the text into clipboard, as the same as copy manually. </p>
-<h4 id="arguments">Arguments</h4>
+<h3 id="setstringtext"><code>setString(text)</code></h3>
+<p>&#x5C06;&#x4E00;&#x6BB5;&#x6587;&#x672C;&#x590D;&#x5236;&#x5230;&#x526A;&#x5207;&#x677F;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x624B;&#x52A8;&#x590D;&#x5236;&#x6587;&#x672C;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <ul>
-<li><code>text</code><em>(string)</em>: the string to copy into the clipboard.</li>
+<li><code>text</code> (<code>string</code>): &#x8981;&#x590D;&#x5236;&#x5230;&#x526A;&#x5207;&#x677F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
 </ul>
-<h4 id="example">Example</h4>
+<h4 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h4>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> clipboard = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/clipboard&apos;</span>);
 clipboard.setString(<span class="hljs-string">&quot;SomeStringHere&quot;</span>);
 </code></pre>
@@ -1739,7 +1792,7 @@ clipboard.setString(<span class="hljs-string">&quot;SomeStringHere&quot;</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"clipboard","level":"1.3.6.9","depth":3,"next":{"title":"globalEvent","level":"1.3.6.10","depth":3,"path":"modules/globalevent.md","ref":"modules/globalevent.md","articles":[]},"previous":{"title":"timer","level":"1.3.6.8","depth":3,"path":"modules/timer.md","ref":"modules/timer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"modules/clipboard.md","mtime":"2016-11-29T19:00:34.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-11-29T19:58:13.381Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"clipboard","level":"1.3.6.9","depth":3,"next":{"title":"globalEvent","level":"1.3.6.10","depth":3,"path":"modules/globalevent.md","ref":"modules/globalevent.md","articles":[]},"previous":{"title":"timer","level":"1.3.6.8","depth":3,"path":"modules/timer.md","ref":"modules/timer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"modules/clipboard.md","mtime":"2016-12-01T01:46:45.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T01:54:51.360Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -218,6 +218,8 @@ a.weex-translate.incomplete{
     background-color: #777;
     border-radius: 10px;
 }
+
+.markdown-section h1 sup { font-size: 50%; font-weight: normal; }
 </style>
 
     <!-- 
@@ -1661,106 +1663,179 @@ contentLoaded(window,function(){
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="modal">modal</h1>
-<h2 id="summary">Summary</h2>
-<p>A series of modal dialog api like <code>toast</code>, <code>alert</code>, <code>confirm</code> and <code>prompt</code>.</p>
+                                <h1 id="modal-&#x6A21;&#x6001;"><code>modal</code> &#x6A21;&#x6001;</h1>
+<p><code>modal</code> &#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x4E86;&#x4EE5;&#x4E0B;&#x5C55;&#x793A;&#x6D88;&#x606F;&#x6846;&#x7684; API&#xFF1A;<code>toast</code>&#x3001;<code>alert</code>&#x3001;<code>confirm</code> &#x548C; <code>prompt</code>&#x3002;</p>
 <h2 id="api">API</h2>
-<h3 id="toastoptions">toast(options)</h3>
-<h4 id="arguments">Arguments</h4>
+<h3 id="toastoptions"><code>toast(options)</code></h3>
+<p><code>toast()</code> &#x4F1A;&#x5728;&#x4E00;&#x4E2A;&#x5C0F;&#x6D6E;&#x5C42;&#x91CC;&#x5C55;&#x793A;&#x5173;&#x4E8E;&#x67D0;&#x4E2A;&#x64CD;&#x4F5C;&#x7684;&#x7B80;&#x5355;&#x53CD;&#x9988;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x90AE;&#x4EF6;&#x53D1;&#x9001;&#x524D;&#x79BB;&#x5F00;&#x90AE;&#x7F16;&#x7F16;&#x8F91;&#x754C;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x89E6;&#x53D1;&#x4E00;&#x4E2A;&#x201C;&#x8349;&#x7A3F;&#x5DF2;&#x4FDD;&#x5B58;&#x201D;&#x7684; toast&#xFF0C;&#x544A;&#x77E5;&#x7528;&#x6237;&#x4EE5;&#x540E;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x7F16;&#x8F91;&#x3002;toast &#x4F1A;&#x5728;&#x663E;&#x793A;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x4E4B;&#x540E;&#x81EA;&#x52A8;&#x6D88;&#x5931;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <ul>
-<li><code>options</code><em>(object)</em>: some options.<ul>
-<li><code>message</code><em>(string)</em>: the message that the toast shows.</li>
-<li><code>duration</code><em>(number)</em>: the duration(seconds) that the toast shows.</li>
+<li><code>options</code> (<code>object</code>): &#x76F8;&#x5173;&#x9009;&#x9879;<ul>
+<li><code>message</code> (<code>string</code>): &#x5C55;&#x793A;&#x7684;&#x5185;&#x5BB9;</li>
+<li><code>duration</code> (<code>number</code>): &#x5C55;&#x793A;&#x7684;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#xFF08;&#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;</li>
 </ul>
 </li>
 </ul>
-<h5 id="example">Example</h5>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> modal = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/modal&apos;</span>);
-modal.toast({<span class="hljs-string">&apos;message&apos;</span>: <span class="hljs-string">&apos;I am toast!&apos;</span>, <span class="hljs-string">&apos;duration&apos;</span>: <span class="hljs-number">1</span>});
+<h4 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h4>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px; width: 400px; background-color: #00bfff;
+     justify-content: center; align-items: center&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;{{perform}}&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;font-size: 60px; color: #ffffff&quot;</span>&gt;</span>Toast<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-built_in">module</span>.exports = {
+        methods: {
+            perform: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">var</span> modal = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/modal&apos;</span>);
+                modal.toast({
+                    <span class="hljs-string">&apos;message&apos;</span>: <span class="hljs-string">&apos;I am a toast&apos;</span>,
+                    <span class="hljs-string">&apos;duration&apos;</span>: <span class="hljs-number">3</span>
+                });
+            }
+        }
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
-<h3 id="alertoptions-callback">alert(options, callback)</h3>
-<h4 id="arguments">Arguments</h4>
+<p><a href="http://dotwe.org/a1b8699c49d1cbb3d0de66c1c5175387" target="_blank">&#x9884;&#x89C8;&#x5730;&#x5740;</a></p>
+<h3 id="alertoptions-callback"><code>alert(options, callback)</code></h3>
+<p>&#x8B66;&#x544A;&#x6846;&#x7ECF;&#x5E38;&#x7528;&#x4E8E;&#x786E;&#x4FDD;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x67D0;&#x4E9B;&#x4FE1;&#x606F;&#x3002;&#x5F53;&#x8B66;&#x544A;&#x6846;&#x51FA;&#x73B0;&#x540E;&#xFF0C;&#x7528;&#x6237;&#x9700;&#x8981;&#x70B9;&#x51FB;&#x786E;&#x5B9A;&#x6309;&#x94AE;&#x624D;&#x80FD;&#x7EE7;&#x7EED;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <ul>
-<li><code>options</code><em>(object)</em>: some options.<ul>
-<li><code>message</code><em>(string)</em>: the message that the alert shows.</li>
-<li><code>okTitle</code><em>(string)</em>: the title of alert button, default is OK.</li>
+<li><code>options</code> (<code>object</code>): alert&#x9009;&#x9879;<ul>
+<li><code>message</code> (<code>string</code>): &#x8B66;&#x544A;&#x6846;&#x5185;&#x663E;&#x793A;&#x7684;&#x6587;&#x5B57;&#x4FE1;&#x606F;</li>
+<li><code>okTitle</code> (<code>string</code>): &#x786E;&#x5B9A;&#x6309;&#x94AE;&#x4E0A;&#x663E;&#x793A;&#x7684;&#x6587;&#x5B57;&#x4FE1;&#x606F;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x201C;OK&#x201D;</li>
+<li><code>callback</code> (<code>function</code>): &#x7528;&#x6237;&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#x540E;&#x7684;&#x56DE;&#x8C03;</li>
 </ul>
 </li>
-<li><code>callback</code><em>(function)</em>: callback when complete.</li>
 </ul>
-<h4 id="example">Example</h4>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arg1 = <span class="hljs-string">&apos;I am alert!&apos;</span>;
-<span class="hljs-keyword">var</span> arg2 = <span class="hljs-string">&apos;I am ok&apos;</span>;
-<span class="hljs-keyword">var</span> modal = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/modal&apos;</span>);
-modal.alert({
-  message: arg1,
-  okTitle: arg2
-}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-comment">// TODO after the alert is complete.</span>
-})
+<h4 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h4>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px; width: 400px; background-color: #00bfff;
+     justify-content: center; align-items: center&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;{{perform}}&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;font-size: 60px; color: #ffffff&quot;</span>&gt;</span>Alert<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{params}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-built_in">module</span>.exports = {
+        data: {
+            params: <span class="hljs-string">&apos;&apos;</span>
+        },
+        methods: {
+            perform: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">var</span> modal = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/modal&apos;</span>);
+                <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;
+                modal.alert({
+                    <span class="hljs-string">&apos;message&apos;</span>: <span class="hljs-string">&apos;I am alert message&apos;</span>,
+                    <span class="hljs-string">&apos;okTitle&apos;</span> : <span class="hljs-string">&apos;YES&apos;</span>
+                }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">result</span>) </span>{
+                    self.params = <span class="hljs-built_in">String</span>(result)
+                });
+            }
+        }
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
-<h3 id="confirmoptions-callback">confirm(options, callback)</h3>
-<h4 id="arguments">Arguments</h4>
+<p><a href="http://dotwe.org/18e2a4bdff4d2f7db865c11eadfcd13e" target="_blank">&#x9884;&#x89C8;&#x5730;&#x5740;</a></p>
+<h3 id="confirmoptions-callback"><code>confirm(options, callback)</code></h3>
+<p>&#x786E;&#x8BA4;&#x6846;&#x7528;&#x4E8E;&#x4F7F;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x9A8C;&#x8BC1;&#x6216;&#x8005;&#x63A5;&#x53D7;&#x67D0;&#x4E9B;&#x4FE1;&#x606F;&#x3002;&#x5F53;&#x786E;&#x8BA4;&#x6846;&#x51FA;&#x73B0;&#x540E;&#xFF0C;&#x7528;&#x6237;&#x9700;&#x8981;&#x70B9;&#x51FB;&#x786E;&#x5B9A;&#x6216;&#x8005;&#x53D6;&#x6D88;&#x6309;&#x94AE;&#x624D;&#x80FD;&#x7EE7;&#x7EED;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <ul>
-<li><code>options</code><em>(object)</em>: some options.<ul>
-<li><code>message</code><em>(string)</em>: the message that the confirm shows.</li>
-<li><code>okTitle</code><em>(string)</em>: the title of confirm button, default is &apos;OK&apos;.</li>
-<li><code>cancelTitle</code><em>(string)</em>: the title of cancel button, default is &apos;Cancel&apos;.</li>
+<li><code>options</code> (<code>object</code>): confirm&#x9009;&#x9879;<ul>
+<li><code>message</code> (<code>string</code>): &#x786E;&#x8BA4;&#x6846;&#x5185;&#x663E;&#x793A;&#x7684;&#x6587;&#x5B57;&#x4FE1;&#x606F;</li>
+<li><code>okTitle</code> (<code>string</code>): &#x786E;&#x8BA4;&#x6309;&#x94AE;&#x4E0A;&#x663E;&#x793A;&#x7684;&#x6587;&#x5B57;&#x4FE1;&#x606F;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x201C;OK&#x201D;</li>
+<li><code>cancelTitle</code> (<code>string</code>): &#x53D6;&#x6D88;&#x6309;&#x94AE;&#x4E0A;&#x663E;&#x793A;&#x7684;&#x6587;&#x5B57;&#x4FE1;&#x606F;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x201C;Cancel&#x201D;</li>
 </ul>
 </li>
-<li><code>callback</code><em>(function)</em>: callback when complete.</li>
+<li><code>callback</code> (<code>function (result)</code>): &#x7528;&#x6237;&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#x540E;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570; <code>result</code> &#x662F;&#x786E;&#x5B9A;&#x6309;&#x94AE;&#x4E0A;&#x7684;&#x6587;&#x5B57;&#x4FE1;&#x606F;&#x5B57;&#x7B26;&#x4E32;</li>
 </ul>
-<p>This method has a callback function whose arguments will be:</p>
-<ul>
-<li><code>result</code><em>(string)</em>: the title of the button that clicked by user.</li>
-</ul>
-<h4 id="example">Example</h4>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arg1 = <span class="hljs-string">&apos;I am alert!&apos;</span>
-<span class="hljs-keyword">var</span> arg2 = <span class="hljs-string">&apos;I am ok&apos;</span>
-<span class="hljs-keyword">var</span> arg3 = <span class="hljs-string">&apos;I am cancel&apos;</span>
-<span class="hljs-keyword">var</span> modal = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/modal&apos;</span>);
-modal.confirm({
-  message: arg1,
-  okTitle: arg2,
-  cancelTitle: arg3
-}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
-  nativeLog(result)
-  <span class="hljs-comment">// TODO after the confirm is complete.</span>
-});
+<h4 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h4>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px; width: 400px; background-color: #00bfff;
+            justify-content: center; align-items: center&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;{{perform}}&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;font-size: 60px; color: #ffffff&quot;</span>&gt;</span>Confirm<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{params}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-built_in">module</span>.exports = {
+        data: {
+            params: <span class="hljs-string">&apos;&apos;</span>
+        },
+        methods: {
+            perform: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">var</span> modal = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/modal&apos;</span>);
+                <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;
+                modal.confirm({
+                    <span class="hljs-string">&apos;message&apos;</span>: <span class="hljs-string">&apos;I have read and accept the terms.&apos;</span>,
+                    <span class="hljs-string">&apos;okTitle&apos;</span> : <span class="hljs-string">&apos;YES&apos;</span>,
+                    <span class="hljs-string">&apos;cancelTitle&apos;</span> : <span class="hljs-string">&apos;NO&apos;</span>
+                }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                    self.params = <span class="hljs-built_in">String</span>(e)
+                });
+            }
+        }
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
-<h3 id="promptoptions-callback">prompt(options, callback)</h3>
-<h4 id="arguments">Arguments</h4>
+<p><a href="http://dotwe.org/3534b9d5eac99045015d97b20af22c27" target="_blank">&#x9884;&#x89C8;&#x5730;&#x5740;</a></p>
+<h3 id="promptoptions-callback"><code>prompt(options, callback)</code></h3>
+<p>&#x63D0;&#x793A;&#x6846;&#x7ECF;&#x5E38;&#x7528;&#x4E8E;&#x63D0;&#x793A;&#x7528;&#x6237;&#x5728;&#x8FDB;&#x5165;&#x9875;&#x9762;&#x524D;&#x8F93;&#x5165;&#x67D0;&#x4E2A;&#x503C;&#x3002;&#x5F53;&#x63D0;&#x793A;&#x6846;&#x51FA;&#x73B0;&#x540E;&#xFF0C;&#x7528;&#x6237;&#x9700;&#x8981;&#x8F93;&#x5165;&#x67D0;&#x4E2A;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB;&#x786E;&#x8BA4;&#x6216;&#x53D6;&#x6D88;&#x6309;&#x94AE;&#x624D;&#x80FD;&#x7EE7;&#x7EED;&#x64CD;&#x4F5C;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <ul>
-<li><code>options</code><em>(object)</em>: some options.<ul>
-<li><code>message</code><em>(string)</em>: the message that the prompt shows.</li>
-<li><code>okTitle</code><em>(string)</em>: the title of confirm button, default is &apos;OK&apos;.</li>
-<li><code>cancelTitle</code><em>(string)</em>: the title of cancel button, default is &apos;Cancel&apos;.</li>
+<li><code>options</code> (<code>object</code>): prompt&#x9009;&#x9879;<ul>
+<li><code>message</code> (<code>string</code>): &#x63D0;&#x793A;&#x6846;&#x5185;&#x8981;&#x663E;&#x793A;&#x7684;&#x6587;&#x5B57;&#x4FE1;&#x606F;</li>
+<li><code>okTitle</code> (<code>string</code>): &#x786E;&#x8BA4;&#x6309;&#x94AE;&#x4E0A;&#x663E;&#x793A;&#x7684;&#x6587;&#x5B57;&#x4FE1;&#x606F;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x201C;OK&#x201D;</li>
+<li><code>cancelTitle</code> (<code>string</code>): &#x53D6;&#x6D88;&#x6309;&#x94AE;&#x4E0A;&#x663E;&#x793A;&#x7684;&#x6587;&#x5B57;&#x4FE1;&#x606F;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x201C;Cancel&#x201D;</li>
 </ul>
 </li>
-<li><code>callback</code><em>(function)</em>: callback when complete.</li>
-</ul>
-<p>This method has a callback function whose arguments will be:</p>
-<ul>
-<li><code>res</code><em>(object)</em>: the argument will be a object, which has attributes <code>result</code> and <code>data</code>, like <code>{ result: &apos;OK&apos;, data: &apos;hello world&apos; }</code><ul>
-<li><code>result</code><em>(string)</em>: the title of the button that clicked by user.</li>
-<li><code>data</code><em>(string)</em>: the value of the text that entered by user.</li>
+<li><code>callback</code> (<code>function (ret)</code>): &#x7528;&#x6237;&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#x540E;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570; <code>ret</code> &#x683C;&#x5F0F;&#x5F62;&#x5982; <code>{ result: &apos;OK&apos;, data: &apos;hello world&apos; }</code>&#xFF0C;&#x5982;&#x4E0B;<ul>
+<li><code>result</code> (<code>string</code>): &#x7528;&#x6237;&#x6309;&#x4E0B;&#x7684;&#x6309;&#x94AE;&#x4E0A;&#x7684;&#x6587;&#x5B57;&#x4FE1;&#x606F;</li>
+<li><code>data</code> (<code>string</code>): &#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x6587;&#x5B57;&#x4FE1;&#x606F;</li>
 </ul>
 </li>
 </ul>
-<h4 id="example">Example</h4>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arg1 = <span class="hljs-string">&apos;I am prompt!&apos;</span>
-<span class="hljs-keyword">var</span> arg2 = <span class="hljs-string">&apos;I am ok&apos;</span>
-<span class="hljs-keyword">var</span> arg3 = <span class="hljs-string">&apos;I am cancel&apos;</span>
-<span class="hljs-keyword">var</span> modal = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/modal&apos;</span>);
-modal.prompt({
-  message: arg1,
-  okTitle: arg2,
-  cancelTitle: arg3
-}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-  nativeLog(res.result + <span class="hljs-string">&apos;, &apos;</span> + res.data);
-  <span class="hljs-comment">// TODO after the prompt is complete.</span>
-});
+<h3 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px; width: 400px; background-color: #00bfff;
+     justify-content: center; align-items: center&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;{{perform}}&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;font-size: 60px; color: #ffffff&quot;</span>&gt;</span>Prompt<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{params}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-built_in">module</span>.exports = {
+        data: {
+            params: <span class="hljs-string">&apos;&apos;</span>
+        },
+        methods: {
+            perform: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">var</span> modal = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/modal&apos;</span>);
+                <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;
+                modal.prompt({
+                    <span class="hljs-string">&apos;message&apos;</span>: <span class="hljs-string">&apos;I am a prompt&apos;</span>,
+                    <span class="hljs-string">&apos;okTitle&apos;</span> : <span class="hljs-string">&apos;YES&apos;</span>,
+                    <span class="hljs-string">&apos;cancelTitle&apos;</span> : <span class="hljs-string">&apos;NO&apos;</span>
+                }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                    self.params = <span class="hljs-built_in">JSON</span>.stringify(e)
+                });
+            }
+        }
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
+<p><a href="http://dotwe.org/9f089100f5808dbc55ef4872a2c0c77b" target="_blank">&#x9884;&#x89C8;&#x5730;&#x5740;</a></p>
 
                                 
                                 </section>
@@ -1804,7 +1879,7 @@ modal.prompt({
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"modal","level":"1.3.6.3","depth":3,"next":{"title":"animation","level":"1.3.6.4","depth":3,"path":"modules/animation.md","ref":"modules/animation.md","articles":[]},"previous":{"title":"stream","level":"1.3.6.2","depth":3,"path":"modules/stream.md","ref":"modules/stream.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"modules/modal.md","mtime":"2016-11-29T19:03:45.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-11-29T19:58:13.381Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"modal","level":"1.3.6.3","depth":3,"next":{"title":"animation","level":"1.3.6.4","depth":3,"path":"modules/animation.md","ref":"modules/animation.md","articles":[]},"previous":{"title":"stream","level":"1.3.6.2","depth":3,"path":"modules/stream.md","ref":"modules/stream.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"modules/modal.md","mtime":"2016-12-01T01:46:45.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T01:54:51.360Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
