@@ -1676,143 +1676,182 @@ contentLoaded(window,function(){
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x663E;&#x793A;&#x903B;&#x8F91;&#x63A7;&#x5236;&#x5668;">&#x663E;&#x793A;&#x903B;&#x8F91;&#x63A7;&#x5236;&#x5668;</h1>
-<p>Weex&#x524D;&#x7AEF;&#x8BED;&#x4E49;&#x652F;&#x6301;&#x901A;&#x8FC7;&#x4E24;&#x79CD;&#x7279;&#x6B8A;&#x5C5E;&#x6027;&#xFF08;if&#x548C;repeat&#xFF09;&#x7684;&#x8BBE;&#x7F6E;&#x6765;&#x786E;&#x5B9A;&#x7EC4;&#x4EF6;&#x7684;&#x663E;&#x793A;&#x72B6;&#x6001;&#xFF0C;&#x8FD9;&#x4F1A;&#x4F7F;&#x5F97;&#x6574;&#x4E2A;&#x9875;&#x9762;&#x5E03;&#x5C40;&#x663E;&#x5F97;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#x3002;</p>
+                                <h1 id="&#x663E;&#x793A;&#x903B;&#x8F91;&#x63A7;&#x5236;">&#x663E;&#x793A;&#x903B;&#x8F91;&#x63A7;&#x5236;</h1>
+<p>Weex &#x652F;&#x6301;&#x901A;&#x8FC7;&#x4E24;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x7279;&#x6027; <code>if</code> &#x548C; <code>repeat</code> &#x786E;&#x5B9A;&#x7EC4;&#x4EF6;&#x7684;&#x663E;&#x793A;&#x903B;&#x8F91;&#xFF0C;&#x8FD9;&#x4F1A;&#x4F7F;&#x5F97;&#x6574;&#x4E2A;&#x754C;&#x9762;&#x7684;&#x903B;&#x8F91;&#x63A7;&#x5236;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#x7075;&#x6D3B;&#x3002;</p>
 <h2 id="if"><code>if</code></h2>
-<p>&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;<code>if</code>&#x5C5E;&#x6027;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x8282;&#x70B9;&#x7684;&#x663E;&#x793A;&#x72B6;&#x6001;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x4E3A;true&#xFF0C;&#x5219;&#x4F1A;&#x5C06;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7F6E;&#x4E8E;DOM&#x4E2D;&#x6E32;&#x67D3;&#xFF0C;&#x53CD;&#x4E4B;&#x5219;&#x4F1A;&#x4ECE;DOM&#x4E2D;&#x79FB;&#x9664;&#x3002;</p>
-<pre><code class="lang-html">
-    <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">container</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;toggle&quot;</span>&gt;</span>Toggle<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">if</span>=<span class="hljs-string">&quot;{{shown}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">container</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<p>&#x901A;&#x8FC7;&#x8BBE;&#x7F6E; <code>if</code> &#x7279;&#x6027;&#x503C;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x662F;&#x5426;&#x663E;&#x793A;&#x3002;&#x5982;&#x679C;&#x503C;&#x4E3A;&#x771F;&#xFF0C;&#x5219;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x4F1A;&#x88AB;&#x6E32;&#x67D3;&#x51FA;&#x6765;&#xFF0C;&#x5982;&#x679C;&#x503C;&#x4E3A;&#x5047;&#x5219;&#x4F1A;&#x88AB;&#x79FB;&#x9664;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;toggle&quot;</span>&gt;</span>Toggle Image<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">if</span>=<span class="hljs-string">&quot;shown&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{imageUrl}}&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 512; height: 512;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-        <span class="hljs-built_in">module</span>.exports = {
-        data: {
-            shown: <span class="hljs-literal">true</span>
-        },
-        methods: {
-        toggle: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-            <span class="hljs-keyword">this</span>.shown = !<span class="hljs-keyword">this</span>.shown
-        }
-        }
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-built_in">module</span>.exports = {
+  data: {
+    imageUrl: <span class="hljs-string">&apos;https://gtms02.alicdn.com/tps/i2/TB1QHKjMXXXXXadXVXX20ySQVXX-512-512.png&apos;</span>,
+    shown: <span class="hljs-literal">true</span>
+  },
+  methods: {
+    toggle: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">this</span>.shown = !<span class="hljs-keyword">this</span>.shown
     }
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-</code></pre>
-<h2 id="repeat"><code>repeat</code></h2>
-<p><code>repeat</code>&#x5C5E;&#x6027;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5177;&#x6709;&#x76F8;&#x540C;&#x6837;&#x5F0F;&#x6216;&#x5C5E;&#x6027;&#x7684;&#x7EC4;&#x4EF6;&#x8282;&#x70B9;&#x505A;&#x91CD;&#x590D;&#x6E32;&#x67D3;&#x3002;&#x5B83;&#x7ED1;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x4E3A;&#x6570;&#x7EC4;&#xFF0C;&#x5176;&#x4E2D;&#x6BCF;&#x4E2A;&#x6570;&#x7EC4;&#x9879;&#x7684;&#x5C5E;&#x6027;&#x4F1A;&#x5206;&#x522B;&#x7ED1;&#x5B9A;&#x5230;&#x9700;&#x8981;&#x91CD;&#x590D;&#x6E32;&#x67D3;&#x7684;&#x5404;&#x5B50;&#x7EC4;&#x4EF6;&#x4E0A;&#x3002;</p>
-<pre><code class="lang-html">
-    <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">container</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">container</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;{{list}}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;{{gender}}&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{avatar}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{nickname}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">container</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">container</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="undefined">
-    .male {...}
-    .female {...}
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-built_in">module</span>.exports = {
-        data: {
-            list: [
-            {gender: <span class="hljs-string">&apos;male&apos;</span>, nickname: <span class="hljs-string">&apos;Li Lei&apos;</span>, avatar: <span class="hljs-string">&apos;...&apos;</span>},
-            {gender: <span class="hljs-string">&apos;female&apos;</span>, nickname: <span class="hljs-string">&apos;Han Meimei&apos;</span>, avatar: <span class="hljs-string">&apos;...&apos;</span>},
-         ...
-        ]
-     }
-    }
+  }
+}
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
-<p>&#x6B64;&#x5916;&#xFF0C;weex&#x540C;&#x6837;&#x652F;&#x6301;&#x4E0D;&#x5728;repeat&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x5230;&#x91CD;&#x590D;&#x6E32;&#x67D3;&#x7684;&#x7EC4;&#x4EF6;&#x8282;&#x70B9;&#x4E0A;&#x3002;</p>
-<pre><code class="lang-html">
-    <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">container</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">container</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;{{list}}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;{{gender}}&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{avatar}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{nickname}} - {{group}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">container</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">container</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="undefined">
-    .male {...}
-    .female {...}
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-built_in">module</span>.exports = {
-        data: {
-            group: <span class="hljs-string">&apos;...&apos;</span>,
-             list: [
-                {gender: <span class="hljs-string">&apos;male&apos;</span>, nickname: <span class="hljs-string">&apos;Li Lei&apos;</span>, avatar: <span class="hljs-string">&apos;...&apos;</span>},
-                {gender: <span class="hljs-string">&apos;female&apos;</span>, nickname: <span class="hljs-string">&apos;Han Meimei&apos;</span>, avatar: <span class="hljs-string">&apos;...&apos;</span>},
-                 ...
-            ]
-        }
-    }
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-</code></pre>
-<h3 id="repeat&#x5C5E;&#x6027;&#x6269;&#x5C55;">repeat&#x5C5E;&#x6027;&#x6269;&#x5C55;</h3>
-<h4 id="&#x4F7F;&#x7528;-index-&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x6240;&#x7ED1;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x5728;repeat&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x7D22;&#x5F15;&#x503C;">&#x4F7F;&#x7528; <code>$index</code> &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x6240;&#x7ED1;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x5728;repeat&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x7D22;&#x5F15;&#x503C;.</h4>
-<p>&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-html">
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;{{list}}&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>No. {{$index + 1}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-</code></pre>
-<h4 id="&#x83B7;&#x53D6;repeat&#x6570;&#x7EC4;&#x7684;&#x5C5E;&#x6027;&#x503C;">&#x83B7;&#x53D6;repeat&#x6570;&#x7EC4;&#x7684;&#x5C5E;&#x6027;&#x503C;.</h4>
-<p>&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-html">
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;{{v in list}}&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>No. {{$index + 1}}, {{v.nickname}}
-        <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>```
-
-```html
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;{{(k, v) in list}}&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>No. {{k + 1}}, {{v.nickname}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+<p><a href="http://dotwe.org/e0999a51fa404f48bbae177f1569cd0e" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<p><em>&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;<code>if=&quot;condition&quot;</code> &#x548C; <code>if=&quot;{{condition}}&quot;</code> &#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#xFF0C;&#x4E24;&#x8005;&#x7B49;&#x4EF7;&#x4F7F;&#x7528;&#x3002;</em></p>
+<h2 id="repeat"><code>repeat</code></h2>
+<p><code>repeat</code> &#x7279;&#x6027;&#x7528;&#x4E8E;&#x91CD;&#x590D;&#x6E32;&#x67D3;&#x4E00;&#x7EC4;&#x76F8;&#x540C;&#x7684;&#x7EC4;&#x4EF6;&#x3002;&#x5B83;&#x7ED1;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x4E3A;&#x6570;&#x7EC4;&#xFF0C;&#x6570;&#x7EC4;&#x91CC;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x4F53;&#x73B0;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x7EC4;&#x4EF6;&#x7279;&#x6027;&#x3001;&#x6837;&#x5F0F;&#x3001;&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x7B49;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;person in list&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;{{person.gender}}&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{person.nickname}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-</code></pre>
-<h4 id="&#x4F7F;&#x7528;-track-by-&#x8FFD;&#x8E2A;&#x7279;&#x6B8A;&#x7684;&#x5C5E;&#x6027;">&#x4F7F;&#x7528; <code>track-by</code> &#x8FFD;&#x8E2A;&#x7279;&#x6B8A;&#x7684;&#x5C5E;&#x6027;</h4>
-<p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5F53;&#x66F4;&#x65B0;repeat&#x6570;&#x7EC4;&#x65F6;&#xFF0C;&#x6240;&#x6709;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x5173;&#x8054;&#x7684;&#x7EC4;&#x4EF6;&#x8282;&#x70B9;&#x90FD;&#x4F1A;&#x88AB;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;&#x5982;&#x679C;&#x5176;&#x4E2D;&#x90E8;&#x5206;&#x8282;&#x70B9;&#x7684;&#x6570;&#x636E;&#x5728;&#x66F4;&#x65B0;&#x524D;&#x540E;&#x672A;&#x53D1;&#x751F;&#x53D8;&#x66F4;&#xFF0C;&#x90A3;&#x4E48;&#x6700;&#x597D;&#x662F;&#x8BA9;&#x8FD9;&#x4E9B;&#x8282;&#x70B9;&#x4FDD;&#x6301;&#x539F;&#x6837;&#xFF0C;&#x4EC5;&#x66F4;&#x65B0;&#x6570;&#x636E;&#x6709;&#x53D8;&#x5316;&#x7684;&#x8282;&#x70B9;&#xFF0C;weex&#x63D0;&#x4F9B;&#x4E86;track-by&#x5C5E;&#x6027;&#x80FD;&#x5E2E;&#x60A8;&#x8F7B;&#x677E;&#x641E;&#x5B9A;&#x3002;</p>
-<p><strong>&#x6CE8;&#x610F;: <code>track-by</code>&#x5C5E;&#x6027;&#x7684;&#x8BBE;&#x7F6E;&#x4E0D;&#x652F;&#x6301;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x7684;&#x65B9;&#x5F0F;</strong></p>
-<p>&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-html">
-    <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">container</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">container</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;{{list}}&quot;</span> <span class="hljs-attr">track-by</span>=<span class="hljs-string">&quot;nickname&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;{{gender}}&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{avatar}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{nickname}} - {{group}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">container</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">container</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-</code></pre>
-<p>&#x5982;&#x524D;&#x6240;&#x8FF0;&#xFF0C;&#x5F53;&#x66F4;&#x65B0;repeat&#x6570;&#x7EC4;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x68C0;&#x6D4B;&#x5230;&#x5C5E;&#x6027;nickname&#x7684;&#x503C;&#x524D;&#x540E;&#x4E00;&#x81F4;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x6240;&#x7ED1;&#x5B9A;&#x7684;&#x5B50;&#x8282;&#x70B9;&#x5C06;&#x4E0D;&#x88AB;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;</p>
-<h2 id="&#x7B80;&#x5316;&#x5199;&#x6CD5;">&#x7B80;&#x5316;&#x5199;&#x6CD5;</h2>
-<p>&#x5BF9;&#x4E8E;if&#x548C;repeat&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x5904;&#x7406;&#xFF0C;&#x5373;if=&quot;show&quot;&#x548C;if=&quot;&quot;&#x6240;&#x8868;&#x8FBE;&#x7684;&#x524D;&#x7AEF;&#x8BED;&#x4E49;&#x76F8;&#x540C;&#x3002;</p>
-<pre><code class="lang-html">
-    <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">container</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">if</span>=<span class="hljs-string">&quot;shown&quot;</span>&gt;</span>Hello<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">if</span>=<span class="hljs-string">&quot;{{shown}}&quot;</span>&gt;</span>Hello<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">container</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-        <span class="hljs-built_in">module</span>.exports = {
-        data: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{<span class="hljs-keyword">return</span> {shown: <span class="hljs-literal">true</span>}}
-    }
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.male</span> { <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#9999ff</span>; }
+  <span class="hljs-selector-class">.female</span> { <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ff9999</span>; }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-built_in">module</span>.exports = {
+  data: {
+    list: [
+      { gender: <span class="hljs-string">&apos;male&apos;</span>, nickname: <span class="hljs-string">&apos;Li Lei&apos;</span> },
+      { gender: <span class="hljs-string">&apos;female&apos;</span>, nickname: <span class="hljs-string">&apos;Han Meimei&apos;</span> },
+      { gender: <span class="hljs-string">&apos;male&apos;</span>, nickname: <span class="hljs-string">&apos;Jim Green&apos;</span> }
+    ]
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
-<p>&#x5F88;&#x663E;&#x7136;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;text&#x6587;&#x672C;&#x4F1A;&#x88AB;&#x540C;&#x65F6;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;</p>
+<p><a href="http://dotwe.org/8c87aac2820531090181c32fca41e913" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<p>&#x6B64;&#x5916;&#xFF0C;<code>repeat</code> &#x7279;&#x6027;&#x8FD8;&#x652F;&#x6301;&#x7ED1;&#x5B9A;&#x6570;&#x7EC4;&#x4E2D;&#x6570;&#x636E;&#x9879;&#x76EE;&#x7684;&#x7D22;&#x5F15;&#x503C;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;(index, person) in list&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;{{person.gender}}&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{index}} - {{person.nickname}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.male</span> { <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#9999ff</span>; }
+  <span class="hljs-selector-class">.female</span> { <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ff9999</span>; }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-built_in">module</span>.exports = {
+  data: {
+    list: [
+      { gender: <span class="hljs-string">&apos;male&apos;</span>, nickname: <span class="hljs-string">&apos;Li Lei&apos;</span> },
+      { gender: <span class="hljs-string">&apos;female&apos;</span>, nickname: <span class="hljs-string">&apos;Han Meimei&apos;</span> },
+      { gender: <span class="hljs-string">&apos;male&apos;</span>, nickname: <span class="hljs-string">&apos;Jim Green&apos;</span> }
+    ]
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p><a href="http://dotwe.org/65d348256ab5c54aa996d3ee6b4ea115" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<p>&#x6BCF;&#x4E00;&#x4E2A;&#x6635;&#x79F0;&#x4E4B;&#x524D;&#x90FD;&#x6709;&#x5BF9;&#x5E94;&#x6570;&#x7EC4;&#x9879;&#x76EE;&#x7684;&#x7D22;&#x5F15;&#x503C;&#x3002;</p>
+<p><em>&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;&#x540C;&#x6837;&#x7684; <code>repeat=&quot;...&quot;</code> &#x548C; <code>repeat=&quot;{{...}}&quot;</code> &#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#xFF0C;&#x4E24;&#x8005;&#x7B49;&#x4EF7;&#x4F7F;&#x7528;&#x3002;</em></p>
+<p><strong>&#x6CE8;&#x610F;&#x4E8B;&#x9879;: &#x5F53;&#x4F60;&#x4FEE;&#x6539; <code>repeat</code> &#x4E2D;&#x7684;&#x6570;&#x7EC4;&#x65F6;&#xFF0C;&#x5728;&#x5199;&#x6CD5;&#x4E0A;&#x4F1A;&#x53D7;&#x5230;&#x4E00;&#x5B9A;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x5177;&#x4F53;&#x5982;&#x4E0B;&#xFF1A;</strong></p>
+<p><strong>&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x201C;&#x89D2;&#x6807;&#x201D;&#x4FEE;&#x6539;&#x6570;&#x7EC4;&#x7684;&#x67D0;&#x4E2A;&#x9879;&#x76EE; (&#x5982; <code>this.items[0] = ...</code>) &#x662F;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x89C6;&#x56FE;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x7684;&#x3002;&#x6211;&#x4EEC;&#x5728;&#x6570;&#x7EC4;&#x7684;&#x539F;&#x578B;&#x4E0A;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;<code>this.items.$set(index, item)</code> &#x6765;&#x5B8C;&#x6210;&#x76F8;&#x540C;&#x7684;&#x4E8B;&#x60C5;&#x3002;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x548C; `this.items[0] = ...` &#x4F5C;&#x7528;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x4F1A;&#x81EA;&#x52A8;&#x89E6;&#x53D1;&#x89C6;&#x56FE;&#x66F4;&#x65B0;</span>
+<span class="hljs-keyword">this</span>.items.$set(<span class="hljs-number">0</span>, { childMsg: <span class="hljs-string">&apos;Changed!&apos;</span>})
+</code></pre>
+<p><strong>&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x4FEE;&#x6539; <code>length</code> &#x6765;&#x6539;&#x53D8;&#x6570;&#x7EC4;&#x957F;&#x5EA6; (&#x5982; <code>this.items.length = 0</code>) &#x4E5F;&#x662F;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x89C6;&#x56FE;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x7684;&#x3002;&#x6211;&#x4EEC;&#x63A8;&#x8350;&#x60A8;&#x76F4;&#x63A5;&#x8D4B;&#x503C;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7A7A;&#x6570;&#x7EC4;&#x628A;&#x65E7;&#x7684;&#x66FF;&#x6362;&#x6389;&#x3002;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x548C; `this.items.length = 0` &#x4F5C;&#x7528;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x4F1A;&#x81EA;&#x52A8;&#x89E6;&#x53D1;&#x89C6;&#x56FE;&#x66F4;&#x65B0;</span>
+<span class="hljs-keyword">this</span>.items = []
+</code></pre>
+<h3 id="repeat-&#x7279;&#x6027;&#x4E2D;&#x7684;-index-&#x5F62;&#x53C2;"><code>repeat</code> &#x7279;&#x6027;&#x4E2D;&#x7684; <code>$index</code> &#x5F62;&#x53C2;</h3>
+<p>&#x5728; <code>repeat</code> &#x7279;&#x6027;&#x503C;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x503C;&#x7684;&#x5F62;&#x53C2;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7ED1;&#x5B9A;&#x5F62;&#x53C2; <code>$index</code> &#x6765;&#x5C55;&#x793A;&#x6570;&#x7EC4;&#x9879;&#x76EE;&#x7684;&#x7D22;&#x5F15;&#x503C;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;person in list&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;{{person.gender}}&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{$index}} - {{person.nickname}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.male</span> { <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#9999ff</span>; }
+  <span class="hljs-selector-class">.female</span> { <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ff9999</span>; }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-built_in">module</span>.exports = {
+  data: {
+    list: [
+      { gender: <span class="hljs-string">&apos;male&apos;</span>, nickname: <span class="hljs-string">&apos;Li Lei&apos;</span> },
+      { gender: <span class="hljs-string">&apos;female&apos;</span>, nickname: <span class="hljs-string">&apos;Han Meimei&apos;</span> },
+      { gender: <span class="hljs-string">&apos;male&apos;</span>, nickname: <span class="hljs-string">&apos;Jim Green&apos;</span> }
+    ]
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p><a href="http://dotwe.org/65d348256ab5c54aa996d3ee6b4ea115" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<p>&#x6E32;&#x67D3;&#x6548;&#x679C;&#x548C;&#x4E0A;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x5E94;&#x8BE5;&#x662F;&#x76F8;&#x540C;&#x7684;&#x3002;</p>
+<h3 id="&#x5728;-repeat-&#x4E2D;&#x4F7F;&#x7528;-track-by-&#x7279;&#x6027;&#x8FFD;&#x8E2A;&#x53D8;&#x5316;">&#x5728; <code>repeat</code> &#x4E2D;&#x4F7F;&#x7528; <code>track-by</code> &#x7279;&#x6027;&#x8FFD;&#x8E2A;&#x53D8;&#x5316;</h3>
+<p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5F53;&#x66F4;&#x65B0; <code>repeat</code> &#x4E2D;&#x7ED1;&#x5B9A;&#x7684;&#x6570;&#x7EC4;&#x65F6;&#xFF0C;&#x6240;&#x6709;&#x6570;&#x7EC4;&#x9879;&#x76EE;&#x5173;&#x8054;&#x7684;&#x7EC4;&#x4EF6;&#x90FD;&#x4F1A;&#x88AB;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;&#x5982;&#x679C;&#x5176;&#x4E2D;&#x90E8;&#x5206;&#x7D22;&#x5F15;&#x503C;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x672A;&#x53D1;&#x751F;&#x53D8;&#x66F4;&#xFF0C;&#x90A3;&#x4E48;&#x6700;&#x597D;&#x662F;&#x8BA9;&#x8FD9;&#x4E9B;&#x7EC4;&#x4EF6;&#x5728;&#x6E32;&#x67D3;&#x5C42;&#x4FDD;&#x6301;&#x539F;&#x6837;&#xFF0C;&#x4EC5;&#x66F4;&#x65B0;&#x6570;&#x636E;&#x6709;&#x53D8;&#x5316;&#x7684;&#x8282;&#x70B9;&#x3002;Weex &#x63D0;&#x4F9B;&#x4E86; <code>track-by</code> &#x7279;&#x6027;&#x6765;&#x8F85;&#x52A9;&#x5224;&#x65AD;&#x54EA;&#x4E9B;&#x6570;&#x7EC4;&#x9879;&#x76EE;&#x53D1;&#x751F;&#x4E86;&#x6539;&#x53D8;&#x3002;</p>
+<p>&#x9996;&#x5148; <code>track-by</code> &#x7279;&#x6027;&#x7684;&#x503C;&#x5FC5;&#x987B;&#x662F;&#x5728;&#x6BCF;&#x4E00;&#x6761;&#x6570;&#x7EC4;&#x9879;&#x76EE;&#x4E2D;&#x90FD;&#x6709;&#x4E14;&#x503C;&#x6CA1;&#x6709;&#x91CD;&#x590D;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#x540D;&#xFF0C;&#x7528;&#x6765;&#x533A;&#x5206;&#x548C;&#x8FFD;&#x8E2A;&#x6BCF;&#x4E00;&#x6761;&#x6570;&#x636E;&#x9879;&#x589E;&#x5220;&#x4E0E;&#x5426;&#x6216;&#x6B21;&#x5E8F;&#x53D8;&#x5316;&#x4E0E;&#x5426;&#x7684;&#x5173;&#x952E;&#x4F9D;&#x636E;&#x3002;&#x6BCF;&#x5F53;&#x6570;&#x7EC4;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x4E4B;&#x540E;&#xFF0C;&#x65B0;&#x8001;&#x6570;&#x7EC4;&#x6570;&#x636E;&#x4F1A;&#x6839;&#x636E; <code>track-by</code> &#x7279;&#x6027;&#x503C;&#x6240;&#x4EE3;&#x8868;&#x7684;&#x5B57;&#x6BB5;&#x91CD;&#x65B0;&#x5339;&#x914D;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x51B3;&#x5B9A;&#x6E32;&#x67D3;&#x5C42;&#x5E94;&#x8BE5;&#x65B0;&#x5EFA;&#x6216;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF1F;&#x8FD8;&#x662F;&#x79FB;&#x52A8;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF1F;&#x8FD8;&#x662F;&#x8BB2;&#x7EC4;&#x4EF6;&#x4FDD;&#x6301;&#x539F;&#x6765;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x9ED8;&#x8BA4;&#x7684; <code>track-by</code> &#x7684;&#x503C;&#x5C31;&#x662F;&#x6570;&#x7EC4;&#x7684;&#x7D22;&#x5F15;&#x503C;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;person in list&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;{{person.gender}}&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{$index}} - {{person.id}} - {{person.nickname}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>----<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;person in list&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;{{person.gender}}&quot;</span> <span class="hljs-attr">track-by</span>=<span class="hljs-string">&quot;id&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{$index}} - {{person.id}} - {{person.nickname}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>----<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- something wrong here: duplicated track-by value --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;person in list&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;{{person.gender}}&quot;</span> <span class="hljs-attr">track-by</span>=<span class="hljs-string">&quot;nickname&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{$index}} - {{person.id}} - {{person.nickname}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.male</span> { <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#9999ff</span>; }
+  <span class="hljs-selector-class">.female</span> { <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ff9999</span>; }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-built_in">module</span>.exports = {
+  data: {
+    list: [
+      { id: <span class="hljs-number">11</span>, gender: <span class="hljs-string">&apos;male&apos;</span>, nickname: <span class="hljs-string">&apos;Li Lei&apos;</span> },
+      { id: <span class="hljs-number">22</span>, gender: <span class="hljs-string">&apos;female&apos;</span>, nickname: <span class="hljs-string">&apos;Han Meimei&apos;</span> },
+      { id: <span class="hljs-number">33</span>, gender: <span class="hljs-string">&apos;male&apos;</span>, nickname: <span class="hljs-string">&apos;Jim Green&apos;</span> }
+    ]
+  },
+  ready: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.list.unshift({ id: <span class="hljs-number">44</span>, gender: <span class="hljs-string">&apos;female&apos;</span>, nickname: <span class="hljs-string">&apos;Han Meimei&apos;</span> })
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p><a href="http://dotwe.org/c124bfc21e6d92271356acbea232089b" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x7684;&#x66F4;&#x65B0;&#x7B56;&#x7565;&#x662F;&#xFF1A;</p>
+<ol>
+<li>&#x628A;&#x7B2C;&#x4E00;&#x4E2A; <code>&lt;text&gt;</code> &#x8D4B;&#x503C;&#x4E3A; <code>Han Meimei</code></li>
+<li>&#x7B2C;&#x4E8C;&#x4E2A;&#x8D4B;&#x503C;&#x4E3A; <code>Li Lei</code></li>
+<li>&#x7B2C;&#x4E09;&#x4E2A;&#x8D4B;&#x503C;&#x4E3A; <code>Han Meimei</code></li>
+<li>&#x6700;&#x540E;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A; <code>&lt;text&gt;</code> &#x5E76;&#x8D4B;&#x503C;&#x4E3A; <code>Jin Green</code></li>
+</ol>
+<p>&#x7B2C;&#x4E8C;&#x4E2A;&#x5217;&#x8868;&#x7684;&#x66F4;&#x65B0;&#x7B56;&#x7565;&#x662F;&#xFF1A;</p>
+<ol>
+<li>&#x5728;&#x6700;&#x524D;&#x9762;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A; <code>&lt;text&gt;</code> &#x5E76;&#x8D4B;&#x503C;&#x4E3A; <code>Han Meimei</code></li>
+</ol>
+<p>&#x7B2C;&#x4E09;&#x4E2A;&#x5217;&#x8868;&#x7684;&#x66F4;&#x65B0;&#x4F1A;&#x9047;&#x5230;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x4E3A;&#x6709;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x9879;&#x76EE;&#x7684; <code>nickname</code> &#x503C;&#x90FD;&#x662F; <code>Han Meimei</code> &#x6240;&#x4EE5;&#x9020;&#x6210;&#x610F;&#x6599;&#x4E4B;&#x5916;&#x7684;&#x6E32;&#x67D3;&#x7ED3;&#x679C; (&#x53EA;&#x6E32;&#x67D3;&#x4E86;&#x4E09;&#x4E2A;&#x6570;&#x7EC4;&#x9879;&#x76EE;)&#x3002;</p>
+<p>&#x4E0B;&#x4E00;&#x8282;&#xFF1A;<a href="render-logic.html">&#x6E32;&#x67D3;&#x8FC7;&#x7A0B;&#x63A7;&#x5236;</a></p>
 
                                 
                                 </section>
@@ -1856,7 +1895,7 @@ contentLoaded(window,function(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"展示逻辑控制","level":"1.2.2.4","depth":3,"next":{"title":"渲染逻辑控制","level":"1.2.2.5","depth":3,"path":"syntax/render-logic.md","ref":"syntax/render-logic.md","articles":[]},"previous":{"title":"事件","level":"1.2.2.3","depth":3,"path":"syntax/events.md","ref":"syntax/events.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"syntax/display-logic.md","mtime":"2016-12-01T01:46:30.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T18:21:31.427Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"展示逻辑控制","level":"1.2.2.4","depth":3,"next":{"title":"渲染逻辑控制","level":"1.2.2.5","depth":3,"path":"syntax/render-logic.md","ref":"syntax/render-logic.md","articles":[]},"previous":{"title":"事件","level":"1.2.2.3","depth":3,"path":"syntax/events.md","ref":"syntax/events.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"syntax/display-logic.md","mtime":"2016-12-02T18:36:19.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-02T18:36:25.370Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

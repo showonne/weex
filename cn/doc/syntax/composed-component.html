@@ -1676,87 +1676,123 @@ contentLoaded(window,function(){
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7EC4;&#x4EF6;&#x5C01;&#x88C5;">&#x7EC4;&#x4EF6;&#x5C01;&#x88C5;</h1>
-<p>&#x7ECF;&#x5E38;&#x6211;&#x4EEC;&#x4F1A;&#x53D1;&#x73B0;&#x5F88;&#x591A;&#x53EF;&#x590D;&#x7528;&#x7684; weex &#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x5C01;&#x88C5;&#x6210; weex &#x7EC4;&#x4EF6;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<code>foo.we</code>&#x7684;&#x6587;&#x4EF6;&#xFF0C;<code>&lt;foo&gt;</code>&#x5C31;&#x662F;&#x7EC4;&#x4EF6;&#x540D;&#x3002;</p>
-<pre><code>&lt;!-- foo.we --&gt;
-&lt;template&gt;
-  &lt;container style=&quot;flex-direction: row;&quot;&gt;
-    &lt;image src=&quot;{{image}}&quot;&gt;&lt;/image&gt;
-    &lt;text&gt;{{title}}&lt;/text&gt;
-  &lt;/container&gt;
-&lt;/template&gt;
-&lt;script&gt;
-  module.exports = {
+                                <h1 id="&#x4E0A;&#x5C42;&#x7EC4;&#x4EF6;&#x5C01;&#x88C5;">&#x4E0A;&#x5C42;&#x7EC4;&#x4EF6;&#x5C01;&#x88C5;</h1>
+<p>&#x7ECF;&#x5E38;&#x6211;&#x4EEC;&#x4F1A;&#x53D1;&#x73B0;&#x5F88;&#x591A;&#x53EF;&#x590D;&#x7528;&#x7684; Weex &#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x5C01;&#x88C5;&#x6210;&#x4E0A;&#x5C42;&#x7EC4;&#x4EF6;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>foo.we</code> &#x7684;&#x6587;&#x4EF6;&#xFF0C;<code>&lt;foo&gt;</code> &#x5C31;&#x662F;&#x5C01;&#x88C5;&#x597D;&#x7684;&#x7EC4;&#x4EF6;&#x540D;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- foo.we --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;flex-direction: row;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{image}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{title}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-built_in">module</span>.exports = {
     data: {
-      title: null,
-      image: null
+      title: <span class="hljs-literal">null</span>,
+      image: <span class="hljs-literal">null</span>
     }
   }
-&lt;/script&gt;
-</code></pre><p><code>foo.we</code> &#x7684;&#x4E5F;&#x5305;&#x542B; <code>&lt;template&gt;</code>&#xFF0C;<code>&lt;style&gt;</code> &#x548C; <code>&lt;script&gt;</code>&#xFF0C;&#x5B9A;&#x4E49;&#x597D;&#x4E86;&#x540E;&#xFF0C;&#x76F4;&#x63A5;&#x7528;<code>&lt;foo&gt;</code>&#x6807;&#x7B7E;&#x5373;&#x53EF;, &#x6CE8;&#x610F;&#x8FD9;&#x91CC;<code>bar.we</code>&#x548C;<code>foo.we</code>&#x662F;&#x5728;&#x540C;&#x76EE;&#x5F55;&#x4E0B;&#x54E6;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>&lt;!-- bar.we --&gt;
-&lt;template&gt;
-  &lt;foo title=&quot;...&quot; image=&quot;...&quot;&gt;&lt;/foo&gt;
-&lt;/template&gt;
-</code></pre><h2 id="&#x7EC4;&#x4EF6;&#x5D4C;&#x5957;">&#x7EC4;&#x4EF6;&#x5D4C;&#x5957;</h2>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p><code>foo.we</code> &#x7684;&#x4E5F;&#x5305;&#x542B; <code>&lt;template&gt;</code>&#xFF0C;<code>&lt;style&gt;</code> &#x548C; <code>&lt;script&gt;</code>&#xFF0C;&#x5B9A;&#x4E49;&#x597D;&#x4E86;&#x540E;&#xFF0C;&#x76F4;&#x63A5;&#x7528; <code>&lt;foo&gt;</code>&#x6807;&#x7B7E;&#x5373;&#x53EF;, &#x6CE8;&#x610F;&#x8FD9;&#x91CC; <code>bar.we</code> &#x548C; <code>foo.we</code> &#x5FC5;&#x987B;&#x5728;&#x540C;&#x76EE;&#x5F55;&#x4E0B;&#x624D;&#x80FD;&#x81EA;&#x52A8;&#x5EFA;&#x7ACB;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- bar.we --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">foo</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">image</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">foo</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+<h2 id="&#x7EC4;&#x4EF6;&#x5D4C;&#x5957;">&#x7EC4;&#x4EF6;&#x5D4C;&#x5957;</h2>
 <p>&#x5C01;&#x88C5;&#x597D;&#x7684;&#x7EC4;&#x4EF6;&#x4E5F;&#x652F;&#x6301;&#x5D4C;&#x5957;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>&lt;!-- somepath/foo.we --&gt;
-&lt;template&gt;
-  &lt;container style=&quot;flex-direction: row;&quot;&gt;
-    &lt;image src=&quot;{{image}}&quot;&gt;&lt;/image&gt;
-    &lt;text&gt;{{title}}&lt;/text&gt;
-  &lt;/container&gt;
-&lt;/template&gt;
-&lt;script&gt;
-  module.exports = {
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- somepath/foo.we --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;flex-direction: row;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{image}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{title}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-built_in">module</span>.exports = {
     data: {
-      // &#x8FD9;&#x51E0;&#x4E2A; key &#x5FC5;&#x987B;&#x660E;&#x786E;&#x5199;&#x597D;&#xFF0C;&#x4E0D;&#x8BBA;&#x662F;&#x4E0A;&#x5C42;&#x6570;&#x636E;&#x4F20;&#x9012;&#x4E0B;&#x6765;&#x8FD8;&#x662F;&#x5185;&#x90E8;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x624D;&#x4F1A;&#x88AB;&#x6B63;&#x5E38;&#x76D1;&#x542C;
-      title: null,
-      image: null
+      <span class="hljs-comment">// These keys must be declared explicitly here</span>
+      <span class="hljs-comment">// or data-binding will not work from its parent.</span>
+      title: <span class="hljs-literal">null</span>,
+      image: <span class="hljs-literal">null</span>
     }
   }
-&lt;/script&gt;
-</code></pre><pre><code>&lt;!-- somepath/foo.list.we --&gt;
-&lt;template&gt;
-  &lt;container&gt;
-    &lt;text&gt;{{description}}&lt;/text&gt;
-    &lt;foo repeat=&quot;{{list}}&quot; title=&quot;{{text}}&quot; image=&quot;{{img}}&quot;&gt;&lt;/foo&gt;
-  &lt;/container&gt;
-&lt;/template&gt;
-&lt;script&gt;
-  module.exports = {
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- samepath/foo.list.we --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{description}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">foo</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;item in list&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;{{item.text}}&quot;</span> <span class="hljs-attr">image</span>=<span class="hljs-string">&quot;{{item.img}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">foo</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-built_in">module</span>.exports = {
     data: {
-      description: &apos;&apos;,
-      // &#x56E0;&#x4E3A;&#x4E0A;&#x5C42;&#x7EC4;&#x4EF6;&#x4F1A;&#x901A;&#x8FC7; list &#x5411;&#x4E0B;&#x4F20;&#x9012;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x628A;&#x5B57;&#x6BB5;&#x660E;&#x786E;&#x5199;&#x597D;
+      description: <span class="hljs-string">&apos;&apos;</span>,
+      <span class="hljs-comment">// This key must be declared explicitly here</span>
+      <span class="hljs-comment">// or data-binding will not work from its parent.</span>
       list: []
     }
   }
-&lt;/script&gt;
-</code></pre><pre><code>&lt;!-- somepath/main.we --&gt;
-&lt;template&gt;
-  &lt;foo-list list=&quot;{{list}}&quot;&gt;&lt;/foo-list&gt;
-&lt;/template&gt;
-&lt;script&gt;
-  module.exports = {
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- samepath/main.we --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">foo-list</span> <span class="hljs-attr">list</span>=<span class="hljs-string">&quot;{{list}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">foo-list</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-built_in">module</span>.exports = {
     data: {
       list: [
-        {text: &apos;...&apos;, img: &apos;...&apos;},
-        {text: &apos;...&apos;, img: &apos;...&apos;},
-        {text: &apos;...&apos;, img: &apos;...&apos;},
+        {text: <span class="hljs-string">&apos;...&apos;</span>, img: <span class="hljs-string">&apos;...&apos;</span>},
+        {text: <span class="hljs-string">&apos;...&apos;</span>, img: <span class="hljs-string">&apos;...&apos;</span>},
+        {text: <span class="hljs-string">&apos;...&apos;</span>, img: <span class="hljs-string">&apos;...&apos;</span>},
         ...
       ]
     }
   }
-&lt;/script&gt;
-</code></pre><p><code>main.we</code>&#x5D4C;&#x5957;&#x4E86;<code>&lt;foo-list&gt;</code>, <code>&lt;foo-list&gt;</code>&#x5D4C;&#x5957;&#x4E86;<code>&lt;foo&gt;</code>&#x3002;</p>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x7684; <code>main.we</code> &#x5D4C;&#x5957;&#x4E86; <code>&lt;foo-list&gt;</code>&#xFF0C;<code>&lt;foo-list&gt;</code> &#x5D4C;&#x5957;&#x4E86; <code>&lt;foo&gt;</code>&#x3002;</p>
+<h2 id="&#x66F4;&#x591A;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x4E66;&#x5199;&#x65B9;&#x5F0F;">&#x66F4;&#x591A;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x4E66;&#x5199;&#x65B9;&#x5F0F;</h2>
+<p>&#x9664;&#x4E86;&#x5728;&#x4E3B;&#x6587;&#x4EF6;&#x540C;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;&#x548C;&#x88AB;&#x5C01;&#x88C5;&#x7EC4;&#x4EF6;&#x540C;&#x540D;&#x7684; <code>we</code> &#x6587;&#x4EF6;&#x4E4B;&#x5916;&#xFF0C;Weex &#x8FD8;&#x652F;&#x6301;&#x53E6;&#x5916;&#x96C6;&#x4E2D;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x4E66;&#x5199;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>&#x5728; <code>&lt;script&gt;</code> &#x4E2D;&#x901A;&#x8FC7; <code>require</code> &#x5176;&#x5B83;&#x76EE;&#x5F55;&#x7684; <code>we</code> &#x6587;&#x4EF6;&#x5B9A;&#x4E49;&#x540C;&#x540D;&#x7EC4;&#x4EF6;</li>
+<li>&#x5728;&#x4E3B;&#x6587;&#x4EF6;&#x4E0B;&#x65B0;&#x589E; <code>&lt;element name=&quot;xxx&quot;&gt;</code> &#x6807;&#x7B7E;&#xFF0C;<code>name</code> &#x7279;&#x6027;&#x7684;&#x503C;&#x4E3A;&#x65B0;&#x521B;&#x5EFA;&#x7684;&#x7EC4;&#x4EF6;&#x540D;&#xFF0C;&#x5176; <code>&lt;element&gt;</code> &#x5185;&#x90E8;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x5B9A;&#x4E49;&#x8BE5;&#x7EC4;&#x4EF6;&#x7684;&#x4EE3;&#x7801;</li>
+</ul>
+<p>&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- path-a/main.we --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;foo&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>Foo<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">foo</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">foo</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bar</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">bar</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path-b/bar.we&apos;</span>)
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- path-b/bar.we --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>Bar<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;<code>path-a/main.we</code> &#x6700;&#x7EC8;&#x5C55;&#x793A;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x201C;Foo&#x201D;&#x548C;&#x201C;Bar&#x201D;&#x4E24;&#x6BB5;&#x6587;&#x672C;&#x3002;</p>
 <h2 id="&#x6CE8;&#x610F;&#x4E8B;&#x9879;">&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h2>
 <ul>
-<li>&#x6BCF;&#x4E2A;&#x5C01;&#x88C5;&#x597D;&#x7684;&#x7EC4;&#x4EF6;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;<code>&lt;style&gt;</code></li>
-<li>&#x5982;&#x679C;&#x5B50;&#x7EC4;&#x4EF6;&#x6709; <code>id</code> &#x5C5E;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>this.$vm(id)</code>&#x6765;&#x8BBF;&#x95EE;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x5E76;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>this.$el(id)</code>&#x6765;&#x627E;&#x8282;&#x70B9;&#x3002;&#x66F4;&#x591A;&#x8BE6;&#x89C1;<a href="id.html">&#x5982;&#x4F55;&#x627E;&#x8282;&#x70B9;</a></li>
-<li>&#x66F4;&#x591A;&#x6A21;&#x5757;&#x95F4;&#x901A;&#x4FE1;&#x95EE;&#x9898;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="comm.html">&#x7EC4;&#x4EF6;&#x95F4;&#x5982;&#x4F55;&#x901A;&#x4FE1;</a></li>
-<li>&#x53EA;&#x6709;&#x5728; <code>data</code> &#x9009;&#x9879;&#x4E2D;&#x660E;&#x786E;&#x5199;&#x660E;&#x7684; key &#x624D;&#x4F1A;&#x88AB;&#x6570;&#x636E;&#x76D1;&#x542C;&#xFF0C;&#x4E0D;&#x8BBA;&#x662F;&#x57FA;&#x4E8E;&#x4E0A;&#x5C42;&#x6570;&#x636E;&#x4F20;&#x9012;&#x4E0B;&#x6765;&#x7684;&#x573A;&#x666F;&#x8FD8;&#x662F;&#x5185;&#x90E8;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;</li>
+<li>&#x7EC4;&#x4EF6;&#x5404;&#x81EA;&#x7684; <code>&lt;style&gt;</code> &#x662F;&#x76F8;&#x4E92;&#x72EC;&#x7ACB;&#x7684;&#xFF0C;&#x4E0D;&#x4F1A;&#x62C5;&#x5FC3;&#x4E0D;&#x540C;&#x7EC4;&#x4EF6;&#x4E2D;&#x76F8;&#x540C;&#x7684; class name &#x76F8;&#x4E92;&#x5E72;&#x6270;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x5C01;&#x88C5;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x5728;&#x7236;&#x7EC4;&#x4EF6;&#x4E2D;&#x6709; <code>id</code> &#x7279;&#x6027;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7236;&#x7EC4;&#x4EF6;&#x7684; <code>this.$vm(id)</code> &#x63A5;&#x53E3;&#x6765;&#x8BBF;&#x95EE;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x5E76;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>this.$el(id)</code> &#x6765;&#x627E;&#x5230;&#x5176;&#x80CC;&#x540E;&#x771F;&#x5B9E;&#x7684;&#x539F;&#x751F;&#x7EC4;&#x4EF6;&#x3002;&#x66F4;&#x591A;&#x8BE6;&#x89C1;<a href="id.html">&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x4FE1;&#x606F;</a></li>
+<li>&#x66F4;&#x591A;&#x7EC4;&#x4EF6;&#x95F4;&#x901A;&#x4FE1;&#x7684;&#x95EE;&#x9898;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="comm.html">&#x7EC4;&#x4EF6;&#x95F4;&#x5982;&#x4F55;&#x901A;&#x4FE1;</a></li>
+<li>&#x53EA;&#x6709;&#x5728;&#x7EC4;&#x4EF6;&#x7684; <code>data</code> &#x9009;&#x9879;&#x4E2D;&#x660E;&#x786E;&#x5199;&#x660E;&#x7684; key &#x624D;&#x4F1A;&#x88AB;&#x6B63;&#x5E38;&#x7684;&#x76D1;&#x542C;&#xFF0C;&#x4E0D;&#x8BBA;&#x901A;&#x8FC7;&#x7236;&#x7EC4;&#x4EF6;&#x628A;&#x6570;&#x636E;&#x4F20;&#x9012;&#x8FDB;&#x6765;&#x8FD8;&#x662F;&#x5728;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x5185;&#x90E8;&#x5BF9;&#x6570;&#x636E;&#x53D1;&#x8D77;&#x4FEE;&#x6539;&#x3002;</li>
 </ul>
-<p>&#x4E0B;&#x4E00;&#x7BC7;&#xFF1A;<a href="id.html">&#x5982;&#x4F55;&#x627E;&#x8282;&#x70B9;</a></p>
+<p>&#x4E0B;&#x4E00;&#x8282;&#xFF1A;<a href="id.html">&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x4FE1;&#x606F;</a></p>
 
                                 
                                 </section>
@@ -1800,7 +1836,7 @@ contentLoaded(window,function(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"组件封装","level":"1.2.2.6","depth":3,"next":{"title":"找节点","level":"1.2.2.7","depth":3,"path":"syntax/id.md","ref":"syntax/id.md","articles":[]},"previous":{"title":"渲染逻辑控制","level":"1.2.2.5","depth":3,"path":"syntax/render-logic.md","ref":"syntax/render-logic.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"syntax/composed-component.md","mtime":"2016-12-01T01:46:30.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-01T18:21:31.427Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"组件封装","level":"1.2.2.6","depth":3,"next":{"title":"找节点","level":"1.2.2.7","depth":3,"path":"syntax/id.md","ref":"syntax/id.md","articles":[]},"previous":{"title":"渲染逻辑控制","level":"1.2.2.5","depth":3,"path":"syntax/render-logic.md","ref":"syntax/render-logic.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"syntax/composed-component.md","mtime":"2016-12-02T18:21:32.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-02T18:36:25.370Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
