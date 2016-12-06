@@ -119,15 +119,31 @@ $ weexpack build ios
 
 构建包的过程中，将会提示让您输入 CodeSign（证书）、Profile(provisioning profile)、AppId，只有输入真实的这些信息才能成功打包。 其余如AppName，和入口 weex bundle 文件可以编辑项目目录下的 `ios.config.json` 配置。 打完包成功之后，可以在 `/playground/build/ipa_build/` 目录下获取 ipa 文件。
 
-注：证书需要预先安装到 keychain 中，在 keychain 中点击右键获取证书 id（证书名称）、provisioning profile 文件（*mobileprovision）需要获取 UUID，进入目录可以看到 mobileprovision_UUID.sh 文件，此文件可以获取到 UUID。
+注：证书需要预先安装到 keychain 中，在 keychain 中点击右键获取证书 id（证书名称）、provisioning profile 文件（\*mobileprovision）需要获取 UUID，进入目录可以看到 mobileprovision_UUID.sh 文件，此文件可以获取到 UUID。
 
 mobileprovision_UUID.sh 用法如下：
 
 ```bash
-$ ./mobileprovision_UUID.sh 
+$ ./mobileprovision_UUID.sh *mobileprovision
 ```
 
-*mobileprovision,参数（*mobileprovision）为provisioning profile文件路径
+参数（\*mobileprovision）为 provisioning profile 文件路径
+
+** 注：run 与 build 部分涉及 pod 的依赖安装问题。**
+
+- 首先要安装 cocoapods ，具体安装步骤可查看[这里](https://cocoapods.org/)，建议安装 0.39.0 版本。
+- 为了加快 CLI 执行速度，weexpack 创建的工程默认安装了需要的依赖库。但是命令执行依然会更新需要升级的依赖库。
+  - 如果出现这种错误提示 `unable to find a specification for 'WeexSDK'` 这种错误，说明你本地没有更新 cocoapods master 仓库，运行 `pod repo update` ，此时运行 `pod search WeexSDK`：
+ 
+  ![](https://img.alicdn.com/tps/TB1jLx4OFXXXXaoXFXXXXXXXXXX-212-33.png)  
+ 
+  说明 master repo 更新成功。以上是以 `WeexSDK` 为例，其他库类似。
+ 
+  - 如果出现这种错误 `error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.` 进入 playground 目录（podfile 文件所在目录）按提示执行。
+
+  更多 pod 使用细节请移步[cocoapods](https://cocoapods.org/)
+
+- mobileprovision，参数（\*mobileprovision）为 provisioning profile 文件路径。
 
 ## Mac & Android
 
