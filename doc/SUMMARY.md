@@ -12,6 +12,7 @@
         * [Find an Element](/syntax/id.md)
         * [Communications](/syntax/comm.md)
         * [Page Config & Data](/syntax/config-n-data.md)
+        * [URL and Path](/syntax/path.md)
     * [How-tos](/how-to/main.md)
         * [Preview In Browser](/how-to/preview-in-browser.md)
         * [Preview in Native](/how-to/preview-in-playground-app.md)        
