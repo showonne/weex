@@ -10,6 +10,10 @@ a[aria-label="Share"] ,  i.fa-facebook , i.fa-twitter{
    display: none  !important;
 }
 
+img[alt="mobile_preview"]{
+   width: 251px;
+}
+
 .top-bar, .top-bar ul{
     background-color: white;
     padding-left: 0;

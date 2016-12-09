@@ -83,6 +83,10 @@ a[aria-label="Share"] ,  i.fa-facebook , i.fa-twitter{
    display: none  !important;
 }
 
+img[alt="mobile_preview"]{
+   width: 251px;
+}
+
 .top-bar, .top-bar ul{
     background-color: white;
     padding-left: 0;
@@ -396,7 +400,7 @@ contentLoaded(window,function(){
                 <a href="../get-started.html">
             
                     
-                    Get Started
+                    &#x8D77;&#x6B65;&#x6559;&#x7A0B;
             
                 </a>
             
@@ -648,7 +652,7 @@ contentLoaded(window,function(){
                 <a href="../tools/cli.html">
             
                     
-                    CLI
+                    CLI&#xFF08;&#x82F1;&#xFF09;
             
                 </a>
             
@@ -675,7 +679,7 @@ contentLoaded(window,function(){
                 <a href="../tools/devtools-android.html">
             
                     
-                    Weex devtools (Android)
+                    Weex devtools (Android)&#xFF08;&#x82F1;&#xFF09;
             
                 </a>
             
@@ -706,7 +710,7 @@ contentLoaded(window,function(){
                 <a href="../tools/transformer.html">
             
                     
-                    Transformer
+                    Transformer&#xFF08;&#x82F1;&#xFF09;
             
                 </a>
             
@@ -1303,20 +1307,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.4.4.8" data-path="../modules/timer.html">
-            
-                <a href="../modules/timer.html">
-            
-                    
-                    timer
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.4.9" data-path="../modules/clipboard.html">
+        <li class="chapter " data-level="1.4.4.8" data-path="../modules/clipboard.html">
             
                 <a href="../modules/clipboard.html">
             
@@ -1329,7 +1320,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.4.4.10" data-path="../modules/globalevent.html">
+        <li class="chapter " data-level="1.4.4.9" data-path="../modules/globalevent.html">
             
                 <a href="../modules/globalevent.html">
             
@@ -1366,7 +1357,7 @@ contentLoaded(window,function(){
                 <a href="../specs/js-bundle-format.html">
             
                     
-                    JS Bundle &#x683C;&#x5F0F;
+                    JS Bundle &#x683C;&#x5F0F;&#xFF08;&#x82F1;&#xFF09;
             
                 </a>
             
@@ -1379,7 +1370,7 @@ contentLoaded(window,function(){
                 <a href="../specs/js-framework-apis.html">
             
                     
-                    JS Framework APIs
+                    JS Framework APIs&#xFF08;&#x82F1;&#xFF09;
             
                 </a>
             
@@ -1424,7 +1415,7 @@ contentLoaded(window,function(){
                 <span>
             
                     
-                    CSS &#x5C5E;&#x6027;&#x5FEB;&#x67E5;
+                    CSS &#x5C5E;&#x6027;&#x5FEB;&#x67E5;&#xFF08;&#x82F1;&#xFF09;
             
                 </span>
             
@@ -1612,7 +1603,7 @@ contentLoaded(window,function(){
                 <span>
             
                     
-                    &#x4E8B;&#x4EF6;&#x5FEB;&#x67E5;
+                    &#x4E8B;&#x4EF6;&#x5FEB;&#x67E5;&#xFF08;&#x82F1;&#xFF09;
             
                 </span>
             
@@ -2033,7 +2024,7 @@ contentLoaded(window,function(){
 <h3 id="&#x7B2C;1&#x6B65;&#xFF1A;&#x7F16;&#x5199;&#x57FA;&#x672C;&#x4EE3;&#x7801;">&#x7B2C;1&#x6B65;&#xFF1A;&#x7F16;&#x5199;&#x57FA;&#x672C;&#x4EE3;&#x7801;</h3>
 <p>&#x6211;&#x4EEC;&#x8981;&#x5728;&#x6BCF;&#x4E2A; <code>&lt;cell&gt;</code> &#x4E2D;&#x5206;&#x522B;&#x5C55;&#x793A; repo &#x7684;&#x5168;&#x79F0;&#x548C; star &#x6570;&#x3002;&#x57FA;&#x672C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">list</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">cell</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;item in items&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;item-{{$index}}&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
@@ -2048,8 +2039,19 @@ contentLoaded(window,function(){
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-<span class="hljs-selector-class">.list</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffffff</span>;
+<span class="hljs-selector-class">.wrapper</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-class">.list</span>{
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
 }
 <span class="hljs-selector-class">.row</span> {
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">20</span>;
@@ -2068,13 +2070,14 @@ contentLoaded(window,function(){
 }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
+<p>&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x70B9;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x5BF9;&#x4E8E;&#x5185;&#x5D4C;&#x7684; <code>&lt;list&gt;</code>&#xFF0C;&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A;&#x53EF;&#x8BA1;&#x7B97;&#x7684;&#x9AD8;&#x5EA6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x7684;&#x6307;&#x5B9A;&#x9AD8;&#x5EA6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>position</code> &#x6216; <code>flex</code> &#x6765;&#x9650;&#x5236;&#x9AD8;&#x5EA6;&#x3002;&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x7684;&#x5217;&#x8868;&#x662F;&#x5168;&#x5C4F;&#x663E;&#x793A;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>position</code> &#x5C06;&#x5217;&#x8868;&#x8BBE;&#x7F6E;&#x4E3A;&#x5168;&#x5C4F;&#x5C55;&#x793A;&#x3002;</p>
 <h3 id="&#x7B2C;2&#x6B65;&#xFF1A;&#x8BF7;&#x6C42;&#x6570;&#x636E;">&#x7B2C;2&#x6B65;&#xFF1A;&#x8BF7;&#x6C42;&#x6570;&#x636E;</h3>
 <p>&#x6B64;&#x65F6;&#xFF0C;<code>items</code> &#x4E3A;&#x7A7A;&#x6570;&#x7EC4;&#xFF0C;&#x65E0;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x53D1;&#x8D77;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x586B;&#x5145;&#x5230; <code>items</code> &#x6570;&#x7EC4;&#x4E2D;&#x3002;</p>
 <p>&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x4F7F;&#x7528;&#x5230; <a href="https://alibaba.github.io/weex/cn/doc/modules/stream.html" target="_blank"><code>stream</code></a> &#x6A21;&#x5757;&#xFF0C;&#x6B64;&#x6A21;&#x5757;&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x5E38;&#x7528;&#x7684;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42; API&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x7528;&#x5230; <a href="https://alibaba.github.io/weex/cn/doc/modules/stream.html#fetchoptions-callbackprogresscallback" target="_blank"><code>fetch</code></a>&#x3002;&#x5177;&#x4F53;&#x4FE1;&#x606F;&#x8BF7;&#x67E5;&#x9605; <a href="https://alibaba.github.io/weex/cn/doc/modules/stream.html#fetchoptions-callbackprogresscallback" target="_blank"><code>fetch</code></a>&#x3002;</p>
 <p>&#x6211;&#x4EEC;&#x5728;&#x5168;&#x5C40;&#x4E0B;&#x5F15;&#x5165; stream &#x6A21;&#x5757;&#xFF0C;&#x5728; <code>created</code> &#x751F;&#x547D;&#x5468;&#x671F;&#x5185;&#x53D1;&#x8D77;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x9875;&#x6570;&#x636E;&#x3002;&#x6B64;&#x5904;&#xFF0C;&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x5728; <code>created</code> &#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#x5728; <code>created</code> &#x751F;&#x547D;&#x5468;&#x671F;&#x5185;&#xFF0C;&#x9875;&#x9762;&#x8FD8;&#x672A;&#x5F00;&#x59CB;&#x6E32;&#x67D3;&#xFF0C;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x66F4;&#x65E9;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#x3002;</p>
 <p>&#x6211;&#x4EEC;&#x5C06;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#x5C01;&#x88C5;&#x4E3A;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5; <code>renderData()</code>&#xFF0C;&#x4EE5;&#x4FBF;&#x91CD;&#x7528;&#x3002;</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">list</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">cell</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span> <span class="hljs-attr">repeat</span>=<span class="hljs-string">&quot;item in items&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;item-{{$index}}&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
@@ -2089,8 +2092,19 @@ contentLoaded(window,function(){
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-<span class="hljs-selector-class">.list</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffffff</span>;
+<span class="hljs-selector-class">.wrapper</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-class">.list</span>{
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
 }
 <span class="hljs-selector-class">.row</span> {
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">20</span>;
@@ -2146,7 +2160,7 @@ contentLoaded(window,function(){
 <p>&#x6211;&#x4EEC;&#x4E3A;&#x9875;&#x9762;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5438;&#x9644;&#x5728;&#x9876;&#x90E8;&#x7684;&#x6807;&#x9898;&#xFF0C;&#x4EE5;&#x4FBF;&#x63D0;&#x793A;&#x9875;&#x9762;&#x5185;&#x5BB9;&#xFF1A;</p>
 <p>&#x5728; <code>&lt;cell&gt;</code> &#x524D;&#x63D2;&#x5165; <code>&lt;header&gt;</code> &#x6807;&#x7B7E;&#x5E76;&#x6DFB;&#x52A0;&#x6837;&#x5F0F;&#x3002;</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">list</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Search Results<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
@@ -2174,8 +2188,19 @@ contentLoaded(window,function(){
 <span class="hljs-selector-class">.title</span> {
   <span class="hljs-attribute">text-align</span>: center;
 }
-<span class="hljs-selector-class">.list</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffffff</span>;
+<span class="hljs-selector-class">.wrapper</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-class">.list</span>{
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
 }
 <span class="hljs-selector-class">.row</span> {
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">20</span>;
@@ -2232,11 +2257,11 @@ contentLoaded(window,function(){
 <ol>
 <li>&#x5728; <code>&lt;cell&gt;</code> &#x540E;&#x63D2;&#x5165; <code>&lt;loading&gt;</code> &#x7EC4;&#x4EF6;&#xFF1B;</li>
 <li>&#x4E3A; <code>&lt;loading&gt;</code> &#x7EC4;&#x4EF6;&#x6DFB;&#x52A0; <code>loading</code> &#x4E8B;&#x4EF6;&#xFF1B;</li>
-<li>&#x6B64;&#x4E8B;&#x4EF6;&#x4F1A;&#x8C03;&#x7528; <code>loadingData()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x83B7;&#x53D6;&#x4E0B;&#x4E00;&#x9875;&#x6570;&#x636E;&#x3002;</li>
+<li>&#x6B64;&#x4E8B;&#x4EF6;&#x4F1A;&#x8C03;&#x7528; <code>loadingData()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x83B7;&#x53D6;&#x4E0B;&#x4E00;&#x9875;&#x6570;&#x636E;&#xFF1B;&#x6211;&#x4EEC;&#x5728;&#x4E0A;&#x62C9;&#x65F6;&#x663E;&#x793A; <code>&lt;loading&gt;</code>&#xFF0C;&#x52A0;&#x8F7D;&#x51FA;&#x6570;&#x636E;&#x540E;&#x5C06;&#x5176;&#x9690;&#x85CF;&#xFF1B;</li>
 <li>&#x6211;&#x4EEC;&#x5C06;&#x5217;&#x8868;&#x9650;&#x5236;&#x4E3A; 15 &#x9875;&#xFF0C;&#x5982;&#x679C;&#x9875;&#x6570;&#x5927;&#x4E8E; 15&#xFF0C;&#x5C06;&#x6587;&#x6848;&#x6539;&#x4E3A;&#x201C;NO MORE&#x201D;&#x3002;</li>
 </ol>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">list</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Search Results<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
@@ -2270,8 +2295,19 @@ contentLoaded(window,function(){
 <span class="hljs-selector-class">.text</span> {
   <span class="hljs-attribute">text-align</span>: center;
 }
-<span class="hljs-selector-class">.list</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffffff</span>;
+<span class="hljs-selector-class">.wrapper</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-class">.list</span>{
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
 }
 <span class="hljs-selector-class">.row</span> {
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">20</span>;
@@ -2287,8 +2323,9 @@ contentLoaded(window,function(){
 <span class="hljs-keyword">var</span> SEARCH_URL = <span class="hljs-string">&apos;https://api.github.com/search/repositories?q=language:javascript&amp;sort=stars&amp;order=desc&apos;</span>
 <span class="hljs-built_in">module</span>.exports = {
   data: {
+    isLoaded: <span class="hljs-literal">true</span>,
     page: <span class="hljs-number">1</span>,
-    loadingDisplay: <span class="hljs-string">&apos;show&apos;</span>,
+    loadingDisplay: <span class="hljs-string">&apos;hide&apos;</span>,
     loadingText: <span class="hljs-string">&apos;Loading...&apos;</span>,
     items:[]
   },
@@ -2308,6 +2345,8 @@ contentLoaded(window,function(){
         url: url,
         type:<span class="hljs-string">&apos;json&apos;</span>
       }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+        self.loadingDisplay = <span class="hljs-string">&apos;hide&apos;</span>
+
         <span class="hljs-keyword">try</span> {
           <span class="hljs-keyword">var</span> results = res.data.items || []
 
@@ -2324,6 +2363,10 @@ contentLoaded(window,function(){
     loadingData: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
       <span class="hljs-keyword">var</span> url = SEARCH_URL + <span class="hljs-string">&apos;&amp;page=&apos;</span> + <span class="hljs-keyword">this</span>.page
       <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
+
+      <span class="hljs-keyword">if</span> (self.isLoaded === <span class="hljs-literal">false</span>) <span class="hljs-keyword">return</span> 
+
+      self.loadingDisplay = <span class="hljs-string">&apos;show&apos;</span>
 
       <span class="hljs-keyword">if</span> (self.page &lt;=<span class="hljs-number">10</span> ) {
         self.renderData(url)
@@ -2351,7 +2394,7 @@ contentLoaded(window,function(){
 <li>&#x70B9;&#x51FB;&#x65F6;&#xFF0C;&#x901A;&#x8FC7; <code>goToTop()</code> &#x65B9;&#x6CD5;&#x56DE;&#x5230;&#x9876;&#x90E8;&#x3002;</li>
 </ol>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">list</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Search Results<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
@@ -2388,8 +2431,19 @@ contentLoaded(window,function(){
 <span class="hljs-selector-class">.text</span> {
   <span class="hljs-attribute">text-align</span>: center;
 }
-<span class="hljs-selector-class">.list</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffffff</span>;
+<span class="hljs-selector-class">.wrapper</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-class">.list</span>{
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
 }
 <span class="hljs-selector-class">.row</span> {
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">20</span>;
@@ -2417,8 +2471,9 @@ contentLoaded(window,function(){
 <span class="hljs-keyword">var</span> SEARCH_URL = <span class="hljs-string">&apos;https://api.github.com/search/repositories?q=language:javascript&amp;sort=stars&amp;order=desc&apos;</span>
 <span class="hljs-built_in">module</span>.exports = {
   data: {
+    isLoaded: <span class="hljs-literal">true</span>,
     page: <span class="hljs-number">1</span>,
-    loadingDisplay: <span class="hljs-string">&apos;show&apos;</span>,
+    loadingDisplay: <span class="hljs-string">&apos;hide&apos;</span>,
     loadingText: <span class="hljs-string">&apos;Loading...&apos;</span>,
     items:[]
   },
@@ -2438,6 +2493,8 @@ contentLoaded(window,function(){
         url: url,
         type:<span class="hljs-string">&apos;json&apos;</span>
       }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+        self.loadingDisplay = <span class="hljs-string">&apos;hide&apos;</span>
+
         <span class="hljs-keyword">try</span> {
           <span class="hljs-keyword">var</span> results = res.data.items || []
 
@@ -2454,6 +2511,10 @@ contentLoaded(window,function(){
     loadingData: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
       <span class="hljs-keyword">var</span> url = SEARCH_URL + <span class="hljs-string">&apos;&amp;page=&apos;</span> + <span class="hljs-keyword">this</span>.page
       <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
+
+      <span class="hljs-keyword">if</span> (self.isLoaded === <span class="hljs-literal">false</span>) <span class="hljs-keyword">return</span>
+
+      self.loadingDisplay = <span class="hljs-string">&apos;show&apos;</span>
 
       <span class="hljs-keyword">if</span> (self.page &lt;=<span class="hljs-number">10</span> ) {
         self.renderData(url)
@@ -2473,15 +2534,15 @@ contentLoaded(window,function(){
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 <h3 id="&#x7B2C;6&#x6B65;&#xFF1A;&#x4E0B;&#x62C9;&#x5237;&#x65B0;">&#x7B2C;6&#x6B65;&#xFF1A;&#x4E0B;&#x62C9;&#x5237;&#x65B0;</h3>
-<p>&#x4E3A;&#x517C;&#x5BB9;&#x6240;&#x6709;&#x7248;&#x672C;&#xFF0C;&#x6211;&#x4EEC;&#x5728; <code>&lt;header&gt;</code> &#x7EC4;&#x4EF6;&#x540E;&#x63D2;&#x5165; <code>&lt;refresh&gt;</code> &#x7EC4;&#x4EF6;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0; <code>refresh</code> &#x4E8B;&#x4EF6;&#x8C03;&#x7528; <code>renderData()</code> &#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x4E3A;&#x517C;&#x5BB9;&#x6240;&#x6709;&#x7248;&#x672C;&#xFF0C;&#x6211;&#x4EEC;&#x5728; <code>&lt;header&gt;</code> &#x7EC4;&#x4EF6;&#x540E;&#x63D2;&#x5165; <code>&lt;refresh&gt;</code> &#x7EC4;&#x4EF6;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0; <code>refresh</code> &#x4E8B;&#x4EF6;&#x8C03;&#x7528; <code>renderData()</code> &#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x91CC;&#x548C;&#x4F7F;&#x7528; <code>&lt;loading&gt;</code> &#x7C7B;&#x4F3C;&#x3002;</p>
 <p>&#x5F53;&#x7528;&#x6237;&#x4E0B;&#x62C9;&#x5237;&#x65B0;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5F39;&#x51FA;&#x4E00;&#x4E2A; toast &#x63D0;&#x9192;&#x7528;&#x6237;&#x9875;&#x9762;&#x6B63;&#x5728;&#x5237;&#x65B0;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x91CC;&#x7528;&#x5230;&#x4E86; <code>modal</code> module &#x7684; <code>toast</code> &#x65B9;&#x6CD5;&#x3002;&#x8BE6;&#x60C5;&#x53C2;&#x8003; <a href="http://alibaba.github.io/weex/cn/doc/modules/modal.html" target="_blank">modal module</a>&#x3002;</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">list</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Search Results<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">refresh</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 750; padding: 30;&quot;</span> <span class="hljs-attr">onrefresh</span>=<span class="hljs-string">&quot;refreshData&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">refresh</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 750; padding: 30;&quot;</span> <span class="hljs-attr">onrefresh</span>=<span class="hljs-string">&quot;refreshData&quot;</span> <span class="hljs-attr">display</span>=<span class="hljs-string">&quot;{{refreshDisplay}}&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span> &#x2193; Pull to refresh <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">loading-indicator</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;indicator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">loading-indicator</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">refresh</span>&gt;</span>
@@ -2517,8 +2578,19 @@ contentLoaded(window,function(){
 <span class="hljs-selector-class">.text</span> {
   <span class="hljs-attribute">text-align</span>: center;
 }
-<span class="hljs-selector-class">.list</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffffff</span>;
+<span class="hljs-selector-class">.wrapper</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-class">.list</span>{
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
 }
 <span class="hljs-selector-class">.row</span> {
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">20</span>;
@@ -2541,15 +2613,16 @@ contentLoaded(window,function(){
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
 <span class="hljs-keyword">var</span> dom = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/dom&apos;</span>) || {}
-<span class="hljs-keyword">var</span> stream = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/stream&apos;</span>) || {}
 <span class="hljs-keyword">var</span> modal = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/modal&apos;</span>) || {}
+<span class="hljs-keyword">var</span> stream = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/stream&apos;</span>) || {}
 
 <span class="hljs-keyword">var</span> SEARCH_URL = <span class="hljs-string">&apos;https://api.github.com/search/repositories?q=language:javascript&amp;sort=stars&amp;order=desc&apos;</span>
-
 <span class="hljs-built_in">module</span>.exports = {
   data: {
+    isLoaded: <span class="hljs-literal">true</span>,
     page: <span class="hljs-number">1</span>,
-    loadingDisplay: <span class="hljs-string">&apos;show&apos;</span>,
+    loadingDisplay: <span class="hljs-string">&apos;hide&apos;</span>,
+    refreshDisplay: <span class="hljs-string">&apos;hide&apos;</span>,
     loadingText: <span class="hljs-string">&apos;Loading...&apos;</span>,
     items:[]
   },
@@ -2569,6 +2642,9 @@ contentLoaded(window,function(){
         url: url,
         type:<span class="hljs-string">&apos;json&apos;</span>
       }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+        self.refreshDisplay = <span class="hljs-string">&apos;hide&apos;</span>
+        self.loadingDisplay = <span class="hljs-string">&apos;hide&apos;</span>
+
         <span class="hljs-keyword">try</span> {
           <span class="hljs-keyword">var</span> results = res.data.items || []
 
@@ -2586,6 +2662,10 @@ contentLoaded(window,function(){
       <span class="hljs-keyword">var</span> url = SEARCH_URL + <span class="hljs-string">&apos;&amp;page=&apos;</span> + <span class="hljs-keyword">this</span>.page
       <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
 
+      <span class="hljs-keyword">if</span> (self.isLoaded === <span class="hljs-literal">false</span>) <span class="hljs-keyword">return</span> 
+
+      self.loadingDisplay = <span class="hljs-string">&apos;show&apos;</span>
+
       <span class="hljs-keyword">if</span> (self.page &lt;=<span class="hljs-number">10</span> ) {
         self.renderData(url)
         self.page++
@@ -2602,20 +2682,26 @@ contentLoaded(window,function(){
     refreshData: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
       <span class="hljs-keyword">var</span> url = SEARCH_URL + <span class="hljs-string">&apos;&amp;page=1&apos;</span>
 
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isLoaded === <span class="hljs-literal">false</span>) <span class="hljs-keyword">return</span> 
+
+      <span class="hljs-keyword">this</span>.refreshDisplay = <span class="hljs-string">&apos;show&apos;</span>
+
       modal.toast({
-        <span class="hljs-string">&apos;message&apos;</span>: <span class="hljs-string">&apos;Refreshing...&apos;</span>,
+        <span class="hljs-string">&apos;message&apos;</span>: <span class="hljs-string">&apos;Refreshing...&apos;</span>, 
         <span class="hljs-string">&apos;duration&apos;</span>: <span class="hljs-number">1</span>
       })
 
       <span class="hljs-keyword">this</span>.items = []
       <span class="hljs-keyword">this</span>.page = <span class="hljs-number">1</span>
       <span class="hljs-keyword">this</span>.renderData(url)
+
+      <span class="hljs-keyword">this</span>.refreshDisplay = <span class="hljs-string">&apos;hide&apos;</span>
     }
   }
 }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
-<p><a href="http://dotwe.org/280fa3dc8e793ea8712451ecdf84fb7b" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<p><a href="http://dotwe.org/5f51ac473b2433aa98d2e61dae476fea" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
 
                                 
                                 </section>
@@ -2659,7 +2745,7 @@ contentLoaded(window,function(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"一个简单的长列表开发教程","level":"1.6.2","depth":2,"next":{"title":"Clipboard","level":"1.6.3","depth":2,"path":"demo/clipboard.md","ref":"demo/clipboard.md","articles":[]},"previous":{"title":"如何实现一个模态框","level":"1.6.1","depth":2,"path":"demo/modal.md","ref":"demo/modal.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"demo/list.md","mtime":"2016-12-07T16:21:19.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-08T17:01:59.376Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"一个简单的长列表开发教程","level":"1.6.2","depth":2,"next":{"title":"Clipboard","level":"1.6.3","depth":2,"path":"demo/clipboard.md","ref":"demo/clipboard.md","articles":[]},"previous":{"title":"如何实现一个模态框","level":"1.6.1","depth":2,"path":"demo/modal.md","ref":"demo/modal.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"demo/list.md","mtime":"2016-12-09T12:12:56.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-09T16:46:46.640Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -83,6 +83,10 @@ a[aria-label="Share"] ,  i.fa-facebook , i.fa-twitter{
    display: none  !important;
 }
 
+img[alt="mobile_preview"]{
+   width: 251px;
+}
+
 .top-bar, .top-bar ul{
     background-color: white;
     padding-left: 0;
@@ -396,7 +400,7 @@ contentLoaded(window,function(){
                 <a href="../get-started.html">
             
                     
-                    Get Started
+                    &#x8D77;&#x6B65;&#x6559;&#x7A0B;
             
                 </a>
             
@@ -648,7 +652,7 @@ contentLoaded(window,function(){
                 <a href="../tools/cli.html">
             
                     
-                    CLI
+                    CLI&#xFF08;&#x82F1;&#xFF09;
             
                 </a>
             
@@ -675,7 +679,7 @@ contentLoaded(window,function(){
                 <a href="../tools/devtools-android.html">
             
                     
-                    Weex devtools (Android)
+                    Weex devtools (Android)&#xFF08;&#x82F1;&#xFF09;
             
                 </a>
             
@@ -706,7 +710,7 @@ contentLoaded(window,function(){
                 <a href="../tools/transformer.html">
             
                     
-                    Transformer
+                    Transformer&#xFF08;&#x82F1;&#xFF09;
             
                 </a>
             
@@ -1303,20 +1307,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.4.4.8" data-path="../modules/timer.html">
-            
-                <a href="../modules/timer.html">
-            
-                    
-                    timer
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.4.9" data-path="../modules/clipboard.html">
+        <li class="chapter " data-level="1.4.4.8" data-path="../modules/clipboard.html">
             
                 <a href="../modules/clipboard.html">
             
@@ -1329,7 +1320,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.4.4.10" data-path="../modules/globalevent.html">
+        <li class="chapter " data-level="1.4.4.9" data-path="../modules/globalevent.html">
             
                 <a href="../modules/globalevent.html">
             
@@ -1366,7 +1357,7 @@ contentLoaded(window,function(){
                 <a href="../specs/js-bundle-format.html">
             
                     
-                    JS Bundle &#x683C;&#x5F0F;
+                    JS Bundle &#x683C;&#x5F0F;&#xFF08;&#x82F1;&#xFF09;
             
                 </a>
             
@@ -1379,7 +1370,7 @@ contentLoaded(window,function(){
                 <a href="../specs/js-framework-apis.html">
             
                     
-                    JS Framework APIs
+                    JS Framework APIs&#xFF08;&#x82F1;&#xFF09;
             
                 </a>
             
@@ -1424,7 +1415,7 @@ contentLoaded(window,function(){
                 <span>
             
                     
-                    CSS &#x5C5E;&#x6027;&#x5FEB;&#x67E5;
+                    CSS &#x5C5E;&#x6027;&#x5FEB;&#x67E5;&#xFF08;&#x82F1;&#xFF09;
             
                 </span>
             
@@ -1612,7 +1603,7 @@ contentLoaded(window,function(){
                 <span>
             
                     
-                    &#x4E8B;&#x4EF6;&#x5FEB;&#x67E5;
+                    &#x4E8B;&#x4EF6;&#x5FEB;&#x67E5;&#xFF08;&#x82F1;&#xFF09;
             
                 </span>
             
@@ -2115,7 +2106,7 @@ contentLoaded(window,function(){
 <h2 id="&#x4E8B;&#x4EF6;">&#x4E8B;&#x4EF6;</h2>
 <ul>
 <li><p><code>loadmore</code> <sup class="wx-v">0.5+</sup>&#xFF1A;&#x5982;&#x679C;&#x5217;&#x8868;&#x6EDA;&#x52A8;&#x5230;&#x5E95;&#x90E8;&#x5C06;&#x4F1A;&#x7ACB;&#x5373;&#x89E6;&#x53D1;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#x4E2D;&#x52A0;&#x8F7D;&#x4E0B;&#x4E00;&#x9875;&#x7684;&#x5217;&#x8868;&#x9879;&#x3002;</p>
-<p><a href="http://dotwe.org/03c4faabb7fb7bc6ead3949e12905994" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<p><a href="http://dotwe.org/bc445ede8746a31360e3607d210304c5" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
 </li>
 <li><p>&#x901A;&#x7528;&#x4E8B;&#x4EF6;</p>
 <p>&#x652F;&#x6301;&#x6240;&#x6709;&#x901A;&#x7528;&#x4E8B;&#x4EF6;&#xFF1A;</p>
@@ -2185,14 +2176,15 @@ contentLoaded(window,function(){
 <h2 id="&#x7EA6;&#x675F;">&#x7EA6;&#x675F;</h2>
 <p><strong>&#x4E0D;&#x5141;&#x8BB8;</strong>&#x76F8;&#x540C;&#x65B9;&#x5411;&#x7684; <code>&lt;list&gt;</code> &#x6216;&#x8005; <code>&lt;scroller&gt;</code> &#x4E92;&#x76F8;&#x5D4C;&#x5957;&#xFF0C;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#x5C31;&#x662F;&#x5D4C;&#x5957;&#x7684; <code>&lt;list&gt;</code>/<code>&lt;scroller&gt;</code> &#x5FC5;&#x987B;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x5411;&#x3002;</p>
 <p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;<strong>&#x4E0D;&#x5141;&#x8BB8;</strong>&#x4E00;&#x4E2A;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x7684; <code>&lt;list&gt;</code> &#x5D4C;&#x5957;&#x7684;&#x4E00;&#x4E2A;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x7684; <code>&lt;scroller&gt;</code> &#x4E2D;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x4E2A;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x7684; <code>&lt;list&gt;</code> &#x662F;&#x53EF;&#x4EE5;&#x5D4C;&#x5957;&#x7684;&#x4E00;&#x4E2A;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x7684; list &#x6216;&#x8005; <code>&lt;scroller&gt;</code> &#x4E2D;&#x7684;&#x3002;</p>
+<p>&#x6839;&#x8282;&#x70B9;&#x4E3A; list &#x65E0;&#x9700;&#x8BBE;&#x7F6E;&#x9AD8;&#x5EA6;&#xFF0C;&#x4F46;&#x662F;&#x5185;&#x5D4C; list &#x9AD8;&#x5EA6;<strong>&#x5FC5;&#x987B;&#x53EF;&#x8BA1;&#x7B97;</strong>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>flex</code> &#x6216; <code>postion</code> &#x5C06; list &#x8BBE;&#x4E3A;&#x4E00;&#x4E2A;&#x54CD;&#x5E94;&#x5F0F;&#x9AD8;&#x5EA6;&#xFF08;&#x5168;&#x5C4F;&#x663E;&#x793A;&#x3001;&#x6216;&#x8005;&#x534A;&#x5C4F;&#xFF09;, &#x4E5F;&#x53EF;&#x4EE5;&#x663E;&#x5F0F;&#x8BBE;&#x7F6E; <code>height</code> &#x6837;&#x5F0F;&#x3002;</p>
 <h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">list</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Search Results<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">refresh</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 750; padding: 30;&quot;</span> <span class="hljs-attr">onrefresh</span>=<span class="hljs-string">&quot;refreshData&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">refresh</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 750; padding: 30;&quot;</span> <span class="hljs-attr">onrefresh</span>=<span class="hljs-string">&quot;refreshData&quot;</span> <span class="hljs-attr">display</span>=<span class="hljs-string">&quot;{{refreshDisplay}}&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span> &#x2193; Pull to refresh <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">loading-indicator</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;indicator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">loading-indicator</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">refresh</span>&gt;</span>
@@ -2215,8 +2207,24 @@ contentLoaded(window,function(){
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+<span class="hljs-selector-class">.wrapper</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-class">.list</span>{
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+}
 <span class="hljs-selector-class">.header</span> {
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">25</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">80</span>;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">justify-content</span>: center;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#efefef</span>;
   <span class="hljs-attribute">border-bottom-color</span>: <span class="hljs-number">#eeeeee</span>;
   <span class="hljs-attribute">border-bottom-width</span>: <span class="hljs-number">2</span>;
@@ -2259,8 +2267,10 @@ contentLoaded(window,function(){
 
 <span class="hljs-built_in">module</span>.exports = {
   data: {
+    isLoaded: <span class="hljs-literal">true</span>,
     page: <span class="hljs-number">1</span>,
-    loadingDisplay: <span class="hljs-string">&apos;show&apos;</span>,
+    loadingDisplay: <span class="hljs-string">&apos;hide&apos;</span>,
+    refreshDisplay: <span class="hljs-string">&apos;hide&apos;</span>,
     loadingText: <span class="hljs-string">&apos;Loading...&apos;</span>,
     items:[]
   },
@@ -2280,6 +2290,9 @@ contentLoaded(window,function(){
         url: url,
         type:<span class="hljs-string">&apos;json&apos;</span>
       }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+        self.refreshDisplay = <span class="hljs-string">&apos;hide&apos;</span>
+        self.loadingDisplay = <span class="hljs-string">&apos;hide&apos;</span>
+
         <span class="hljs-keyword">try</span> {
           <span class="hljs-keyword">var</span> results = res.data.items || []
 
@@ -2288,6 +2301,8 @@ contentLoaded(window,function(){
               self.items.push(results[i])
             }
           }
+
+          self.isLoaded = <span class="hljs-literal">true</span>
         } <span class="hljs-keyword">catch</span>(e) {}
       },<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
 
@@ -2296,6 +2311,10 @@ contentLoaded(window,function(){
     loadingData: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
       <span class="hljs-keyword">var</span> url = SEARCH_URL + <span class="hljs-string">&apos;&amp;page=&apos;</span> + <span class="hljs-keyword">this</span>.page
       <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
+
+      <span class="hljs-keyword">if</span> (self.isLoaded === <span class="hljs-literal">false</span>) <span class="hljs-keyword">return</span> 
+
+      self.loadingDisplay = <span class="hljs-string">&apos;show&apos;</span>
 
       <span class="hljs-keyword">if</span> (self.page &lt;=<span class="hljs-number">10</span> ) {
         self.renderData(url)
@@ -2313,20 +2332,26 @@ contentLoaded(window,function(){
     refreshData: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
       <span class="hljs-keyword">var</span> url = SEARCH_URL + <span class="hljs-string">&apos;&amp;page=1&apos;</span>
 
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isLoaded === <span class="hljs-literal">false</span>) <span class="hljs-keyword">return</span> 
+
+      <span class="hljs-keyword">this</span>.refreshDisplay = <span class="hljs-string">&apos;show&apos;</span>
+
       modal.toast({
-        <span class="hljs-string">&apos;message&apos;</span>: <span class="hljs-string">&apos;Refreshing...&apos;</span>,
+        <span class="hljs-string">&apos;message&apos;</span>: <span class="hljs-string">&apos;Refreshing...&apos;</span>, 
         <span class="hljs-string">&apos;duration&apos;</span>: <span class="hljs-number">1</span>
       })
 
       <span class="hljs-keyword">this</span>.items = []
       <span class="hljs-keyword">this</span>.page = <span class="hljs-number">1</span>
       <span class="hljs-keyword">this</span>.renderData(url)
+
+      <span class="hljs-keyword">this</span>.refreshDisplay = <span class="hljs-string">&apos;hide&apos;</span>
     }
   }
 }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
-<p><a href="http://dotwe.org/280fa3dc8e793ea8712451ecdf84fb7b" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<p><a href="http://dotwe.org/8e8c97dbd5d1efaac274750f6e0cd19d" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
 
                                 
                                 </section>
@@ -2370,7 +2395,7 @@ contentLoaded(window,function(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"&lt;list&gt;","level":"1.4.2.3","depth":3,"next":{"title":"&lt;cell&gt;","level":"1.4.2.3.1","depth":4,"path":"components/cell.md","ref":"components/cell.md","articles":[]},"previous":{"title":"&lt;scroller&gt;","level":"1.4.2.2","depth":3,"path":"components/scroller.md","ref":"components/scroller.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/list.md","mtime":"2016-12-08T17:01:24.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-08T17:01:59.376Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"&lt;list&gt;","level":"1.4.2.3","depth":3,"next":{"title":"&lt;cell&gt;","level":"1.4.2.3.1","depth":4,"path":"components/cell.md","ref":"components/cell.md","articles":[]},"previous":{"title":"&lt;scroller&gt;","level":"1.4.2.2","depth":3,"path":"components/scroller.md","ref":"components/scroller.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/list.md","mtime":"2016-12-09T16:43:41.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-09T16:46:46.640Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
