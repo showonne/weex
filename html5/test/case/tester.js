@@ -81,6 +81,7 @@ describe('test input and output', function () {
     it('repeat watch case', () => checkOutput(app, 'repeat-watch'))
 
     it('reset style case', () => checkOutput(app, 'reset-style'))
+    it('CSS unit case', () => checkOutput(app, 'css-unit'))
     it('dynamic type case', () => checkOutput(app, 'dynamic-type'))
     it('dynamic property case', () => checkOutput(app, 'dynamic-property'))
 
