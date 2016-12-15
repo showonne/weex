@@ -41,14 +41,17 @@ you can use the definition below in weex box model.
     - `border-right-color`: [color](styles/units/color.md) type, default value `#000000`
     - `border-bottom-color`: [color](styles/units/color.md) type, default value `#000000`
   - `border-radius`: [length](styles/units/length.md) type, default value `0`, (rounded borders to elements , default value is 0 meaning right angle )
-
-  Although the the default overflow style is `overflow:hidden` in android, a view will not be clipped by its parents' `border-radius`. This only happens on Android, it works fine on iOS.
     - `border-bottom-left-radius`: [length](styles/units/length.md) type, non-negative, default value `0`
     - `border-bottom-right-radius`: [length](styles/units/length.md) type, non-negative, default value `0`
     - `border-top-left-radius`: [length](styles/units/length.md) type, non-negative, default value `0`
     - `border-top-right-radius`: [length](styles/units/length.md) type, non-negative, default value `0`
 
-Notes: The rule of border-radius for a specific corner such as `border-top-left-radius` is not currently supported for component `<image>` and `<text>`.
+### Notes
+
+* The rule of border-radius for a specific corner such as `border-top-left-radius` is not currently supported for component `<image>` on iOS.
+* Although the the default overflow style is `overflow:hidden` on android, only `<div>` and `<image>` will clip its content according to `border-radius`. This only happens on Android, it works fine on iOS.
+* If API level on Android is lower than 18, the above clipping behavior of `<div>` on Android will not happen.
+* Set `border-radius` on div will cause alias and poor performance. If you want to get a rounded image, set `border-radius` **on image** instead of div.
 
 Weex box model uses `border-box` as the default value of `box-sizing`, meaning the width and height properties includes content, padding and border, but not the margin.
 
