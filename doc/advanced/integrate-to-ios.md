@@ -71,6 +71,7 @@ Something you have to do is to render weex view with specific URL, then add it t
     __weak typeof(self) weakSelf = self;
     _instance.onCreate = ^(UIView *view) {
         [weakSelf.weexView removeFromSuperview];
+        weakSelf.weexView = view;
         [weakSelf.view addSubview:weakSelf.weexView];
     };
     
@@ -106,4 +107,4 @@ We can also pack all the JS files into the app's resources. This way you can run
 * Move `index.js` to your app's Xcode project and add the file to your target.
 * Replace `[_instance renderWithURL:'httpURL']` with: `[_instance renderWithURL: [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"js"]]`
 
-* Go for Product -> Archive in Xcode and follow the steps to build your .IPA file and submit it to the AppStore.
+* Go to Product -> Archive in Xcode and follow the steps to build your .IPA file and submit it to the AppStore.
