@@ -2123,7 +2123,7 @@ contentLoaded(window,function(){
       <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Search Results<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">refresh</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 750; padding: 30;&quot;</span> <span class="hljs-attr">onrefresh</span>=<span class="hljs-string">&quot;refreshData&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">refresh</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 750; padding: 30;&quot;</span> <span class="hljs-attr">onrefresh</span>=<span class="hljs-string">&quot;refreshData&quot;</span> <span class="hljs-attr">display</span>=<span class="hljs-string">&quot;{{refreshDisplay}}&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span> &#x2193; Pull to refresh <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">loading-indicator</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;indicator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">loading-indicator</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">refresh</span>&gt;</span>
@@ -2198,8 +2198,10 @@ contentLoaded(window,function(){
 
 <span class="hljs-built_in">module</span>.exports = {
   data: {
+    isLoaded: <span class="hljs-literal">true</span>,
     page: <span class="hljs-number">1</span>,
-    loadingDisplay: <span class="hljs-string">&apos;show&apos;</span>,
+    loadingDisplay: <span class="hljs-string">&apos;hide&apos;</span>,
+    refreshDisplay: <span class="hljs-string">&apos;hide&apos;</span>,
     loadingText: <span class="hljs-string">&apos;Loading...&apos;</span>,
     items:[]
   },
@@ -2240,6 +2242,10 @@ contentLoaded(window,function(){
       <span class="hljs-keyword">var</span> url = SEARCH_URL + <span class="hljs-string">&apos;&amp;page=&apos;</span> + <span class="hljs-keyword">this</span>.page
       <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
 
+      <span class="hljs-keyword">if</span> (self.isLoaded === <span class="hljs-literal">false</span>) <span class="hljs-keyword">return</span> 
+
+      self.loadingDisplay = <span class="hljs-string">&apos;show&apos;</span>
+
       <span class="hljs-keyword">if</span> (self.page &lt;=<span class="hljs-number">10</span> ) {
         self.renderData(url)
         self.page++
@@ -2256,6 +2262,10 @@ contentLoaded(window,function(){
     refreshData: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
       <span class="hljs-keyword">var</span> url = SEARCH_URL + <span class="hljs-string">&apos;&amp;page=1&apos;</span>
 
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isLoaded === <span class="hljs-literal">false</span>) <span class="hljs-keyword">return</span> 
+
+      <span class="hljs-keyword">this</span>.refreshDisplay = <span class="hljs-string">&apos;show&apos;</span>
+
       modal.toast({
         <span class="hljs-string">&apos;message&apos;</span>: <span class="hljs-string">&apos;Refreshing...&apos;</span>, 
         <span class="hljs-string">&apos;duration&apos;</span>: <span class="hljs-number">1</span>
@@ -2264,19 +2274,30 @@ contentLoaded(window,function(){
       <span class="hljs-keyword">this</span>.items = []
       <span class="hljs-keyword">this</span>.page = <span class="hljs-number">1</span>
       <span class="hljs-keyword">this</span>.renderData(url)
+
+      <span class="hljs-keyword">this</span>.refreshDisplay = <span class="hljs-string">&apos;hide&apos;</span>
     },
     processUrl: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">url</span>) </span>{
-      <span class="hljs-keyword">if</span> (url) {
-        <span class="hljs-keyword">var</span> encodeUrl = <span class="hljs-built_in">encodeURIComponent</span>(url)
+      <span class="hljs-keyword">var</span> platform = <span class="hljs-keyword">this</span>.$getConfig().env.platform.toLowerCase()
 
-        <span class="hljs-keyword">return</span> PAGE_URL + <span class="hljs-string">&apos;?weburl=&apos;</span> + encodeUrl
+
+      <span class="hljs-keyword">if</span> (url) {
+        <span class="hljs-comment">// iOS do not need encode</span>
+        <span class="hljs-keyword">if</span> (platform === <span class="hljs-string">&apos;ios&apos;</span>) {
+          <span class="hljs-keyword">return</span> PAGE_URL + <span class="hljs-string">&apos;?weburl=&apos;</span> + url
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (platform === <span class="hljs-string">&apos;web&apos;</span>) {
+          <span class="hljs-keyword">return</span> url
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">var</span> encodeUrl = <span class="hljs-built_in">encodeURIComponent</span>(url)
+          <span class="hljs-keyword">return</span> PAGE_URL + <span class="hljs-string">&apos;?weburl=&apos;</span> + encodeUrl
+        }
       }
     }
   }
 }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
-<p><a href="http://dotwe.org/8b39c386fb3d2fc743afbd547a522227" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a>&#x3002;</p>
+<p><a href="http://dotwe.org/3e8369efb20a169077b5331b45927ed8" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a>&#x3002;</p>
 
                                 
                                 </section>
@@ -2320,7 +2341,7 @@ contentLoaded(window,function(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"&lt;a&gt;","level":"1.4.2.11","depth":3,"next":{"title":"&lt;web&gt;","level":"1.4.2.12","depth":3,"path":"components/web.md","ref":"components/web.md","articles":[]},"previous":{"title":"&lt;video&gt;","level":"1.4.2.10","depth":3,"path":"components/video.md","ref":"components/video.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/a.md","mtime":"2016-12-06T09:57:03.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-11T13:36:40.478Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"&lt;a&gt;","level":"1.4.2.11","depth":3,"next":{"title":"&lt;web&gt;","level":"1.4.2.12","depth":3,"path":"components/web.md","ref":"components/web.md","articles":[]},"previous":{"title":"&lt;video&gt;","level":"1.4.2.10","depth":3,"path":"components/video.md","ref":"components/video.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"components/a.md","mtime":"2016-12-17T08:18:27.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-17T08:19:55.290Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
