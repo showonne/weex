@@ -29,6 +29,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+     NSLog(@"%s",__PRETTY_FUNCTION__);
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
@@ -43,7 +44,7 @@
     return YES;
 }
 
--(void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
 {
     if ([shortcutItem.type isEqualToString:QRSCAN]) {
         WXScannerVC * scanViewController = [[WXScannerVC alloc] init];
@@ -88,7 +89,7 @@
 #ifdef DEBUG
     [self atAddPlugin];
     [WXDebugTool setDebug:YES];
-    [WXLog setLogLevel:WXLogLevelLog];
+    [WXLog setLogLevel:WXLogLevelAll];
     
     #ifndef UITEST
         [[ATManager shareInstance] show];
@@ -105,7 +106,7 @@
     
 #if DEBUG
     //If you are debugging in device , please change the host to current IP of your computer.
-    ((WXDemoViewController *)demo).url = [NSURL URLWithString:HOME_URL];
+    ((WXDemoViewController *)demo).url = [NSURL URLWithString:@"http://h5.m.taobao.com/weex/viewpage.htm?_wx_tpl=http://30.10.212.140:12580/test/build/auto_detail.js"];
 #else
     ((WXDemoViewController *)demo).url = [NSURL URLWithString:BUNDLE_URL];
 #endif
@@ -115,6 +116,19 @@
 #endif
     
     return demo;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    NSString *newUrlStr = url.absoluteString;
+    if([url.scheme isEqualToString:@"wxpage"]) {
+        newUrlStr = [newUrlStr stringByReplacingOccurrencesOfString:@"wxpage://" withString:@"http://"];
+    }
+    UIViewController * viewController = [self demoController];
+    ((WXDemoViewController*)viewController).url = [NSURL URLWithString:newUrlStr];
+    [(WXRootViewController*)self.window.rootViewController pushViewController:viewController animated:YES];
+    
+    return YES;
 }
 
 #pragma mark 
