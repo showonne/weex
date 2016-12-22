@@ -24,28 +24,19 @@ pick data(single column)
 ```html
 <template>
   <scroller>
-    <wxc-panel title="picker module" type="primary">
+    <div title="picker module">
       <text style="margin-bottom: 20px;">pick value: {{value}}</text>
-      <wxc-button type="primary" onclick="{{pick}}" value="single pick" style="margin-bottom: 20px;"></wxc-button>
-    </wxc-panel>
+      <text type="default" size="small" value="single pick" onclick="pick" style="width: 180px;height: 50px; border-color: #26a4f4;font-color: #26a4f4;border-width: 2px"></text>
+    </div>
   </scroller>
 </template>
 
-<style>
-  .input {
-    font-size: 60px;
-    height: 80px;
-    width: 400px;
-  }
-</style>
 
 <script>
-  require('weex-components');
   module.exports = {
     data: {
       value: '',
       index: 0,
-      txtChange: ''
     },
     methods: {
       pick: function() {
@@ -69,7 +60,7 @@ pick data(single column)
 </script>
 ```
 
-[Have a try](http://dotwe.org/6bbb12bda94413ab394041558ac6ecda)
+[Have a try](http://dotwe.org/5213cb5cd40106401a93dbe724324400)
 
 ### `pickDate(options, callback[options])`
 
@@ -91,28 +82,18 @@ pick date
 ```html
 <template>
   <scroller>
-    <wxc-panel title="picker module" type="primary">
+    <div title="picker module">
       <text style="margin-bottom: 20px;">pick value: {{value}}</text>
-      <wxc-button type="primary" onclick="{{pickDate}}" value="pickDate" style="margin-bottom: 20px;"></wxc-button>
-    </wxc-panel>
+      <text type="default" size="small" value="pick date" onclick="pickDate" style="width: 180px;height: 50px; border-color: #26a4f4;font-color: #26a4f4;border-width: 2px"></text>
+    </div>
   </scroller>
 </template>
 
-<style>
-  .input {
-    font-size: 60px;
-    height: 80px;
-    width: 400px;
-  }
-</style>
-
 <script>
-  require('weex-components');
   module.exports = {
     data: {
       value: '',
       index: 0,
-      txtChange: ''
     },
     methods: {
       pickDate: function() {
@@ -135,7 +116,7 @@ pick date
 </script>
 ```
 
-[Have a try](http://dotwe.org/11324b3beedff4f78073d1fe51fc430f)
+[Have a try](http://dotwe.org/2ee6fcdd3508db90c84185b40bf49ee3)
 
 ### `pickTime(options, callback[options])`
 
@@ -155,10 +136,10 @@ pick time
 ```html
 <template>
   <scroller>
-    <wxc-panel title="picker module" type="primary">
+    <div title="picker module">
       <text style="margin-bottom: 20px;">pick value: {{value}}</text>
-      <wxc-button type="primary" onclick="{{pickTime}}" value="pickTime"></wxc-button>
-    </wxc-panel>
+      <text type="default" size="small" value="pick time" onclick="pickTime" style="width: 180px;height: 50px; border-color: #26a4f4;font-color: #26a4f4;border-width: 2px"></text>
+    </div>
   </scroller>
 </template>
 
@@ -171,12 +152,10 @@ pick time
 </style>
 
 <script>
-  require('weex-components');
   module.exports = {
     data: {
       value: '',
       index: 0,
-      txtChange: ''
     },
     methods: {
       pickTime: function() {
@@ -197,4 +176,4 @@ pick time
 </script>
 ```
 
-[Have a try](http://dotwe.org/3fdf2faec84cedfc6cfb140948c46032)
+[Have a try](http://dotwe.org/a9851d2773ac784729006d6b2add99c9)
