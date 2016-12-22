@@ -53,14 +53,85 @@ If you want to get the rectangle information of 'weex view' container, you can s
 
 Example Useage:
 
-```javascript
-require('@weex-module/dom').getComponentRect(this.$el('someId'), function(result) {
-  console.log(JSON.stringify(result))
-})
+```html
+<template>
+  <div class="wrapper">
+    <div class="box" id="box">
+    </div>
+    <text>Red box: {{boxposition}}</text>
+    <text>Viewport: {{viewportposition}}</text>
+    <div class="row">
+      <div onClick="getBoxPosition" class="button">
+        <text>Get red Box position</text>
+      </div>
+      <div onClick="getViewportPosition" class="button">
+        <text>Get Viewport position</text>
+      </div>
+    </div>
+  </div>
+</template>
 
-require('@weex-module/dom').getComponentRect('viewport', function(result) {
-  console.log(JSON.stringify(result))
-})
+<style>
+.wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.box {
+  width: 300;
+  height: 300;
+  background-color: #f00;
+  position: absolute;
+  top: 300;
+  left: 200;
+}  
+.row {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.button {
+  flex: 1;
+  background-color: #ddd;
+  border-left-width: 1;
+  border-left-color: #333;
+  border-left-style: solid;
+}
+</style>
+
+<script>
+var dom = require('@weex-module/dom')
+
+module.exports = {
+  data: {
+    boxposition: '',
+    viewportposition: ''
+  },
+  methods: {
+    getBoxPosition: function () {
+      var el = this.$el('box')
+      var self = this
+      
+       dom.getComponentRect(el, function(result) {
+      	self.boxposition = JSON.stringify(result)
+      })
+    },
+    getViewportPosition: function () {
+      var self = this
+      
+       dom.getComponentRect('viewport', function(result) {
+      	self.viewportposition = JSON.stringify(result)
+      })
+    }
+  }
+}
+</script>
 ```
 
 ### createBody(element)
