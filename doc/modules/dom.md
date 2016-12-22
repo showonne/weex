@@ -27,6 +27,42 @@ var dom = require('@weex-module/dom');
 dom.scrollToElement(this.$el('someId'), {offset: 10});
 ```
 
+### getComponentRect(ref,callback)
+
+<span class="weex-version">0.9.4</span>
+
+You can get the view rectangle information of named element.
+
+An example callback result maybe:
+
+```json
+{
+  result: true,
+  size: {
+    bottom: 60,
+    height: 15,
+    left: 0,
+    right: 353,
+    top: 45,
+    width: 353
+  }
+}
+```
+
+If you want to get the rectangle information of 'weex view' container, you can specify the `ref='viewport'`.
+
+Example Useage:
+
+```javascript
+require('@weex-module/dom').getComponentRect(this.$el('someId'), function(result) {
+  console.log(JSON.stringify(result))
+})
+
+require('@weex-module/dom').getComponentRect('viewport', function(result) {
+  console.log(JSON.stringify(result))
+})
+```
+
 ### createBody(element)
 
 Create the body for the whole dom tree. Element type should only be the ones that can be used as roots (`div`, `scroller` and `list`).
@@ -106,36 +142,4 @@ Notify native renders that the series of messages for updating the native dom tr
 ### refreshFinish()
 
 Notify native renders that the series of messages for refreshing a native dom tree have reached a end.
-
-### getComponentRect(ref,callback)
-<span class="weex-version">0.9.4</span>
-
-You can get the view rectangle information of named element.
-
-An example callback result maybe:
-
-	{
-	  result: true,
-	  size: {
-	    bottom: 60,
-	    height: 15,
-	    left: 0,
-	    right: 353,
-	    top: 45,
-	    width: 353
-	  }
-	}
-If you want to get the rectangle information of 'weex view' container, you can specify the `ref='viewport'`.
-
-Example Useage:
-
-```javascript
-require('@weex-module/dom').getComponentRect(this.$el('someId'), function(result) {
-	console.log(JSON.stringify(result))
-})
-
-require('@weex-module/dom').getComponentRect('viewport', function(result) {
-	console.log(JSON.stringify(result))
-})
-```
 
