@@ -1320,7 +1320,20 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.4.4.9" data-path="../modules/globalevent.html">
+        <li class="chapter " data-level="1.4.4.9" data-path="../modules/picker.html">
+            
+                <a href="../modules/picker.html">
+            
+                    
+                    picker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../modules/globalevent.html">
             
                 <a href="../modules/globalevent.html">
             
@@ -2053,11 +2066,11 @@ contentLoaded(window,function(){
 <h2 id="&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;">&#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;</h2>
 <p>&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x7236;&#x7EC4;&#x4EF6;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x4F7F;&#x7528; <code>this.$el(id)</code> &#x6765;&#x627E;&#x5230;&#x8BE5;&#x7EC4;&#x4EF6;&#xFF0C;&#x4EE5;&#x8FD0;&#x7528; <code>scrollToElement()</code> &#x4E3A;&#x4F8B;&#xFF1A;</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">scroller</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;goto-top&quot;</span>&gt;</span>Top<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 10000; background-color: #999999;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;back2Top&quot;</span>&gt;</span>Back to Top<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">scroller</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
   <span class="hljs-keyword">var</span> dom = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/dom&apos;</span>)
@@ -2071,7 +2084,7 @@ contentLoaded(window,function(){
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
-<p><a href="http://dotwe.org/ed07068ef6f038d6c39af6c971ad08a0" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
+<p><a href="http://dotwe.org/2a9a086906da17779610623220619a3f" target="_blank">&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;</a></p>
 <h3 id="id-&#x548C;-repeat-&#x7279;&#x6027;&#x914D;&#x5408;&#x4F7F;&#x7528;"><code>id</code> &#x548C; <code>repeat</code> &#x7279;&#x6027;&#x914D;&#x5408;&#x4F7F;&#x7528;</h3>
 <p><code>id</code> &#x4E5F;&#x53EF;&#x4EE5;&#x548C; <code>repeat</code> &#x8BED;&#x6CD5;&#x914D;&#x5408;&#x4F7F;&#x7528;&#xFF0C;&#x5173;&#x4E8E; <code>repeat</code> &#x66F4;&#x591A;&#x8BE6;&#x89C1; <a href="display-logic.html">&#x5C55;&#x793A;&#x903B;&#x8F91;&#x63A7;&#x5236;</a>&#xFF0C;&#x4F46;&#x662F;&#x8981;&#x786E;&#x4FDD;&#x5FAA;&#x73AF;&#x7684;&#x8282;&#x70B9;&#x9700;&#x8981;&#x7528;&#x4E0D;&#x540C;&#x7684; <code>id</code>&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
@@ -2188,7 +2201,7 @@ contentLoaded(window,function(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"找节点","level":"1.2.3.7","depth":3,"next":{"title":"组件通信","level":"1.2.3.8","depth":3,"path":"syntax/comm.md","ref":"syntax/comm.md","articles":[]},"previous":{"title":"组件封装","level":"1.2.3.6","depth":3,"path":"syntax/composed-component.md","ref":"syntax/composed-component.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"syntax/id.md","mtime":"2016-12-07T07:26:13.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-22T07:12:04.880Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"找节点","level":"1.2.3.7","depth":3,"next":{"title":"组件通信","level":"1.2.3.8","depth":3,"path":"syntax/comm.md","ref":"syntax/comm.md","articles":[]},"previous":{"title":"组件封装","level":"1.2.3.6","depth":3,"path":"syntax/composed-component.md","ref":"syntax/composed-component.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"syntax/id.md","mtime":"2016-12-23T14:42:42.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-23T14:57:25.284Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
