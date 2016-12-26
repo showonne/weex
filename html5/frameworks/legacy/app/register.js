@@ -68,11 +68,19 @@ export function requireModule (app, name) {
   const methods = nativeModules[name]
   const target = {}
   for (const methodName in methods) {
-    target[methodName] = (...args) => app.callTasks({
-      module: name,
-      method: methodName,
-      args: args
-    })
+    target[methodName] = (...args) => {
+      if (typeof callNativeModule === 'function') {
+        if (process.env.NODE_ENV === 'development') {
+          console.debug(`[JS Framework] callNativeModule ${name}#${methodName}`)
+        }
+        return callNativeModule(app.id, name, methodName, args, {}, '-1')
+      }
+      return app.callTasks({
+        module: name,
+        method: methodName,
+        args: args
+      })
+    }
   }
   return target
 }
