@@ -533,6 +533,19 @@ contentLoaded(window,function(){
             
         </li>
     
+        <li class="chapter " data-level="1.2.2.10" data-path="../syntax/path.html">
+            
+                <a href="../syntax/path.html">
+            
+                    
+                    URL and Path
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1218,7 +1231,20 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.3" data-path="../modules/modal.html">
+        <li class="chapter " data-level="1.3.6.3" data-path="../modules/picker.html">
+            
+                <a href="../modules/picker.html">
+            
+                    
+                    picker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" data-path="../modules/modal.html">
             
                 <a href="../modules/modal.html">
             
@@ -1231,7 +1257,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.4" data-path="../modules/animation.html">
+        <li class="chapter " data-level="1.3.6.5" data-path="../modules/animation.html">
             
                 <a href="../modules/animation.html">
             
@@ -1244,7 +1270,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.5" data-path="../modules/webview.html">
+        <li class="chapter " data-level="1.3.6.6" data-path="../modules/webview.html">
             
                 <a href="../modules/webview.html">
             
@@ -1257,7 +1283,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.6" data-path="../modules/navigator.html">
+        <li class="chapter " data-level="1.3.6.7" data-path="../modules/navigator.html">
             
                 <a href="../modules/navigator.html">
             
@@ -1270,7 +1296,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.7" data-path="../modules/storage.html">
+        <li class="chapter " data-level="1.3.6.8" data-path="../modules/storage.html">
             
                 <a href="../modules/storage.html">
             
@@ -1283,7 +1309,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.8" data-path="../modules/timer.html">
+        <li class="chapter " data-level="1.3.6.9" data-path="../modules/timer.html">
             
                 <a href="../modules/timer.html">
             
@@ -1296,7 +1322,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.9" data-path="../modules/clipboard.html">
+        <li class="chapter " data-level="1.3.6.10" data-path="../modules/clipboard.html">
             
                 <a href="../modules/clipboard.html">
             
@@ -1309,7 +1335,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.10" data-path="../modules/globalevent.html">
+        <li class="chapter " data-level="1.3.6.11" data-path="../modules/globalevent.html">
             
                 <a href="../modules/globalevent.html">
             
@@ -1685,8 +1711,7 @@ contentLoaded(window,function(){
 <li><code>margin-bottom</code>: <a href="styles/units/length.md">length</a> type, default value <code>0</code></li>
 </ul>
 </li>
-<li><p><code>border</code></p>
-<ul>
+<li><code>border</code><ul>
 <li><code>border-style</code>: values <code>solid</code> | <code>dashed</code> | <code>dotted</code>, default value <code>solid</code><ul>
 <li><code>border-left-style</code>: values <code>solid</code> | <code>dashed</code> | <code>dotted</code>, default value <code>solid</code></li>
 <li><code>border-top-style</code>: values <code>solid</code> | <code>dashed</code> | <code>dotted</code>, default value <code>solid</code></li>
@@ -1694,8 +1719,7 @@ contentLoaded(window,function(){
 <li><code>border-bottom-style</code>: values <code>solid</code> | <code>dashed</code> | <code>dotted</code>, default value <code>solid</code></li>
 </ul>
 </li>
-<li><code>border-width</code>: <a href="styles/units/length.md">length</a> type, non-negative, default value <code>0</code>
-<strong>DO NOT</strong> use <code>border-width:1</code>. There is a default viewport <code>&lt;viewport width=&quot;750&quot;&gt;</code>, if the actual width of a device is 720px, then <code>border-width:1</code> will be <code>border-width:0.96</code>. As weex <strong>do not</strong> support sub-pixel, this border would not be rendered.<ul>
+<li><code>border-width</code>: <a href="styles/units/length.md">length</a> type, non-negative, default value <code>0</code><ul>
 <li><code>border-left-width</code>: <a href="styles/units/length.md">length</a> type, non-negative, default value <code>0</code></li>
 <li><code>border-top-width</code>: <a href="styles/units/length.md">length</a> type, non-negative, default value <code>0</code></li>
 <li><code>border-right-width</code>: <a href="styles/units/length.md">length</a> type, non-negative, default value <code>0</code></li>
@@ -1709,10 +1733,7 @@ contentLoaded(window,function(){
 <li><code>border-bottom-color</code>: <a href="styles/units/color.md">color</a> type, default value <code>#000000</code></li>
 </ul>
 </li>
-<li><code>border-radius</code>: <a href="styles/units/length.md">length</a> type, default value <code>0</code>, (rounded borders to elements , default value is 0 meaning right angle )</li>
-</ul>
-<p>Although the the default overflow style is <code>overflow:hidden</code> in android, a view will not be clipped by its parents&apos; <code>border-radius</code>. This only happens on Android, it works fine on iOS.</p>
-<ul>
+<li><code>border-radius</code>: <a href="styles/units/length.md">length</a> type, default value <code>0</code>, (rounded borders to elements , default value is 0 meaning right angle )<ul>
 <li><code>border-bottom-left-radius</code>: <a href="styles/units/length.md">length</a> type, non-negative, default value <code>0</code></li>
 <li><code>border-bottom-right-radius</code>: <a href="styles/units/length.md">length</a> type, non-negative, default value <code>0</code></li>
 <li><code>border-top-left-radius</code>: <a href="styles/units/length.md">length</a> type, non-negative, default value <code>0</code></li>
@@ -1720,7 +1741,16 @@ contentLoaded(window,function(){
 </ul>
 </li>
 </ul>
-<p>Notes: The rule of border-radius for a specific corner such as <code>border-top-left-radius</code> is not currently supported for component <code>&lt;image&gt;</code> and <code>&lt;text&gt;</code>.</p>
+</li>
+</ul>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>The rule of border-radius for a specific corner such as <code>border-top-left-radius</code> is not currently supported for component <code>&lt;image&gt;</code> on iOS.</li>
+<li>Although the the default overflow style is <code>overflow:hidden</code> on android, only <code>&lt;div&gt;</code> and <code>&lt;image&gt;</code> will clip its content according to <code>border-radius</code>. This only happens on Android, it works fine on iOS.</li>
+<li>If API level on Android is lower than 18, the above clipping behavior of <code>&lt;div&gt;</code> on Android will not happen.</li>
+<li>Set <code>border-radius</code> on div will cause alias and poor performance. If you want to get a rounded image, set <code>border-radius</code> <strong>on image</strong> instead of div.</li>
+<li><strong>DO NOT</strong> use <code>border-width:1</code>. There is a default viewport <code>&lt;viewport width=&quot;750&quot;&gt;</code>, if the actual width of a device is 720px, then <code>border-width:1</code> will be <code>border-width:0.96</code>. As weex <strong>do not</strong> support sub-pixel, this border would not be rendered.</li>
+</ul>
 <p>Weex box model uses <code>border-box</code> as the default value of <code>box-sizing</code>, meaning the width and height properties includes content, padding and border, but not the margin.</p>
 <p>example:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
@@ -1882,7 +1912,7 @@ contentLoaded(window,function(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Common Style","level":"1.3.5.2","depth":3,"next":{"title":"Text Style","level":"1.3.5.2.1","depth":4,"path":"references/text-style.md","ref":"references/text-style.md","articles":[]},"previous":{"title":"Common Attributes","level":"1.3.5.1","depth":3,"path":"references/common-attrs.md","ref":"references/common-attrs.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"references/common-style.md","mtime":"2016-12-20T13:55:34.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-20T14:11:49.515Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Common Style","level":"1.3.5.2","depth":3,"next":{"title":"Text Style","level":"1.3.5.2.1","depth":4,"path":"references/text-style.md","ref":"references/text-style.md","articles":[]},"previous":{"title":"Common Attributes","level":"1.3.5.1","depth":3,"path":"references/common-attrs.md","ref":"references/common-attrs.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"references/common-style.md","mtime":"2017-01-01T03:57:07.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2017-01-01T03:59:32.445Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

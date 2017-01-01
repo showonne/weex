@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="">
     <head>
-        <title>Communications &#xB7; Weex</title>
+        <title>URL and Path &#xB7; Weex</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="config-n-data.html">
+    <link rel="next" href="../how-to/main.html">
     
     
-    <link rel="prev" href="id.html">
+    <link rel="prev" href="config-n-data.html">
     
 
     </head>
@@ -507,7 +507,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2.8" data-path="comm.html">
+        <li class="chapter " data-level="1.2.2.8" data-path="comm.html">
             
                 <a href="comm.html">
             
@@ -533,7 +533,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.10" data-path="path.html">
+        <li class="chapter active" data-level="1.2.2.10" data-path="path.html">
             
                 <a href="path.html">
             
@@ -1672,7 +1672,7 @@ contentLoaded(window,function(){
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="..">Communications</a>
+        <a href="..">URL and Path</a>
     </h1>
 </div>
 
@@ -1687,208 +1687,28 @@ contentLoaded(window,function(){
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="communicate-between-components">Communicate Between Components</h1>
-<p><span class="weex-version">0.4</span></p>
-<h2 id="for-child-parent-communication">For Child-Parent Communication</h2>
-<p>Children component can use <code>this.$dispatch([String type], [Object detail])</code> method passing information to parent component. first argument meaning type of message , second argument is the message object. If any parent of the child component register the same type of listener using <code>$on([String type], [Function callback])</code> method , the callback will be execute with one argument , the message object will be <code>detail</code> property of the the argument.</p>
-<p>eg:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">we-element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;foo&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{imageUrl}}&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;test&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{title}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-built_in">module</span>.exports = {
-      data: {
-        title: <span class="hljs-string">&apos;&apos;</span>,
-        imageUrl: <span class="hljs-string">&apos;&apos;</span>
-      },
-      methods: {
-        test: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-          <span class="hljs-keyword">this</span>.$dispatch(<span class="hljs-string">&apos;notify&apos;</span>, {a: <span class="hljs-number">1</span>})
-        }
-      }
-    }
-  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">we-element</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">foo</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">image-url</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">foo</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-built_in">module</span>.exports = {
-    created: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-      <span class="hljs-keyword">this</span>.$on(<span class="hljs-string">&apos;notify&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-        <span class="hljs-comment">//  when &lt;foo&gt; image tag  be clicked ,the function will be executing.</span>
-        <span class="hljs-comment">// e.detail is  `{a: 1}`</span>
-      })
-    }
-  }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-</code></pre>
-<h2 id="for-parent-child-communication">For Parent-Child Communication</h2>
-<p>Parent component can use <code>this.$vm([String id])</code> get vm instance of child component. you can access child component information using the vm instance.</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">we-element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;foo&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{imageUrl}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{title}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-built_in">module</span>.exports = {
-      data: {
-        title: <span class="hljs-string">&apos;&apos;</span>,
-        imageUrl: <span class="hljs-string">&apos;&apos;</span>
-      },
-      methods: {
-        setTitle: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t</span>) </span>{
-          <span class="hljs-keyword">this</span>.title = t
-        }
-      }
-    }
-  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">we-element</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;test&quot;</span>&gt;</span>click to update foo<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">foo</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;fooEl&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">image-url</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">foo</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-built_in">module</span>.exports = {
-    methods: {
-      test: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
-        <span class="hljs-keyword">var</span> foo = <span class="hljs-keyword">this</span>.$vm(<span class="hljs-string">&apos;fooEl&apos;</span>)
-        foo.setTitle(<span class="hljs-string">&apos;...&apos;</span>)
-        foo.imageUrl = <span class="hljs-string">&apos;...&apos;</span>
-      }
-    }
-  }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-</code></pre>
-<h2 id="parent-to-children-multi-child-communication">Parent to Children (multi-child) Communication</h2>
-<p>Parent can using <code>this.$broadcast([String type], [Object detail])</code> broadcast message to all of children.</p>
-<p>eg:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">we-element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;bar&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{imageUrl}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-built_in">module</span>.exports = {
-      data: {
-        imageUrl: <span class="hljs-string">&apos;&apos;</span>
-      },
-      created: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-        <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
-        <span class="hljs-keyword">this</span>.$on(<span class="hljs-string">&apos;changeImage&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-          self.imageUrl = e.detail.imageUrl
-        })
-      }
-    }
-  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">we-element</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">we-element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;foo&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">bar</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">bar</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{title}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-built_in">module</span>.exports = {
-      data: {
-        title: <span class="hljs-string">&apos;&apos;</span>
-      },
-      created: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-        <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
-        <span class="hljs-keyword">this</span>.$on(<span class="hljs-string">&apos;changeTitle&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-          self.title = e.detail.title
-        })
-      }
-    }
-  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">we-element</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;test&quot;</span>&gt;</span>click to update foo<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">foo</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">foo</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">bar</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">bar</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-built_in">module</span>.exports = {
-    methods: {
-      test: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
-        <span class="hljs-keyword">this</span>.$broadcast(<span class="hljs-string">&apos;changeTitle&apos;</span>, {
-          title: <span class="hljs-string">&apos;...&apos;</span>
-        })
-        <span class="hljs-keyword">this</span>.$broadcast(<span class="hljs-string">&apos;changeImage&apos;</span>, {
-          imageUrl: <span class="hljs-string">&apos;...&apos;</span>
-        })
-      }
-    }
-  }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-</code></pre>
-<h2 id="siblings-communication">Siblings Communication</h2>
-<p>siblings components can using common parent as bridge for passing information</p>
-<p>eg:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">we-element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;foo&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-built_in">module</span>.exports = {
-      methods: {
-        callbar: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-          <span class="hljs-keyword">this</span>.$dispatch(<span class="hljs-string">&apos;callbar&apos;</span>, {a: <span class="hljs-number">1</span>})
-        }
-      }
-    }
-  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">we-element</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">we-element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;bar&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-built_in">module</span>.exports = {
-      created: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-        <span class="hljs-keyword">this</span>.$on(<span class="hljs-string">&apos;callbar&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-          <span class="hljs-comment">// e.detail.a</span>
-        })
-      }
-    }
-  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">we-element</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">foo</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">foo</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">bar</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">bar</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-built_in">module</span>.exports = {
-    created: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-      <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
-      <span class="hljs-keyword">this</span>.$on(<span class="hljs-string">&apos;callbar&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-        self.$broadcast(<span class="hljs-string">&apos;callbar&apos;</span>, e.detail)
-      })
-    }
-  }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-</code></pre>
-<p>At last, you can learn how to write <a href="config-n-data.html">config &amp; data</a> for a Weex page.</p>
+                                <h1 id="path">Path</h1>
+<p><span class="weex-version">0.9</span></p>
+<p>This article will cover uri (url) usage in Weex. Including using image/typeface resources, deal with relative uri and how to access local and packaged asset files. </p>
+<h2 id="schemes">Schemes</h2>
+<ul>
+<li><p>Local<br>Weex SDK provide <code>local</code> scheme to access resources packaged with application, and of cource, it&apos;s not working in the HTML5 runtime.<br>Currently, developers can use this scheme with <code>image</code> and text&apos;s font file location.    </p>
+<ul>
+<li>In iOS, it&apos;s always locate file in &apos;bundle resources&apos;. For example, a <code>image</code> component with <code>local:///app_icon</code> will load image file named &apos;app_icon&apos; in bundle resouce, and font file work in the same way.    </li>
+<li>In Android, image component will load from &apos;drawable&apos; resource folder like &apos;res/drawable-xxx&apos;. But load font file is different, android framework can not load font file from &apos;res&apos;, so SDK will load it from <code>asserts</code> folder.</li>
+</ul>
+</li>
+<li><p>HTTP/HTTPS<br>It&apos;s working in the same way as in web, Weex support these at very beginning.   </p>
+</li>
+<li><p>File<br>Use <code>file</code> scheme to access local disk file. This scheme has its limitations: You would not hard coded a file url in source page. Because not matter it&apos;s running in different platform(iOS, Android) or not, the content will be totally different in another device, which is depend to the specific device.
+So one possible case is getting the file url in runtime dynamically, which you can use it to diaplay a local disk image, or maybe upload it later.</p>
+</li>
+</ul>
+<h2 id="relative-uri">Relative URI</h2>
+<p><a href="https://www.w3.org/TR/html4/types.html#type-uri" target="_blank">Like we do in HTML</a>, weex process &apos;relative URI&apos; in the same way. The relative URI, which start with <code>/</code>,<code>.</code>,<code>..</code>,<code>//</code>, will resolve by the bunle url.
+Means URL start with <code>/</code> will resolve to the root folder as bundle js file, <code>.</code> and <code>..</code> will resolve to current and parent folder, and <code>//</code> will resolve to same scheme bundle js have.</p>
+<h2 id="uri-adapter">URI Adapter</h2>
+<p>All the above is the default implementation, developers can extend or override these their own by providing a &apos;URI Adapter&apos;. Same as the other adapters, Custom adapter should be set before Weex SDK is initializing.</p>
 
                                 
                                 </section>
@@ -1916,12 +1736,12 @@ contentLoaded(window,function(){
 
             
                 
-                <a href="id.html" class="navigation navigation-prev " aria-label="Previous page: Find an Element">
+                <a href="config-n-data.html" class="navigation navigation-prev " aria-label="Previous page: Page Config &amp; Data">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="config-n-data.html" class="navigation navigation-next " aria-label="Next page: Page Config &amp; Data">
+                <a href="../how-to/main.html" class="navigation navigation-next " aria-label="Next page: How-tos">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1932,7 +1752,7 @@ contentLoaded(window,function(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Communications","level":"1.2.2.8","depth":3,"next":{"title":"Page Config & Data","level":"1.2.2.9","depth":3,"path":"syntax/config-n-data.md","ref":"syntax/config-n-data.md","articles":[]},"previous":{"title":"Find an Element","level":"1.2.2.7","depth":3,"path":"syntax/id.md","ref":"syntax/id.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"syntax/comm.md","mtime":"2017-01-01T03:56:36.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2017-01-01T03:59:32.445Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"URL and Path","level":"1.2.2.10","depth":3,"next":{"title":"How-tos","level":"1.2.3","depth":2,"path":"how-to/main.md","ref":"how-to/main.md","articles":[{"title":"Preview In Browser","level":"1.2.3.1","depth":3,"path":"how-to/preview-in-browser.md","ref":"how-to/preview-in-browser.md","articles":[]},{"title":"Preview in Native","level":"1.2.3.2","depth":3,"path":"how-to/preview-in-playground-app.md","ref":"how-to/preview-in-playground-app.md","articles":[]},{"title":"Customize a native Component","level":"1.2.3.3","depth":3,"path":"how-to/customize-a-native-component.md","ref":"how-to/customize-a-native-component.md","articles":[]},{"title":"Customize native APIs","level":"1.2.3.4","depth":3,"path":"how-to/cuszomize-native-apis.md","ref":"how-to/cuszomize-native-apis.md","articles":[]},{"title":"Debug in html5 renderer","level":"1.2.3.5","depth":3,"path":"how-to/debug-with-html5.md","ref":"how-to/debug-with-html5.md","articles":[]},{"title":"Require 3rd Party Libs","level":"1.2.3.6","depth":3,"path":"how-to/require-3rd-party-libs.md","ref":"how-to/require-3rd-party-libs.md","articles":[]},{"title":"Transform Code Into JS Bundle","level":"1.2.3.7","depth":3,"path":"how-to/transform-code-into-js-bundle.md","ref":"how-to/transform-code-into-js-bundle.md","articles":[]}]},"previous":{"title":"Page Config & Data","level":"1.2.2.9","depth":3,"path":"syntax/config-n-data.md","ref":"syntax/config-n-data.md","articles":[]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"syntax/path.md","mtime":"2017-01-01T03:57:07.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2017-01-01T03:59:32.445Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
