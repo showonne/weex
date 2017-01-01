@@ -533,6 +533,19 @@ contentLoaded(window,function(){
             
         </li>
     
+        <li class="chapter " data-level="1.2.2.10" data-path="../syntax/path.html">
+            
+                <a href="../syntax/path.html">
+            
+                    
+                    URL and Path
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1218,7 +1231,20 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.3" data-path="modal.html">
+        <li class="chapter " data-level="1.3.6.3" data-path="picker.html">
+            
+                <a href="picker.html">
+            
+                    
+                    picker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" data-path="modal.html">
             
                 <a href="modal.html">
             
@@ -1231,7 +1257,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.4" data-path="animation.html">
+        <li class="chapter " data-level="1.3.6.5" data-path="animation.html">
             
                 <a href="animation.html">
             
@@ -1244,7 +1270,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.5" data-path="webview.html">
+        <li class="chapter " data-level="1.3.6.6" data-path="webview.html">
             
                 <a href="webview.html">
             
@@ -1257,7 +1283,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.6" data-path="navigator.html">
+        <li class="chapter " data-level="1.3.6.7" data-path="navigator.html">
             
                 <a href="navigator.html">
             
@@ -1270,7 +1296,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.7" data-path="storage.html">
+        <li class="chapter " data-level="1.3.6.8" data-path="storage.html">
             
                 <a href="storage.html">
             
@@ -1283,7 +1309,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.8" data-path="timer.html">
+        <li class="chapter " data-level="1.3.6.9" data-path="timer.html">
             
                 <a href="timer.html">
             
@@ -1296,7 +1322,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.9" data-path="clipboard.html">
+        <li class="chapter " data-level="1.3.6.10" data-path="clipboard.html">
             
                 <a href="clipboard.html">
             
@@ -1309,7 +1335,7 @@ contentLoaded(window,function(){
             
         </li>
     
-        <li class="chapter " data-level="1.3.6.10" data-path="globalevent.html">
+        <li class="chapter " data-level="1.3.6.11" data-path="globalevent.html">
             
                 <a href="globalevent.html">
             
@@ -1681,6 +1707,103 @@ contentLoaded(window,function(){
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> dom = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/dom&apos;</span>);
 dom.scrollToElement(<span class="hljs-keyword">this</span>.$el(<span class="hljs-string">&apos;someId&apos;</span>), {offset: <span class="hljs-number">10</span>});
 </code></pre>
+<h3 id="getcomponentrectrefcallback">getComponentRect(ref,callback)</h3>
+<p><span class="weex-version">0.9.4</span></p>
+<p>You can get the view rectangle information of named element.</p>
+<p>An example callback result maybe:</p>
+<pre><code class="lang-json">{
+  result: <span class="hljs-literal">true</span>,
+  size: {
+    bottom: <span class="hljs-number">60</span>,
+    height: <span class="hljs-number">15</span>,
+    left: <span class="hljs-number">0</span>,
+    right: <span class="hljs-number">353</span>,
+    top: <span class="hljs-number">45</span>,
+    width: <span class="hljs-number">353</span>
+  }
+}
+</code></pre>
+<p>If you want to get the rectangle information of &apos;weex view&apos; container, you can specify the <code>ref=&apos;viewport&apos;</code>.</p>
+<p>Example Useage:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;box&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;box&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>Red box: {{boxposition}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>Viewport: {{viewportposition}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">&quot;getBoxPosition&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>Get red Box position<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">&quot;getViewportPosition&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>Get Viewport position<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+<span class="hljs-selector-class">.wrapper</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-class">.box</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">300</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">300</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f00</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">300</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">200</span>;
+}  
+<span class="hljs-selector-class">.row</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">flex-direction</span>: row;
+}
+<span class="hljs-selector-class">.button</span> {
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ddd</span>;
+  <span class="hljs-attribute">border-left-width</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">border-left-color</span>: <span class="hljs-number">#333</span>;
+  <span class="hljs-attribute">border-left-style</span>: solid;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">var</span> dom = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@weex-module/dom&apos;</span>)
+
+<span class="hljs-built_in">module</span>.exports = {
+  data: {
+    boxposition: <span class="hljs-string">&apos;&apos;</span>,
+    viewportposition: <span class="hljs-string">&apos;&apos;</span>
+  },
+  methods: {
+    getBoxPosition: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">var</span> el = <span class="hljs-keyword">this</span>.$el(<span class="hljs-string">&apos;box&apos;</span>)
+      <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
+
+       dom.getComponentRect(el, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
+          self.boxposition = <span class="hljs-built_in">JSON</span>.stringify(result)
+      })
+    },
+    getViewportPosition: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>
+
+       dom.getComponentRect(<span class="hljs-string">&apos;viewport&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
+          self.viewportposition = <span class="hljs-built_in">JSON</span>.stringify(result)
+      })
+    }
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
 <h3 id="createbodyelement">createBody(element)</h3>
 <p>Create the body for the whole dom tree. Element type should only be the ones that can be used as roots (<code>div</code>, <code>scroller</code> and <code>list</code>).</p>
 <h4 id="arguments">Arguments</h4>
@@ -1784,7 +1907,7 @@ dom.scrollToElement(<span class="hljs-keyword">this</span>.$el(<span class="hljs
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"dom","level":"1.3.6.1","depth":3,"next":{"title":"stream","level":"1.3.6.2","depth":3,"path":"modules/stream.md","ref":"modules/stream.md","articles":[]},"previous":{"title":"Built-in Modules","level":"1.3.6","depth":2,"path":"modules/main.md","ref":"modules/main.md","articles":[{"title":"dom","level":"1.3.6.1","depth":3,"path":"modules/dom.md","ref":"modules/dom.md","articles":[]},{"title":"stream","level":"1.3.6.2","depth":3,"path":"modules/stream.md","ref":"modules/stream.md","articles":[]},{"title":"modal","level":"1.3.6.3","depth":3,"path":"modules/modal.md","ref":"modules/modal.md","articles":[]},{"title":"animation","level":"1.3.6.4","depth":3,"path":"modules/animation.md","ref":"modules/animation.md","articles":[]},{"title":"webview","level":"1.3.6.5","depth":3,"path":"modules/webview.md","ref":"modules/webview.md","articles":[]},{"title":"navigator","level":"1.3.6.6","depth":3,"path":"modules/navigator.md","ref":"modules/navigator.md","articles":[]},{"title":"storage","level":"1.3.6.7","depth":3,"path":"modules/storage.md","ref":"modules/storage.md","articles":[]},{"title":"timer","level":"1.3.6.8","depth":3,"path":"modules/timer.md","ref":"modules/timer.md","articles":[]},{"title":"clipboard","level":"1.3.6.9","depth":3,"path":"modules/clipboard.md","ref":"modules/clipboard.md","articles":[]},{"title":"globalEvent","level":"1.3.6.10","depth":3,"path":"modules/globalevent.md","ref":"modules/globalevent.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"modules/dom.md","mtime":"2016-12-20T13:55:34.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-12-20T14:11:49.515Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"dom","level":"1.3.6.1","depth":3,"next":{"title":"stream","level":"1.3.6.2","depth":3,"path":"modules/stream.md","ref":"modules/stream.md","articles":[]},"previous":{"title":"Built-in Modules","level":"1.3.6","depth":2,"path":"modules/main.md","ref":"modules/main.md","articles":[{"title":"dom","level":"1.3.6.1","depth":3,"path":"modules/dom.md","ref":"modules/dom.md","articles":[]},{"title":"stream","level":"1.3.6.2","depth":3,"path":"modules/stream.md","ref":"modules/stream.md","articles":[]},{"title":"picker","level":"1.3.6.3","depth":3,"path":"modules/picker.md","ref":"modules/picker.md","articles":[]},{"title":"modal","level":"1.3.6.4","depth":3,"path":"modules/modal.md","ref":"modules/modal.md","articles":[]},{"title":"animation","level":"1.3.6.5","depth":3,"path":"modules/animation.md","ref":"modules/animation.md","articles":[]},{"title":"webview","level":"1.3.6.6","depth":3,"path":"modules/webview.md","ref":"modules/webview.md","articles":[]},{"title":"navigator","level":"1.3.6.7","depth":3,"path":"modules/navigator.md","ref":"modules/navigator.md","articles":[]},{"title":"storage","level":"1.3.6.8","depth":3,"path":"modules/storage.md","ref":"modules/storage.md","articles":[]},{"title":"timer","level":"1.3.6.9","depth":3,"path":"modules/timer.md","ref":"modules/timer.md","articles":[]},{"title":"clipboard","level":"1.3.6.10","depth":3,"path":"modules/clipboard.md","ref":"modules/clipboard.md","articles":[]},{"title":"globalEvent","level":"1.3.6.11","depth":3,"path":"modules/globalevent.md","ref":"modules/globalevent.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["header","disqus","heading-anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"weex-doc"},"search":{},"layout":{"headerPath":"_layouts/header.html"},"lunr":{"maxIndexSize":1000000},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Weex","gitbook":"3.1.1","description":"Weex Document Site"},"file":{"path":"modules/dom.md","mtime":"2017-01-01T03:57:07.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2017-01-01T03:59:32.445Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
