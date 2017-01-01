@@ -64,6 +64,7 @@
     * [Built-in Modules](/modules/main.md)
         * [dom](/modules/dom.md)
         * [stream](/modules/stream.md)
+        * [picker](/modules/picker.md)
         * [modal](/modules/modal.md)
         * [animation](/modules/animation.md)
         * [webview](/modules/webview.md)
