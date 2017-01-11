@@ -19,7 +19,7 @@ Weex 封装了原生的触摸事件以提供手势系统。使用手势类似于
 手势类型目前，仅支持以下四种手势类型：
 
 Touch：当触摸到一个点，移动或从触摸面移开时触发 touch 手势。触摸手势很精准，它会返回所有详细的事件信息。所以，监听 touch 手势可能很慢，即使只移动一丁点也需要处理大量事件。有三种">
-<meta property="og:updated_time" content="2017-01-11T17:27:46.000Z">
+<meta property="og:updated_time" content="2017-01-11T19:36:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手势">
 <meta name="twitter:description" content="手势注：该功能属于实验性功能
@@ -1268,7 +1268,7 @@ Touch：当触摸到一个点，移动或从触摸面移开时触发 touch 手�
       </h1>
     
   
-  <time class="article-date" datetime="2017-01-11T17:27:46.000Z">Updated time: 12/01/2017</time>
+  <time class="article-date" datetime="2017-01-11T19:36:57.000Z">Updated time: 12/01/2017</time>
 </header>
     <h1 id="手势"><a href="#手势" class="headerlink" title="手势"></a>手势</h1><p><em>注：该功能属于实验性功能</em></p>
 <p>Weex 封装了原生的触摸事件以提供手势系统。使用手势类似于在 Weex 中使用事件，只需在节点上设置 <code>on</code> 特性来监听手势即可。</p>
@@ -1312,8 +1312,6 @@ Touch：当触摸到一个点，移动或从触摸面移开时触发 touch 手�
 <li><code>screenY</code>：触摸点相对于屏幕顶部边缘的 Y 轴坐标。</li>
 </ul>
 <h2 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h2><p>目前，由于会触发大量事件冲突，Weex Android 还不支持在滚动类型的元素上监听手势，例如 <code>scroller</code>, <code>list</code> 和 <code>webview</code> 这三个组件。</p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">2<span class="tag">&lt;<span class="name">div</span> <span class="attr">ontouchstart</span>=<span class="string">"handleTouchstart"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">2<span class="attr">methods</span>: &#123;</div><div class="line">22<span class="attr">handleTouchstart</span>: <span class="function"><span class="keyword">function</span>(<span class="params">eventProperties</span>) </span>&#123;</div><div class="line">222<span class="comment">// handling with the Event Properties</span></div><div class="line">22&#125;</div><div class="line">2&#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>如上面代码所示，一个 <code>touchstart</code> 事件会在触摸点与触摸面接触的时候触发。</p>
 
   </div>
   

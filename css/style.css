@@ -535,7 +535,7 @@ pre .attr {
     list-style-type: none; }
 
 .horizon .scene-container, .edge .scene-container {
-  max-width: 940px;
+  max-width: 900px;
   padding-bottom: 2em;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -593,10 +593,10 @@ pre .attr {
     height: 100%;
     height: calc(100% - 72px); }
   .header .swiper-container {
-    max-width: 940px;
+    max-width: 900px;
     height: 100%; }
   .header .swiper-controller {
-    max-width: 940px;
+    max-width: 900px;
     height: 100%;
     margin: auto;
     position: absolute;
@@ -613,7 +613,7 @@ pre .attr {
         -ms-transform: rotate(180deg);
             transform: rotate(180deg); }
   .header .slide-content {
-    max-width: 940px;
+    max-width: 900px;
     margin: auto;
     height: 100%; }
     .header .slide-content .page-title {
@@ -662,7 +662,7 @@ pre .attr {
           justify-content: center; }
 
 .edge .scene-container .sketch-content {
-  padding: 0 7em;
+  padding: 2em 7em;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -672,9 +672,9 @@ pre .attr {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
 .edge .inner-box {
   -webkit-flex: 1;
@@ -702,7 +702,7 @@ pre .attr {
 
 .feature .feature-content {
   height: 100%;
-  max-width: 940px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
   overflow: hidden; }
@@ -963,7 +963,7 @@ pre .attr {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-top: -50px; }
+  margin-top: -30px; }
 
 .back2top {
   display: none;
@@ -1480,7 +1480,7 @@ hue-6-2: #e6c07b
 /***********************
 * Mixin
 ***********************/
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 900px) {
   /***********************************************
    * Global
    **********************************************/

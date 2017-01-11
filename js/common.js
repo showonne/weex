@@ -223,6 +223,23 @@
    * LANDINGPAGE 
    */
   if (PAGE_TYPE === 'index') {
+    /**
+     * Set index page scene max height
+     */
+    function setMaxHeight () {
+      if(window.innerWidth < 1100 
+        && window.innerWidth >= 800
+        && window.innerWidth / window.innerHeight >= 0.7) {
+
+        var scenes = document.querySelectorAll('.scene')
+
+        scenes.forEach(function (i) {
+          i.style.maxHeight = window.innerWidth * 0.65 + 'px'
+        })
+      }
+    }
+
+    setMaxHeight()
 
     /**
      * Index page animation helper: AppearController 
