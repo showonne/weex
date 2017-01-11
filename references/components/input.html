@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>&lt;input&gt; | Weex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="inputThe weex builtin component input is used to create input controls to receive the user’s input characters. How a input component works varies considerably depending on the value of its type attrib">
+<meta property="og:type" content="website">
+<meta property="og:title" content="<input>">
+<meta property="og:url" content="https://doranyun.github.io/references/components/input.html">
+<meta property="og:site_name" content="Weex">
+<meta property="og:description" content="inputThe weex builtin component input is used to create input controls to receive the user’s input characters. How a input component works varies considerably depending on the value of its type attrib">
+<meta property="og:updated_time" content="2017-01-11T16:57:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="<input>">
+<meta name="twitter:description" content="inputThe weex builtin component input is used to create input controls to receive the user’s input characters. How a input component works varies considerably depending on the value of its type attrib">
+  
+    <link rel="alternate" href="/atom.xml" title="Weex" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="//gw.alicdn.com/tps/TB1XNqxPXXXXXcSXVXXXXXXXXXX-64-63.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/swiper.min.css">
+</head>
+
+<body id="references" class="lang-en">
+  
+  <script>
+    window.PAGE_TYPE = "references";
+    window.ROOT = "/"
+  </script>
+  <header id="header">
+  <div class="navbar">
+    <a id="logo" href="/">
+      <img src="//img.alicdn.com/tps/TB1zBLaPXXXXXXeXXXXXXXXXXXX-121-59.svg" />
+    </a>
+    <div class="main-nav">
+      <ul class="links">
+        <li><a href="/guide">Guide</a></li>
+        <li><a href="/references">References</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li class="dropdown">
+            <a href="javascript:;">Download</a>
+            <ul class="dropdown-menu subnav">
+              <li>
+                <a href="/playground.html">Playground</a>
+              </li>
+              <li>
+                <a href="https://www.npmjs.com/package/weex-devtool" target="_blank">Devtool</a>
+              </li>
+              <li>
+                <a href="https://www.npmjs.com/package/weexpack" target="_blank">Weexpack</a>
+              </li>
+              <li>
+                <a href="http://dotwe.org" target="_blank">Snippets</a>
+              </li>
+              <li>
+                <a href="https://market.weex-project.io/" target="_blank">Market</a>
+              </li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="info">
+        <li><a href="https://github.com/alibaba/weex/" target="_blank"><span class="btn-github iconfont icon-github"></span></a></li>
+      </ul>
+      <ul class="tools">
+        <li>
+          <div class="search">
+  <form id="search-form" class="search-form"> <!-- 搜索框相关 -->
+    <input type="text" id="search-input-header" name="q" results="0" placeholder="search..." class="form-control search-input" autocomplete="off" autocorrect="off"/>
+    <span class="iconfont icon-search"></span>
+  </form>
+  <div class="results-panel">
+  </div>
+</div>
+        </li>
+        <!--<li></li>-->
+      </ul>
+    </div>
+  </div>
+  <div id="mobile-nav">
+    <a id="logo" href="/">
+      <img src="//img.alicdn.com/tps/TB1zBLaPXXXXXXeXXXXXXXXXXXX-121-59.svg" />
+    </a>
+    <a class="btn-menu"><span class="iconfont icon-nav"></span></a>
+  </div>
+</header>
+  <div id="sidebar" class="">
+  <div class="sidebar-menu">
+    
+      <div class="search">
+  <form id="search-form" class="search-form"> <!-- 搜索框相关 -->
+    <input type="text" id="search-input-sidebar" name="q" results="0" placeholder="search..." class="form-control search-input" autocomplete="off" autocorrect="off"/>
+    <span class="iconfont icon-search"></span>
+  </form>
+  <div class="results-panel">
+  </div>
+</div>
+      
+
+
+<div class="summary">
+  <h2 class="part-title">
+    
+      References
+    
+  </h2>
+  <ul class="doc-summary">
+    
+    
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+   
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/index.html" class="sidebar-link">Common Options</a></h3>
+          
+            <ul class="chapter">
+              
+                <li>
+                  <a href="/references/index.html" class="sidebar-link  ">iOS APIs</a>
+                </li>
+              
+                <li>
+                  <a href="/references/android-apis.html" class="sidebar-link  ">Android APIs</a>
+                </li>
+              
+                <li>
+                  <a href="/references/html5-apis.html" class="sidebar-link  ">HTML5 APIs</a>
+                </li>
+              
+                <li>
+                  <a href="/references/common-style.html" class="sidebar-link  ">Common Style</a>
+                </li>
+              
+                <li>
+                  <a href="/references/text-style.html" class="sidebar-link  ">Text Style</a>
+                </li>
+              
+                <li>
+                  <a href="/references/color-names.html" class="sidebar-link  ">Color name</a>
+                </li>
+              
+                <li>
+                  <a href="/references/gesture.html" class="sidebar-link  ">Gesture</a>
+                </li>
+              
+                <li>
+                  <a href="/references/path.html" class="sidebar-link  ">Path</a>
+                </li>
+              
+            </ul>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/components/index.html" class="sidebar-link">Build-in Components</a></h3>
+          
+            <ul class="chapter">
+              
+                <li>
+                  <a href="/references/components/index.html" class="sidebar-link  ">&lt;a&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/indicator.html" class="sidebar-link  ">&lt;indicator&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/switch.html" class="sidebar-link  ">&lt;switch&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/text.html" class="sidebar-link  ">&lt;text&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/textarea.html" class="sidebar-link  ">&lt;textarea&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/video.html" class="sidebar-link  ">&lt;video&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/web.html" class="sidebar-link  ">&lt;web&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/div.html" class="sidebar-link  ">&lt;div&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/image.html" class="sidebar-link  ">&lt;image&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/input.html" class="sidebar-link current ">&lt;input&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/list.html" class="sidebar-link  ">&lt;list&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/cell.html" class="sidebar-link  ">&lt;cell&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/refresh.html" class="sidebar-link  ">&lt;refresh&gt; &amp; &lt;loading&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/scroller.html" class="sidebar-link  ">&lt;scroller&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/slider.html" class="sidebar-link  ">&lt;slider&gt;</a>
+                </li>
+              
+            </ul>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/modules/index.html" class="sidebar-link  ">Built-in Modules</a></h3>
+          
+            <ul class="chapter">
+              
+                <li>
+                  <a href="/references/modules/animation.html" class="sidebar-link  ">animation</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/globalevent.html" class="sidebar-link  ">globalEvent</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/picker.html" class="sidebar-link  ">picker</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/clipboard.html" class="sidebar-link  ">clipboard</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/dom.html" class="sidebar-link  ">dom</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/modal.html" class="sidebar-link  ">modal</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/navigator.html" class="sidebar-link  ">navigator</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/storage.html" class="sidebar-link  ">storage</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/stream.html" class="sidebar-link  ">stream</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/webview.html" class="sidebar-link  ">webview</a>
+                </li>
+              
+            </ul>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/unit.html" class="sidebar-link  ">CSS unit</a></h3>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/common-event.html" class="sidebar-link  ">Common Events</a></h3>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/native-dom-api.html" class="sidebar-link  ">Native DOM APIs</a></h3>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/web-standards.html" class="sidebar-link  ">Web standards</a></h3>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/vue/index.html" class="sidebar-link">Vue</a></h3>
+          
+            <ul class="chapter">
+              
+                <li>
+                  <a href="/references/vue/index.html" class="sidebar-link  ">Difference with Web</a>
+                </li>
+              
+                <li>
+                  <a href="/references/vue/difference-of-vuex.html" class="sidebar-link  ">Using Vuex &amp; vue-router</a>
+                </li>
+              
+            </ul>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/advanced/index.html" class="sidebar-link">Advanced</a></h3>
+          
+            <ul class="chapter">
+              
+                <li>
+                  <a href="/references/advanced/index.html" class="sidebar-link  ">Extend to iOS</a>
+                </li>
+              
+                <li>
+                  <a href="/references/advanced/extend-to-android.html" class="sidebar-link  ">Extend to Android</a>
+                </li>
+              
+                <li>
+                  <a href="/references/advanced/extend-to-html5.html" class="sidebar-link  ">Extend to HTML5</a>
+                </li>
+              
+                <li>
+                  <a href="/references/advanced/extend-jsfm.html" class="sidebar-link  ">Extend JS framework</a>
+                </li>
+              
+                <li>
+                  <a href="/references/advanced/extend-js-service.html" class="sidebar-link  ">Extend JS Service (later)</a>
+                </li>
+              
+                <li>
+                  <a href="/references/advanced/integrate-devtool-to-android.html" class="sidebar-link  ">Integrate Devtool to Android</a>
+                </li>
+              
+                <li>
+                  <a href="/references/advanced/integrate-devtool-to-ios.html" class="sidebar-link  ">Integrate Devtool to iOS</a>
+                </li>
+              
+            </ul>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/migration/index.html" class="sidebar-link">Migration</a></h3>
+          
+            <ul class="chapter">
+              
+                <li>
+                  <a href="/references/migration/index.html" class="sidebar-link  ">Migration from Weex</a>
+                </li>
+              
+                <li>
+                  <a href="/references/migration/difference.html" class="sidebar-link  ">The difference between Weex and Vue</a>
+                </li>
+              
+            </ul>
+          
+        
+      </li>
+    
+    
+    
+      <li>
+        <h3 class="chapter-title"><a href="/v-0.10/references/index.html" class="sidebar-link">Legacy</a></h3>
+      </li>
+    
+  </ul>
+</div>
+    
+    <a class="btn-close-sidebar iconfont  icon-close"></a>
+  </div>
+</div>
+  <div class="article-wrapper page-layout">
+  <div class="doc-nav">
+    
+
+
+<div class="summary">
+  <h2 class="part-title">
+    
+      References
+    
+  </h2>
+  <ul class="doc-summary">
+    
+    
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+   
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/index.html" class="sidebar-link">Common Options</a></h3>
+          
+            <ul class="chapter">
+              
+                <li>
+                  <a href="/references/index.html" class="sidebar-link  ">iOS APIs</a>
+                </li>
+              
+                <li>
+                  <a href="/references/android-apis.html" class="sidebar-link  ">Android APIs</a>
+                </li>
+              
+                <li>
+                  <a href="/references/html5-apis.html" class="sidebar-link  ">HTML5 APIs</a>
+                </li>
+              
+                <li>
+                  <a href="/references/common-style.html" class="sidebar-link  ">Common Style</a>
+                </li>
+              
+                <li>
+                  <a href="/references/text-style.html" class="sidebar-link  ">Text Style</a>
+                </li>
+              
+                <li>
+                  <a href="/references/color-names.html" class="sidebar-link  ">Color name</a>
+                </li>
+              
+                <li>
+                  <a href="/references/gesture.html" class="sidebar-link  ">Gesture</a>
+                </li>
+              
+                <li>
+                  <a href="/references/path.html" class="sidebar-link  ">Path</a>
+                </li>
+              
+            </ul>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/components/index.html" class="sidebar-link">Build-in Components</a></h3>
+          
+            <ul class="chapter">
+              
+                <li>
+                  <a href="/references/components/index.html" class="sidebar-link  ">&lt;a&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/indicator.html" class="sidebar-link  ">&lt;indicator&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/switch.html" class="sidebar-link  ">&lt;switch&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/text.html" class="sidebar-link  ">&lt;text&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/textarea.html" class="sidebar-link  ">&lt;textarea&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/video.html" class="sidebar-link  ">&lt;video&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/web.html" class="sidebar-link  ">&lt;web&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/div.html" class="sidebar-link  ">&lt;div&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/image.html" class="sidebar-link  ">&lt;image&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/input.html" class="sidebar-link current ">&lt;input&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/list.html" class="sidebar-link  ">&lt;list&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/cell.html" class="sidebar-link  ">&lt;cell&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/refresh.html" class="sidebar-link  ">&lt;refresh&gt; &amp; &lt;loading&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/scroller.html" class="sidebar-link  ">&lt;scroller&gt;</a>
+                </li>
+              
+                <li>
+                  <a href="/references/components/slider.html" class="sidebar-link  ">&lt;slider&gt;</a>
+                </li>
+              
+            </ul>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/modules/index.html" class="sidebar-link  ">Built-in Modules</a></h3>
+          
+            <ul class="chapter">
+              
+                <li>
+                  <a href="/references/modules/animation.html" class="sidebar-link  ">animation</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/globalevent.html" class="sidebar-link  ">globalEvent</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/picker.html" class="sidebar-link  ">picker</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/clipboard.html" class="sidebar-link  ">clipboard</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/dom.html" class="sidebar-link  ">dom</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/modal.html" class="sidebar-link  ">modal</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/navigator.html" class="sidebar-link  ">navigator</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/storage.html" class="sidebar-link  ">storage</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/stream.html" class="sidebar-link  ">stream</a>
+                </li>
+              
+                <li>
+                  <a href="/references/modules/webview.html" class="sidebar-link  ">webview</a>
+                </li>
+              
+            </ul>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/unit.html" class="sidebar-link  ">CSS unit</a></h3>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/common-event.html" class="sidebar-link  ">Common Events</a></h3>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/native-dom-api.html" class="sidebar-link  ">Native DOM APIs</a></h3>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/web-standards.html" class="sidebar-link  ">Web standards</a></h3>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/vue/index.html" class="sidebar-link">Vue</a></h3>
+          
+            <ul class="chapter">
+              
+                <li>
+                  <a href="/references/vue/index.html" class="sidebar-link  ">Difference with Web</a>
+                </li>
+              
+                <li>
+                  <a href="/references/vue/difference-of-vuex.html" class="sidebar-link  ">Using Vuex &amp; vue-router</a>
+                </li>
+              
+            </ul>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/advanced/index.html" class="sidebar-link">Advanced</a></h3>
+          
+            <ul class="chapter">
+              
+                <li>
+                  <a href="/references/advanced/index.html" class="sidebar-link  ">Extend to iOS</a>
+                </li>
+              
+                <li>
+                  <a href="/references/advanced/extend-to-android.html" class="sidebar-link  ">Extend to Android</a>
+                </li>
+              
+                <li>
+                  <a href="/references/advanced/extend-to-html5.html" class="sidebar-link  ">Extend to HTML5</a>
+                </li>
+              
+                <li>
+                  <a href="/references/advanced/extend-jsfm.html" class="sidebar-link  ">Extend JS framework</a>
+                </li>
+              
+                <li>
+                  <a href="/references/advanced/extend-js-service.html" class="sidebar-link  ">Extend JS Service (later)</a>
+                </li>
+              
+                <li>
+                  <a href="/references/advanced/integrate-devtool-to-android.html" class="sidebar-link  ">Integrate Devtool to Android</a>
+                </li>
+              
+                <li>
+                  <a href="/references/advanced/integrate-devtool-to-ios.html" class="sidebar-link  ">Integrate Devtool to iOS</a>
+                </li>
+              
+            </ul>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/references/migration/index.html" class="sidebar-link">Migration</a></h3>
+          
+            <ul class="chapter">
+              
+                <li>
+                  <a href="/references/migration/index.html" class="sidebar-link  ">Migration from Weex</a>
+                </li>
+              
+                <li>
+                  <a href="/references/migration/difference.html" class="sidebar-link  ">The difference between Weex and Vue</a>
+                </li>
+              
+            </ul>
+          
+        
+      </li>
+    
+    
+    
+      <li>
+        <h3 class="chapter-title"><a href="/v-0.10/references/index.html" class="sidebar-link">Legacy</a></h3>
+      </li>
+    
+  </ul>
+</div>
+  </div>
+  
+
+<article class="article article-type-references">
+  <div class="article-entry" itemprop="articleBody">
+    <header class="article-header">
+  
+    
+      <h1 class="article-title" itemprop="name">
+        &lt;input&gt;
+      </h1>
+    
+  
+  <time class="article-date" datetime="2017-01-11T16:57:10.000Z">Updated time: 12/01/2017</time>
+</header>
+    <h1 id="input"><a href="#input" class="headerlink" title="input"></a>input</h1><p>The weex builtin component <code>input</code> is used to create input controls to receive the user’s input characters. How a <code>input</code> component works varies considerably depending on the value of its <code>type</code> attribute, such as <code>text</code>, <code>password</code>, <code>url</code>, <code>email</code>, <code>tel</code> etc.</p>
+<p><strong>Notes:</strong> does not support the common-event <code>click</code>. Please listen to the <code>input</code> or <code>change</code> event instead.</p>
+<h2 id="Child-Components"><a href="#Child-Components" class="headerlink" title="Child Components"></a>Child Components</h2><p>This component supports no child components.</p>
+<h2 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h2><ul>
+<li><p><code>type</code>: the type of controls to display. The default value is <code>text</code>, if this attribute is not specified. Possible values are <code>text</code>, <code>password</code>, <code>tel</code>, <code>email</code>, <code>url</code> etc. each of which has the same meaning with W3C standard.</p>
+</li>
+<li><p><code>value</code>: the value(text) of the control.</p>
+</li>
+<li><p><code>placeholder</code>: a hint to the user of which can be entered to the control. The placeholder text must have no carriage returns or line-feeds.</p>
+</li>
+<li><p><code>disabled</code>: a boolean attribute indicates that the form control is not available for interaction. In particular, the click event will not be dispatched on disabled controls.</p>
+</li>
+<li><p><code>autofocus</code>: a boolean attribute lets you specify that a form control should have input focus when the page loads.</p>
+</li>
+<li><p><code>maxlength</code>: <span class="api-version">v0.7+</span> a number value to specify maxlength of input.</p>
+</li>
+</ul>
+<p>Other attributes please check out the <a href="../common-attrs.html">common attributes</a>.</p>
+<h2 id="Styles"><a href="#Styles" class="headerlink" title="Styles"></a>Styles</h2><ul>
+<li><p>placeholder-color: the color of placeholder. Default value is ‘#999999’.</p>
+</li>
+<li><p>text styles: checkout <a href="../text-style.html">text styles</a></p>
+<ul>
+<li>support ‘color’ style.</li>
+<li>support ‘font-size’ style.</li>
+<li>support ‘font-style’ style.</li>
+<li>support ‘font-weight’ style.</li>
+<li>support ‘text-align’ style.</li>
+</ul>
+</li>
+</ul>
+<h3 id="common-styles"><a href="#common-styles" class="headerlink" title="common styles"></a>common styles</h3><p>check out <a href="../common-style.html">common styles for components</a></p>
+<ul>
+<li>support flexbox related styles.</li>
+<li>support box model related styles.</li>
+<li>support ‘position’ related styles.</li>
+<li>support ‘opacity’, ‘background-color’ etc.</li>
+</ul>
+<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><ul>
+<li>input: the value of an input character changes.</li>
+<li>change: the change event is fired when a change to the component’s value is commited by the user. It always come after a ‘blur’ event.</li>
+<li>focus: a component has received focus.</li>
+<li>blur: a component has lost focus.</li>
+</ul>
+<h3 id="common-events"><a href="#common-events" class="headerlink" title="common events"></a>common events</h3><p>check out <a href="../common-event.html">common events</a></p>
+<ul>
+<li>support ‘appear’ / ‘disappear’ event. </li>
+</ul>
+<h3 id="Methods-v0-9"><a href="#Methods-v0-9" class="headerlink" title="Methods v0.9+"></a>Methods <spu>v0.9+</spu></h3><ul>
+<li><p><code>focus()</code></p>
+<p>The <code>focus()</code> method is used to give focus to an input component and tigger soft keybord(if it can be focused).</p>
+</li>
+<li><p><code>blur()</code></p>
+<p>The <code>blur()</code> method is used to remove focus from an input component and close soft keybord(if it has focus).</p>
+</li>
+</ul>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>does not support the common-event ‘click’. Please listen to the ‘input’ or ‘change’ event instead.</p>
+<h3 id="Parameters-of-events’-object"><a href="#Parameters-of-events’-object" class="headerlink" title="Parameters of events’ object"></a>Parameters of events’ object</h3><ul>
+<li>for ‘input’ and ‘change’ events:’value’: the value of the component who dispatched this event.’timestamp’: the time stamp of the event.</li>
+<li>for ‘focus’ and ‘blur’ events:’timestamp’: the time stamp of the event.</li>
+</ul>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">"input"</span> <span class="attr">class</span>=<span class="string">"input"</span> <span class="attr">type</span>=<span class="string">"text"</span> @<span class="attr">input</span>=<span class="string">"oninput"</span> @<span class="attr">change</span>=<span class="string">"onchange"</span> @<span class="attr">focus</span>=<span class="string">"onfocus"</span> @<span class="attr">blur</span>=<span class="string">"onblur"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">const</span> modal = weex.requireModule(<span class="string">'modal'</span>)</div><div class="line"></div><div class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">    <span class="attr">methods</span>: &#123;</div><div class="line">      oninput (event) &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'oninput:'</span>, event.value)</div><div class="line">        modal.toast(&#123;</div><div class="line">          <span class="attr">message</span>: <span class="string">`oninput: <span class="subst">$&#123;event.value&#125;</span>`</span>,</div><div class="line">          <span class="attr">duration</span>: <span class="number">0.8</span></div><div class="line">        &#125;)</div><div class="line">      &#125;,</div><div class="line">      onchange (event) &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'onchange:'</span>, event.value)</div><div class="line">        modal.toast(&#123;</div><div class="line">          <span class="attr">message</span>: <span class="string">`onchange: <span class="subst">$&#123;event.value&#125;</span>`</span>,</div><div class="line">          <span class="attr">duration</span>: <span class="number">0.8</span></div><div class="line">        &#125;)</div><div class="line">      &#125;,</div><div class="line">      onfocus (event) &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'onfocus:'</span>, event.value)</div><div class="line">        modal.toast(&#123;</div><div class="line">          <span class="attr">message</span>: <span class="string">`onfocus: <span class="subst">$&#123;event.value&#125;</span>`</span>,</div><div class="line">          <span class="attr">duration</span>: <span class="number">0.8</span></div><div class="line">        &#125;)</div><div class="line">      &#125;,</div><div class="line">      onblur (event) &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'onblur:'</span>, event.value)</div><div class="line">        modal.toast(&#123;</div><div class="line">          <span class="attr">message</span>: <span class="string">`input blur: <span class="subst">$&#123;event.value&#125;</span>`</span>,</div><div class="line">          <span class="attr">duration</span>: <span class="number">0.8</span></div><div class="line">        &#125;)</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">  <span class="selector-class">.input</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">50px</span>;</div><div class="line">    <span class="attribute">width</span>: <span class="number">650px</span>;</div><div class="line">    <span class="attribute">margin-top</span>: <span class="number">50px</span>;</div><div class="line">    <span class="attribute">margin-left</span>: <span class="number">50px</span>;</div><div class="line">    <span class="attribute">padding-top</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">padding-bottom</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">padding-left</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">padding-right</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#666666</span>;</div><div class="line">    <span class="attribute">border-width</span>: <span class="number">2px</span>;</div><div class="line">    <span class="attribute">border-style</span>: solid;</div><div class="line">    <span class="attribute">border-color</span>: <span class="number">#41B883</span>;</div><div class="line">  &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><a href="../../examples/input.html">try it</a></p>
+
+  </div>
+  
+</article>
+</div>
+  
+  <footer id="footer">
+  <div class="row clearfix">
+    <div class="ali-logo">
+      <img src="//gw.alicdn.com/tps/TB1Ef93PXXXXXaXXpXXXXXXXXXX-252-126.png" alt="Alibaba">
+    </div>
+    <div class="dropdown select-lang">
+      <a href="javascript:;" class="dropdown-toggle">
+        Language
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="/references/components/input.html">English</a>
+        </li>
+        <li>
+          <a href="/cn/references/components/input.html">中文</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <p><span>Released under </span><a href="">Apache License 2.0</a></p>
+  </div>
+  <div class="row clearfix">
+    <div class="cell"><span>Copyright(c) 2016 </span><a href="https://www.alibaba.com">Alibaba</a></div>
+    <div class="cell"><span>GroupMade by </span><a href="">阿里云UED AX</a></div>
+  </div>
+</footer>
+  <div style="display: none;">
+  <script src="//s95.cnzz.com/z_stat.php?id=1261102667&amp;web_id=1261102667" language="JavaScript"></script>
+</div>
+
+  <script src="/js/reqwest.js"></script>
+  <script src="/js/velocity.js"></script>
+  <script src="/js/common.js"></script>
+</body>
+</html>

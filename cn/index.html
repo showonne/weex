@@ -1,271 +1,414 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Weex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Weex">
+<meta property="og:url" content="https://doranyun.github.io/cn/index.html">
+<meta property="og:site_name" content="Weex">
+<meta property="og:updated_time" content="2017-01-11T16:57:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Weex">
+  
+    <link rel="alternate" href="/atom.xml" title="Weex" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="//gw.alicdn.com/tps/TB1XNqxPXXXXXcSXVXXXXXXXXXX-64-63.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/swiper.min.css">
+</head>
 
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width = device-width">
-        <title>Weex</title>
-        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-        <link rel="stylesheet" href="../css/vendor/foundation.min.css" />
-        <link rel="stylesheet" href="../css/site.css" />
-        <script src="../js/vendor/mobile-detect.min.js"></script>
-        <script>
-            var md = new MobileDetect(window.navigator.userAgent);
-               if (  (md.mobile() != null)  &&  (md.tablet() != "iPad")  &&  ( location.search.indexOf("force_desktop") == -1  )  ){
-                   location = "index_m.html"
-               }
-        </script>
-    </head>
-
-    <body>
-        <div class="nav-background"></div>
-        <div class="header">
-            <div class="top-bar">
-                <div class="top-bar-wrap">
-                    <div class="top-bar-title"></div>
-                    <div class="top-bar-left">
-                        <ul class="dropdown menu" data-dropdown-menu>
-                            <li> <a href="doc">文档</a>
-
-                            </li>
-                            <li>
-                                <script>
-                                    if( location.pathname.indexOf("demo.html") != -1 ){
-                                    document.write("<a class='current'>示例</a>")
-                                    }else{
-                                    document.write("<a href='demo.html'>示例</a>")
-                                    }
-                                </script>
-                            </li>
-                            <li>
-                                <script>
-                                    if( location.pathname.indexOf("download.html") != -1 ){
-                                    document.write("<a class='current'>下载</a>")
-                                    }else{
-                                    document.write("<a href='download.html'>下载</a>")
-                                    }
-                                </script>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="baichuan">
-                        <svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <!-- Generator: Sketch 3.7 (28169) - http://www.bohemiancoding.com/sketch
-                            -->
-                            <desc>Created with Sketch.</desc>
-                            <defs>
-                                <polygon id="path-1" points="0 0.387077352 0 11.3806629 8.43561525 11.3806629 8.43561525 0.387077352 2.39609128e-20 0.387077352"></polygon>
-                            </defs>
-                            <g id="Group-12" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <path d="M13.7115728,7.69515663 C13.7115728,7.95360067 13.6879995,8.20556889 13.6532287,8.45459356 C12.3997144,6.82563077 10.4384094,5.77124973 8.22722659,5.77124973 C6.01545445,5.77124973 4.05414945,6.82563077 2.80063511,8.45459356 C2.76586437,8.20556889 2.742291,7.95360067 2.742291,7.69515663 C2.742291,5.65762854 3.85082907,3.88325419 5.49389348,2.93425238 C5.48976814,2.87184903 5.48446413,2.81121182 5.48446413,2.74821976 C5.48446413,1.22993461 6.71263709,0.00011774216 8.22722659,0.00011774216 C9.74181609,0.00011774216 10.9693997,1.22993461 10.9693997,2.74821976 C10.9693997,2.81121182 10.9640957,2.87184903 10.9599704,2.93425238 C12.6030348,3.88325419 13.7115728,5.65762854 13.7115728,7.69515663"
-                                id="Fill-1" fill="#3199F4"></path>
-                                <g id="Group-5" transform="translate(0.000000, 6.208367)">
-                                    <mask id="mask-2" fill="white">
-                                        <use xlink:href="#path-1"></use>
-                                    </mask>
-                                    <g id="Clip-4"></g>
-                                    <path d="M5.75885824,5.8838701 C5.75885824,8.10036627 6.80964154,10.0660716 8.43561525,11.3223805 C8.18750545,11.3565257 7.93585964,11.3806629 7.6783205,11.3806629 C5.64629536,11.3806629 3.87534538,10.2697656 2.92828494,8.62314146 C2.86640483,8.62785115 2.80511405,8.63256084 2.74205526,8.63256084 C1.22746576,8.63256084 -0.000117866887,7.40215526 -0.000117866887,5.8838701 C-0.000117866887,4.36558495 1.22746576,3.13576808 2.74205526,3.13576808 C2.80511405,3.13576808 2.86640483,3.14047777 2.92828494,3.14518746 C3.87534538,1.49856334 5.64629536,0.387077352 7.6783205,0.387077352 C7.93585964,0.387077352 8.18750545,0.411214495 8.43561525,0.445359721 C6.81082021,1.70166857 5.75885824,3.66737394 5.75885824,5.8838701"
-                                    id="Fill-3" fill="#4CC08C" mask="url(#mask-2)"></path>
-                                </g>
-                                <g id="Group-8" transform="translate(6.482679, 11.506765)" fill="#F4CE33">
-                                    <path d="M8.31668756,5.89658626 C8.3208129,5.95781218 8.32611691,6.01962682 8.32611691,6.08203016 C8.32611691,7.60031532 7.09853328,8.83072089 5.58335444,8.83072089 C4.06935428,8.83072089 2.84118131,7.60031532 2.84118131,6.08203016 C2.84118131,6.01962682 2.84589599,5.95781218 2.85061067,5.89658626 C1.20754626,4.94758445 0.0990081852,3.17262138 0.0990081852,1.13568201 C0.0990081852,0.877237965 0.122581563,0.624681031 0.157352294,0.376245073 C1.41086664,2.00520786 3.37217164,3.0590002 5.58335444,3.0590002 C7.79512658,3.0590002 9.75643158,2.00520786 11.0099459,0.376245073 C11.0447167,0.624681031 11.06829,0.877237965 11.06829,1.13568201 C11.06829,3.17262138 9.95916263,4.94758445 8.31668756,5.89658626"
-                                    id="Fill-6"></path>
-                                </g>
-                                <path d="M17.550851,10.9932323 C17.4883815,10.9932323 17.4265014,10.9885226 17.3652106,10.9838129 C16.4175608,12.630437 14.6477895,13.7413343 12.6145857,13.7413343 C12.3570466,13.7413343 12.1054008,13.7177859 11.857291,13.6830519 C13.482086,12.4267431 14.534048,10.4610377 14.534048,8.24454155 C14.534048,6.02804538 13.482086,4.06292872 11.857291,2.80603116 C12.1054008,2.77188594 12.3570466,2.74774879 12.6145857,2.74774879 C14.6477895,2.74774879 16.4175608,3.85923479 17.3652106,5.5058589 C17.4265014,5.50173792 17.4883815,5.49643953 17.550851,5.49643953 C19.0654405,5.49643953 20.2930241,6.7268451 20.2930241,8.24454155 C20.2930241,9.7628267 19.0654405,10.9932323 17.550851,10.9932323"
-                                id="Fill-9" fill="#F77823"></path>
-                            </g>
-                        </svg> <span class="baichuan-text">阿里百川</span>
-
-                    </div>
-                    <div class="top-bar-right">
-                        <ul class="menu">
-                            <li><a href="//github.com/alibaba/weex">
-            <script>
-              if( location.pathname.indexOf("demo.html") != -1  || location.pathname.indexOf("download.html") != -1 ){
-              document.write(" <img class='github' src='../img/github.png' alt='github' ><span class='text'>Github</span>")
-              }else{
-              document.write(" <img class='github' src='../img/github-light.png' alt='github' ><span class='text'>Github</span>")
-              }
-            </script>
-        </a>
-                            </li>
-                            <li>
-                              <a href="../">&#127482;&#127480;</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slogan-area">
-            <div class="slogan">
-                <div class="logo-index"></div>
-                <div class="desc">跨平台移动开发框架</div>
-            </div>
-        </div>
-        <div class="entrance">
-            <div><a href="doc/get-started.html">开始上手</a></div>
-            <div><a href="//github.com/alibaba/weex">Github</a></div>
-        </div>
-        <div class="clear"></div>
-        <div class="row features">
-            <div class="small-4 columns">
-                <img src="../img/feature1@3x.png" />
-                <div class="feature">轻量</div>
-                <div class="list-wrap">体积小、语法简单<br>易于掌握</div>
-            </div>
-            <div class="small-4 columns">
-                <img src="../img/feature2@3x.png">
-                <div class="feature">可扩展</div>
-                <div class="list-wrap" style="max-width:300px">可以横向扩展和定制<br>原生组件和功能</div>
-            </div>
-            <div class="small-4 columns">
-                <img src="../img/feature3@3x.png">
-                <div class="feature">高性能</div>
-                <div class="list-wrap">对加载时间和资源占用深度优化，给你更好的体验</div>
-            </div>
-        </div>
-        <div class="white-bg">
-            <div class="wrap">
-                 <h4 class="text-center">跨平台开发 &amp; 原生体验</h4>
-
-                <div class="high-light">
-                    <div>
-                         <h5>一次撰写，多端运行</h5>
-
-                        <p>100% 跨平台代码复用
-                            <br/>多端接口设计一致
-                            <br/>节省跨端研发成本</p>
-                    </div>
-                    <div>
-                         <h5>原生功能和性能</h5>
-
-                        <p>Weex 的渲染层基于 Android &amp; iOS 原生效果
-                            <br/>最大程度保留了应用平台自身的用户体验</p>
-                    </div>
-                </div>
-                <div class="clear"></div>
-                <div class="code-show">
-                    <div class="code">
-                        <!-- weex source <template>
-  <div class="container">
-    <div class="logoContainer">
-      <image class="logo" src="https://t.cn/Rq9bcDm"></image>
-      <text class="desc">A framework for building Mobile cross-platform UI</text>
-    </div>
-    <div class="textContainer">
-        <text class="text">Hello weex</text>
+<body id="index" class="lang-cn">
+  
+  <script>
+    window.PAGE_TYPE = "index";
+    window.ROOT = "/"
+  </script>
+  <header id="header">
+  <div class="navbar">
+    <a id="logo" href="/cn/">
+      <img src="//img.alicdn.com/tps/TB1zBLaPXXXXXXeXXXXXXXXXXXX-121-59.svg" />
+    </a>
+    <div class="main-nav">
+      <ul class="links">
+        <li><a href="/cn/guide">教程</a></li>
+        <li><a href="/cn/references">手册</a></li>
+        <li><a href="/cn/faq.html">FAQ</a></li>
+        <li class="dropdown">
+            <a href="javascript:;">下载</a>
+            <ul class="dropdown-menu subnav">
+              <li>
+                <a href="/cn/playground.html">Playground</a>
+              </li>
+              <li>
+                <a href="https://www.npmjs.com/package/weex-devtool" target="_blank">Devtool</a>
+              </li>
+              <li>
+                <a href="https://www.npmjs.com/package/weexpack" target="_blank">Weexpack</a>
+              </li>
+              <li>
+                <a href="http://dotwe.org" target="_blank">Snippets</a>
+              </li>
+              <li>
+                <a href="https://market.weex-project.io/" target="_blank">Market</a>
+              </li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="info">
+        <li><a href="https://github.com/alibaba/weex/" target="_blank"><span class="btn-github iconfont icon-github"></span></a></li>
+      </ul>
+      <ul class="tools">
+        <li>
+          <div class="search">
+  <form id="search-form" class="search-form"> <!-- 搜索框相关 -->
+    <input type="text" id="search-input-header" name="q" results="0" placeholder="search..." class="form-control search-input" autocomplete="off" autocorrect="off"/>
+    <span class="iconfont icon-search"></span>
+  </form>
+  <div class="results-panel">
+  </div>
+</div>
+        </li>
+        <!--<li></li>-->
+      </ul>
     </div>
   </div>
-</template>
-
-
-<style>
-  .logoContainer {
-    width: 750px;
-    height: 500px;
-    align-items: center;
-    justify-content: center;
-    background-color: #0054DC;
-  }
-  .logo {
-    width: 378px;
-    height: 84px;
-  }
-  .desc {
-    margin-top: 40px;
-    font-size: 24px;
-    color: #ccc;
-  }
-  .textContainer {
-    width: 750px;
-    padding-top: 200px;
-    align-items: center;
-    justify-content: center;
-  }
-  .text {
-    font-size: 48px;
-  }
-</style>
-          --> <pre style='color:#000000;'><span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>template</span><span style='color:#a65700; '>></span>
-  <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>div</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"container"</span><span style='color:#a65700; '>></span>
-    <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>div</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"logoContainer"</span><span style='color:#a65700; '>></span>
-      <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>img</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"logo"</span><span style='color:#274796; '> </span><span style='color:#074726; '>src</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"https://t.cn/Rq9bcDm"</span><span style='color:#a65700; '>/></span>
-      <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>text</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"desc"</span><span style='color:#a65700; '>></span>...<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>text</span><span style='color:#a65700; '>></span>
-    <span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>div</span><span style='color:#a65700; '>></span>
-    <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>div</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"textContainer"</span><span style='color:#a65700; '>></span>
-      <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>text</span><span style='color:#274796; '> </span><span style='color:#074726; '>class</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"text"</span><span style='color:#a65700; '>></span>Hello weex<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>text</span><span style='color:#a65700; '>></span>
-    <span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>div</span><span style='color:#a65700; '>></span>
-  <span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>div</span><span style='color:#a65700; '>></span>
-<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>template</span><span style='color:#a65700; '>></span>
-<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>style</span><span style='color:#a65700; '>></span>
-  <span style='color:#808030; '>.</span>logoContainer <span style='color:#800080; '>{</span>
-    <span style='color:#bb7977; font-weight:bold; '>width</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>750</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span><span style='color:#bb7977; font-weight:bold; '>height</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>500</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span>
-    <span style='color:#bb7977; font-weight:bold; '>align-items</span><span style='color:#808030; '>:</span> <span style='color:#074726; '>center</span><span style='color:#800080; '>;</span> <span style='color:#008484; '>justify-content</span><span style='color:#808030; '>:</span> <span style='color:#074726; '>center</span><span style='color:#800080; '>;</span>
-    <span style='color:#bb7977; font-weight:bold; '>background-color</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>#</span><span style='color:#008000; '>0054DC</span><span style='color:#800080; '>;</span>
-  <span style='color:#800080; '>}</span>
-  <span style='color:#808030; '>.</span>logo <span style='color:#800080; '>{</span>
-    <span style='color:#bb7977; font-weight:bold; '>width</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>378px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>height</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>84px</span><span style='color:#800080; '>;</span>
-  <span style='color:#800080; '>}</span>
-  <span style='color:#808030; '>.</span>desc <span style='color:#800080; '>{</span>
-    <span style='color:#bb7977; font-weight:bold; '>margin-top</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>40</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>font-size</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>24</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>color</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>#</span><span style='color:#008000; '>ccc</span><span style='color:#800080; '>;</span>
-  <span style='color:#800080; '>}</span>
-  <span style='color:#808030; '>.</span>textContainer <span style='color:#800080; '>{</span>
-    <span style='color:#bb7977; font-weight:bold; '>width</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>750</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>padding-top</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>200</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span>
-    <span style='color:#bb7977; font-weight:bold; '>align-items</span><span style='color:#808030; '>:</span> <span style='color:#074726; '>center</span><span style='color:#800080; '>;</span><span style='color:#008484; '>justify-content</span><span style='color:#808030; '>:</span> <span style='color:#074726; '>center</span><span style='color:#800080; '>;</span>
-  <span style='color:#800080; '>}</span>
-  <span style='color:#808030; '>.</span>text <span style='color:#800080; '>{</span><span style='color:#bb7977; font-weight:bold; '>font-size</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>48</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span><span style='color:#800080; '>}</span>
-<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>style</span><span style='color:#a65700; '>></span>
-</pre>
-
-                    </div>
-                    <div class="show">
-                        <img src="../img/weex_show.png" alt="weex show" />
-                    </div>
-                </div>
-                <!-- code-show -->
-            </div>
-        </div>
-        <!-- white-bg -->
-        <div class="clear"></div>
-        <div class="footer-nav">
-
-          <div class="copy-right ">
-              <p>
-                  Released under <a href="http://www.apache.org/licenses/LICENSE-2.0.txt "> Apache License 2.0 </a>
-              </p>
-              <p>
-                  Copyright(c) 2016  <a href="http://www.alibabagroup.com/en/global/home
-        ">Alibaba Group</a>  &nbsp;&nbsp;&nbsp; Proudly Produced by <span style="color:#999999 " class="baichuan-text ">Alibaichuan</span> <img class="baichuan-icon
-        " src="../img/baichuan@3x.png " alt="aliBaichuan ">
-              </p>
+  <div id="mobile-nav">
+    <a id="logo" href="/cn/">
+      <img src="//img.alicdn.com/tps/TB1zBLaPXXXXXXeXXXXXXXXXXXX-121-59.svg" />
+    </a>
+    <a class="btn-menu"><span class="iconfont icon-nav"></span></a>
+  </div>
+</header>
+  <div id="sidebar" class="index-sidebar">
+  <div class="sidebar-menu">
+    
+      <ul class="main-nav">
+        <li>
+          <div class="search">
+  <form id="search-form" class="search-form"> <!-- 搜索框相关 -->
+    <input type="text" id="search-input-sidebar" name="q" results="0" placeholder="search..." class="form-control search-input" autocomplete="off" autocorrect="off"/>
+    <span class="iconfont icon-search"></span>
+  </form>
+  <div class="results-panel">
+  </div>
+</div>
+        </li>
+        <li>
+          <a class="" href="/cn/guide">
+            教程
+          </a>
+        </li>
+        <li>
+          <a class="" href="/cn/references">
+            手册
+          </a>
+        </li>
+        <li>
+          <a href="/cn/faq">
+            FAQ
+          </a>
+        </li>
+        <li>
+            <p>下载</p>
+            <ul class="subnav">
+              <li>
+                <a href="/cn/playground.html">Playground</a>
+              </li>
+              <li>
+                <a href="https://www.npmjs.com/package/weex-devtool" target="_blank">Devtool</a>
+              </li>
+              <li>
+                <a href="https://www.npmjs.com/package/weexpack" target="_blank">Weexpack</a>
+              </li>
+              <li>
+                <a href="http://dotwe.org" target="_blank">Snippets</a>
+              </li>
+              </li>
+              <li>
+                <a href="https://market.weex-project.io/" target="_blank">Market</a>
+              </li>
+            </ul>
+        </li>
+        <li>
+          <a href="https://github.com/alibaba/weex" target="_blank">
+            Github
+          </a>
+        </li>
+      </ul>
+    
+    <a class="btn-close-sidebar iconfont  icon-close"></a>
+  </div>
+</div>
+  <div class="scene header" style="background: #00BDFF;">
+  <div class="scene-container">
+    <div class="galaxy left">
+      <canvas width="560" height="560" id="left-canvas"></canvas>
+    </div>
+    <div class="galaxy right">
+      <canvas width="500" height="500" id="right-canvas"></canvas>
+    </div>
+    <div id="slider">
+  <div class="swiper-container swiper-container-horizontal">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background:url('//gw.alicdn.com/tps/TB1.5OBPXXXXXajaXXXXXXXXXXX-800-800.png') 50% 50% / contain no-repeat">
+        <div class="slide-content">
+          <h1 class="page-title">一套构建高性能、可扩展的原生应用跨平台开发方案</h1>
+          <div class="btn-group">
+            <a href="/cn/guide/index.html" class="button get-started">上手教程</a>
+            <a href="https://github.com/alibaba/weex/" class="button get-started" target="_blank">Github</a>
           </div>
+        </div>
       </div>
+    </div>
+    <!--<div class="swiper-button-next iconfont icon-arrow-small"></div>
+    <div class="swiper-button-prev iconfont icon-arrow-small"></div>-->
+  </div>
+</div>
+  </div>
+</div>
+<div class="scene edge overlength horizon">
+  <div class="scene-container">
+    <div class="textbox">
+      <h2>优势</h2>
+    </div>
+    <div class="sketch-content">
+      <div class="inner-box">
+        <img src="//gw.alicdn.com/tps/TB17ga7PXXXXXbnXXXXXXXXXXXX-120-121.svg" alt="Lightweight">
+        <h3>轻量</h3>
+        <span class="underline"></span>
+        <p>体积小、语法简单、易于掌握</p>
+      </div>
+      <div class="inner-box">
+        <img src="//gw.alicdn.com/tps/TB1BGSCPXXXXXb1aXXXXXXXXXXX-79-79.svg" alt="Extendable">
+        <h3>可扩展</h3>
+        <span class="underline"></span>
+        <p>可以横向扩展和定制原生组件和功能</p>
+      </div>
+      <div class="inner-box">
+        <img src="//img.alicdn.com/tps/TB1uMC9PXXXXXaFXXXXXXXXXXXX-80-69.svg" alt="High Performance">
+        <h3>高性能</h3>
+        <span class="underline"></span>
+        <p>对加载时间和资源占用深度优化，给你更好的体验</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-  </body>
-  <script src="../js/vendor/jquery.min.js "></script>
-<script src="../js/vendor/what-input.min.js "></script>
-<script src="../js/vendor/foundation.min.js "></script>
+<div class="scene feature">
+  <div class="scene-container">
+    <div class="feature-content">
+      <div class="left-text">
+        <h2>帮助你构建原生应用</h2>
+        <p>与 Web App、HTML5 App 或 hybrid App 不同，您可以使用 Weex 构建一个真正的原生应用。更贴心的是你的代码只需使用 HTML、CSS、JavaScript 可以构建原生应用，上手非常简单。但实际上，应用的底层是 Objective-C 或 Java， 同时，Weex 提供很多 native 组件或模块供开发人员使用。</p>
+      </div>
+      <div class="right-box">
+        <div class="imgbox phone-layer level1">
+        </div>
+        <div class="imgbox phone-layer level2">
+        </div>
+        <div class="imgbox phone-layer level3">
+        </div>
+        <div class="imgbox phone-layer level4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="scene cross-platform horizon">
+  <div class="scene-container">
+    <div class="textbox">
+      <h2>一次编写，多端运行</h2>
+      <p>Weex 提供强大的跨平台能力，可以使用相同的 API 开发 Web，Android 和 iOS 应用。 同时，我们对接口了丰富的扩展能力。 这样，当您需要扩展原生组件或模块时，这将非常方便。</p>
+    </div>
+    <div class="sketch-content">
+      <div class="inner-box imgbox ios"></div>
+      <div class="inner-box imgbox android"></div>
+      <div class="inner-box imgbox h5"></div>
+    </div>
+  </div>
+</div>
+
+<div class="scene supporting-vue horizon">
+  <div class="scene-container">
+    <div class="textbox">
+      <h2>支持 Vue 语法</h2>
+      <p>Weex 遵循 Web 标准，同时支持 vue.js 的语法。因此，您可以使用 vue.js 语法来开发应用程序。</p>
+    </div>
+    <div class="sketch-content imgbox">
+      <div class="imgbox"></div>
+    </div>
+  </div>
+</div>
+
+<div class="scene schematic horizon">
+  <div class="scene-container">
+    <div class="textbox">
+      <h2>工作原理</h2>
+      <p>Weex 是一个动态化的高扩展跨平台解决方案。 在 Weex 代码中，您可以使用 &lt;template&gt;，&lt;style&gt; 和 &lt;script&gt; 标签编写页面或组件，然后将它们转换为 JS bundle 以进行部署。当服务器返回给客户端 JS bundle 时，JS bundle 会被客户端的 JavaScript 引擎处理，并管理渲染 native 视图，调用原生 API 和用户交互。</p>
+    </div>
+    <div class="sketch-content imgbox">
+    </div>
+  </div>
+</div>
+
+<div class="scene users horizon overlength">
+  <div class="scene-container">
+    <div class="textbox">
+      <h2>谁在使用 Weex</h2>
+    </div>
+    <div class="sketch-content">
+      <div class="user-logo tmall-logo">
+        <h3>天猫</h3>
+        <div class="user-info">
+          <h4>天猫</h4>
+          <p>中国最大的 B2C 购物平台.</p>
+        </div>
+      </div>
+      <div class="user-logo aliyun-logo">
+        <h3>阿里云</h3>
+        <div class="user-info">
+          <h4>阿里云</h4>
+          <p>阿里巴巴集团旗下云计算业务，阿里云提供全面的全球云计算服务，为国际客户的在线业务和阿里巴巴自己的电子商务生态系统提供支持。</p>
+        </div>
+      </div>
+      <div class="user-logo taobao-logo">
+        <h3>淘宝</h3>
+        <div class="user-info">
+          <h4>淘宝</h4>
+          <p>中国最大的移动电子购物平台，展示数以亿计的产品与服务信息，为消费者提供多个种类的产品和服务。</p>
+        </div>
+      </div>
+      <div class="user-logo ding-logo">
+        <h3>钉钉</h3>
+        <div class="user-info">
+          <h4>钉钉</h4>
+          <p>阿里巴巴集团专为中小企业打造的沟通和协同平台。钉钉因中小企业而生，帮助中小企业通过系统化的解决方案（微应用），全方位提升中小企业沟通和协同效率。</p>
+        </div>
+      </div>
+      <div class="user-logo alibaba-logo">
+        <h3>1688</h3>
+        <div class="user-info">
+          <h4>1688</h4>
+          <p>中国领先的网上批发平台，覆盖普通商品、服装、电子产品、原材料、工业部件、农产品和化工产品等多个行业的买家和卖家。1688 为在阿里巴巴集团旗下零售市场经营业务的商家，提供了从本地批发商采购产品的渠道。</p>
+        </div>
+      </div>
+      <div class="user-logo cainiao-logo">
+        <h3>菜鸟裹裹</h3>
+        <div class="user-info">
+          <h4>菜鸟裹裹</h4>
+          <p>菜鸟裹裹是阿里巴巴旗下菜鸟网络推出的一款快递服务 APP，主要功能有：快递运单查询、预约寄快递、包裹自动跟踪、菜鸟驿站网点代收代寄。</p>
+        </div>
+      </div>
+      <div class="user-logo xiami-logo">
+        <h3>虾米</h3>
+        <div class="user-info">
+          <h4>虾米</h4>
+          <p>提供高品质音乐的个性化推荐服务，以及线下音乐活动等互动内容。</p>
+        </div>
+      </div>
+      <div class="user-logo youku-logo">
+        <h3>优酷</h3>
+        <div class="user-info">
+          <h4>优酷</h4>
+          <p>中国领先的视频服务平台，提供视频播放，视频发布，视频分享等服务。</p>
+        </div>
+      </div>
+    </div>
+    <!--<div class="more">
+      <a class="more" href="">More</a>
+    </div>-->
+  </div>
+</div>
+
+<div class="scene feedback horizon overlength">
+  <div class="scene-container">
+    <div class="textbox">
+      <h2>他们说</h2>
+    </div>
+    <div class="sketch-content">
+      <div class="user-feedback">
+        <img class="avatar" src="//img.alicdn.com/tps/TB1837aOVXXXXcJXXXXXXXXXXXX-640-640.jpg" alt="avatar">
+        <p class="user-name">陈天予</p>
+        <p class="user-title">众安保险技术总监</p>
+        <p class="user-say">“ Weex 不仅应用灵活、性能强大，而且能让前端开发者最大程度复用现有技术积累，帮助我们用最少成本设计全新的跨平台架构体系，并尽快进入实施阶段。”</p>
+      </div>
+      <div class="user-feedback">
+        <img class="avatar" src="//img.alicdn.com/tps/TB1.dHzOVXXXXcvapXXXXXXXXXX-337-337.jpg" alt="avatar">
+        <p class="user-name">林建锋</p>
+        <p class="user-title">饿了么大前端部负责人</p>
+        <p class="user-say">“ Weex 提供了媲美 HTML5 开发效率和 Native 的性能，对于类似我们这种迭代速度要求比较高的团队，几乎是目前最好的方案。”</p>
+      </div>
+      <div class="user-feedback">
+        <img class="avatar" src="//img.alicdn.com/tps/TB1zapVOVXXXXaCXpXXXXXXXXXX-640-640.jpg" alt="avatar">
+        <p class="user-name">黄泰成</p>
+        <p class="user-title">天猫技术专家</p>
+        <p class="user-say">“ Weex 作为轻量渲染引擎又提供了很方便的插件机制，让各个端可以把自己的能力发挥出来，充分发挥在天猫的业务上，并良好的支持双11。”</p>
+      </div>
+    </div>
+    <div class="go-2-doc">
+      <a href="/cn/guide/index.html" class="button get-started">上手教程 →</a>
+    </div>
+  </div>
+</div>
+<a href="javascript:;" id="back2top" class="back2top"><span class="iconfont icon-arrow-small"></span></a>
+<script src="/js/swiper.min.js"></script>
+
 <script>
-$(document).foundation();
-$('.top-bar-title').click(function(){
-    location = 'index.html'
-})
-if( location.pathname.indexOf('download.html') != -1  || location.pathname.indexOf('demo.html') != -1   ){
-    $('.top-bar').addClass('non-index')
-}
-$(document).scroll(function(){
-    if ( $(window).scrollTop() > 150){
-        $('.top-bar').addClass('fade');
-    }else{
-        $('.top-bar').removeClass('fade')
-    }
+var swiper = new Swiper('.swiper-container', {
+  nextButton: '.swiper-button-next',
+  prevButton: '.swiper-button-prev',
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: false,
+  autoplayDisableOnInteraction: false
 })
 </script>
+    
+  
+  <footer id="footer">
+  <div class="row clearfix">
+    <div class="ali-logo">
+      <img src="//gw.alicdn.com/tps/TB1Ef93PXXXXXaXXpXXXXXXXXXX-252-126.png" alt="Alibaba">
+    </div>
+    <div class="dropdown select-lang">
+      <a href="javascript:;" class="dropdown-toggle">
+        Language
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="/index.html">English</a>
+        </li>
+        <li>
+          <a href="/cn/index.html">中文</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <p><span>Released under </span><a href="">Apache License 2.0</a></p>
+  </div>
+  <div class="row clearfix">
+    <div class="cell"><span>Copyright(c) 2016 </span><a href="https://www.alibaba.com">Alibaba</a></div>
+    <div class="cell"><span>GroupMade by </span><a href="">阿里云UED AX</a></div>
+  </div>
+</footer>
+  <div style="display: none;">
+  <script src="//s95.cnzz.com/z_stat.php?id=1261102667&amp;web_id=1261102667" language="JavaScript"></script>
+</div>
 
-<script src="//s95.cnzz.com/z_stat.php?id=1261102667&web_id=1261102667" language="JavaScript"></script>
-
-  <script src='../js/index.js' ></script>
+  <script src="/js/reqwest.js"></script>
+  <script src="/js/velocity.js"></script>
+  <script src="/js/common.js"></script>
+</body>
 </html>
