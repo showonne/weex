@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>storage | Weex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;lt;template&amp;gt;  &amp;lt;div class=&quot;list&quot;&amp;gt;    &amp;lt;div class=&quot;group center&quot;&amp;gt;      &amp;lt;div class=&quot;panel&quot;&amp;gt;&amp;lt;text class=&quot;text&quot;&amp;gt;&amp;#123;&amp;#123;state&amp;#125;&amp;#125;&amp;lt;/text&amp;gt;&amp;lt;/div&amp;gt;    &amp;lt;/div">
+<meta property="og:type" content="website">
+<meta property="og:title" content="storage">
+<meta property="og:url" content="https://doranyun.github.io/examples/storage.html">
+<meta property="og:site_name" content="Weex">
+<meta property="og:description" content="&amp;lt;template&amp;gt;  &amp;lt;div class=&quot;list&quot;&amp;gt;    &amp;lt;div class=&quot;group center&quot;&amp;gt;      &amp;lt;div class=&quot;panel&quot;&amp;gt;&amp;lt;text class=&quot;text&quot;&amp;gt;&amp;#123;&amp;#123;state&amp;#125;&amp;#125;&amp;lt;/text&amp;gt;&amp;lt;/div&amp;gt;    &amp;lt;/div">
+<meta property="og:updated_time" content="2017-01-11T16:57:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="storage">
+<meta name="twitter:description" content="&amp;lt;template&amp;gt;  &amp;lt;div class=&quot;list&quot;&amp;gt;    &amp;lt;div class=&quot;group center&quot;&amp;gt;      &amp;lt;div class=&quot;panel&quot;&amp;gt;&amp;lt;text class=&quot;text&quot;&amp;gt;&amp;#123;&amp;#123;state&amp;#125;&amp;#125;&amp;lt;/text&amp;gt;&amp;lt;/div&amp;gt;    &amp;lt;/div">
+  
+    <link rel="alternate" href="/atom.xml" title="Weex" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="//gw.alicdn.com/tps/TB1XNqxPXXXXXcSXVXXXXXXXXXX-64-63.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/swiper.min.css">
+</head>
+
+<body id="example" class="lang-en">
+  
+  <script>
+    window.PAGE_TYPE = "example";
+    window.ROOT = "/"
+  </script>
+  <header id="header">
+  <div class="navbar">
+    <a id="logo" href="/">
+      <img src="//img.alicdn.com/tps/TB1zBLaPXXXXXXeXXXXXXXXXXXX-121-59.svg" />
+    </a>
+    <div class="main-nav">
+      <ul class="links">
+        <li><a href="/guide">Guide</a></li>
+        <li><a href="/references">References</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li class="dropdown">
+            <a href="javascript:;">Download</a>
+            <ul class="dropdown-menu subnav">
+              <li>
+                <a href="/playground.html">Playground</a>
+              </li>
+              <li>
+                <a href="https://www.npmjs.com/package/weex-devtool" target="_blank">Devtool</a>
+              </li>
+              <li>
+                <a href="https://www.npmjs.com/package/weexpack" target="_blank">Weexpack</a>
+              </li>
+              <li>
+                <a href="http://dotwe.org" target="_blank">Snippets</a>
+              </li>
+              <li>
+                <a href="https://market.weex-project.io/" target="_blank">Market</a>
+              </li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="info">
+        <li><a href="https://github.com/alibaba/weex/" target="_blank"><span class="btn-github iconfont icon-github"></span></a></li>
+      </ul>
+      <ul class="tools">
+        <li>
+          <div class="search">
+  <form id="search-form" class="search-form"> <!-- 搜索框相关 -->
+    <input type="text" id="search-input-header" name="q" results="0" placeholder="search..." class="form-control search-input" autocomplete="off" autocorrect="off"/>
+    <span class="iconfont icon-search"></span>
+  </form>
+  <div class="results-panel">
+  </div>
+</div>
+        </li>
+        <!--<li></li>-->
+      </ul>
+    </div>
+  </div>
+  <div id="mobile-nav">
+    <a id="logo" href="/">
+      <img src="//img.alicdn.com/tps/TB1zBLaPXXXXXXeXXXXXXXXXXXX-121-59.svg" />
+    </a>
+    <a class="btn-menu"><span class="iconfont icon-nav"></span></a>
+  </div>
+</header>
+  <div id="sidebar" class="">
+  <div class="sidebar-menu">
+    
+      <ul class="main-nav">
+        <li>
+          <div class="search">
+  <form id="search-form" class="search-form"> <!-- 搜索框相关 -->
+    <input type="text" id="search-input-sidebar" name="q" results="0" placeholder="search..." class="form-control search-input" autocomplete="off" autocorrect="off"/>
+    <span class="iconfont icon-search"></span>
+  </form>
+  <div class="results-panel">
+  </div>
+</div>
+        </li>
+        <li>
+          <a class="" href="/guide">
+            Guide
+          </a>
+        </li>
+        <li>
+          <a class="" href="/references">
+            References
+          </a>
+        </li>
+        <li>
+          <a href="/faq">
+            FAQ
+          </a>
+        </li>
+        <li>
+            <p>Download</p>
+            <ul class="subnav">
+              <li>
+                <a href="/playground.html">Playground</a>
+              </li>
+              <li>
+                <a href="https://www.npmjs.com/package/weex-devtool" target="_blank">Devtool</a>
+              </li>
+              <li>
+                <a href="https://www.npmjs.com/package/weexpack" target="_blank">Weexpack</a>
+              </li>
+              <li>
+                <a href="http://dotwe.org" target="_blank">Snippets</a>
+              </li>
+              </li>
+              <li>
+                <a href="https://market.weex-project.io/" target="_blank">Market</a>
+              </li>
+            </ul>
+        </li>
+        <li>
+          <a href="https://github.com/alibaba/weex" target="_blank">
+            Github
+          </a>
+        </li>
+      </ul>
+    
+    <a class="btn-close-sidebar iconfont  icon-close"></a>
+  </div>
+</div>
+  <div class="example-wrapper clearfix">
+  <div class="horizontal">
+    <h2>storage</h2>
+    <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"group center"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"panel"</span>&gt;</span><span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"text"</span>&gt;</span>&#123;&#123;state&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"group"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"panel"</span>&gt;</span><span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"text"</span> @<span class="attr">click</span>=<span class="string">"setItem"</span>&gt;</span>set<span class="tag">&lt;/<span class="name">text</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"panel"</span>&gt;</span><span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"text"</span> @<span class="attr">click</span>=<span class="string">"getItem"</span>&gt;</span>get<span class="tag">&lt;/<span class="name">text</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"panel"</span>&gt;</span><span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"text"</span> @<span class="attr">click</span>=<span class="string">"removeItem"</span>&gt;</span>remove<span class="tag">&lt;/<span class="name">text</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"panel"</span>&gt;</span><span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"text"</span> @<span class="attr">click</span>=<span class="string">"getAll"</span>&gt;</span>all<span class="tag">&lt;/<span class="name">text</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">const</span> storage = weex.requireModule(<span class="string">'storage'</span>)</div><div class="line">  <span class="keyword">const</span> modal = weex.requireModule(<span class="string">'modal'</span>)</div><div class="line"></div><div class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">    data () &#123;</div><div class="line">      <span class="keyword">return</span> &#123;</div><div class="line">        <span class="attr">keys</span>: <span class="string">'[]'</span>,</div><div class="line">        <span class="attr">length</span>: <span class="number">0</span>,</div><div class="line">        <span class="attr">state</span>: <span class="string">'----'</span></div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">methods</span>: &#123;</div><div class="line">      setItem () &#123;</div><div class="line">        storage.setItem(<span class="string">'name'</span>, <span class="string">'Hanks'</span>, event =&gt; &#123;</div><div class="line">          <span class="keyword">this</span>.state = <span class="string">'set success'</span></div><div class="line">          <span class="built_in">console</span>.log(<span class="string">'set success'</span>)</div><div class="line">        &#125;)</div><div class="line">      &#125;,</div><div class="line">      getItem () &#123;</div><div class="line">        storage.getItem(<span class="string">'name'</span>, event =&gt; &#123;</div><div class="line">          <span class="built_in">console</span>.log(<span class="string">'get value:'</span>, event.data)</div><div class="line">          <span class="keyword">this</span>.state = <span class="string">'value: '</span> + event.data</div><div class="line">        &#125;)</div><div class="line">      &#125;,</div><div class="line">      removeItem () &#123;</div><div class="line">        storage.removeItem(<span class="string">'name'</span>, event =&gt; &#123;</div><div class="line">          <span class="built_in">console</span>.log(<span class="string">'delete value:'</span>, event.data)</div><div class="line">          <span class="keyword">this</span>.state = <span class="string">'deleted'</span></div><div class="line">        &#125;)</div><div class="line">      &#125;,</div><div class="line">      getAll () &#123;</div><div class="line">        storage.getAllKeys(<span class="function"><span class="params">event</span> =&gt;</span> &#123;</div><div class="line">          <span class="comment">// modal.toast(&#123; message: event.result &#125;)</span></div><div class="line">          <span class="keyword">if</span> (event.result === <span class="string">'success'</span>) &#123;</div><div class="line">            modal.toast(&#123;</div><div class="line">              <span class="attr">message</span>: <span class="string">'props: '</span> + event.data.join(<span class="string">', '</span>)</div><div class="line">            &#125;)</div><div class="line">          &#125;</div><div class="line">        &#125;)</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="undefined"></span></div><div class="line">  .panel &#123;</div><div class="line">    height: 100px;</div><div class="line">    flex-direction: column;</div><div class="line">    justify-content: center;</div><div class="line">    border-width: 2px;</div><div class="line">    border-style: solid;</div><div class="line">    border-color: rgb(162, 217, 192);</div><div class="line">    background-color: rgba(162, 217, 192, 0.2);</div><div class="line">  &#125;</div><div class="line">  .group &#123;</div><div class="line">    flex-direction: row;</div><div class="line">    justify-content: space-between;</div><div class="line">    width: 650px;</div><div class="line">    margin-left: 50px;</div><div class="line">    margin-top: 50px;</div><div class="line">    margin-bottom: 50px;</div><div class="line">  &#125;</div><div class="line">  .center &#123;</div><div class="line">    justify-content: center;</div><div class="line">  &#125;</div><div class="line">  .text &#123;</div><div class="line">    font-size: 50px;</div><div class="line">    text-align: center;</div><div class="line">    padding-left: 25px;</div><div class="line">    padding-right: 25px;</div><div class="line">    color: #41B883;</div><div class="line">  &#125;</div><div class="line">  .small &#123;</div><div class="line">    font-size: 32px;</div><div class="line">    padding-left: 35px;</div><div class="line">    padding-right: 35px;</div><div class="line">    color: #41B883;</div><div class="line">  &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>      
+  </div>
+  <div class="horizontal phone">
+    <div class="mock-phone">
+      <div class="inner">
+        <iframe frameborder="0" src="about:blank" id="iframe">
+        </iframe>
+      </div>
+      <div class="camera"></div>
+      <div class="earpiece"></div>
+      <div class="home-btn"></div>
+    </div>
+  </div>
+  <div class="horizontal qrcode">
+    <div id="qrcode-img"></div>
+    <p>Playground Scan</p>
+    <p>目前还未提供 Playground 正式版下载，需要手动 build playground。</p>
+  </div>
+</div>
+<script>
+  var WEB_BUNDLE_URL = location.origin + ROOT + 'js/examples/' + 'storage' + '.web.js'
+  var NATIVE_BUNDLE_URL = location.origin + ROOT + 'js/examples/' + 'storage' + '.weex.js'
+</script>
+
+<script src="/js/qrcode.min.js"></script>
+<script src="/js/example.js"></script>
+
+<script>
+var qrcode = new QRCode(document.getElementById("qrcode-img"), {
+    text: NATIVE_BUNDLE_URL,
+    width: 150,
+    height: 150,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});
+</script>
+
+  
+  <footer id="footer">
+  <div class="row clearfix">
+    <div class="ali-logo">
+      <img src="//gw.alicdn.com/tps/TB1Ef93PXXXXXaXXpXXXXXXXXXX-252-126.png" alt="Alibaba">
+    </div>
+    <div class="dropdown select-lang">
+      <a href="javascript:;" class="dropdown-toggle">
+        Language
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="/examples/storage.html">English</a>
+        </li>
+        <li>
+          <a href="/cn/examples/storage.html">中文</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <p><span>Released under </span><a href="">Apache License 2.0</a></p>
+  </div>
+  <div class="row clearfix">
+    <div class="cell"><span>Copyright(c) 2016 </span><a href="https://www.alibaba.com">Alibaba</a></div>
+    <div class="cell"><span>GroupMade by </span><a href="">阿里云UED AX</a></div>
+  </div>
+</footer>
+  <div style="display: none;">
+  <script src="//s95.cnzz.com/z_stat.php?id=1261102667&amp;web_id=1261102667" language="JavaScript"></script>
+</div>
+
+  <script src="/js/reqwest.js"></script>
+  <script src="/js/velocity.js"></script>
+  <script src="/js/common.js"></script>
+</body>
+</html>

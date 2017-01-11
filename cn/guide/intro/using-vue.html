@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>使用 Vue 开发 Weex 页面 | Weex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="使用 Vue 开发 Weex 页面Vue &amp;amp; Weex 介绍Vue.js 是 Evan You 开发的渐进式 JavaScript 框架，在易用性、灵活性和性能等方面都非常优秀。开发者能够通过撰写 *.vue 文件，基于 &amp;lt;template&amp;gt;, &amp;lt;style&amp;gt;, &amp;lt;script&amp;gt; 快速构建组件化的 web 应用。
+
+Vue.js 在 2016 年 10">
+<meta property="og:type" content="website">
+<meta property="og:title" content="使用 Vue 开发 Weex 页面">
+<meta property="og:url" content="https://doranyun.github.io/cn/guide/intro/using-vue.html">
+<meta property="og:site_name" content="Weex">
+<meta property="og:description" content="使用 Vue 开发 Weex 页面Vue &amp;amp; Weex 介绍Vue.js 是 Evan You 开发的渐进式 JavaScript 框架，在易用性、灵活性和性能等方面都非常优秀。开发者能够通过撰写 *.vue 文件，基于 &amp;lt;template&amp;gt;, &amp;lt;style&amp;gt;, &amp;lt;script&amp;gt; 快速构建组件化的 web 应用。
+
+Vue.js 在 2016 年 10">
+<meta property="og:image" content="https://doranyun.github.io//cn.vuejs.org/images/vue-component.png">
+<meta property="og:updated_time" content="2017-01-11T16:57:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用 Vue 开发 Weex 页面">
+<meta name="twitter:description" content="使用 Vue 开发 Weex 页面Vue &amp;amp; Weex 介绍Vue.js 是 Evan You 开发的渐进式 JavaScript 框架，在易用性、灵活性和性能等方面都非常优秀。开发者能够通过撰写 *.vue 文件，基于 &amp;lt;template&amp;gt;, &amp;lt;style&amp;gt;, &amp;lt;script&amp;gt; 快速构建组件化的 web 应用。
+
+Vue.js 在 2016 年 10">
+<meta name="twitter:image" content="https://doranyun.github.io//cn.vuejs.org/images/vue-component.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Weex" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="//gw.alicdn.com/tps/TB1XNqxPXXXXXcSXVXXXXXXXXXX-64-63.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/swiper.min.css">
+</head>
+
+<body id="guide" class="lang-cn">
+  
+  <script>
+    window.PAGE_TYPE = "guide";
+    window.ROOT = "/"
+  </script>
+  <header id="header">
+  <div class="navbar">
+    <a id="logo" href="/cn/">
+      <img src="//img.alicdn.com/tps/TB1zBLaPXXXXXXeXXXXXXXXXXXX-121-59.svg" />
+    </a>
+    <div class="main-nav">
+      <ul class="links">
+        <li><a href="/cn/guide">教程</a></li>
+        <li><a href="/cn/references">手册</a></li>
+        <li><a href="/cn/faq.html">FAQ</a></li>
+        <li class="dropdown">
+            <a href="javascript:;">下载</a>
+            <ul class="dropdown-menu subnav">
+              <li>
+                <a href="/cn/playground.html">Playground</a>
+              </li>
+              <li>
+                <a href="https://www.npmjs.com/package/weex-devtool" target="_blank">Devtool</a>
+              </li>
+              <li>
+                <a href="https://www.npmjs.com/package/weexpack" target="_blank">Weexpack</a>
+              </li>
+              <li>
+                <a href="http://dotwe.org" target="_blank">Snippets</a>
+              </li>
+              <li>
+                <a href="https://market.weex-project.io/" target="_blank">Market</a>
+              </li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="info">
+        <li><a href="https://github.com/alibaba/weex/" target="_blank"><span class="btn-github iconfont icon-github"></span></a></li>
+      </ul>
+      <ul class="tools">
+        <li>
+          <div class="search">
+  <form id="search-form" class="search-form"> <!-- 搜索框相关 -->
+    <input type="text" id="search-input-header" name="q" results="0" placeholder="search..." class="form-control search-input" autocomplete="off" autocorrect="off"/>
+    <span class="iconfont icon-search"></span>
+  </form>
+  <div class="results-panel">
+  </div>
+</div>
+        </li>
+        <!--<li></li>-->
+      </ul>
+    </div>
+  </div>
+  <div id="mobile-nav">
+    <a id="logo" href="/cn/">
+      <img src="//img.alicdn.com/tps/TB1zBLaPXXXXXXeXXXXXXXXXXXX-121-59.svg" />
+    </a>
+    <a class="btn-menu"><span class="iconfont icon-nav"></span></a>
+  </div>
+</header>
+  <div id="sidebar" class="">
+  <div class="sidebar-menu">
+    
+      <div class="search">
+  <form id="search-form" class="search-form"> <!-- 搜索框相关 -->
+    <input type="text" id="search-input-sidebar" name="q" results="0" placeholder="search..." class="form-control search-input" autocomplete="off" autocorrect="off"/>
+    <span class="iconfont icon-search"></span>
+  </form>
+  <div class="results-panel">
+  </div>
+</div>
+      
+
+
+<div class="summary">
+  <h2 class="part-title">
+    
+      教程
+    
+  </h2>
+  <ul class="doc-summary">
+    
+    
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+   
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/cn/guide/index.html" class="sidebar-link  ">快速上手</a></h3>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/cn/guide/dev-with-weexpack.html" class="sidebar-link  ">构建全新应用</a></h3>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/cn/guide/integrate-to-your-app.html" class="sidebar-link  ">集成 Weex 到已有应用</a></h3>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/cn/guide/intro/index.html" class="sidebar-link">优势介绍</a></h3>
+          
+            <ul class="chapter">
+              
+                <li>
+                  <a href="/cn/guide/intro/index.html" class="sidebar-link  ">工作原理</a>
+                </li>
+              
+                <li>
+                  <a href="/cn/guide/intro/web-dev-experience.html" class="sidebar-link  ">Web 开发体验</a>
+                </li>
+              
+                <li>
+                  <a href="/cn/guide/intro/using-vue.html" class="sidebar-link current ">使用 Vue 开发 Weex 页面</a>
+                </li>
+              
+                <li>
+                  <a href="/cn/guide/intro/write-once.html" class="sidebar-link  ">一次撰写，多端运行</a>
+                </li>
+              
+                <li>
+                  <a href="/cn/guide/intro/app-architecture.html" class="sidebar-link  ">用 Weex 构建移动应用</a>
+                </li>
+              
+                <li>
+                  <a href="/cn/guide/intro/page-architecture.html" class="sidebar-link  ">Weex 页面结构</a>
+                </li>
+              
+            </ul>
+          
+        
+      </li>
+    
+    
+    
+      <li>
+        <h3 class="chapter-title"><a href="/cn/v-0.10/guide/index.html" class="sidebar-link">Legacy</a></h3>
+      </li>
+    
+  </ul>
+</div>
+    
+    <a class="btn-close-sidebar iconfont  icon-close"></a>
+  </div>
+</div>
+  <div class="article-wrapper page-layout">
+  <div class="doc-nav">
+    
+
+
+<div class="summary">
+  <h2 class="part-title">
+    
+      教程
+    
+  </h2>
+  <ul class="doc-summary">
+    
+    
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+      
+      
+        
+      
+    
+   
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/cn/guide/index.html" class="sidebar-link  ">快速上手</a></h3>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/cn/guide/dev-with-weexpack.html" class="sidebar-link  ">构建全新应用</a></h3>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/cn/guide/integrate-to-your-app.html" class="sidebar-link  ">集成 Weex 到已有应用</a></h3>
+          
+        
+      </li>
+    
+      <li>
+        
+          <h3 class="chapter-title"><a href="/cn/guide/intro/index.html" class="sidebar-link">优势介绍</a></h3>
+          
+            <ul class="chapter">
+              
+                <li>
+                  <a href="/cn/guide/intro/index.html" class="sidebar-link  ">工作原理</a>
+                </li>
+              
+                <li>
+                  <a href="/cn/guide/intro/web-dev-experience.html" class="sidebar-link  ">Web 开发体验</a>
+                </li>
+              
+                <li>
+                  <a href="/cn/guide/intro/using-vue.html" class="sidebar-link current ">使用 Vue 开发 Weex 页面</a>
+                </li>
+              
+                <li>
+                  <a href="/cn/guide/intro/write-once.html" class="sidebar-link  ">一次撰写，多端运行</a>
+                </li>
+              
+                <li>
+                  <a href="/cn/guide/intro/app-architecture.html" class="sidebar-link  ">用 Weex 构建移动应用</a>
+                </li>
+              
+                <li>
+                  <a href="/cn/guide/intro/page-architecture.html" class="sidebar-link  ">Weex 页面结构</a>
+                </li>
+              
+            </ul>
+          
+        
+      </li>
+    
+    
+    
+      <li>
+        <h3 class="chapter-title"><a href="/cn/v-0.10/guide/index.html" class="sidebar-link">Legacy</a></h3>
+      </li>
+    
+  </ul>
+</div>
+  </div>
+  
+
+<article class="article article-type-guide">
+  <div class="article-entry" itemprop="articleBody">
+    <header class="article-header">
+  
+    
+      <h1 class="article-title" itemprop="name">
+        使用 Vue 开发 Weex 页面
+      </h1>
+    
+  
+  <time class="article-date" datetime="2017-01-11T16:57:10.000Z">Updated time: 12/01/2017</time>
+</header>
+    <h1 id="使用-Vue-开发-Weex-页面"><a href="#使用-Vue-开发-Weex-页面" class="headerlink" title="使用 Vue 开发 Weex 页面"></a>使用 Vue 开发 Weex 页面</h1><h2 id="Vue-amp-Weex-介绍"><a href="#Vue-amp-Weex-介绍" class="headerlink" title="Vue &amp; Weex 介绍"></a>Vue &amp; Weex 介绍</h2><p><a href="https://vuejs.org/" target="_blank" rel="external">Vue.js</a> 是 Evan You 开发的渐进式 JavaScript 框架，在易用性、灵活性和性能等方面都非常优秀。开发者能够通过撰写 <code>*.vue</code> 文件，基于 <code>&lt;template&gt;</code>, <code>&lt;style&gt;</code>, <code>&lt;script&gt;</code> 快速构建组件化的 web 应用。</p>
+<p><img src="//cn.vuejs.org/images/vue-component.png" alt="a vue file"></p>
+<p>Vue.js 在 2016 年 10 月正式发布了 2.0 版本，该版本加入了 Virtual-DOM 和预编译器的设计，使得该框架在运行时能够脱离 HTML 和 CSS 解析，只依赖 JavaScript；同时 Virtual-DOM 也使得 Vue 2.x 渲染成原生 UI 成为了可能。</p>
+<p><a href="https://weex-project.io/" target="_blank" rel="external">Weex</a> 是一套简单易用的跨平台开发方案，能以 Web 的开发体验构建高性能、可扩展的原生应用。 Weex 与 Vue 有官方合作，支持将 Vue 2.x 作为内置的前端框架，Vue 也借此具备了开发原生应用的能力。</p>
+<h2 id="尝鲜体验"><a href="#尝鲜体验" class="headerlink" title="尝鲜体验"></a>尝鲜体验</h2><blockquote>
+<p>开始之前，希望你能对 Weex 和 Vue 有基本的了解，推荐阅读 <a href="../index.html">Weex Tutorial</a> 和 <a href="https://vuejs.org/v2/guide/" target="_blank" rel="external">Vue Introduction</a> 了解更多信息。</p>
+</blockquote>
+<h3 id="快速创建项目"><a href="#快速创建项目" class="headerlink" title="快速创建项目"></a>快速创建项目</h3><p>Weex 官方提供了 <a href="https://github.com/weexteam/weex-toolkit" target="_blank" rel="external">weex-toolkit</a> 的脚手架工具来辅助开发和调试。</p>
+<p>首先安装 <code>weex-toolkit</code> 工具：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">npm install weex-toolkit@beta -g</div></pre></td></tr></table></figure>
+<blockquote>
+<p>注：目前 weex-toolkit 仅在 beta 版中才支持初始化 Vue 项目，使用前请确认版本是否正确。</p>
+</blockquote>
+<p>然后初始化 Weex 项目：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">weex init awesome-project</div></pre></td></tr></table></figure>
+<p>执行完命令后，在 <code>awesome-project</code> 目录中就创建了一个使用 Weex 和 Vue 的模板项目，生成的项目功能和用法可以参考其 package.json 和 README 。</p>
+<h2 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h2><p>在创建了项目并且配置好了开发环境之后，我们就可以开始写代码了。</p>
+<p>虽然开发的是原生应用，但是代码写起来和 Web 中并没什么不一样。你可以选择自己喜欢的前端开发环境、可以写 <code>.vue</code> 文件、也可以直接写 javascript 文件、可以使用 ES6+ 、可以使用发布在 npm 上的模块、可以扩展 Weex 的组件或者模块。</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>Vue.js 最初是为 Web 设计的，虽然可以基于 Weex 开发移动应用，但是 Web 开发和原生开发毕竟不同，在功能和开发体验上都有一些差异，这些差异从本质上讲是原生开发平台和 Web 平台之间的差异，Weex 正在努力缩小这个差异的范围。</p>
+<p>参考文章<a href="../../references/vue/index.html">《Vue 2.x 在 Weex 和 Web 中的差异》</a>了解存在差异的原因和细节。</p>
+<h3 id="使用其他工具库"><a href="#使用其他工具库" class="headerlink" title="使用其他工具库"></a>使用其他工具库</h3><p>Vue.js 也有较多周边技术产品，如 <a href="https://github.com/vuejs/vuex" target="_blank" rel="external">Vuex</a> 和 <a href="https://github.com/vuejs/vue-router" target="_blank" rel="external">vue-router</a> 等，这些库也可以在 Weex 中很好的工作。</p>
+<p>关于 Vuex 和 vue-louter 的使用方法，可以参考<a href="../../references/vue/difference-of-vuex.html">《在 Weex 项目中使用 Vuex 和 vue-router》</a>。</p>
+<blockquote>
+<p>我们基于 Weex 和 Vue 开发了一个的完整项目 <a href="https://github.com/weexteam/weex-hackernews" target="_blank" rel="external">weex-hackernews</a> ，引入了包含 Vue 2.x 的 WeexSDK，创建了三端的项目和基本的编译配置。在项目中使用了 Vuex 和 vue-router ，能够实现同一份代码，在 iOS、Android、Web 下都能完整地工作。</p>
+</blockquote>
+<h3 id="扩展-Weex"><a href="#扩展-Weex" class="headerlink" title="扩展 Weex"></a>扩展 Weex</h3><p>Weex 内置了一些通用的组件和模块，可以满足基本上使用需求。为了控制 SDK 的体积和保持框架的通用性，我们会谨慎地选择内置的组件和模块，并不会包罗万象将所有功能都封装进 SDK。不过我们提供了额外的组件市场，在其中将能找到满足不同需求、各式各样的组件和模块，此外 Weex 也具备横向扩展的能力，开发者可以自行定制和扩展 Weex 组件和模块。</p>
+<p>Weex 的底层设计比较灵活，除了组件和模块以外，开发者甚至可以定制 Weex 内置的前端框架，Vue 2.x 就是一个成功的例子。</p>
+<p>可以阅读以下文档了解更多信息：</p>
+<ul>
+<li><a href="../../references/advanced/index.html">《拓展 iOS》</a></li>
+<li><a href="../../references/advanced/extend-to-android.html">《Android 扩展》</a></li>
+<li><a href="../../references/advanced/extend-to-html5.html">《如何扩展 Weex Web 端的组件和模块》</a></li>
+<li><a href="../../references/advanced/extend-to-jsfm.html">《定制自己的 JS Framework》</a></li>
+</ul>
+<h2 id="Vue-2-x-在-Weex-中的特色功能"><a href="#Vue-2-x-在-Weex-中的特色功能" class="headerlink" title="Vue 2.x 在 Weex 中的特色功能"></a>Vue 2.x 在 Weex 中的特色功能</h2><p>我想，你一定对 <strong>Vue 为什么能渲染成原生页面</strong> 、<strong>Weex 为什么能将内核切换成 Vue</strong> 心存好奇。如果你对这些细节感兴趣，可以阅读这篇文章 <del><a href="./index.html">《how it works》</a></del></p>
+<h3 id="流式渲染"><a href="#流式渲染" class="headerlink" title="流式渲染"></a>流式渲染</h3><p>在 Weex 中，我们可以通过 <code>&lt;foo append=&quot;tree|node&quot;&gt;</code> 的方式定义页面首次渲染时的渲染颗粒度，这让开发者有机会根据界面的复杂度和业务需求对首次渲染过程进行定制。<code>append=&quot;tree&quot;</code> 表示整个结点包括其所有子结点全部生成完毕之后，才会一次性渲染到界面上；而 <code>append=&quot;node&quot;</code> 则表示该结点会先渲染在界面上作为一个容器，其子结点会稍后做进一步渲染。</p>
+<!-- dotwe demo -->
+<h3 id="表单控件绑定"><a href="#表单控件绑定" class="headerlink" title="表单控件绑定"></a>表单控件绑定</h3><p>在 Weex 中，我们针对 <code>&lt;input&gt;</code> 和 <code>&lt;textarea&gt;</code> 这两个表单控件提供了和 web 体验相同的 <code>v-model</code> 指令。通过 <code>&lt;input v-model=&quot;message&quot;&gt;</code> 或 <code>&lt;textarea v-model=&quot;message&quot;&gt;</code>，开发者可以把数据 <code>message</code> 的值自动展示在文本框上，同时用户修改了文本框的值的时候，数据 <code>message</code> 会自动被更新。</p>
+<!-- dotwe demo -->
+<h3 id="多页面上下文隔离"><a href="#多页面上下文隔离" class="headerlink" title="多页面上下文隔离"></a>多页面上下文隔离</h3><p>如 Weex 工作原理文中所述，所有 Weex 的 JS bundle 公用一个 JavaScript 内核实例。所以如何能够让多个 JS bundle 中使用的 Vue 是完全隔离的，并且其中一个页面对 Vue 进行扩展或改写不会影响到其它页面就变成了一个问题，通过 Weex 和 Vue 双方的协作，这一问题已经得以解决。大家可以放心使用。</p>
+<!-- html5 apis -->
+<h3 id="lt-transition-gt-过渡状态"><a href="#lt-transition-gt-过渡状态" class="headerlink" title="&lt;transition&gt; 过渡状态"></a><code>&lt;transition&gt;</code> 过渡状态</h3><p>Weex 支持了 Vue 2.x 中经典的 <code>&lt;transition&gt;</code> 写法，开发者可以通过 <code>&lt;transition&gt;</code> 轻松定义一个界面在两种状态中的过渡方式。</p>
+
+  </div>
+  
+</article>
+</div>
+  
+  <footer id="footer">
+  <div class="row clearfix">
+    <div class="ali-logo">
+      <img src="//gw.alicdn.com/tps/TB1Ef93PXXXXXaXXpXXXXXXXXXX-252-126.png" alt="Alibaba">
+    </div>
+    <div class="dropdown select-lang">
+      <a href="javascript:;" class="dropdown-toggle">
+        Language
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="/guide/intro/using-vue.html">English</a>
+        </li>
+        <li>
+          <a href="/cn/guide/intro/using-vue.html">中文</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <p><span>Released under </span><a href="">Apache License 2.0</a></p>
+  </div>
+  <div class="row clearfix">
+    <div class="cell"><span>Copyright(c) 2016 </span><a href="https://www.alibaba.com">Alibaba</a></div>
+    <div class="cell"><span>GroupMade by </span><a href="">阿里云UED AX</a></div>
+  </div>
+</footer>
+  <div style="display: none;">
+  <script src="//s95.cnzz.com/z_stat.php?id=1261102667&amp;web_id=1261102667" language="JavaScript"></script>
+</div>
+
+  <script src="/js/reqwest.js"></script>
+  <script src="/js/velocity.js"></script>
+  <script src="/js/common.js"></script>
+</body>
+</html>
