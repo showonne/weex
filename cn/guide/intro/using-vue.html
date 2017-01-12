@@ -16,7 +16,7 @@ Vue.js 在 2016 年 10">
 
 Vue.js 在 2016 年 10">
 <meta property="og:image" content="https://weex-project.io//cn.vuejs.org/images/vue-component.png">
-<meta property="og:updated_time" content="2017-01-12T07:26:17.000Z">
+<meta property="og:updated_time" content="2017-01-12T09:37:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Vue 开发 Weex 页面">
 <meta name="twitter:description" content="使用 Vue 开发 Weex 页面Vue &amp;amp; Weex 介绍Vue.js 是 Evan You 开发的渐进式 JavaScript 框架，在易用性、灵活性和性能等方面都非常优秀。开发者能够通过撰写 *.vue 文件，基于 &amp;lt;template&amp;gt;, &amp;lt;style&amp;gt;, &amp;lt;script&amp;gt; 快速构建组件化的 web 应用。
@@ -376,7 +376,7 @@ Vue.js 在 2016 年 10">
       </h1>
     
   
-  <time class="article-date" datetime="2017-01-12T07:26:17.000Z">Updated time: 12/01/2017</time>
+  <time class="article-date" datetime="2017-01-12T09:37:05.000Z">Updated time: 12/01/2017</time>
 </header>
     <h1 id="使用-Vue-开发-Weex-页面"><a href="#使用-Vue-开发-Weex-页面" class="headerlink" title="使用 Vue 开发 Weex 页面"></a>使用 Vue 开发 Weex 页面</h1><h2 id="Vue-amp-Weex-介绍"><a href="#Vue-amp-Weex-介绍" class="headerlink" title="Vue &amp; Weex 介绍"></a>Vue &amp; Weex 介绍</h2><p><a href="https://vuejs.org/" target="_blank" rel="external">Vue.js</a> 是 Evan You 开发的渐进式 JavaScript 框架，在易用性、灵活性和性能等方面都非常优秀。开发者能够通过撰写 <code>*.vue</code> 文件，基于 <code>&lt;template&gt;</code>, <code>&lt;style&gt;</code>, <code>&lt;script&gt;</code> 快速构建组件化的 web 应用。</p>
 <p><img src="//cn.vuejs.org/images/vue-component.png" alt="a vue file"></p>
@@ -407,12 +407,12 @@ Vue.js 在 2016 年 10">
 <p>Weex 的底层设计比较灵活，除了组件和模块以外，开发者甚至可以定制 Weex 内置的前端框架，Vue 2.x 就是一个成功的例子。</p>
 <p>可以阅读以下文档了解更多信息：</p>
 <ul>
-<li><a href="../../references/advanced/index.html">《拓展 iOS》</a></li>
+<li><a href="../../references/advanced/index.html">《iOS 扩展》</a></li>
 <li><a href="../../references/advanced/extend-to-android.html">《Android 扩展》</a></li>
-<li><a href="../../references/advanced/extend-to-html5.html">《如何扩展 Weex Web 端的组件和模块》</a></li>
+<li><a href="../../references/advanced/extend-to-html5.html">《HTML5 扩展》</a></li>
 <li><a href="../../references/advanced/extend-to-jsfm.html">《定制自己的 JS Framework》</a></li>
 </ul>
-<h2 id="Vue-2-x-在-Weex-中的特色功能"><a href="#Vue-2-x-在-Weex-中的特色功能" class="headerlink" title="Vue 2.x 在 Weex 中的特色功能"></a>Vue 2.x 在 Weex 中的特色功能</h2><p>我想，你一定对 <strong>Vue 为什么能渲染成原生页面</strong> 、<strong>Weex 为什么能将内核切换成 Vue</strong> 心存好奇。如果你对这些细节感兴趣，可以阅读这篇文章 <del><a href="./index.html">《how it works》</a></del></p>
+<h2 id="Vue-2-x-在-Weex-中的特色功能"><a href="#Vue-2-x-在-Weex-中的特色功能" class="headerlink" title="Vue 2.x 在 Weex 中的特色功能"></a>Vue 2.x 在 Weex 中的特色功能</h2><p>我想，你一定对 <strong>Vue 为什么能渲染成原生页面</strong> 、<strong>Weex 为什么能将内核切换成 Vue</strong> 心存好奇。如果你对这些细节感兴趣，可以阅读这篇文章 <a href="./index.html">《how it works》</a>。</p>
 <h3 id="流式渲染"><a href="#流式渲染" class="headerlink" title="流式渲染"></a>流式渲染</h3><p>在 Weex 中，我们可以通过 <code>&lt;foo append=&quot;tree|node&quot;&gt;</code> 的方式定义页面首次渲染时的渲染颗粒度，这让开发者有机会根据界面的复杂度和业务需求对首次渲染过程进行定制。<code>append=&quot;tree&quot;</code> 表示整个结点包括其所有子结点全部生成完毕之后，才会一次性渲染到界面上；而 <code>append=&quot;node&quot;</code> 则表示该结点会先渲染在界面上作为一个容器，其子结点会稍后做进一步渲染。</p>
 <!-- dotwe demo -->
 <h3 id="表单控件绑定"><a href="#表单控件绑定" class="headerlink" title="表单控件绑定"></a>表单控件绑定</h3><p>在 Weex 中，我们针对 <code>&lt;input&gt;</code> 和 <code>&lt;textarea&gt;</code> 这两个表单控件提供了和 web 体验相同的 <code>v-model</code> 指令。通过 <code>&lt;input v-model=&quot;message&quot;&gt;</code> 或 <code>&lt;textarea v-model=&quot;message&quot;&gt;</code>，开发者可以把数据 <code>message</code> 的值自动展示在文本框上，同时用户修改了文本框的值的时候，数据 <code>message</code> 会自动被更新。</p>
