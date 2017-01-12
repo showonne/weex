@@ -228,13 +228,13 @@
      */
     function setMaxHeight () {
       if(window.innerWidth < 1100 
-        && window.innerWidth >= 800
+        && window.innerWidth >= 700
         && window.innerWidth / window.innerHeight >= 0.7) {
-
+          console.log('aa')
         var scenes = document.querySelectorAll('.scene')
 
         scenes.forEach(function (i) {
-          i.style.maxHeight = window.innerWidth * 0.65 + 'px'
+          i.style.maxHeight = window.innerWidth * 0.7 + 'px'
         })
       }
     }
@@ -451,8 +451,8 @@
         threshold: -30,
         appear: function (el, offset) {
           var layerSequence = [
-            { e: img_level_4, p: { translateX: '5px', translateY: '-95px' }, o: { easing: 'ease-out', duration: 900 } },
-            { e: img_level_3, p: { translateX: '5px', translateY: '-65px' }, o: { easing: 'ease-out', duration: 700, sequenceQueue: false } },
+            { e: img_level_4, p: { translateX: '-20px', translateY: '-112px' }, o: { easing: 'ease-out', duration: 900 } },
+            { e: img_level_3, p: { translateX: '-10px', translateY: '-75px' }, o: { easing: 'ease-out', duration: 700, sequenceQueue: false } },
             { e: img_level_2, p: { translateX: '5px', translateY: '-35px' }, o: { easing: 'ease-out', duration: 500, sequenceQueue: false  } }
           ]
 

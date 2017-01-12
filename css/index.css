@@ -325,8 +325,8 @@
       -ms-flex-line-pack: start;
           align-content: flex-start; }
   .users .sketch-content .user-logo {
-    width: 162px;
-    height: 162px;
+    width: 150px;
+    height: 150px;
     margin: 1px;
     overflow: hidden;
     position: relative;

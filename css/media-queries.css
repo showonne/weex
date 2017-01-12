@@ -38,16 +38,16 @@
   .header .galaxy {
     display: none; }
   .edge .scene-container .textbox {
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1; }
+    -webkit-flex: 2;
+        -ms-flex: 2;
+            flex: 2; }
+  .edge .scene-container .inner-box:nth-child(3) {
+    -webkit-flex: 0 0 240px;
+        -ms-flex: 0 0 240px;
+            flex: 0 0 240px; }
   .edge .scene-container .sketch-content {
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    /*flex-direction: column; 
+      align-items: center;*/ }
   .horizon .sketch-content {
     padding: 0 5em; }
   .horizon .sketch-content .inner-box {
@@ -76,6 +76,17 @@
   /***********************************************
    * Index
    **********************************************/
+  .edge .scene-container .textbox {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+  .edge .scene-container .sketch-content {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .scene.overlength {
     height: auto;
     min-height: 100%;
