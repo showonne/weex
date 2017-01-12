@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://weex-project.io/v-0.10/references/modules/timer.html">
 <meta property="og:site_name" content="Weex">
 <meta property="og:description" content="TimerWeex encapsulates a series of APIs in order to start/stop a one-time task or a repeated task at a fixed delay. Please note that this module don’t provide an accuracy delay. It provides best-effor">
-<meta property="og:updated_time" content="2017-01-12T01:15:09.000Z">
+<meta property="og:updated_time" content="2017-01-12T07:26:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Timer">
 <meta name="twitter:description" content="TimerWeex encapsulates a series of APIs in order to start/stop a one-time task or a repeated task at a fixed delay. Please note that this module don’t provide an accuracy delay. It provides best-effor">
@@ -463,11 +463,11 @@
             <ul class="chapter">
               
                 <li>
-                  <a href="/v-0.10/references/modules/animation.html" class="sidebar-link  ">animation</a>
+                  <a href="/v-0.10/references/modules/globalevent.html" class="sidebar-link  ">globalEvent</a>
                 </li>
               
                 <li>
-                  <a href="/v-0.10/references/modules/globalevent.html" class="sidebar-link  ">globalEvent</a>
+                  <a href="/v-0.10/references/modules/animation.html" class="sidebar-link  ">animation</a>
                 </li>
               
                 <li>
@@ -906,11 +906,11 @@
             <ul class="chapter">
               
                 <li>
-                  <a href="/v-0.10/references/modules/animation.html" class="sidebar-link  ">animation</a>
+                  <a href="/v-0.10/references/modules/globalevent.html" class="sidebar-link  ">globalEvent</a>
                 </li>
               
                 <li>
-                  <a href="/v-0.10/references/modules/globalevent.html" class="sidebar-link  ">globalEvent</a>
+                  <a href="/v-0.10/references/modules/animation.html" class="sidebar-link  ">animation</a>
                 </li>
               
                 <li>
@@ -994,7 +994,7 @@
       </h1>
     
   
-  <time class="article-date" datetime="2017-01-12T01:15:09.000Z">Updated time: 12/01/2017</time>
+  <time class="article-date" datetime="2017-01-12T07:26:17.000Z">Updated time: 12/01/2017</time>
 </header>
     <h1 id="Timer"><a href="#Timer" class="headerlink" title="Timer"></a>Timer</h1><p>Weex encapsulates a series of APIs in order to start/stop a one-time task or a repeated task at a fixed delay. Please note that this module don’t provide an accuracy delay. It provides best-effort delivery, but the actual delay may still exceed the delay user wants if the corresponding thread is busy.<br>Actually, this module is made for the polyfill of HTML5 timer APIs, developers <strong>should not</strong> use this module directly unless they know exactly what they are doing.    </p>
 <h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p>All timeout or interval in this module are measured in milliseconds.<br>Also, timeout and interval should be a non-negative integer(the max of integer is 0x7FFFFFFF). If timeout or interval is negative, then it will be reset to zero, e.g. the task will be put in the task queue immediately.     </p>
