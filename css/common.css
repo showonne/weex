@@ -208,7 +208,8 @@ table th {
   font-weight: 700; }
 
 .api-version {
-  padding: 3px 5px;
+  font-size: 12px;
+  padding: 1px 7px;
   background: #00BDFF;
   color: #fff;
   border-radius: 20px; }
