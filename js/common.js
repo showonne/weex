@@ -230,11 +230,11 @@
       if(window.innerWidth < 1100 
         && window.innerWidth >= 700
         && window.innerWidth / window.innerHeight >= 0.7) {
-          console.log('aa')
         var scenes = document.querySelectorAll('.scene')
+        var scenesArr = Array.prototype.slice.call(scenes, 1)
 
-        scenes.forEach(function (i) {
-          i.style.maxHeight = window.innerWidth * 0.7 + 'px'
+        scenesArr.forEach(function (i) {
+          i.style.maxHeight = '600px'
         })
       }
     }
