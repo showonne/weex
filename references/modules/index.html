@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Weex">
 <meta property="og:description" content="Built-in ModulesHow to useYou can use a simply way like requireModule(&amp;#39;name&amp;#39;) to access the apis of module. e.g.
 &amp;lt;script&amp;gt;  const modal = weex.requireModule(&apos;modal&apos;)  module.exports = &amp;#1">
-<meta property="og:updated_time" content="2017-01-13T02:55:09.000Z">
+<meta property="og:updated_time" content="2017-01-13T08:57:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Built-in Modules">
 <meta name="twitter:description" content="Built-in ModulesHow to useYou can use a simply way like requireModule(&amp;#39;name&amp;#39;) to access the apis of module. e.g.
@@ -485,11 +485,11 @@
             <ul class="chapter">
               
                 <li>
-                  <a href="/references/modules/globalevent.html" class="sidebar-link  ">globalEvent</a>
+                  <a href="/references/modules/animation.html" class="sidebar-link  ">animation</a>
                 </li>
               
                 <li>
-                  <a href="/references/modules/animation.html" class="sidebar-link  ">animation</a>
+                  <a href="/references/modules/globalevent.html" class="sidebar-link  ">globalEvent</a>
                 </li>
               
                 <li>
@@ -1029,11 +1029,11 @@
             <ul class="chapter">
               
                 <li>
-                  <a href="/references/modules/globalevent.html" class="sidebar-link  ">globalEvent</a>
+                  <a href="/references/modules/animation.html" class="sidebar-link  ">animation</a>
                 </li>
               
                 <li>
-                  <a href="/references/modules/animation.html" class="sidebar-link  ">animation</a>
+                  <a href="/references/modules/globalevent.html" class="sidebar-link  ">globalEvent</a>
                 </li>
               
                 <li>
@@ -1199,7 +1199,7 @@
       </h1>
     
   
-  <time class="article-date" datetime="2017-01-13T02:55:09.000Z">Updated time: 13/01/2017</time>
+  <time class="article-date" datetime="2017-01-13T08:57:34.000Z">Updated time: 13/01/2017</time>
 </header>
     <h1 id="Built-in-Modules"><a href="#Built-in-Modules" class="headerlink" title="Built-in Modules"></a>Built-in Modules</h1><h2 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a>How to use</h2><p>You can use a simply way like <code>requireModule(&#39;name&#39;)</code> to access the apis of module. e.g.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">const</span> modal = weex.requireModule(<span class="string">'modal'</span>)</div><div class="line"></div><div class="line">  <span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="attr">data</span>: &#123;&#125;,</div><div class="line">    <span class="attr">methods</span>: &#123;</div><div class="line">      <span class="attr">toast</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        modal.toast(&#123;</div><div class="line">          <span class="attr">message</span>: <span class="string">'props: '</span> + event.data.join(<span class="string">', '</span>)</div><div class="line">        &#125;)</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
