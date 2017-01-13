@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Weex">
 <meta property="og:description" content="组件封装经常我们会发现 Weex 的 &amp;lt;template&amp;gt; 中有很多可复用的部分，这时候我们可以将其封装成上层的自定义组件并重用。例如我们可以直接创建一个名为 foo.we 的文件，&amp;lt;foo&amp;gt; 就是自定义组件的组件名称：
 &amp;lt;!-- foo.we --&amp;gt;&amp;lt;template&amp;gt;  &amp;lt;div style=&quot;flex-direction: row;&quot;&amp;g">
-<meta property="og:updated_time" content="2017-01-13T08:57:34.000Z">
+<meta property="og:updated_time" content="2017-01-13T09:49:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="组件封装">
 <meta name="twitter:description" content="组件封装经常我们会发现 Weex 的 &amp;lt;template&amp;gt; 中有很多可复用的部分，这时候我们可以将其封装成上层的自定义组件并重用。例如我们可以直接创建一个名为 foo.we 的文件，&amp;lt;foo&amp;gt; 就是自定义组件的组件名称：
@@ -497,7 +497,7 @@
       </h1>
     
   
-  <time class="article-date" datetime="2017-01-13T08:57:34.000Z">Updated time: 13/01/2017</time>
+  <time class="article-date" datetime="2017-01-13T09:49:32.000Z">Updated time: 13/01/2017</time>
 </header>
     <h1 id="组件封装"><a href="#组件封装" class="headerlink" title="组件封装"></a>组件封装</h1><p>经常我们会发现 Weex 的 <code>&lt;template&gt;</code> 中有很多可复用的部分，这时候我们可以将其封装成上层的自定义组件并重用。例如我们可以直接创建一个名为 <code>foo.we</code> 的文件，<code>&lt;foo&gt;</code> 就是自定义组件的组件名称：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- foo.we --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"flex-direction: row;"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">"&#123;&#123;image&#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">text</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> env = <span class="string">'foo'</span></div><div class="line">  <span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="attr">data</span>: &#123;</div><div class="line">      <span class="attr">title</span>: <span class="literal">null</span>,</div><div class="line">      <span class="attr">image</span>: <span class="literal">null</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
