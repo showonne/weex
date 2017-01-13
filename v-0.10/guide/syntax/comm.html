@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://weex-project.io/v-0.10/guide/syntax/comm.html">
 <meta property="og:site_name" content="Weex">
 <meta property="og:description" content="Communicate Between ComponentsFor Child-Parent CommunicationChildren component can use this.$dispatch([String type], [Object detail]) method passing information to parent component. first argument mea">
-<meta property="og:updated_time" content="2017-01-13T08:57:34.000Z">
+<meta property="og:updated_time" content="2017-01-13T09:49:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Communications">
 <meta name="twitter:description" content="Communicate Between ComponentsFor Child-Parent CommunicationChildren component can use this.$dispatch([String type], [Object detail]) method passing information to parent component. first argument mea">
@@ -524,7 +524,7 @@
       </h1>
     
   
-  <time class="article-date" datetime="2017-01-13T08:57:34.000Z">Updated time: 13/01/2017</time>
+  <time class="article-date" datetime="2017-01-13T09:49:33.000Z">Updated time: 13/01/2017</time>
 </header>
     <h1 id="Communicate-Between-Components"><a href="#Communicate-Between-Components" class="headerlink" title="Communicate Between Components"></a>Communicate Between Components</h1><h2 id="For-Child-Parent-Communication"><a href="#For-Child-Parent-Communication" class="headerlink" title="For Child-Parent Communication"></a>For Child-Parent Communication</h2><p>Children component can use <code>this.$dispatch([String type], [Object detail])</code> method passing information to parent component. first argument meaning type of message , second argument is the message object. If any parent of the child component register the same type of listener using <code>$on([String type], [Function callback])</code> method , the callback will be execute with one argument , the message object will be <code>detail</code> property of the the argument.</p>
 <p>eg:</p>
